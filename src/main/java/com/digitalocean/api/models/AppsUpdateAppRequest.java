@@ -1,14 +1,19 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsUpdateAppRequest model. */
+/**
+ * The AppsUpdateAppRequest model.
+ */
 @Fluent
 public final class AppsUpdateAppRequest {
     /*
      * AppSpec
-     *
+     * 
      * The desired configuration of an application.
      */
     @JsonProperty(value = "spec", required = true)
@@ -16,9 +21,9 @@ public final class AppsUpdateAppRequest {
 
     /**
      * Get the spec property: AppSpec
-     *
-     * <p>The desired configuration of an application.
-     *
+     * 
+     * The desired configuration of an application.
+     * 
      * @return the spec value.
      */
     public AppSpec getSpec() {
@@ -27,9 +32,9 @@ public final class AppsUpdateAppRequest {
 
     /**
      * Set the spec property: AppSpec
-     *
-     * <p>The desired configuration of an application.
-     *
+     * 
+     * The desired configuration of an application.
+     * 
      * @param spec the spec value to set.
      * @return the AppsUpdateAppRequest object itself.
      */

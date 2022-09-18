@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The AppFunctionsSpec model. */
+/**
+ * The AppFunctionsSpec model.
+ */
 @Fluent
 public final class AppFunctionsSpec {
     /*
@@ -70,7 +75,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Get the cors property: The cors property.
-     *
+     * 
      * @return the cors value.
      */
     public AppsCorsPolicy getCors() {
@@ -79,7 +84,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Set the cors property: The cors property.
-     *
+     * 
      * @param cors the cors value to set.
      * @return the AppFunctionsSpec object itself.
      */
@@ -90,7 +95,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Get the routes property: A list of HTTP routes that should be routed to this component.
-     *
+     * 
      * @return the routes value.
      */
     public List<AppRouteSpec> getRoutes() {
@@ -99,7 +104,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Set the routes property: A list of HTTP routes that should be routed to this component.
-     *
+     * 
      * @param routes the routes value to set.
      * @return the AppFunctionsSpec object itself.
      */
@@ -110,7 +115,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Get the name property: The name. Must be unique across all components within the same app.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -119,7 +124,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Set the name property: The name. Must be unique across all components within the same app.
-     *
+     * 
      * @param name the name value to set.
      * @return the AppFunctionsSpec object itself.
      */
@@ -131,7 +136,7 @@ public final class AppFunctionsSpec {
     /**
      * Get the sourceDir property: An optional path to the working directory to use for the build. For Dockerfile
      * builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
+     * 
      * @return the sourceDir value.
      */
     public String getSourceDir() {
@@ -141,7 +146,7 @@ public final class AppFunctionsSpec {
     /**
      * Set the sourceDir property: An optional path to the working directory to use for the build. For Dockerfile
      * builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
+     * 
      * @param sourceDir the sourceDir value to set.
      * @return the AppFunctionsSpec object itself.
      */
@@ -152,7 +157,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Get the alerts property: The alerts property.
-     *
+     * 
      * @return the alerts value.
      */
     public List<AppAlertSpec> getAlerts() {
@@ -161,7 +166,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Set the alerts property: The alerts property.
-     *
+     * 
      * @param alerts the alerts value to set.
      * @return the AppFunctionsSpec object itself.
      */
@@ -172,7 +177,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Get the envs property: A list of environment variables made available to the component.
-     *
+     * 
      * @return the envs value.
      */
     public List<AppVariableDefinition> getEnvs() {
@@ -181,7 +186,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Set the envs property: A list of environment variables made available to the component.
-     *
+     * 
      * @param envs the envs value to set.
      * @return the AppFunctionsSpec object itself.
      */
@@ -192,7 +197,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Get the git property: The git property.
-     *
+     * 
      * @return the git value.
      */
     public AppsGitSourceSpec getGit() {
@@ -201,7 +206,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Set the git property: The git property.
-     *
+     * 
      * @param git the git value to set.
      * @return the AppFunctionsSpec object itself.
      */
@@ -212,7 +217,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Get the github property: The github property.
-     *
+     * 
      * @return the github value.
      */
     public AppsGithubSourceSpec getGithub() {
@@ -221,7 +226,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Set the github property: The github property.
-     *
+     * 
      * @param github the github value to set.
      * @return the AppFunctionsSpec object itself.
      */
@@ -232,7 +237,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Get the gitlab property: The gitlab property.
-     *
+     * 
      * @return the gitlab value.
      */
     public AppsGitlabSourceSpec getGitlab() {
@@ -241,7 +246,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Set the gitlab property: The gitlab property.
-     *
+     * 
      * @param gitlab the gitlab value to set.
      * @return the AppFunctionsSpec object itself.
      */
@@ -252,7 +257,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Get the logDestinations property: Configurations for external logging.
-     *
+     * 
      * @return the logDestinations value.
      */
     public AppLogDestinationDefinition getLogDestinations() {
@@ -261,7 +266,7 @@ public final class AppFunctionsSpec {
 
     /**
      * Set the logDestinations property: Configurations for external logging.
-     *
+     * 
      * @param logDestinations the logDestinations value to set.
      * @return the AppFunctionsSpec object itself.
      */

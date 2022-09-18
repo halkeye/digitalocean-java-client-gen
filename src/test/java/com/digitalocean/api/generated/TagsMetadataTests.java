@@ -1,15 +1,17 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.TagsMetadata;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class TagsMetadataTests {
     @Test
     public void testDeserialize() {
-        TagsMetadata model =
-                BinaryData.fromString("{\"count\":22664450,\"last_tagged_uri\":\"hp\"}").toObject(TagsMetadata.class);
+        TagsMetadata model = BinaryData.fromString("{\"count\":22664450,\"last_tagged_uri\":\"hp\"}").toObject(TagsMetadata.class);
         Assertions.assertEquals(22664450, model.getCount());
         Assertions.assertEquals("hp", model.getLastTaggedUri());
     }

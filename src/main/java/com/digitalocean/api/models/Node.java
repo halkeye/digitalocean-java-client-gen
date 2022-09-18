@@ -1,11 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.UUID;
+import java.util.regex.Pattern;
 
-/** The Node model. */
+/**
+ * The Node model.
+ */
 @Fluent
 public final class Node {
     /*
@@ -47,7 +52,7 @@ public final class Node {
 
     /**
      * Get the id property: A unique ID that can be used to identify and reference the node.
-     *
+     * 
      * @return the id value.
      */
     public UUID getId() {
@@ -56,7 +61,7 @@ public final class Node {
 
     /**
      * Set the id property: A unique ID that can be used to identify and reference the node.
-     *
+     * 
      * @param id the id value to set.
      * @return the Node object itself.
      */
@@ -67,7 +72,7 @@ public final class Node {
 
     /**
      * Get the name property: An automatically generated, human-readable name for the node.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -76,7 +81,7 @@ public final class Node {
 
     /**
      * Set the name property: An automatically generated, human-readable name for the node.
-     *
+     * 
      * @param name the name value to set.
      * @return the Node object itself.
      */
@@ -88,7 +93,7 @@ public final class Node {
     /**
      * Get the status property: An object containing a `state` attribute whose value is set to a string indicating the
      * current status of the node.
-     *
+     * 
      * @return the status value.
      */
     public NodeStatus getStatus() {
@@ -98,7 +103,7 @@ public final class Node {
     /**
      * Set the status property: An object containing a `state` attribute whose value is set to a string indicating the
      * current status of the node.
-     *
+     * 
      * @param status the status value to set.
      * @return the Node object itself.
      */
@@ -109,7 +114,7 @@ public final class Node {
 
     /**
      * Get the dropletId property: The ID of the Droplet used for the worker node.
-     *
+     * 
      * @return the dropletId value.
      */
     public String getDropletId() {
@@ -118,7 +123,7 @@ public final class Node {
 
     /**
      * Set the dropletId property: The ID of the Droplet used for the worker node.
-     *
+     * 
      * @param dropletId the dropletId value to set.
      * @return the Node object itself.
      */
@@ -130,7 +135,7 @@ public final class Node {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * node was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -140,7 +145,7 @@ public final class Node {
     /**
      * Set the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * node was created.
-     *
+     * 
      * @param createdAt the createdAt value to set.
      * @return the Node object itself.
      */
@@ -152,7 +157,7 @@ public final class Node {
     /**
      * Get the updatedAt property: A time value given in ISO8601 combined date and time format that represents when the
      * node was last updated.
-     *
+     * 
      * @return the updatedAt value.
      */
     public OffsetDateTime getUpdatedAt() {
@@ -162,7 +167,7 @@ public final class Node {
     /**
      * Set the updatedAt property: A time value given in ISO8601 combined date and time format that represents when the
      * node was last updated.
-     *
+     * 
      * @param updatedAt the updatedAt value to set.
      * @return the Node object itself.
      */

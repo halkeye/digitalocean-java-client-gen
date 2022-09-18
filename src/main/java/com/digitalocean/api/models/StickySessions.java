@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** An object specifying sticky sessions settings for the load balancer. */
+/**
+ * An object specifying sticky sessions settings for the load balancer.
+ */
 @Fluent
 public final class StickySessions {
     /*
@@ -30,7 +36,7 @@ public final class StickySessions {
     /**
      * Get the type property: An attribute indicating how and if requests from a client will be persistently served by
      * the same backend Droplet. The possible values are `cookies` or `none`.
-     *
+     * 
      * @return the type value.
      */
     public StickySessionsType getType() {
@@ -40,7 +46,7 @@ public final class StickySessions {
     /**
      * Set the type property: An attribute indicating how and if requests from a client will be persistently served by
      * the same backend Droplet. The possible values are `cookies` or `none`.
-     *
+     * 
      * @param type the type value to set.
      * @return the StickySessions object itself.
      */
@@ -52,7 +58,7 @@ public final class StickySessions {
     /**
      * Get the cookieName property: The name of the cookie sent to the client. This attribute is only returned when
      * using `cookies` for the sticky sessions type.
-     *
+     * 
      * @return the cookieName value.
      */
     public String getCookieName() {
@@ -62,7 +68,7 @@ public final class StickySessions {
     /**
      * Set the cookieName property: The name of the cookie sent to the client. This attribute is only returned when
      * using `cookies` for the sticky sessions type.
-     *
+     * 
      * @param cookieName the cookieName value to set.
      * @return the StickySessions object itself.
      */
@@ -74,7 +80,7 @@ public final class StickySessions {
     /**
      * Get the cookieTtlSeconds property: The number of seconds until the cookie set by the load balancer expires. This
      * attribute is only returned when using `cookies` for the sticky sessions type.
-     *
+     * 
      * @return the cookieTtlSeconds value.
      */
     public Integer getCookieTtlSeconds() {
@@ -84,7 +90,7 @@ public final class StickySessions {
     /**
      * Set the cookieTtlSeconds property: The number of seconds until the cookie set by the load balancer expires. This
      * attribute is only returned when using `cookies` for the sticky sessions type.
-     *
+     * 
      * @param cookieTtlSeconds the cookieTtlSeconds value to set.
      * @return the StickySessions object itself.
      */

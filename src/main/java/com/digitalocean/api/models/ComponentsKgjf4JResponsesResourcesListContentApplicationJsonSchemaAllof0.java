@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsKgjf4JResponsesResourcesListContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The ComponentsKgjf4JResponsesResourcesListContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class ComponentsKgjf4JResponsesResourcesListContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsKgjf4JResponsesResourcesListContentApplicationJsonSchemaA
 
     /**
      * Get the resources property: The resources property.
-     *
+     * 
      * @return the resources value.
      */
     public List<Resource> getResources() {
@@ -24,12 +29,11 @@ public class ComponentsKgjf4JResponsesResourcesListContentApplicationJsonSchemaA
 
     /**
      * Set the resources property: The resources property.
-     *
+     * 
      * @param resources the resources value to set.
      * @return the ComponentsKgjf4JResponsesResourcesListContentApplicationJsonSchemaAllof0 object itself.
      */
-    public ComponentsKgjf4JResponsesResourcesListContentApplicationJsonSchemaAllof0 setResources(
-            List<Resource> resources) {
+    public ComponentsKgjf4JResponsesResourcesListContentApplicationJsonSchemaAllof0 setResources(List<Resource> resources) {
         this.resources = resources;
         return this;
     }

@@ -1,14 +1,20 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The Redis model. */
+/**
+ * The Redis model.
+ */
 @Fluent
 public final class Redis {
     /*
      * A string specifying the desired eviction policy for the Redis cluster.
-     *
+     * 
      * - `noeviction`: Don't evict any data, returns error when memory limit is reached.
      * - `allkeys_lru:` Evict any key, least recently used (LRU) first.
      * - `allkeys_random`: Evict keys in a random order.
@@ -87,12 +93,14 @@ public final class Redis {
 
     /**
      * Get the redisMaxmemoryPolicy property: A string specifying the desired eviction policy for the Redis cluster.
-     *
-     * <p>- `noeviction`: Don't evict any data, returns error when memory limit is reached. - `allkeys_lru:` Evict any
-     * key, least recently used (LRU) first. - `allkeys_random`: Evict keys in a random order. - `volatile_lru`: Evict
-     * keys with expiration only, least recently used (LRU) first. - `volatile_random`: Evict keys with expiration only
-     * in a random order. - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-     *
+     * 
+     * - `noeviction`: Don't evict any data, returns error when memory limit is reached.
+     * - `allkeys_lru:` Evict any key, least recently used (LRU) first.
+     * - `allkeys_random`: Evict keys in a random order.
+     * - `volatile_lru`: Evict keys with expiration only, least recently used (LRU) first.
+     * - `volatile_random`: Evict keys with expiration only in a random order.
+     * - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
+     * 
      * @return the redisMaxmemoryPolicy value.
      */
     public EvictionPolicyModel getRedisMaxmemoryPolicy() {
@@ -101,12 +109,14 @@ public final class Redis {
 
     /**
      * Set the redisMaxmemoryPolicy property: A string specifying the desired eviction policy for the Redis cluster.
-     *
-     * <p>- `noeviction`: Don't evict any data, returns error when memory limit is reached. - `allkeys_lru:` Evict any
-     * key, least recently used (LRU) first. - `allkeys_random`: Evict keys in a random order. - `volatile_lru`: Evict
-     * keys with expiration only, least recently used (LRU) first. - `volatile_random`: Evict keys with expiration only
-     * in a random order. - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
-     *
+     * 
+     * - `noeviction`: Don't evict any data, returns error when memory limit is reached.
+     * - `allkeys_lru:` Evict any key, least recently used (LRU) first.
+     * - `allkeys_random`: Evict keys in a random order.
+     * - `volatile_lru`: Evict keys with expiration only, least recently used (LRU) first.
+     * - `volatile_random`: Evict keys with expiration only in a random order.
+     * - `volatile_ttl`: Evict keys with expiration only, shortest time-to-live (TTL) first.
+     * 
      * @param redisMaxmemoryPolicy the redisMaxmemoryPolicy value to set.
      * @return the Redis object itself.
      */
@@ -119,7 +129,7 @@ public final class Redis {
      * Get the redisPubsubClientOutputBufferLimit property: Set output buffer limit for pub / sub clients in MB. The
      * value is the hard limit, the soft limit is 1/4 of the hard limit. When setting the limit, be mindful of the
      * available memory in the selected service plan.
-     *
+     * 
      * @return the redisPubsubClientOutputBufferLimit value.
      */
     public Integer getRedisPubsubClientOutputBufferLimit() {
@@ -130,7 +140,7 @@ public final class Redis {
      * Set the redisPubsubClientOutputBufferLimit property: Set output buffer limit for pub / sub clients in MB. The
      * value is the hard limit, the soft limit is 1/4 of the hard limit. When setting the limit, be mindful of the
      * available memory in the selected service plan.
-     *
+     * 
      * @param redisPubsubClientOutputBufferLimit the redisPubsubClientOutputBufferLimit value to set.
      * @return the Redis object itself.
      */
@@ -142,7 +152,7 @@ public final class Redis {
     /**
      * Get the redisNumberOfDatabases property: Set number of redis databases. Changing this will cause a restart of
      * redis service.
-     *
+     * 
      * @return the redisNumberOfDatabases value.
      */
     public Integer getRedisNumberOfDatabases() {
@@ -152,7 +162,7 @@ public final class Redis {
     /**
      * Set the redisNumberOfDatabases property: Set number of redis databases. Changing this will cause a restart of
      * redis service.
-     *
+     * 
      * @param redisNumberOfDatabases the redisNumberOfDatabases value to set.
      * @return the Redis object itself.
      */
@@ -163,7 +173,7 @@ public final class Redis {
 
     /**
      * Get the redisIoThreads property: Redis IO thread count.
-     *
+     * 
      * @return the redisIoThreads value.
      */
     public Integer getRedisIoThreads() {
@@ -172,7 +182,7 @@ public final class Redis {
 
     /**
      * Set the redisIoThreads property: Redis IO thread count.
-     *
+     * 
      * @param redisIoThreads the redisIoThreads value to set.
      * @return the Redis object itself.
      */
@@ -182,8 +192,9 @@ public final class Redis {
     }
 
     /**
-     * Get the redisLfuLogFactor property: Counter logarithm factor for volatile-lfu and allkeys-lfu maxmemory-policies.
-     *
+     * Get the redisLfuLogFactor property: Counter logarithm factor for volatile-lfu and allkeys-lfu
+     * maxmemory-policies.
+     * 
      * @return the redisLfuLogFactor value.
      */
     public Integer getRedisLfuLogFactor() {
@@ -191,8 +202,9 @@ public final class Redis {
     }
 
     /**
-     * Set the redisLfuLogFactor property: Counter logarithm factor for volatile-lfu and allkeys-lfu maxmemory-policies.
-     *
+     * Set the redisLfuLogFactor property: Counter logarithm factor for volatile-lfu and allkeys-lfu
+     * maxmemory-policies.
+     * 
      * @param redisLfuLogFactor the redisLfuLogFactor value to set.
      * @return the Redis object itself.
      */
@@ -203,7 +215,7 @@ public final class Redis {
 
     /**
      * Get the redisLfuDecayTime property: LFU maxmemory-policy counter decay time in minutes.
-     *
+     * 
      * @return the redisLfuDecayTime value.
      */
     public Integer getRedisLfuDecayTime() {
@@ -212,7 +224,7 @@ public final class Redis {
 
     /**
      * Set the redisLfuDecayTime property: LFU maxmemory-policy counter decay time in minutes.
-     *
+     * 
      * @param redisLfuDecayTime the redisLfuDecayTime value to set.
      * @return the Redis object itself.
      */
@@ -223,7 +235,7 @@ public final class Redis {
 
     /**
      * Get the redisSsl property: Require SSL to access Redis.
-     *
+     * 
      * @return the redisSsl value.
      */
     public Boolean isRedisSsl() {
@@ -232,7 +244,7 @@ public final class Redis {
 
     /**
      * Set the redisSsl property: Require SSL to access Redis.
-     *
+     * 
      * @param redisSsl the redisSsl value to set.
      * @return the Redis object itself.
      */
@@ -243,7 +255,7 @@ public final class Redis {
 
     /**
      * Get the redisTimeout property: Redis idle connection timeout in seconds.
-     *
+     * 
      * @return the redisTimeout value.
      */
     public Integer getRedisTimeout() {
@@ -252,7 +264,7 @@ public final class Redis {
 
     /**
      * Set the redisTimeout property: Redis idle connection timeout in seconds.
-     *
+     * 
      * @param redisTimeout the redisTimeout value to set.
      * @return the Redis object itself.
      */
@@ -263,7 +275,7 @@ public final class Redis {
 
     /**
      * Get the redisNotifyKeyspaceEvents property: Set notify-keyspace-events option.
-     *
+     * 
      * @return the redisNotifyKeyspaceEvents value.
      */
     public String getRedisNotifyKeyspaceEvents() {
@@ -272,7 +284,7 @@ public final class Redis {
 
     /**
      * Set the redisNotifyKeyspaceEvents property: Set notify-keyspace-events option.
-     *
+     * 
      * @param redisNotifyKeyspaceEvents the redisNotifyKeyspaceEvents value to set.
      * @return the Redis object itself.
      */
@@ -286,7 +298,7 @@ public final class Redis {
      * changed. Also RDB dumps are done according to backup schedule for backup purposes. When persistence is 'off', no
      * RDB dumps and backups are done, so data can be lost at any moment if service is restarted for any reason, or if
      * service is powered off. Also service can't be forked.
-     *
+     * 
      * @return the redisPersistence value.
      */
     public RedisPersistence getRedisPersistence() {
@@ -298,7 +310,7 @@ public final class Redis {
      * changed. Also RDB dumps are done according to backup schedule for backup purposes. When persistence is 'off', no
      * RDB dumps and backups are done, so data can be lost at any moment if service is restarted for any reason, or if
      * service is powered off. Also service can't be forked.
-     *
+     * 
      * @param redisPersistence the redisPersistence value to set.
      * @return the Redis object itself.
      */
@@ -311,7 +323,7 @@ public final class Redis {
      * Get the redisAclChannelsDefault property: Determines default pub/sub channels' ACL for new users if ACL is not
      * supplied. When this option is not defined, all_channels is assumed to keep backward compatibility. This option
      * doesn't affect Redis configuration acl-pubsub-default.
-     *
+     * 
      * @return the redisAclChannelsDefault value.
      */
     public RedisAclChannelsDefault getRedisAclChannelsDefault() {
@@ -322,7 +334,7 @@ public final class Redis {
      * Set the redisAclChannelsDefault property: Determines default pub/sub channels' ACL for new users if ACL is not
      * supplied. When this option is not defined, all_channels is assumed to keep backward compatibility. This option
      * doesn't affect Redis configuration acl-pubsub-default.
-     *
+     * 
      * @param redisAclChannelsDefault the redisAclChannelsDefault value to set.
      * @return the Redis object itself.
      */

@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsBrpyirResponsesSshkeysAllContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The ComponentsBrpyirResponsesSshkeysAllContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class ComponentsBrpyirResponsesSshkeysAllContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsBrpyirResponsesSshkeysAllContentApplicationJsonSchemaAllo
 
     /**
      * Get the sshKeys property: The ssh_keys property.
-     *
+     * 
      * @return the sshKeys value.
      */
     public List<SshKeys> getSshKeys() {
@@ -24,7 +29,7 @@ public class ComponentsBrpyirResponsesSshkeysAllContentApplicationJsonSchemaAllo
 
     /**
      * Set the sshKeys property: The ssh_keys property.
-     *
+     * 
      * @param sshKeys the sshKeys value to set.
      * @return the ComponentsBrpyirResponsesSshkeysAllContentApplicationJsonSchemaAllof0 object itself.
      */

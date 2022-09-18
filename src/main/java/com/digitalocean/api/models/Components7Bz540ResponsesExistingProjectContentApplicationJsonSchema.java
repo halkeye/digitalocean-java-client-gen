@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components7Bz540ResponsesExistingProjectContentApplicationJsonSchema model. */
+/**
+ * The Components7Bz540ResponsesExistingProjectContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components7Bz540ResponsesExistingProjectContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components7Bz540ResponsesExistingProjectContentApplicationJso
 
     /**
      * Get the project property: The project property.
-     *
+     * 
      * @return the project value.
      */
     public Project getProject() {
@@ -23,7 +28,7 @@ public final class Components7Bz540ResponsesExistingProjectContentApplicationJso
 
     /**
      * Set the project property: The project property.
-     *
+     * 
      * @param project the project value to set.
      * @return the Components7Bz540ResponsesExistingProjectContentApplicationJsonSchema object itself.
      */

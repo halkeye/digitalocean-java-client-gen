@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Alerts model. */
+/**
+ * The Alerts model.
+ */
 @Fluent
 public final class Alerts {
     /*
@@ -21,7 +26,7 @@ public final class Alerts {
 
     /**
      * Get the email property: An email to notify on an alert trigger.
-     *
+     * 
      * @return the email value.
      */
     public List<String> getEmail() {
@@ -30,7 +35,7 @@ public final class Alerts {
 
     /**
      * Set the email property: An email to notify on an alert trigger.
-     *
+     * 
      * @param email the email value to set.
      * @return the Alerts object itself.
      */
@@ -41,7 +46,7 @@ public final class Alerts {
 
     /**
      * Get the slack property: Slack integration details.
-     *
+     * 
      * @return the slack value.
      */
     public List<SlackDetails> getSlack() {
@@ -50,7 +55,7 @@ public final class Alerts {
 
     /**
      * Set the slack property: Slack integration details.
-     *
+     * 
      * @param slack the slack value to set.
      * @return the Alerts object itself.
      */

@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsGetInstanceSizeResponse model. */
+/**
+ * The AppsGetInstanceSizeResponse model.
+ */
 @Fluent
 public final class AppsGetInstanceSizeResponse {
     /*
@@ -14,7 +19,7 @@ public final class AppsGetInstanceSizeResponse {
 
     /**
      * Get the instanceSize property: The instance_size property.
-     *
+     * 
      * @return the instanceSize value.
      */
     public AppsInstanceSize getInstanceSize() {
@@ -23,7 +28,7 @@ public final class AppsGetInstanceSizeResponse {
 
     /**
      * Set the instanceSize property: The instance_size property.
-     *
+     * 
      * @param instanceSize the instanceSize value to set.
      * @return the AppsGetInstanceSizeResponse object itself.
      */

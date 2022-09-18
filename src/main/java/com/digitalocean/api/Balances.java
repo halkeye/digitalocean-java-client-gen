@@ -10,24 +10,33 @@ import com.azure.core.annotation.ServiceInterface;
 import com.azure.core.annotation.ServiceMethod;
 import com.azure.core.annotation.UnexpectedResponseExceptionType;
 import com.azure.core.http.rest.RestProxy;
+import com.azure.core.util.Context;
 import com.digitalocean.api.models.BalancesGetResponse;
 import com.digitalocean.api.models.ErrorException;
+import java.util.Objects;
+import java.util.stream.Collectors;
 import reactor.core.publisher.Mono;
 
-/** An instance of this class provides access to all the operations defined in Balances. */
+/**
+ * An instance of this class provides access to all the operations defined in Balances.
+ */
 public final class Balances {
-    /** The proxy service used to perform REST calls. */
+    /**
+     * The proxy service used to perform REST calls.
+     */
     private final BalancesService service;
 
-    /** The service client containing this operation class. */
+    /**
+     * The service client containing this operation class.
+     */
     private final GeneratedClient client;
 
     /**
      * Initializes an instance of Balances.
-     *
+     * 
      * @param client the instance of the service client containing this operation class.
      */
-    Balances(GeneratedClient client) {
+     Balances(GeneratedClient client) {
         this.service = RestProxy.create(BalancesService.class, client.getHttpPipeline(), client.getSerializerAdapter());
         this.client = client;
     }
@@ -47,9 +56,9 @@ public final class Balances {
 
     /**
      * Get Customer Balance
-     *
-     * <p>To retrieve the balances on a customer's account, send a GET request to `/v2/customers/my/balance`.
-     *
+     * 
+     * To retrieve the balances on a customer's account, send a GET request to `/v2/customers/my/balance`.
+     * 
      * @throws ErrorException thrown if the request is rejected by server.
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent.
      * @return the response body on successful completion of {@link Mono}.
@@ -62,15 +71,15 @@ public final class Balances {
 
     /**
      * Get Customer Balance
-     *
-     * <p>To retrieve the balances on a customer's account, send a GET request to `/v2/customers/my/balance`.
-     *
+     * 
+     * To retrieve the balances on a customer's account, send a GET request to `/v2/customers/my/balance`.
+     * 
      * @throws ErrorException thrown if the request is rejected by server.
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent.
      * @return the response body on successful completion of {@link Mono}.
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Object> getAsync() {
-        return getWithResponseAsync().flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return getWithResponseAsync()
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 }

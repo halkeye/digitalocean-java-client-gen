@@ -1,14 +1,19 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The OneClicks model. */
+/**
+ * The OneClicks model.
+ */
 @Fluent
 public final class OneClicks {
     /*
      * slug
-     *
+     * 
      * The slug identifier for the 1-Click application.
      */
     @JsonProperty(value = "slug", required = true)
@@ -16,7 +21,7 @@ public final class OneClicks {
 
     /*
      * type
-     *
+     * 
      * The type of the 1-Click application.
      */
     @JsonProperty(value = "type", required = true)
@@ -24,9 +29,9 @@ public final class OneClicks {
 
     /**
      * Get the slug property: slug
-     *
-     * <p>The slug identifier for the 1-Click application.
-     *
+     * 
+     * The slug identifier for the 1-Click application.
+     * 
      * @return the slug value.
      */
     public String getSlug() {
@@ -35,9 +40,9 @@ public final class OneClicks {
 
     /**
      * Set the slug property: slug
-     *
-     * <p>The slug identifier for the 1-Click application.
-     *
+     * 
+     * The slug identifier for the 1-Click application.
+     * 
      * @param slug the slug value to set.
      * @return the OneClicks object itself.
      */
@@ -48,9 +53,9 @@ public final class OneClicks {
 
     /**
      * Get the type property: type
-     *
-     * <p>The type of the 1-Click application.
-     *
+     * 
+     * The type of the 1-Click application.
+     * 
      * @return the type value.
      */
     public String getType() {
@@ -59,9 +64,9 @@ public final class OneClicks {
 
     /**
      * Set the type property: type
-     *
-     * <p>The type of the 1-Click application.
-     *
+     * 
+     * The type of the 1-Click application.
+     * 
      * @param type the type value to set.
      * @return the OneClicks object itself.
      */

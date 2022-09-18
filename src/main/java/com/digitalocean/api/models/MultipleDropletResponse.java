@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** Multiple Droplet Response. */
+/**
+ * Multiple Droplet Response.
+ */
 @Fluent
 public final class MultipleDropletResponse {
     /*
@@ -21,7 +26,7 @@ public final class MultipleDropletResponse {
 
     /**
      * Get the droplets property: The droplets property.
-     *
+     * 
      * @return the droplets value.
      */
     public List<Droplet> getDroplets() {
@@ -30,7 +35,7 @@ public final class MultipleDropletResponse {
 
     /**
      * Set the droplets property: The droplets property.
-     *
+     * 
      * @param droplets the droplets value to set.
      * @return the MultipleDropletResponse object itself.
      */
@@ -41,7 +46,7 @@ public final class MultipleDropletResponse {
 
     /**
      * Get the links property: The links property.
-     *
+     * 
      * @return the links value.
      */
     public Components10LqvkkResponsesDropletCreateContentApplicationJsonSchemaOneof1PropertiesLinks getLinks() {
@@ -50,12 +55,11 @@ public final class MultipleDropletResponse {
 
     /**
      * Set the links property: The links property.
-     *
+     * 
      * @param links the links value to set.
      * @return the MultipleDropletResponse object itself.
      */
-    public MultipleDropletResponse setLinks(
-            Components10LqvkkResponsesDropletCreateContentApplicationJsonSchemaOneof1PropertiesLinks links) {
+    public MultipleDropletResponse setLinks(Components10LqvkkResponsesDropletCreateContentApplicationJsonSchemaOneof1PropertiesLinks links) {
         this.links = links;
         return this;
     }

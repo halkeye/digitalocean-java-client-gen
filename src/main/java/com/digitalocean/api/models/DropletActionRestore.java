@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The DropletActionRestore model. */
+/**
+ * The DropletActionRestore model.
+ */
 @Fluent
 public final class DropletActionRestore extends DropletAction {
     /*
@@ -14,7 +20,7 @@ public final class DropletActionRestore extends DropletAction {
 
     /**
      * Get the image property: The ID of a backup of the current Droplet instance to restore from.
-     *
+     * 
      * @return the image value.
      */
     public Integer getImage() {
@@ -23,7 +29,7 @@ public final class DropletActionRestore extends DropletAction {
 
     /**
      * Set the image property: The ID of a backup of the current Droplet instance to restore from.
-     *
+     * 
      * @param image the image value to set.
      * @return the DropletActionRestore object itself.
      */
@@ -32,7 +38,9 @@ public final class DropletActionRestore extends DropletAction {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletActionRestore setType(DropletActionType type) {
         super.setType(type);

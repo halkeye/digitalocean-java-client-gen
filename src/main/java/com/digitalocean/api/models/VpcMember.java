@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The VpcMember model. */
+/**
+ * The VpcMember model.
+ */
 @Fluent
 public final class VpcMember {
     /*
@@ -26,7 +31,7 @@ public final class VpcMember {
 
     /**
      * Get the name property: The name of the resource.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -35,7 +40,7 @@ public final class VpcMember {
 
     /**
      * Set the name property: The name of the resource.
-     *
+     * 
      * @param name the name value to set.
      * @return the VpcMember object itself.
      */
@@ -47,7 +52,7 @@ public final class VpcMember {
     /**
      * Get the urn property: The uniform resource name (URN) for the resource in the format
      * do:resource_type:resource_id.
-     *
+     * 
      * @return the urn value.
      */
     public String getUrn() {
@@ -57,7 +62,7 @@ public final class VpcMember {
     /**
      * Set the urn property: The uniform resource name (URN) for the resource in the format
      * do:resource_type:resource_id.
-     *
+     * 
      * @param urn the urn value to set.
      * @return the VpcMember object itself.
      */
@@ -69,7 +74,7 @@ public final class VpcMember {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * resource was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public String getCreatedAt() {
@@ -79,7 +84,7 @@ public final class VpcMember {
     /**
      * Set the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * resource was created.
-     *
+     * 
      * @param createdAt the createdAt value to set.
      * @return the VpcMember object itself.
      */

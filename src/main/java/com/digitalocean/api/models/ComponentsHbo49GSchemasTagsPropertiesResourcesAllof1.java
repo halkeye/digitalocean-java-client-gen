@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 model. */
+/**
+ * The ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 model.
+ */
 @Fluent
 public class ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 {
     /*
@@ -39,7 +44,7 @@ public class ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 {
     /**
      * Get the droplets property: Tagged Resource Statistics include metadata regarding the resource type that has been
      * tagged.
-     *
+     * 
      * @return the droplets value.
      */
     public TagsMetadata getDroplets() {
@@ -49,7 +54,7 @@ public class ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 {
     /**
      * Set the droplets property: Tagged Resource Statistics include metadata regarding the resource type that has been
      * tagged.
-     *
+     * 
      * @param droplets the droplets value to set.
      * @return the ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 object itself.
      */
@@ -61,7 +66,7 @@ public class ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 {
     /**
      * Get the imgages property: Tagged Resource Statistics include metadata regarding the resource type that has been
      * tagged.
-     *
+     * 
      * @return the imgages value.
      */
     public TagsMetadata getImgages() {
@@ -71,7 +76,7 @@ public class ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 {
     /**
      * Set the imgages property: Tagged Resource Statistics include metadata regarding the resource type that has been
      * tagged.
-     *
+     * 
      * @param imgages the imgages value to set.
      * @return the ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 object itself.
      */
@@ -83,7 +88,7 @@ public class ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 {
     /**
      * Get the volumes property: Tagged Resource Statistics include metadata regarding the resource type that has been
      * tagged.
-     *
+     * 
      * @return the volumes value.
      */
     public TagsMetadata getVolumes() {
@@ -93,7 +98,7 @@ public class ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 {
     /**
      * Set the volumes property: Tagged Resource Statistics include metadata regarding the resource type that has been
      * tagged.
-     *
+     * 
      * @param volumes the volumes value to set.
      * @return the ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 object itself.
      */
@@ -105,7 +110,7 @@ public class ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 {
     /**
      * Get the volumeSnapshots property: Tagged Resource Statistics include metadata regarding the resource type that
      * has been tagged.
-     *
+     * 
      * @return the volumeSnapshots value.
      */
     public TagsMetadata getVolumeSnapshots() {
@@ -115,7 +120,7 @@ public class ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 {
     /**
      * Set the volumeSnapshots property: Tagged Resource Statistics include metadata regarding the resource type that
      * has been tagged.
-     *
+     * 
      * @param volumeSnapshots the volumeSnapshots value to set.
      * @return the ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 object itself.
      */
@@ -125,9 +130,9 @@ public class ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 {
     }
 
     /**
-     * Get the databases property: Tagged Resource Statistics include metadata regarding the resource type that has been
-     * tagged.
-     *
+     * Get the databases property: Tagged Resource Statistics include metadata regarding the resource type that has
+     * been tagged.
+     * 
      * @return the databases value.
      */
     public TagsMetadata getDatabases() {
@@ -135,9 +140,9 @@ public class ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 {
     }
 
     /**
-     * Set the databases property: Tagged Resource Statistics include metadata regarding the resource type that has been
-     * tagged.
-     *
+     * Set the databases property: Tagged Resource Statistics include metadata regarding the resource type that has
+     * been tagged.
+     * 
      * @param databases the databases value to set.
      * @return the ComponentsHbo49GSchemasTagsPropertiesResourcesAllof1 object itself.
      */

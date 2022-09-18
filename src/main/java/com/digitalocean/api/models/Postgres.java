@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The Postgres model. */
+/**
+ * The Postgres model.
+ */
 @Fluent
 public final class Postgres {
     /*
@@ -360,7 +366,7 @@ public final class Postgres {
      * pg_class.relfrozenxid field can attain before a VACUUM operation is forced to prevent transaction ID wraparound
      * within the table. Note that the system will launch autovacuum processes to prevent wraparound even when
      * autovacuum is otherwise disabled. This parameter will cause the server to be restarted.
-     *
+     * 
      * @return the autovacuumFreezeMaxAge value.
      */
     public Integer getAutovacuumFreezeMaxAge() {
@@ -372,7 +378,7 @@ public final class Postgres {
      * pg_class.relfrozenxid field can attain before a VACUUM operation is forced to prevent transaction ID wraparound
      * within the table. Note that the system will launch autovacuum processes to prevent wraparound even when
      * autovacuum is otherwise disabled. This parameter will cause the server to be restarted.
-     *
+     * 
      * @param autovacuumFreezeMaxAge the autovacuumFreezeMaxAge value to set.
      * @return the Postgres object itself.
      */
@@ -383,9 +389,9 @@ public final class Postgres {
 
     /**
      * Get the autovacuumMaxWorkers property: Specifies the maximum number of autovacuum processes (other than the
-     * autovacuum launcher) that may be running at any one time. The default is three. This parameter can only be set at
-     * server start.
-     *
+     * autovacuum launcher) that may be running at any one time. The default is three. This parameter can only be set
+     * at server start.
+     * 
      * @return the autovacuumMaxWorkers value.
      */
     public Integer getAutovacuumMaxWorkers() {
@@ -394,9 +400,9 @@ public final class Postgres {
 
     /**
      * Set the autovacuumMaxWorkers property: Specifies the maximum number of autovacuum processes (other than the
-     * autovacuum launcher) that may be running at any one time. The default is three. This parameter can only be set at
-     * server start.
-     *
+     * autovacuum launcher) that may be running at any one time. The default is three. This parameter can only be set
+     * at server start.
+     * 
      * @param autovacuumMaxWorkers the autovacuumMaxWorkers value to set.
      * @return the Postgres object itself.
      */
@@ -406,9 +412,9 @@ public final class Postgres {
     }
 
     /**
-     * Get the autovacuumNaptime property: Specifies the minimum delay, in seconds, between autovacuum runs on any given
-     * database. The default is one minute.
-     *
+     * Get the autovacuumNaptime property: Specifies the minimum delay, in seconds, between autovacuum runs on any
+     * given database. The default is one minute.
+     * 
      * @return the autovacuumNaptime value.
      */
     public Integer getAutovacuumNaptime() {
@@ -416,9 +422,9 @@ public final class Postgres {
     }
 
     /**
-     * Set the autovacuumNaptime property: Specifies the minimum delay, in seconds, between autovacuum runs on any given
-     * database. The default is one minute.
-     *
+     * Set the autovacuumNaptime property: Specifies the minimum delay, in seconds, between autovacuum runs on any
+     * given database. The default is one minute.
+     * 
      * @param autovacuumNaptime the autovacuumNaptime value to set.
      * @return the Postgres object itself.
      */
@@ -430,7 +436,7 @@ public final class Postgres {
     /**
      * Get the autovacuumVacuumThreshold property: Specifies the minimum number of updated or deleted tuples needed to
      * trigger a VACUUM in any one table. The default is 50 tuples.
-     *
+     * 
      * @return the autovacuumVacuumThreshold value.
      */
     public Integer getAutovacuumVacuumThreshold() {
@@ -440,7 +446,7 @@ public final class Postgres {
     /**
      * Set the autovacuumVacuumThreshold property: Specifies the minimum number of updated or deleted tuples needed to
      * trigger a VACUUM in any one table. The default is 50 tuples.
-     *
+     * 
      * @param autovacuumVacuumThreshold the autovacuumVacuumThreshold value to set.
      * @return the Postgres object itself.
      */
@@ -450,9 +456,9 @@ public final class Postgres {
     }
 
     /**
-     * Get the autovacuumAnalyzeThreshold property: Specifies the minimum number of inserted, updated, or deleted tuples
-     * needed to trigger an ANALYZE in any one table. The default is 50 tuples.
-     *
+     * Get the autovacuumAnalyzeThreshold property: Specifies the minimum number of inserted, updated, or deleted
+     * tuples needed to trigger an ANALYZE in any one table. The default is 50 tuples.
+     * 
      * @return the autovacuumAnalyzeThreshold value.
      */
     public Integer getAutovacuumAnalyzeThreshold() {
@@ -460,9 +466,9 @@ public final class Postgres {
     }
 
     /**
-     * Set the autovacuumAnalyzeThreshold property: Specifies the minimum number of inserted, updated, or deleted tuples
-     * needed to trigger an ANALYZE in any one table. The default is 50 tuples.
-     *
+     * Set the autovacuumAnalyzeThreshold property: Specifies the minimum number of inserted, updated, or deleted
+     * tuples needed to trigger an ANALYZE in any one table. The default is 50 tuples.
+     * 
      * @param autovacuumAnalyzeThreshold the autovacuumAnalyzeThreshold value to set.
      * @return the Postgres object itself.
      */
@@ -473,8 +479,9 @@ public final class Postgres {
 
     /**
      * Get the autovacuumVacuumScaleFactor property: Specifies a fraction, in a decimal value, of the table size to add
-     * to autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The default is 0.2 (20% of table size).
-     *
+     * to autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The default is 0.2 (20% of table
+     * size).
+     * 
      * @return the autovacuumVacuumScaleFactor value.
      */
     public Float getAutovacuumVacuumScaleFactor() {
@@ -483,8 +490,9 @@ public final class Postgres {
 
     /**
      * Set the autovacuumVacuumScaleFactor property: Specifies a fraction, in a decimal value, of the table size to add
-     * to autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The default is 0.2 (20% of table size).
-     *
+     * to autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The default is 0.2 (20% of table
+     * size).
+     * 
      * @param autovacuumVacuumScaleFactor the autovacuumVacuumScaleFactor value to set.
      * @return the Postgres object itself.
      */
@@ -494,10 +502,10 @@ public final class Postgres {
     }
 
     /**
-     * Get the autovacuumAnalyzeScaleFactor property: Specifies a fraction, in a decimal value, of the table size to add
-     * to autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The default is 0.2 (20% of table
-     * size).
-     *
+     * Get the autovacuumAnalyzeScaleFactor property: Specifies a fraction, in a decimal value, of the table size to
+     * add to autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The default is 0.2 (20% of
+     * table size).
+     * 
      * @return the autovacuumAnalyzeScaleFactor value.
      */
     public Float getAutovacuumAnalyzeScaleFactor() {
@@ -505,10 +513,10 @@ public final class Postgres {
     }
 
     /**
-     * Set the autovacuumAnalyzeScaleFactor property: Specifies a fraction, in a decimal value, of the table size to add
-     * to autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The default is 0.2 (20% of table
-     * size).
-     *
+     * Set the autovacuumAnalyzeScaleFactor property: Specifies a fraction, in a decimal value, of the table size to
+     * add to autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The default is 0.2 (20% of
+     * table size).
+     * 
      * @param autovacuumAnalyzeScaleFactor the autovacuumAnalyzeScaleFactor value to set.
      * @return the Postgres object itself.
      */
@@ -518,9 +526,9 @@ public final class Postgres {
     }
 
     /**
-     * Get the autovacuumVacuumCostDelay property: Specifies the cost delay value, in milliseconds, that will be used in
-     * automatic VACUUM operations. If -1, uses the regular vacuum_cost_delay value, which is 20 milliseconds.
-     *
+     * Get the autovacuumVacuumCostDelay property: Specifies the cost delay value, in milliseconds, that will be used
+     * in automatic VACUUM operations. If -1, uses the regular vacuum_cost_delay value, which is 20 milliseconds.
+     * 
      * @return the autovacuumVacuumCostDelay value.
      */
     public Integer getAutovacuumVacuumCostDelay() {
@@ -528,9 +536,9 @@ public final class Postgres {
     }
 
     /**
-     * Set the autovacuumVacuumCostDelay property: Specifies the cost delay value, in milliseconds, that will be used in
-     * automatic VACUUM operations. If -1, uses the regular vacuum_cost_delay value, which is 20 milliseconds.
-     *
+     * Set the autovacuumVacuumCostDelay property: Specifies the cost delay value, in milliseconds, that will be used
+     * in automatic VACUUM operations. If -1, uses the regular vacuum_cost_delay value, which is 20 milliseconds.
+     * 
      * @param autovacuumVacuumCostDelay the autovacuumVacuumCostDelay value to set.
      * @return the Postgres object itself.
      */
@@ -542,7 +550,7 @@ public final class Postgres {
     /**
      * Get the autovacuumVacuumCostLimit property: Specifies the cost limit value that will be used in automatic VACUUM
      * operations. If -1 is specified (which is the default), the regular vacuum_cost_limit value will be used.
-     *
+     * 
      * @return the autovacuumVacuumCostLimit value.
      */
     public Integer getAutovacuumVacuumCostLimit() {
@@ -552,7 +560,7 @@ public final class Postgres {
     /**
      * Set the autovacuumVacuumCostLimit property: Specifies the cost limit value that will be used in automatic VACUUM
      * operations. If -1 is specified (which is the default), the regular vacuum_cost_limit value will be used.
-     *
+     * 
      * @param autovacuumVacuumCostLimit the autovacuumVacuumCostLimit value to set.
      * @return the Postgres object itself.
      */
@@ -564,7 +572,7 @@ public final class Postgres {
     /**
      * Get the backupHour property: The hour of day (in UTC) when backup for the service starts. New backup only starts
      * if previous backup has already completed.
-     *
+     * 
      * @return the backupHour value.
      */
     public Integer getBackupHour() {
@@ -574,7 +582,7 @@ public final class Postgres {
     /**
      * Set the backupHour property: The hour of day (in UTC) when backup for the service starts. New backup only starts
      * if previous backup has already completed.
-     *
+     * 
      * @param backupHour the backupHour value to set.
      * @return the Postgres object itself.
      */
@@ -586,7 +594,7 @@ public final class Postgres {
     /**
      * Get the backupMinute property: The minute of the backup hour when backup for the service starts. New backup is
      * only started if previous backup has already completed.
-     *
+     * 
      * @return the backupMinute value.
      */
     public Integer getBackupMinute() {
@@ -596,7 +604,7 @@ public final class Postgres {
     /**
      * Set the backupMinute property: The minute of the backup hour when backup for the service starts. New backup is
      * only started if previous backup has already completed.
-     *
+     * 
      * @param backupMinute the backupMinute value to set.
      * @return the Postgres object itself.
      */
@@ -608,7 +616,7 @@ public final class Postgres {
     /**
      * Get the bgwriterDelay property: Specifies the delay, in milliseconds, between activity rounds for the background
      * writer. Default is 200 ms.
-     *
+     * 
      * @return the bgwriterDelay value.
      */
     public Integer getBgwriterDelay() {
@@ -618,7 +626,7 @@ public final class Postgres {
     /**
      * Set the bgwriterDelay property: Specifies the delay, in milliseconds, between activity rounds for the background
      * writer. Default is 200 ms.
-     *
+     * 
      * @param bgwriterDelay the bgwriterDelay value to set.
      * @return the Postgres object itself.
      */
@@ -629,9 +637,9 @@ public final class Postgres {
 
     /**
      * Get the bgwriterFlushAfter property: The amount of kilobytes that need to be written by the background writer
-     * before attempting to force the OS to issue these writes to underlying storage. Specified in kilobytes, default is
-     * 512. Setting of 0 disables forced writeback.
-     *
+     * before attempting to force the OS to issue these writes to underlying storage. Specified in kilobytes, default
+     * is 512.  Setting of 0 disables forced writeback.
+     * 
      * @return the bgwriterFlushAfter value.
      */
     public Integer getBgwriterFlushAfter() {
@@ -640,9 +648,9 @@ public final class Postgres {
 
     /**
      * Set the bgwriterFlushAfter property: The amount of kilobytes that need to be written by the background writer
-     * before attempting to force the OS to issue these writes to underlying storage. Specified in kilobytes, default is
-     * 512. Setting of 0 disables forced writeback.
-     *
+     * before attempting to force the OS to issue these writes to underlying storage. Specified in kilobytes, default
+     * is 512.  Setting of 0 disables forced writeback.
+     * 
      * @param bgwriterFlushAfter the bgwriterFlushAfter value to set.
      * @return the Postgres object itself.
      */
@@ -652,9 +660,9 @@ public final class Postgres {
     }
 
     /**
-     * Get the bgwriterLruMaxpages property: The maximum number of buffers that the background writer can write. Setting
-     * this to zero disables background writing. Default is 100.
-     *
+     * Get the bgwriterLruMaxpages property: The maximum number of buffers that the background writer can write.
+     * Setting this to zero disables background writing. Default is 100.
+     * 
      * @return the bgwriterLruMaxpages value.
      */
     public Integer getBgwriterLruMaxpages() {
@@ -662,9 +670,9 @@ public final class Postgres {
     }
 
     /**
-     * Set the bgwriterLruMaxpages property: The maximum number of buffers that the background writer can write. Setting
-     * this to zero disables background writing. Default is 100.
-     *
+     * Set the bgwriterLruMaxpages property: The maximum number of buffers that the background writer can write.
+     * Setting this to zero disables background writing. Default is 100.
+     * 
      * @param bgwriterLruMaxpages the bgwriterLruMaxpages value to set.
      * @return the Postgres object itself.
      */
@@ -676,10 +684,10 @@ public final class Postgres {
     /**
      * Get the bgwriterLruMultiplier property: The average recent need for new buffers is multiplied by
      * bgwriter_lru_multiplier to arrive at an estimate of the number that will be needed during the next round, (up to
-     * bgwriter_lru_maxpages). 1.0 represents a “just in time” policy of writing exactly the number of buffers predicted
-     * to be needed. Larger values provide some cushion against spikes in demand, while smaller values intentionally
-     * leave writes to be done by server processes. The default is 2.0.
-     *
+     * bgwriter_lru_maxpages). 1.0 represents a “just in time” policy of writing exactly the number of buffers
+     * predicted to be needed. Larger values provide some cushion against spikes in demand, while smaller values
+     * intentionally leave writes to be done by server processes. The default is 2.0.
+     * 
      * @return the bgwriterLruMultiplier value.
      */
     public Float getBgwriterLruMultiplier() {
@@ -689,10 +697,10 @@ public final class Postgres {
     /**
      * Set the bgwriterLruMultiplier property: The average recent need for new buffers is multiplied by
      * bgwriter_lru_multiplier to arrive at an estimate of the number that will be needed during the next round, (up to
-     * bgwriter_lru_maxpages). 1.0 represents a “just in time” policy of writing exactly the number of buffers predicted
-     * to be needed. Larger values provide some cushion against spikes in demand, while smaller values intentionally
-     * leave writes to be done by server processes. The default is 2.0.
-     *
+     * bgwriter_lru_maxpages). 1.0 represents a “just in time” policy of writing exactly the number of buffers
+     * predicted to be needed. Larger values provide some cushion against spikes in demand, while smaller values
+     * intentionally leave writes to be done by server processes. The default is 2.0.
+     * 
      * @param bgwriterLruMultiplier the bgwriterLruMultiplier value to set.
      * @return the Postgres object itself.
      */
@@ -704,7 +712,7 @@ public final class Postgres {
     /**
      * Get the deadlockTimeout property: The amount of time, in milliseconds, to wait on a lock before checking to see
      * if there is a deadlock condition.
-     *
+     * 
      * @return the deadlockTimeout value.
      */
     public Integer getDeadlockTimeout() {
@@ -714,7 +722,7 @@ public final class Postgres {
     /**
      * Set the deadlockTimeout property: The amount of time, in milliseconds, to wait on a lock before checking to see
      * if there is a deadlock condition.
-     *
+     * 
      * @param deadlockTimeout the deadlockTimeout value to set.
      * @return the Postgres object itself.
      */
@@ -726,7 +734,7 @@ public final class Postgres {
     /**
      * Get the defaultToastCompression property: Specifies the default TOAST compression method for values of
      * compressible columns (the default is lz4).
-     *
+     * 
      * @return the defaultToastCompression value.
      */
     public PostgresDefaultToastCompression getDefaultToastCompression() {
@@ -736,7 +744,7 @@ public final class Postgres {
     /**
      * Set the defaultToastCompression property: Specifies the default TOAST compression method for values of
      * compressible columns (the default is lz4).
-     *
+     * 
      * @param defaultToastCompression the defaultToastCompression value to set.
      * @return the Postgres object itself.
      */
@@ -748,7 +756,7 @@ public final class Postgres {
     /**
      * Get the idleInTransactionSessionTimeout property: Time out sessions with open transactions after this number of
      * milliseconds.
-     *
+     * 
      * @return the idleInTransactionSessionTimeout value.
      */
     public Integer getIdleInTransactionSessionTimeout() {
@@ -758,7 +766,7 @@ public final class Postgres {
     /**
      * Set the idleInTransactionSessionTimeout property: Time out sessions with open transactions after this number of
      * milliseconds.
-     *
+     * 
      * @param idleInTransactionSessionTimeout the idleInTransactionSessionTimeout value to set.
      * @return the Postgres object itself.
      */
@@ -769,7 +777,7 @@ public final class Postgres {
 
     /**
      * Get the jit property: Activates, in a boolean, the system-wide use of Just-in-Time Compilation (JIT).
-     *
+     * 
      * @return the jit value.
      */
     public Boolean isJit() {
@@ -778,7 +786,7 @@ public final class Postgres {
 
     /**
      * Set the jit property: Activates, in a boolean, the system-wide use of Just-in-Time Compilation (JIT).
-     *
+     * 
      * @param jit the jit value to set.
      * @return the Postgres object itself.
      */
@@ -791,7 +799,7 @@ public final class Postgres {
      * Get the logAutovacuumMinDuration property: Causes each action executed by autovacuum to be logged if it ran for
      * at least the specified number of milliseconds. Setting this to zero logs all autovacuum actions. Minus-one (the
      * default) disables logging autovacuum actions.
-     *
+     * 
      * @return the logAutovacuumMinDuration value.
      */
     public Integer getLogAutovacuumMinDuration() {
@@ -802,7 +810,7 @@ public final class Postgres {
      * Set the logAutovacuumMinDuration property: Causes each action executed by autovacuum to be logged if it ran for
      * at least the specified number of milliseconds. Setting this to zero logs all autovacuum actions. Minus-one (the
      * default) disables logging autovacuum actions.
-     *
+     * 
      * @param logAutovacuumMinDuration the logAutovacuumMinDuration value to set.
      * @return the Postgres object itself.
      */
@@ -812,9 +820,9 @@ public final class Postgres {
     }
 
     /**
-     * Get the logErrorVerbosity property: Controls the amount of detail written in the server log for each message that
-     * is logged.
-     *
+     * Get the logErrorVerbosity property: Controls the amount of detail written in the server log for each message
+     * that is logged.
+     * 
      * @return the logErrorVerbosity value.
      */
     public PostgresLogErrorVerbosity getLogErrorVerbosity() {
@@ -822,9 +830,9 @@ public final class Postgres {
     }
 
     /**
-     * Set the logErrorVerbosity property: Controls the amount of detail written in the server log for each message that
-     * is logged.
-     *
+     * Set the logErrorVerbosity property: Controls the amount of detail written in the server log for each message
+     * that is logged.
+     * 
      * @param logErrorVerbosity the logErrorVerbosity value to set.
      * @return the Postgres object itself.
      */
@@ -834,9 +842,9 @@ public final class Postgres {
     }
 
     /**
-     * Get the logLinePrefix property: Selects one of the available log-formats. These can support popular log analyzers
-     * like pgbadger, pganalyze, etc.
-     *
+     * Get the logLinePrefix property: Selects one of the available log-formats. These can support popular log
+     * analyzers like pgbadger, pganalyze, etc.
+     * 
      * @return the logLinePrefix value.
      */
     public PostfixLogLinePrefix getLogLinePrefix() {
@@ -844,9 +852,9 @@ public final class Postgres {
     }
 
     /**
-     * Set the logLinePrefix property: Selects one of the available log-formats. These can support popular log analyzers
-     * like pgbadger, pganalyze, etc.
-     *
+     * Set the logLinePrefix property: Selects one of the available log-formats. These can support popular log
+     * analyzers like pgbadger, pganalyze, etc.
+     * 
      * @param logLinePrefix the logLinePrefix value to set.
      * @return the Postgres object itself.
      */
@@ -858,7 +866,7 @@ public final class Postgres {
     /**
      * Get the logMinDurationStatement property: Log statements that take more than this number of milliseconds to run.
      * If -1, disables.
-     *
+     * 
      * @return the logMinDurationStatement value.
      */
     public Integer getLogMinDurationStatement() {
@@ -868,7 +876,7 @@ public final class Postgres {
     /**
      * Set the logMinDurationStatement property: Log statements that take more than this number of milliseconds to run.
      * If -1, disables.
-     *
+     * 
      * @param logMinDurationStatement the logMinDurationStatement value to set.
      * @return the Postgres object itself.
      */
@@ -879,7 +887,7 @@ public final class Postgres {
 
     /**
      * Get the maxFilesPerProcess property: PostgreSQL maximum number of files that can be open per process.
-     *
+     * 
      * @return the maxFilesPerProcess value.
      */
     public Integer getMaxFilesPerProcess() {
@@ -888,7 +896,7 @@ public final class Postgres {
 
     /**
      * Set the maxFilesPerProcess property: PostgreSQL maximum number of files that can be open per process.
-     *
+     * 
      * @param maxFilesPerProcess the maxFilesPerProcess value to set.
      * @return the Postgres object itself.
      */
@@ -899,7 +907,7 @@ public final class Postgres {
 
     /**
      * Get the maxPreparedTransactions property: PostgreSQL maximum prepared transactions.
-     *
+     * 
      * @return the maxPreparedTransactions value.
      */
     public Integer getMaxPreparedTransactions() {
@@ -908,7 +916,7 @@ public final class Postgres {
 
     /**
      * Set the maxPreparedTransactions property: PostgreSQL maximum prepared transactions.
-     *
+     * 
      * @param maxPreparedTransactions the maxPreparedTransactions value to set.
      * @return the Postgres object itself.
      */
@@ -919,7 +927,7 @@ public final class Postgres {
 
     /**
      * Get the maxPredLocksPerTransaction property: PostgreSQL maximum predicate locks per transaction.
-     *
+     * 
      * @return the maxPredLocksPerTransaction value.
      */
     public Integer getMaxPredLocksPerTransaction() {
@@ -928,7 +936,7 @@ public final class Postgres {
 
     /**
      * Set the maxPredLocksPerTransaction property: PostgreSQL maximum predicate locks per transaction.
-     *
+     * 
      * @param maxPredLocksPerTransaction the maxPredLocksPerTransaction value to set.
      * @return the Postgres object itself.
      */
@@ -939,7 +947,7 @@ public final class Postgres {
 
     /**
      * Get the maxLocksPerTransaction property: PostgreSQL maximum locks per transaction.
-     *
+     * 
      * @return the maxLocksPerTransaction value.
      */
     public Integer getMaxLocksPerTransaction() {
@@ -948,7 +956,7 @@ public final class Postgres {
 
     /**
      * Set the maxLocksPerTransaction property: PostgreSQL maximum locks per transaction.
-     *
+     * 
      * @param maxLocksPerTransaction the maxLocksPerTransaction value to set.
      * @return the Postgres object itself.
      */
@@ -959,7 +967,7 @@ public final class Postgres {
 
     /**
      * Get the maxStackDepth property: Maximum depth of the stack in bytes.
-     *
+     * 
      * @return the maxStackDepth value.
      */
     public Integer getMaxStackDepth() {
@@ -968,7 +976,7 @@ public final class Postgres {
 
     /**
      * Set the maxStackDepth property: Maximum depth of the stack in bytes.
-     *
+     * 
      * @param maxStackDepth the maxStackDepth value to set.
      * @return the Postgres object itself.
      */
@@ -979,7 +987,7 @@ public final class Postgres {
 
     /**
      * Get the maxStandbyArchiveDelay property: Max standby archive delay in milliseconds.
-     *
+     * 
      * @return the maxStandbyArchiveDelay value.
      */
     public Integer getMaxStandbyArchiveDelay() {
@@ -988,7 +996,7 @@ public final class Postgres {
 
     /**
      * Set the maxStandbyArchiveDelay property: Max standby archive delay in milliseconds.
-     *
+     * 
      * @param maxStandbyArchiveDelay the maxStandbyArchiveDelay value to set.
      * @return the Postgres object itself.
      */
@@ -999,7 +1007,7 @@ public final class Postgres {
 
     /**
      * Get the maxStandbyStreamingDelay property: Max standby streaming delay in milliseconds.
-     *
+     * 
      * @return the maxStandbyStreamingDelay value.
      */
     public Integer getMaxStandbyStreamingDelay() {
@@ -1008,7 +1016,7 @@ public final class Postgres {
 
     /**
      * Set the maxStandbyStreamingDelay property: Max standby streaming delay in milliseconds.
-     *
+     * 
      * @param maxStandbyStreamingDelay the maxStandbyStreamingDelay value to set.
      * @return the Postgres object itself.
      */
@@ -1019,7 +1027,7 @@ public final class Postgres {
 
     /**
      * Get the maxReplicationSlots property: PostgreSQL maximum replication slots.
-     *
+     * 
      * @return the maxReplicationSlots value.
      */
     public Integer getMaxReplicationSlots() {
@@ -1028,7 +1036,7 @@ public final class Postgres {
 
     /**
      * Set the maxReplicationSlots property: PostgreSQL maximum replication slots.
-     *
+     * 
      * @param maxReplicationSlots the maxReplicationSlots value to set.
      * @return the Postgres object itself.
      */
@@ -1040,7 +1048,7 @@ public final class Postgres {
     /**
      * Get the maxLogicalReplicationWorkers property: PostgreSQL maximum logical replication workers (taken from the
      * pool of max_parallel_workers).
-     *
+     * 
      * @return the maxLogicalReplicationWorkers value.
      */
     public Integer getMaxLogicalReplicationWorkers() {
@@ -1050,7 +1058,7 @@ public final class Postgres {
     /**
      * Set the maxLogicalReplicationWorkers property: PostgreSQL maximum logical replication workers (taken from the
      * pool of max_parallel_workers).
-     *
+     * 
      * @param maxLogicalReplicationWorkers the maxLogicalReplicationWorkers value to set.
      * @return the Postgres object itself.
      */
@@ -1062,7 +1070,7 @@ public final class Postgres {
     /**
      * Get the maxParallelWorkers property: Sets the maximum number of workers that the system can support for parallel
      * queries.
-     *
+     * 
      * @return the maxParallelWorkers value.
      */
     public Integer getMaxParallelWorkers() {
@@ -1072,7 +1080,7 @@ public final class Postgres {
     /**
      * Set the maxParallelWorkers property: Sets the maximum number of workers that the system can support for parallel
      * queries.
-     *
+     * 
      * @param maxParallelWorkers the maxParallelWorkers value to set.
      * @return the Postgres object itself.
      */
@@ -1084,7 +1092,7 @@ public final class Postgres {
     /**
      * Get the maxParallelWorkersPerGather property: Sets the maximum number of workers that can be started by a single
      * Gather or Gather Merge node.
-     *
+     * 
      * @return the maxParallelWorkersPerGather value.
      */
     public Integer getMaxParallelWorkersPerGather() {
@@ -1094,7 +1102,7 @@ public final class Postgres {
     /**
      * Set the maxParallelWorkersPerGather property: Sets the maximum number of workers that can be started by a single
      * Gather or Gather Merge node.
-     *
+     * 
      * @param maxParallelWorkersPerGather the maxParallelWorkersPerGather value to set.
      * @return the Postgres object itself.
      */
@@ -1104,8 +1112,9 @@ public final class Postgres {
     }
 
     /**
-     * Get the maxWorkerProcesses property: Sets the maximum number of background processes that the system can support.
-     *
+     * Get the maxWorkerProcesses property: Sets the maximum number of background processes that the system can
+     * support.
+     * 
      * @return the maxWorkerProcesses value.
      */
     public Integer getMaxWorkerProcesses() {
@@ -1113,8 +1122,9 @@ public final class Postgres {
     }
 
     /**
-     * Set the maxWorkerProcesses property: Sets the maximum number of background processes that the system can support.
-     *
+     * Set the maxWorkerProcesses property: Sets the maximum number of background processes that the system can
+     * support.
+     * 
      * @param maxWorkerProcesses the maxWorkerProcesses value to set.
      * @return the Postgres object itself.
      */
@@ -1127,7 +1137,7 @@ public final class Postgres {
      * Get the pgPartmanBgwRole property: Controls which role to use for pg_partman's scheduled background tasks. Must
      * consist of alpha-numeric characters, dots, underscores, or dashes. May not start with dash or dot. Maximum of 64
      * characters.
-     *
+     * 
      * @return the pgPartmanBgwRole value.
      */
     public String getPgPartmanBgwRole() {
@@ -1138,7 +1148,7 @@ public final class Postgres {
      * Set the pgPartmanBgwRole property: Controls which role to use for pg_partman's scheduled background tasks. Must
      * consist of alpha-numeric characters, dots, underscores, or dashes. May not start with dash or dot. Maximum of 64
      * characters.
-     *
+     * 
      * @param pgPartmanBgwRole the pgPartmanBgwRole value to set.
      * @return the Postgres object itself.
      */
@@ -1149,7 +1159,7 @@ public final class Postgres {
 
     /**
      * Get the pgPartmanBgwInterval property: Sets the time interval to run pg_partman's scheduled tasks.
-     *
+     * 
      * @return the pgPartmanBgwInterval value.
      */
     public Integer getPgPartmanBgwInterval() {
@@ -1158,7 +1168,7 @@ public final class Postgres {
 
     /**
      * Set the pgPartmanBgwInterval property: Sets the time interval to run pg_partman's scheduled tasks.
-     *
+     * 
      * @param pgPartmanBgwInterval the pgPartmanBgwInterval value to set.
      * @return the Postgres object itself.
      */
@@ -1171,7 +1181,7 @@ public final class Postgres {
      * Get the pgStatStatementsTrack property: Controls which statements are counted. Specify 'top' to track top-level
      * statements (those issued directly by clients), 'all' to also track nested statements (such as statements invoked
      * within functions), or 'none' to disable statement statistics collection. The default value is top.
-     *
+     * 
      * @return the pgStatStatementsTrack value.
      */
     public PostgresPgStatStatementsTrack getPgStatStatementsTrack() {
@@ -1182,7 +1192,7 @@ public final class Postgres {
      * Set the pgStatStatementsTrack property: Controls which statements are counted. Specify 'top' to track top-level
      * statements (those issued directly by clients), 'all' to also track nested statements (such as statements invoked
      * within functions), or 'none' to disable statement statistics collection. The default value is top.
-     *
+     * 
      * @param pgStatStatementsTrack the pgStatStatementsTrack value to set.
      * @return the Postgres object itself.
      */
@@ -1193,7 +1203,7 @@ public final class Postgres {
 
     /**
      * Get the tempFileLimit property: PostgreSQL temporary file limit in KiB. If -1, sets to unlimited.
-     *
+     * 
      * @return the tempFileLimit value.
      */
     public Integer getTempFileLimit() {
@@ -1202,7 +1212,7 @@ public final class Postgres {
 
     /**
      * Set the tempFileLimit property: PostgreSQL temporary file limit in KiB. If -1, sets to unlimited.
-     *
+     * 
      * @param tempFileLimit the tempFileLimit value to set.
      * @return the Postgres object itself.
      */
@@ -1213,7 +1223,7 @@ public final class Postgres {
 
     /**
      * Get the timezone property: PostgreSQL service timezone.
-     *
+     * 
      * @return the timezone value.
      */
     public String getTimezone() {
@@ -1222,7 +1232,7 @@ public final class Postgres {
 
     /**
      * Set the timezone property: PostgreSQL service timezone.
-     *
+     * 
      * @param timezone the timezone value to set.
      * @return the Postgres object itself.
      */
@@ -1234,7 +1244,7 @@ public final class Postgres {
     /**
      * Get the trackActivityQuerySize property: Specifies the number of bytes reserved to track the currently executing
      * command for each active session.
-     *
+     * 
      * @return the trackActivityQuerySize value.
      */
     public Integer getTrackActivityQuerySize() {
@@ -1244,7 +1254,7 @@ public final class Postgres {
     /**
      * Set the trackActivityQuerySize property: Specifies the number of bytes reserved to track the currently executing
      * command for each active session.
-     *
+     * 
      * @param trackActivityQuerySize the trackActivityQuerySize value to set.
      * @return the Postgres object itself.
      */
@@ -1255,7 +1265,7 @@ public final class Postgres {
 
     /**
      * Get the trackCommitTimestamp property: Record commit time of transactions.
-     *
+     * 
      * @return the trackCommitTimestamp value.
      */
     public PostgresTrackCommitTimestamp getTrackCommitTimestamp() {
@@ -1264,7 +1274,7 @@ public final class Postgres {
 
     /**
      * Set the trackCommitTimestamp property: Record commit time of transactions.
-     *
+     * 
      * @param trackCommitTimestamp the trackCommitTimestamp value to set.
      * @return the Postgres object itself.
      */
@@ -1275,7 +1285,7 @@ public final class Postgres {
 
     /**
      * Get the trackFunctions property: Enables tracking of function call counts and time used.
-     *
+     * 
      * @return the trackFunctions value.
      */
     public PostgresTrackFunctions getTrackFunctions() {
@@ -1284,7 +1294,7 @@ public final class Postgres {
 
     /**
      * Set the trackFunctions property: Enables tracking of function call counts and time used.
-     *
+     * 
      * @param trackFunctions the trackFunctions value to set.
      * @return the Postgres object itself.
      */
@@ -1297,7 +1307,7 @@ public final class Postgres {
      * Get the trackIoTiming property: Enables timing of database I/O calls. This parameter is off by default, because
      * it will repeatedly query the operating system for the current time, which may cause significant overhead on some
      * platforms.
-     *
+     * 
      * @return the trackIoTiming value.
      */
     public PostgresTrackIoTiming getTrackIoTiming() {
@@ -1308,7 +1318,7 @@ public final class Postgres {
      * Set the trackIoTiming property: Enables timing of database I/O calls. This parameter is off by default, because
      * it will repeatedly query the operating system for the current time, which may cause significant overhead on some
      * platforms.
-     *
+     * 
      * @param trackIoTiming the trackIoTiming value to set.
      * @return the Postgres object itself.
      */
@@ -1319,7 +1329,7 @@ public final class Postgres {
 
     /**
      * Get the maxWalSenders property: PostgreSQL maximum WAL senders.
-     *
+     * 
      * @return the maxWalSenders value.
      */
     public Integer getMaxWalSenders() {
@@ -1328,7 +1338,7 @@ public final class Postgres {
 
     /**
      * Set the maxWalSenders property: PostgreSQL maximum WAL senders.
-     *
+     * 
      * @param maxWalSenders the maxWalSenders value to set.
      * @return the Postgres object itself.
      */
@@ -1341,7 +1351,7 @@ public final class Postgres {
      * Get the walSenderTimeout property: Terminate replication connections that are inactive for longer than this
      * amount of time, in milliseconds. Setting this value to zero disables the timeout. Must be either 0 or between
      * 5000 and 10800000.
-     *
+     * 
      * @return the walSenderTimeout value.
      */
     public Integer getWalSenderTimeout() {
@@ -1352,7 +1362,7 @@ public final class Postgres {
      * Set the walSenderTimeout property: Terminate replication connections that are inactive for longer than this
      * amount of time, in milliseconds. Setting this value to zero disables the timeout. Must be either 0 or between
      * 5000 and 10800000.
-     *
+     * 
      * @param walSenderTimeout the walSenderTimeout value to set.
      * @return the Postgres object itself.
      */
@@ -1364,7 +1374,7 @@ public final class Postgres {
     /**
      * Get the walWriterDelay property: WAL flush interval in milliseconds. Note that setting this value to lower than
      * the default 200ms may negatively impact performance.
-     *
+     * 
      * @return the walWriterDelay value.
      */
     public Integer getWalWriterDelay() {
@@ -1374,7 +1384,7 @@ public final class Postgres {
     /**
      * Set the walWriterDelay property: WAL flush interval in milliseconds. Note that setting this value to lower than
      * the default 200ms may negatively impact performance.
-     *
+     * 
      * @param walWriterDelay the walWriterDelay value to set.
      * @return the Postgres object itself.
      */
@@ -1384,10 +1394,10 @@ public final class Postgres {
     }
 
     /**
-     * Get the sharedBuffersPercentage property: Percentage of total RAM that the database server uses for shared memory
-     * buffers. Valid range is 20-60 (float), which corresponds to 20% - 60%. This setting adjusts the shared_buffers
-     * configuration value.
-     *
+     * Get the sharedBuffersPercentage property: Percentage of total RAM that the database server uses for shared
+     * memory buffers.  Valid range is 20-60 (float), which corresponds to 20% - 60%.  This setting adjusts the
+     * shared_buffers configuration value.
+     * 
      * @return the sharedBuffersPercentage value.
      */
     public Float getSharedBuffersPercentage() {
@@ -1395,10 +1405,10 @@ public final class Postgres {
     }
 
     /**
-     * Set the sharedBuffersPercentage property: Percentage of total RAM that the database server uses for shared memory
-     * buffers. Valid range is 20-60 (float), which corresponds to 20% - 60%. This setting adjusts the shared_buffers
-     * configuration value.
-     *
+     * Set the sharedBuffersPercentage property: Percentage of total RAM that the database server uses for shared
+     * memory buffers.  Valid range is 20-60 (float), which corresponds to 20% - 60%.  This setting adjusts the
+     * shared_buffers configuration value.
+     * 
      * @param sharedBuffersPercentage the sharedBuffersPercentage value to set.
      * @return the Postgres object itself.
      */
@@ -1409,7 +1419,7 @@ public final class Postgres {
 
     /**
      * Get the pgbouncer property: PGBouncer connection pooling settings.
-     *
+     * 
      * @return the pgbouncer value.
      */
     public Pgbouncer getPgbouncer() {
@@ -1418,7 +1428,7 @@ public final class Postgres {
 
     /**
      * Set the pgbouncer property: PGBouncer connection pooling settings.
-     *
+     * 
      * @param pgbouncer the pgbouncer value to set.
      * @return the Postgres object itself.
      */
@@ -1430,7 +1440,7 @@ public final class Postgres {
     /**
      * Get the workMem property: The maximum amount of memory, in MB, used by a query operation (such as a sort or hash
      * table) before writing to temporary disk files. Default is 1MB + 0.075% of total RAM (up to 32MB).
-     *
+     * 
      * @return the workMem value.
      */
     public Integer getWorkMem() {
@@ -1440,7 +1450,7 @@ public final class Postgres {
     /**
      * Set the workMem property: The maximum amount of memory, in MB, used by a query operation (such as a sort or hash
      * table) before writing to temporary disk files. Default is 1MB + 0.075% of total RAM (up to 32MB).
-     *
+     * 
      * @param workMem the workMem value to set.
      * @return the Postgres object itself.
      */
@@ -1451,7 +1461,7 @@ public final class Postgres {
 
     /**
      * Get the timescaledb property: TimescaleDB extension configuration values.
-     *
+     * 
      * @return the timescaledb value.
      */
     public Timescaledb getTimescaledb() {
@@ -1460,7 +1470,7 @@ public final class Postgres {
 
     /**
      * Set the timescaledb property: TimescaleDB extension configuration values.
-     *
+     * 
      * @param timescaledb the timescaledb value to set.
      * @return the Postgres object itself.
      */
@@ -1472,7 +1482,7 @@ public final class Postgres {
     /**
      * Get the synchronousReplication property: Synchronous replication type. Note that the service plan also needs to
      * support synchronous replication.
-     *
+     * 
      * @return the synchronousReplication value.
      */
     public PostgresSynchronousReplication getSynchronousReplication() {
@@ -1482,7 +1492,7 @@ public final class Postgres {
     /**
      * Set the synchronousReplication property: Synchronous replication type. Note that the service plan also needs to
      * support synchronous replication.
-     *
+     * 
      * @param synchronousReplication the synchronousReplication value to set.
      * @return the Postgres object itself.
      */
@@ -1495,7 +1505,7 @@ public final class Postgres {
      * Get the statMonitorEnable property: Enable the pg_stat_monitor extension. &lt;b&gt;Enabling this extension will
      * cause the cluster to be restarted.&lt;/b&gt; When this extension is enabled, pg_stat_statements results for
      * utility commands are unreliable.
-     *
+     * 
      * @return the statMonitorEnable value.
      */
     public Boolean isStatMonitorEnable() {
@@ -1506,7 +1516,7 @@ public final class Postgres {
      * Set the statMonitorEnable property: Enable the pg_stat_monitor extension. &lt;b&gt;Enabling this extension will
      * cause the cluster to be restarted.&lt;/b&gt; When this extension is enabled, pg_stat_statements results for
      * utility commands are unreliable.
-     *
+     * 
      * @param statMonitorEnable the statMonitorEnable value to set.
      * @return the Postgres object itself.
      */

@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The PathsEyeh4JV2AccountKeysSshKeyIdentifierPutRequestbodyContentApplicationJsonSchema model. */
+/**
+ * The PathsEyeh4JV2AccountKeysSshKeyIdentifierPutRequestbodyContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class PathsEyeh4JV2AccountKeysSshKeyIdentifierPutRequestbodyContentApplicationJsonSchema {
     /*
@@ -13,9 +18,9 @@ public final class PathsEyeh4JV2AccountKeysSshKeyIdentifierPutRequestbodyContent
     private String name;
 
     /**
-     * Get the name property: A human-readable display name for this key, used to easily identify the SSH keys when they
-     * are displayed.
-     *
+     * Get the name property: A human-readable display name for this key, used to easily identify the SSH keys when
+     * they are displayed.
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -23,9 +28,9 @@ public final class PathsEyeh4JV2AccountKeysSshKeyIdentifierPutRequestbodyContent
     }
 
     /**
-     * Set the name property: A human-readable display name for this key, used to easily identify the SSH keys when they
-     * are displayed.
-     *
+     * Set the name property: A human-readable display name for this key, used to easily identify the SSH keys when
+     * they are displayed.
+     * 
      * @param name the name value to set.
      * @return the PathsEyeh4JV2AccountKeysSshKeyIdentifierPutRequestbodyContentApplicationJsonSchema object itself.
      */

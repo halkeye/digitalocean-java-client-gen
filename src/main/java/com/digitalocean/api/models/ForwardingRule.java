@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** An object specifying a forwarding rule for a load balancer. */
+/**
+ * An object specifying a forwarding rule for a load balancer.
+ */
 @Fluent
 public final class ForwardingRule {
     /*
@@ -11,7 +17,7 @@ public final class ForwardingRule {
      * `udp`. If you set the  `entry_protocol` to `upd`, the `target_protocol` must be set to `udp`.  When using UDP,
      * the load balancer requires that you set up a health  check with a port that uses TCP, HTTP, or HTTPS to work
      * properly.
-     *
+     * 
      */
     @JsonProperty(value = "entry_protocol", required = true)
     private ForwardingRuleEntryProtocol entryProtocol;
@@ -27,7 +33,7 @@ public final class ForwardingRule {
      * `https`, `http2`, `tcp`, or `udp`. If you set the `target_protocol` to `upd`, the `entry_protocol` must be set
      * to  `udp`. When using UDP, the load balancer requires that you set up a health  check with a port that uses TCP,
      * HTTP, or HTTPS to work properly.
-     *
+     * 
      */
     @JsonProperty(value = "target_protocol", required = true)
     private ForwardingRuleTargetProtocol targetProtocol;
@@ -52,10 +58,10 @@ public final class ForwardingRule {
 
     /**
      * Get the entryProtocol property: The protocol used for traffic to the load balancer. The possible values are:
-     * `http`, `https`, `http2`, `tcp`, or `udp`. If you set the `entry_protocol` to `upd`, the `target_protocol` must
-     * be set to `udp`. When using UDP, the load balancer requires that you set up a health check with a port that uses
-     * TCP, HTTP, or HTTPS to work properly.
-     *
+     * `http`, `https`, `http2`, `tcp`, or `udp`. If you set the  `entry_protocol` to `upd`, the `target_protocol` must
+     * be set to `udp`.  When using UDP, the load balancer requires that you set up a health  check with a port that
+     * uses TCP, HTTP, or HTTPS to work properly.
+     * 
      * @return the entryProtocol value.
      */
     public ForwardingRuleEntryProtocol getEntryProtocol() {
@@ -64,10 +70,10 @@ public final class ForwardingRule {
 
     /**
      * Set the entryProtocol property: The protocol used for traffic to the load balancer. The possible values are:
-     * `http`, `https`, `http2`, `tcp`, or `udp`. If you set the `entry_protocol` to `upd`, the `target_protocol` must
-     * be set to `udp`. When using UDP, the load balancer requires that you set up a health check with a port that uses
-     * TCP, HTTP, or HTTPS to work properly.
-     *
+     * `http`, `https`, `http2`, `tcp`, or `udp`. If you set the  `entry_protocol` to `upd`, the `target_protocol` must
+     * be set to `udp`.  When using UDP, the load balancer requires that you set up a health  check with a port that
+     * uses TCP, HTTP, or HTTPS to work properly.
+     * 
      * @param entryProtocol the entryProtocol value to set.
      * @return the ForwardingRule object itself.
      */
@@ -78,7 +84,7 @@ public final class ForwardingRule {
 
     /**
      * Get the entryPort property: An integer representing the port on which the load balancer instance will listen.
-     *
+     * 
      * @return the entryPort value.
      */
     public int getEntryPort() {
@@ -87,7 +93,7 @@ public final class ForwardingRule {
 
     /**
      * Set the entryPort property: An integer representing the port on which the load balancer instance will listen.
-     *
+     * 
      * @param entryPort the entryPort value to set.
      * @return the ForwardingRule object itself.
      */
@@ -99,9 +105,9 @@ public final class ForwardingRule {
     /**
      * Get the targetProtocol property: The protocol used for traffic from the load balancer to the backend Droplets.
      * The possible values are: `http`, `https`, `http2`, `tcp`, or `udp`. If you set the `target_protocol` to `upd`,
-     * the `entry_protocol` must be set to `udp`. When using UDP, the load balancer requires that you set up a health
+     * the `entry_protocol` must be set to  `udp`. When using UDP, the load balancer requires that you set up a health 
      * check with a port that uses TCP, HTTP, or HTTPS to work properly.
-     *
+     * 
      * @return the targetProtocol value.
      */
     public ForwardingRuleTargetProtocol getTargetProtocol() {
@@ -111,9 +117,9 @@ public final class ForwardingRule {
     /**
      * Set the targetProtocol property: The protocol used for traffic from the load balancer to the backend Droplets.
      * The possible values are: `http`, `https`, `http2`, `tcp`, or `udp`. If you set the `target_protocol` to `upd`,
-     * the `entry_protocol` must be set to `udp`. When using UDP, the load balancer requires that you set up a health
+     * the `entry_protocol` must be set to  `udp`. When using UDP, the load balancer requires that you set up a health 
      * check with a port that uses TCP, HTTP, or HTTPS to work properly.
-     *
+     * 
      * @param targetProtocol the targetProtocol value to set.
      * @return the ForwardingRule object itself.
      */
@@ -125,7 +131,7 @@ public final class ForwardingRule {
     /**
      * Get the targetPort property: An integer representing the port on the backend Droplets to which the load balancer
      * will send traffic.
-     *
+     * 
      * @return the targetPort value.
      */
     public int getTargetPort() {
@@ -135,7 +141,7 @@ public final class ForwardingRule {
     /**
      * Set the targetPort property: An integer representing the port on the backend Droplets to which the load balancer
      * will send traffic.
-     *
+     * 
      * @param targetPort the targetPort value to set.
      * @return the ForwardingRule object itself.
      */
@@ -146,7 +152,7 @@ public final class ForwardingRule {
 
     /**
      * Get the certificateId property: The ID of the TLS certificate used for SSL termination if enabled.
-     *
+     * 
      * @return the certificateId value.
      */
     public String getCertificateId() {
@@ -155,7 +161,7 @@ public final class ForwardingRule {
 
     /**
      * Set the certificateId property: The ID of the TLS certificate used for SSL termination if enabled.
-     *
+     * 
      * @param certificateId the certificateId value to set.
      * @return the ForwardingRule object itself.
      */
@@ -167,7 +173,7 @@ public final class ForwardingRule {
     /**
      * Get the tlsPassthrough property: A boolean value indicating whether SSL encrypted traffic will be passed through
      * to the backend Droplets.
-     *
+     * 
      * @return the tlsPassthrough value.
      */
     public Boolean isTlsPassthrough() {
@@ -177,7 +183,7 @@ public final class ForwardingRule {
     /**
      * Set the tlsPassthrough property: A boolean value indicating whether SSL encrypted traffic will be passed through
      * to the backend Droplets.
-     *
+     * 
      * @param tlsPassthrough the tlsPassthrough value to set.
      * @return the ForwardingRule object itself.
      */

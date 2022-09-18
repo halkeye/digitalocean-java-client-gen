@@ -1,18 +1,18 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.SourceDatabase;
 import com.digitalocean.api.models.SourceDatabaseSource;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class SourceDatabaseTests {
     @Test
     public void testDeserialize() {
-        SourceDatabase model =
-                BinaryData.fromString(
-                                "{\"source\":{\"uri\":\"zmqilrixysfnim\",\"database\":\"y\",\"host\":\"wmhkruwaedrympml\",\"port\":476187325,\"user\":\"hzdue\",\"password\":\"hapfjiik\",\"ssl\":true},\"disable_ssl\":false}")
-                        .toObject(SourceDatabase.class);
+        SourceDatabase model = BinaryData.fromString("{\"source\":{\"uri\":\"zmqilrixysfnim\",\"database\":\"y\",\"host\":\"wmhkruwaedrympml\",\"port\":476187325,\"user\":\"hzdue\",\"password\":\"hapfjiik\",\"ssl\":true},\"disable_ssl\":false}").toObject(SourceDatabase.class);
         Assertions.assertEquals(false, model.isDisableSsl());
     }
 

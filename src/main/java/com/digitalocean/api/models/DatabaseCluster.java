@@ -1,12 +1,18 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The DatabaseCluster model. */
+/**
+ * The DatabaseCluster model.
+ */
 @Fluent
 public class DatabaseCluster {
     /*
@@ -123,7 +129,7 @@ public class DatabaseCluster {
 
     /**
      * Get the id property: A unique ID that can be used to identify and reference a database cluster.
-     *
+     * 
      * @return the id value.
      */
     public UUID getId() {
@@ -132,7 +138,7 @@ public class DatabaseCluster {
 
     /**
      * Get the name property: A unique, human-readable name referring to a database cluster.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -141,7 +147,7 @@ public class DatabaseCluster {
 
     /**
      * Set the name property: A unique, human-readable name referring to a database cluster.
-     *
+     * 
      * @param name the name value to set.
      * @return the DatabaseCluster object itself.
      */
@@ -153,7 +159,7 @@ public class DatabaseCluster {
     /**
      * Get the engine property: A slug representing the database engine used for the cluster. The possible values are:
      * "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Redis, and "mongodb" for MongoDB.
-     *
+     * 
      * @return the engine value.
      */
     public DatabaseClusterEngine getEngine() {
@@ -163,7 +169,7 @@ public class DatabaseCluster {
     /**
      * Set the engine property: A slug representing the database engine used for the cluster. The possible values are:
      * "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Redis, and "mongodb" for MongoDB.
-     *
+     * 
      * @param engine the engine value to set.
      * @return the DatabaseCluster object itself.
      */
@@ -174,7 +180,7 @@ public class DatabaseCluster {
 
     /**
      * Get the version property: A string representing the version of the database engine in use for the cluster.
-     *
+     * 
      * @return the version value.
      */
     public String getVersion() {
@@ -183,7 +189,7 @@ public class DatabaseCluster {
 
     /**
      * Set the version property: A string representing the version of the database engine in use for the cluster.
-     *
+     * 
      * @param version the version value to set.
      * @return the DatabaseCluster object itself.
      */
@@ -194,7 +200,7 @@ public class DatabaseCluster {
 
     /**
      * Get the numNodes property: The number of nodes in the database cluster.
-     *
+     * 
      * @return the numNodes value.
      */
     public int getNumNodes() {
@@ -203,7 +209,7 @@ public class DatabaseCluster {
 
     /**
      * Set the numNodes property: The number of nodes in the database cluster.
-     *
+     * 
      * @param numNodes the numNodes value to set.
      * @return the DatabaseCluster object itself.
      */
@@ -214,7 +220,7 @@ public class DatabaseCluster {
 
     /**
      * Get the size property: The slug identifier representing the size of the nodes in the database cluster.
-     *
+     * 
      * @return the size value.
      */
     public String getSize() {
@@ -223,7 +229,7 @@ public class DatabaseCluster {
 
     /**
      * Set the size property: The slug identifier representing the size of the nodes in the database cluster.
-     *
+     * 
      * @param size the size value to set.
      * @return the DatabaseCluster object itself.
      */
@@ -234,7 +240,7 @@ public class DatabaseCluster {
 
     /**
      * Get the region property: The slug identifier for the region where the database cluster is located.
-     *
+     * 
      * @return the region value.
      */
     public String getRegion() {
@@ -243,7 +249,7 @@ public class DatabaseCluster {
 
     /**
      * Set the region property: The slug identifier for the region where the database cluster is located.
-     *
+     * 
      * @param region the region value to set.
      * @return the DatabaseCluster object itself.
      */
@@ -254,7 +260,7 @@ public class DatabaseCluster {
 
     /**
      * Get the status property: A string representing the current status of the database cluster.
-     *
+     * 
      * @return the status value.
      */
     public DatabaseClusterStatus getStatus() {
@@ -264,7 +270,7 @@ public class DatabaseCluster {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * database cluster was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -273,9 +279,9 @@ public class DatabaseCluster {
 
     /**
      * Get the privateNetworkUuid property: A string specifying the UUID of the VPC to which the database cluster will
-     * be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's
-     * default VPC for the region.
-     *
+     * be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your
+     * account's default VPC for the region.
+     * 
      * @return the privateNetworkUuid value.
      */
     public String getPrivateNetworkUuid() {
@@ -284,9 +290,9 @@ public class DatabaseCluster {
 
     /**
      * Set the privateNetworkUuid property: A string specifying the UUID of the VPC to which the database cluster will
-     * be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's
-     * default VPC for the region.
-     *
+     * be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your
+     * account's default VPC for the region.
+     * 
      * @param privateNetworkUuid the privateNetworkUuid value to set.
      * @return the DatabaseCluster object itself.
      */
@@ -297,7 +303,7 @@ public class DatabaseCluster {
 
     /**
      * Get the tags property: An array of tags that have been applied to the database cluster.
-     *
+     * 
      * @return the tags value.
      */
     public List<String> getTags() {
@@ -306,7 +312,7 @@ public class DatabaseCluster {
 
     /**
      * Set the tags property: An array of tags that have been applied to the database cluster.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the DatabaseCluster object itself.
      */
@@ -317,7 +323,7 @@ public class DatabaseCluster {
 
     /**
      * Get the dbNames property: An array of strings containing the names of databases created in the database cluster.
-     *
+     * 
      * @return the dbNames value.
      */
     public List<String> getDbNames() {
@@ -326,7 +332,7 @@ public class DatabaseCluster {
 
     /**
      * Get the connection property: The connection property.
-     *
+     * 
      * @return the connection value.
      */
     public DatabaseClusterConnection getConnection() {
@@ -335,7 +341,7 @@ public class DatabaseCluster {
 
     /**
      * Set the connection property: The connection property.
-     *
+     * 
      * @param connection the connection value to set.
      * @return the DatabaseCluster object itself.
      */
@@ -346,7 +352,7 @@ public class DatabaseCluster {
 
     /**
      * Get the privateConnection property: The private_connection property.
-     *
+     * 
      * @return the privateConnection value.
      */
     public DatabaseClusterPrivateConnection getPrivateConnection() {
@@ -355,7 +361,7 @@ public class DatabaseCluster {
 
     /**
      * Set the privateConnection property: The private_connection property.
-     *
+     * 
      * @param privateConnection the privateConnection value to set.
      * @return the DatabaseCluster object itself.
      */
@@ -366,7 +372,7 @@ public class DatabaseCluster {
 
     /**
      * Get the users property: The users property.
-     *
+     * 
      * @return the users value.
      */
     public List<DatabaseUser> getUsers() {
@@ -375,7 +381,7 @@ public class DatabaseCluster {
 
     /**
      * Get the maintenanceWindow property: The maintenance_window property.
-     *
+     * 
      * @return the maintenanceWindow value.
      */
     public DatabaseClusterMaintenanceWindow getMaintenanceWindow() {
@@ -384,7 +390,7 @@ public class DatabaseCluster {
 
     /**
      * Set the maintenanceWindow property: The maintenance_window property.
-     *
+     * 
      * @param maintenanceWindow the maintenanceWindow value to set.
      * @return the DatabaseCluster object itself.
      */
@@ -396,7 +402,7 @@ public class DatabaseCluster {
     /**
      * Get the projectId property: The ID of the project that the database cluster is assigned to. If excluded when
      * creating a new database cluster, it will be assigned to your default project.
-     *
+     * 
      * @return the projectId value.
      */
     public UUID getProjectId() {
@@ -406,7 +412,7 @@ public class DatabaseCluster {
     /**
      * Set the projectId property: The ID of the project that the database cluster is assigned to. If excluded when
      * creating a new database cluster, it will be assigned to your default project.
-     *
+     * 
      * @param projectId the projectId value to set.
      * @return the DatabaseCluster object itself.
      */
@@ -417,7 +423,7 @@ public class DatabaseCluster {
 
     /**
      * Get the rules property: The rules property.
-     *
+     * 
      * @return the rules value.
      */
     public List<FirewallRule> getRules() {
@@ -426,7 +432,7 @@ public class DatabaseCluster {
 
     /**
      * Set the rules property: The rules property.
-     *
+     * 
      * @param rules the rules value to set.
      * @return the DatabaseCluster object itself.
      */

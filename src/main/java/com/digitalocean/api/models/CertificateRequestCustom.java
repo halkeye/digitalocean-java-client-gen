@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** Custom Certificate Request. */
+/**
+ * Custom Certificate Request.
+ */
 @Fluent
 public final class CertificateRequestCustom extends CertificateCreateBase {
     /*
@@ -27,7 +33,7 @@ public final class CertificateRequestCustom extends CertificateCreateBase {
 
     /**
      * Get the privateKey property: The contents of a PEM-formatted private-key corresponding to the SSL certificate.
-     *
+     * 
      * @return the privateKey value.
      */
     public String getPrivateKey() {
@@ -36,7 +42,7 @@ public final class CertificateRequestCustom extends CertificateCreateBase {
 
     /**
      * Set the privateKey property: The contents of a PEM-formatted private-key corresponding to the SSL certificate.
-     *
+     * 
      * @param privateKey the privateKey value to set.
      * @return the CertificateRequestCustom object itself.
      */
@@ -47,7 +53,7 @@ public final class CertificateRequestCustom extends CertificateCreateBase {
 
     /**
      * Get the leafCertificate property: The contents of a PEM-formatted public SSL certificate.
-     *
+     * 
      * @return the leafCertificate value.
      */
     public String getLeafCertificate() {
@@ -56,7 +62,7 @@ public final class CertificateRequestCustom extends CertificateCreateBase {
 
     /**
      * Set the leafCertificate property: The contents of a PEM-formatted public SSL certificate.
-     *
+     * 
      * @param leafCertificate the leafCertificate value to set.
      * @return the CertificateRequestCustom object itself.
      */
@@ -68,7 +74,7 @@ public final class CertificateRequestCustom extends CertificateCreateBase {
     /**
      * Get the certificateChain property: The full PEM-formatted trust chain between the certificate authority's
      * certificate and your domain's SSL certificate.
-     *
+     * 
      * @return the certificateChain value.
      */
     public String getCertificateChain() {
@@ -78,7 +84,7 @@ public final class CertificateRequestCustom extends CertificateCreateBase {
     /**
      * Set the certificateChain property: The full PEM-formatted trust chain between the certificate authority's
      * certificate and your domain's SSL certificate.
-     *
+     * 
      * @param certificateChain the certificateChain value to set.
      * @return the CertificateRequestCustom object itself.
      */
@@ -87,14 +93,18 @@ public final class CertificateRequestCustom extends CertificateCreateBase {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public CertificateRequestCustom setName(String name) {
         super.setName(name);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public CertificateRequestCustom setType(CertificateCreateBaseType type) {
         super.setType(type);

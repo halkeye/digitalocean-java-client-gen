@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The PageLinks model. */
+/**
+ * The PageLinks model.
+ */
 @Fluent
 public final class PageLinks {
     /*
@@ -14,7 +19,7 @@ public final class PageLinks {
 
     /**
      * Get the pages property: The pages property.
-     *
+     * 
      * @return the pages value.
      */
     public Object getPages() {
@@ -23,7 +28,7 @@ public final class PageLinks {
 
     /**
      * Set the pages property: The pages property.
-     *
+     * 
      * @param pages the pages value to set.
      * @return the PageLinks object itself.
      */

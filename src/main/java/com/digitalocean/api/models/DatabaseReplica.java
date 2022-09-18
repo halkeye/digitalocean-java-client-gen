@@ -1,12 +1,18 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The DatabaseReplica model. */
+/**
+ * The DatabaseReplica model.
+ */
 @Fluent
 public class DatabaseReplica {
     /*
@@ -76,7 +82,7 @@ public class DatabaseReplica {
 
     /**
      * Get the id property: A unique ID that can be used to identify and reference a database replica.
-     *
+     * 
      * @return the id value.
      */
     public UUID getId() {
@@ -85,7 +91,7 @@ public class DatabaseReplica {
 
     /**
      * Get the name property: The name to give the read-only replicating.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -94,7 +100,7 @@ public class DatabaseReplica {
 
     /**
      * Set the name property: The name to give the read-only replicating.
-     *
+     * 
      * @param name the name value to set.
      * @return the DatabaseReplica object itself.
      */
@@ -106,7 +112,7 @@ public class DatabaseReplica {
     /**
      * Get the region property: A slug identifier for the region where the read-only replica will be located. If
      * excluded, the replica will be placed in the same region as the cluster.
-     *
+     * 
      * @return the region value.
      */
     public String getRegion() {
@@ -116,7 +122,7 @@ public class DatabaseReplica {
     /**
      * Set the region property: A slug identifier for the region where the read-only replica will be located. If
      * excluded, the replica will be placed in the same region as the cluster.
-     *
+     * 
      * @param region the region value to set.
      * @return the DatabaseReplica object itself.
      */
@@ -126,9 +132,9 @@ public class DatabaseReplica {
     }
 
     /**
-     * Get the size property: A slug identifier representing the size of the node for the read-only replica. The size of
-     * the replica must be at least as large as the node size for the database cluster from which it is replicating.
-     *
+     * Get the size property: A slug identifier representing the size of the node for the read-only replica. The size
+     * of the replica must be at least as large as the node size for the database cluster from which it is replicating.
+     * 
      * @return the size value.
      */
     public String getSize() {
@@ -136,9 +142,9 @@ public class DatabaseReplica {
     }
 
     /**
-     * Set the size property: A slug identifier representing the size of the node for the read-only replica. The size of
-     * the replica must be at least as large as the node size for the database cluster from which it is replicating.
-     *
+     * Set the size property: A slug identifier representing the size of the node for the read-only replica. The size
+     * of the replica must be at least as large as the node size for the database cluster from which it is replicating.
+     * 
      * @param size the size value to set.
      * @return the DatabaseReplica object itself.
      */
@@ -149,7 +155,7 @@ public class DatabaseReplica {
 
     /**
      * Get the status property: A string representing the current status of the database cluster.
-     *
+     * 
      * @return the status value.
      */
     public DatabaseReplicaStatus getStatus() {
@@ -159,7 +165,7 @@ public class DatabaseReplica {
     /**
      * Get the tags property: A flat array of tag names as strings to apply to the read-only replica after it is
      * created. Tag names can either be existing or new tags.
-     *
+     * 
      * @return the tags value.
      */
     public List<String> getTags() {
@@ -169,7 +175,7 @@ public class DatabaseReplica {
     /**
      * Set the tags property: A flat array of tag names as strings to apply to the read-only replica after it is
      * created. Tag names can either be existing or new tags.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the DatabaseReplica object itself.
      */
@@ -181,7 +187,7 @@ public class DatabaseReplica {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * database cluster was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -191,7 +197,7 @@ public class DatabaseReplica {
     /**
      * Get the privateNetworkUuid property: A string specifying the UUID of the VPC to which the read-only replica will
      * be assigned. If excluded, the replica will be assigned to your account's default VPC for the region.
-     *
+     * 
      * @return the privateNetworkUuid value.
      */
     public String getPrivateNetworkUuid() {
@@ -201,7 +207,7 @@ public class DatabaseReplica {
     /**
      * Set the privateNetworkUuid property: A string specifying the UUID of the VPC to which the read-only replica will
      * be assigned. If excluded, the replica will be assigned to your account's default VPC for the region.
-     *
+     * 
      * @param privateNetworkUuid the privateNetworkUuid value to set.
      * @return the DatabaseReplica object itself.
      */
@@ -212,7 +218,7 @@ public class DatabaseReplica {
 
     /**
      * Get the connection property: The connection property.
-     *
+     * 
      * @return the connection value.
      */
     public DatabaseReplicaConnection getConnection() {
@@ -221,7 +227,7 @@ public class DatabaseReplica {
 
     /**
      * Set the connection property: The connection property.
-     *
+     * 
      * @param connection the connection value to set.
      * @return the DatabaseReplica object itself.
      */
@@ -232,7 +238,7 @@ public class DatabaseReplica {
 
     /**
      * Get the privateConnection property: The private_connection property.
-     *
+     * 
      * @return the privateConnection value.
      */
     public DatabaseReplicaPrivateConnection getPrivateConnection() {
@@ -241,7 +247,7 @@ public class DatabaseReplica {
 
     /**
      * Set the privateConnection property: The private_connection property.
-     *
+     * 
      * @param privateConnection the privateConnection value to set.
      * @return the DatabaseReplica object itself.
      */

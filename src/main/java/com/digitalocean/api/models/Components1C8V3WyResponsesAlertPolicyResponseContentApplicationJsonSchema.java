@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components1C8V3WyResponsesAlertPolicyResponseContentApplicationJsonSchema model. */
+/**
+ * The Components1C8V3WyResponsesAlertPolicyResponseContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components1C8V3WyResponsesAlertPolicyResponseContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components1C8V3WyResponsesAlertPolicyResponseContentApplicati
 
     /**
      * Get the policy property: The policy property.
-     *
+     * 
      * @return the policy value.
      */
     public AlertPolicy getPolicy() {
@@ -23,7 +28,7 @@ public final class Components1C8V3WyResponsesAlertPolicyResponseContentApplicati
 
     /**
      * Set the policy property: The policy property.
-     *
+     * 
      * @param policy the policy value to set.
      * @return the Components1C8V3WyResponsesAlertPolicyResponseContentApplicationJsonSchema object itself.
      */

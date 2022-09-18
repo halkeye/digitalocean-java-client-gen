@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
 
-/** The Balance model. */
+/**
+ * The Balance model.
+ */
 @Fluent
 public final class Balance {
     /*
@@ -32,9 +37,9 @@ public final class Balance {
     private OffsetDateTime generatedAt;
 
     /**
-     * Get the monthToDateBalance property: Balance as of the `generated_at` time. This value includes the
+     * Get the monthToDateBalance property: Balance as of the `generated_at` time.  This value includes the
      * `account_balance` and `month_to_date_usage`.
-     *
+     * 
      * @return the monthToDateBalance value.
      */
     public String getMonthToDateBalance() {
@@ -42,9 +47,9 @@ public final class Balance {
     }
 
     /**
-     * Set the monthToDateBalance property: Balance as of the `generated_at` time. This value includes the
+     * Set the monthToDateBalance property: Balance as of the `generated_at` time.  This value includes the
      * `account_balance` and `month_to_date_usage`.
-     *
+     * 
      * @param monthToDateBalance the monthToDateBalance value to set.
      * @return the Balance object itself.
      */
@@ -54,9 +59,9 @@ public final class Balance {
     }
 
     /**
-     * Get the accountBalance property: Current balance of the customer's most recent billing activity. Does not reflect
-     * `month_to_date_usage`.
-     *
+     * Get the accountBalance property: Current balance of the customer's most recent billing activity.  Does not
+     * reflect `month_to_date_usage`.
+     * 
      * @return the accountBalance value.
      */
     public String getAccountBalance() {
@@ -64,9 +69,9 @@ public final class Balance {
     }
 
     /**
-     * Set the accountBalance property: Current balance of the customer's most recent billing activity. Does not reflect
-     * `month_to_date_usage`.
-     *
+     * Set the accountBalance property: Current balance of the customer's most recent billing activity.  Does not
+     * reflect `month_to_date_usage`.
+     * 
      * @param accountBalance the accountBalance value to set.
      * @return the Balance object itself.
      */
@@ -77,7 +82,7 @@ public final class Balance {
 
     /**
      * Get the monthToDateUsage property: Amount used in the current billing period as of the `generated_at` time.
-     *
+     * 
      * @return the monthToDateUsage value.
      */
     public String getMonthToDateUsage() {
@@ -86,7 +91,7 @@ public final class Balance {
 
     /**
      * Set the monthToDateUsage property: Amount used in the current billing period as of the `generated_at` time.
-     *
+     * 
      * @param monthToDateUsage the monthToDateUsage value to set.
      * @return the Balance object itself.
      */
@@ -97,7 +102,7 @@ public final class Balance {
 
     /**
      * Get the generatedAt property: The time at which balances were most recently generated.
-     *
+     * 
      * @return the generatedAt value.
      */
     public OffsetDateTime getGeneratedAt() {
@@ -106,7 +111,7 @@ public final class Balance {
 
     /**
      * Set the generatedAt property: The time at which balances were most recently generated.
-     *
+     * 
      * @param generatedAt the generatedAt value to set.
      * @return the Balance object itself.
      */

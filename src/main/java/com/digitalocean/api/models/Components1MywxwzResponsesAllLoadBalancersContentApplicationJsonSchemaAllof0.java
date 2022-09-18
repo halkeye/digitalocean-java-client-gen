@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components1MywxwzResponsesAllLoadBalancersContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The Components1MywxwzResponsesAllLoadBalancersContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class Components1MywxwzResponsesAllLoadBalancersContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class Components1MywxwzResponsesAllLoadBalancersContentApplicationJsonSch
 
     /**
      * Get the loadBalancers property: The load_balancers property.
-     *
+     * 
      * @return the loadBalancers value.
      */
     public List<LoadBalancer> getLoadBalancers() {
@@ -24,12 +29,11 @@ public class Components1MywxwzResponsesAllLoadBalancersContentApplicationJsonSch
 
     /**
      * Set the loadBalancers property: The load_balancers property.
-     *
+     * 
      * @param loadBalancers the loadBalancers value to set.
      * @return the Components1MywxwzResponsesAllLoadBalancersContentApplicationJsonSchemaAllof0 object itself.
      */
-    public Components1MywxwzResponsesAllLoadBalancersContentApplicationJsonSchemaAllof0 setLoadBalancers(
-            List<LoadBalancer> loadBalancers) {
+    public Components1MywxwzResponsesAllLoadBalancersContentApplicationJsonSchemaAllof0 setLoadBalancers(List<LoadBalancer> loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
     }

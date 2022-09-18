@@ -4,23 +4,33 @@ import com.azure.core.util.ExpandableStringEnum;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import java.util.Collection;
 
-/** Defines values for AlertPolicyWindow. */
+/**
+ * Defines values for AlertPolicyWindow.
+ */
 public final class AlertPolicyWindow extends ExpandableStringEnum<AlertPolicyWindow> {
-    /** Static value 5m for AlertPolicyWindow. */
+    /**
+     * Static value 5m for AlertPolicyWindow.
+     */
     public static final AlertPolicyWindow FIVEM = fromString("5m");
 
-    /** Static value 10m for AlertPolicyWindow. */
+    /**
+     * Static value 10m for AlertPolicyWindow.
+     */
     public static final AlertPolicyWindow TENM = fromString("10m");
 
-    /** Static value 30m for AlertPolicyWindow. */
+    /**
+     * Static value 30m for AlertPolicyWindow.
+     */
     public static final AlertPolicyWindow THIRTYM = fromString("30m");
 
-    /** Static value 1h for AlertPolicyWindow. */
+    /**
+     * Static value 1h for AlertPolicyWindow.
+     */
     public static final AlertPolicyWindow ONEH = fromString("1h");
 
     /**
      * Creates or finds a AlertPolicyWindow from its string representation.
-     *
+     * 
      * @param name a name to look for.
      * @return the corresponding AlertPolicyWindow.
      */
@@ -31,7 +41,7 @@ public final class AlertPolicyWindow extends ExpandableStringEnum<AlertPolicyWin
 
     /**
      * Gets known AlertPolicyWindow values.
-     *
+     * 
      * @return known AlertPolicyWindow values.
      */
     public static Collection<AlertPolicyWindow> values() {

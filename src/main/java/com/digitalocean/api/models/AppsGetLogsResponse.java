@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The AppsGetLogsResponse model. */
+/**
+ * The AppsGetLogsResponse model.
+ */
 @Fluent
 public final class AppsGetLogsResponse {
     /*
@@ -22,7 +27,7 @@ public final class AppsGetLogsResponse {
 
     /**
      * Get the historicUrls property: A list of URLs to archived log files.
-     *
+     * 
      * @return the historicUrls value.
      */
     public List<String> getHistoricUrls() {
@@ -31,7 +36,7 @@ public final class AppsGetLogsResponse {
 
     /**
      * Set the historicUrls property: A list of URLs to archived log files.
-     *
+     * 
      * @param historicUrls the historicUrls value to set.
      * @return the AppsGetLogsResponse object itself.
      */
@@ -43,7 +48,7 @@ public final class AppsGetLogsResponse {
     /**
      * Get the liveUrl property: A URL of the real-time live logs. This URL may use either the `https://` or `wss://`
      * protocols and will keep pushing live logs as they become available.
-     *
+     * 
      * @return the liveUrl value.
      */
     public String getLiveUrl() {
@@ -53,7 +58,7 @@ public final class AppsGetLogsResponse {
     /**
      * Set the liveUrl property: A URL of the real-time live logs. This URL may use either the `https://` or `wss://`
      * protocols and will keep pushing live logs as they become available.
-     *
+     * 
      * @param liveUrl the liveUrl value to set.
      * @return the AppsGetLogsResponse object itself.
      */

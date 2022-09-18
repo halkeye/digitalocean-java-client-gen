@@ -12,25 +12,34 @@ import com.azure.core.annotation.ServiceInterface;
 import com.azure.core.annotation.ServiceMethod;
 import com.azure.core.annotation.UnexpectedResponseExceptionType;
 import com.azure.core.http.rest.RestProxy;
+import com.azure.core.util.Context;
 import com.digitalocean.api.models.ActionsGetResponse;
 import com.digitalocean.api.models.ActionsListResponse;
 import com.digitalocean.api.models.ErrorException;
+import java.util.Objects;
+import java.util.stream.Collectors;
 import reactor.core.publisher.Mono;
 
-/** An instance of this class provides access to all the operations defined in Actions. */
+/**
+ * An instance of this class provides access to all the operations defined in Actions.
+ */
 public final class Actions {
-    /** The proxy service used to perform REST calls. */
+    /**
+     * The proxy service used to perform REST calls.
+     */
     private final ActionsService service;
 
-    /** The service client containing this operation class. */
+    /**
+     * The service client containing this operation class.
+     */
     private final GeneratedClient client;
 
     /**
      * Initializes an instance of Actions.
-     *
+     * 
      * @param client the instance of the service client containing this operation class.
      */
-    Actions(GeneratedClient client) {
+     Actions(GeneratedClient client) {
         this.service = RestProxy.create(ActionsService.class, client.getHttpPipeline(), client.getSerializerAdapter());
         this.client = client;
     }
@@ -45,27 +54,19 @@ public final class Actions {
         @Get("/v2/actions")
         @ExpectedResponses({200, 401, 429, 500})
         @UnexpectedResponseExceptionType(ErrorException.class)
-        Mono<ActionsListResponse> list(
-                @HostParam("$host") String host,
-                @QueryParam("per_page") Integer perPage,
-                @QueryParam("page") Integer page,
-                @HeaderParam("Accept") String accept);
+        Mono<ActionsListResponse> list(@HostParam("$host") String host, @QueryParam("per_page") Integer perPage, @QueryParam("page") Integer page, @HeaderParam("Accept") String accept);
 
         @Get("/v2/actions/{action_id}")
         @ExpectedResponses({200, 401, 404, 429, 500})
         @UnexpectedResponseExceptionType(ErrorException.class)
-        Mono<ActionsGetResponse> get(
-                @HostParam("$host") String host,
-                @PathParam("action_id") int actionId,
-                @HeaderParam("Accept") String accept);
+        Mono<ActionsGetResponse> get(@HostParam("$host") String host, @PathParam("action_id") int actionId, @HeaderParam("Accept") String accept);
     }
 
     /**
      * List All Actions
-     *
-     * <p>This will be the entire list of actions taken on your account, so it will be quite large. As with any large
-     * collection returned by the API, the results will be paginated with only 20 on each page by default.
-     *
+     * 
+     * This will be the entire list of actions taken on your account, so it will be quite large. As with any large collection returned by the API, the results will be paginated with only 20 on each page by default.
+     * 
      * @param perPage Number of items returned per page.
      * @param page Which 'page' of paginated results to return.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
@@ -81,10 +82,9 @@ public final class Actions {
 
     /**
      * List All Actions
-     *
-     * <p>This will be the entire list of actions taken on your account, so it will be quite large. As with any large
-     * collection returned by the API, the results will be paginated with only 20 on each page by default.
-     *
+     * 
+     * This will be the entire list of actions taken on your account, so it will be quite large. As with any large collection returned by the API, the results will be paginated with only 20 on each page by default.
+     * 
      * @param perPage Number of items returned per page.
      * @param page Which 'page' of paginated results to return.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
@@ -94,14 +94,14 @@ public final class Actions {
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Object> listAsync(Integer perPage, Integer page) {
-        return listWithResponseAsync(perPage, page).flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return listWithResponseAsync(perPage, page)
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 
     /**
      * Retrieve an Existing Action
-     *
-     * <p>To retrieve a specific action object, send a GET request to `/v2/actions/$ACTION_ID`.
-     *
+     * 
+     * To retrieve a specific action object, send a GET request to `/v2/actions/$ACTION_ID`.
+     * 
      * @param actionId A unique numeric ID that can be used to identify and reference an action.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
      * @throws ErrorException thrown if the request is rejected by server.
@@ -116,9 +116,9 @@ public final class Actions {
 
     /**
      * Retrieve an Existing Action
-     *
-     * <p>To retrieve a specific action object, send a GET request to `/v2/actions/$ACTION_ID`.
-     *
+     * 
+     * To retrieve a specific action object, send a GET request to `/v2/actions/$ACTION_ID`.
+     * 
      * @param actionId A unique numeric ID that can be used to identify and reference an action.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
      * @throws ErrorException thrown if the request is rejected by server.
@@ -127,6 +127,6 @@ public final class Actions {
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Object> getAsync(int actionId) {
-        return getWithResponseAsync(actionId).flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return getWithResponseAsync(actionId)
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 }

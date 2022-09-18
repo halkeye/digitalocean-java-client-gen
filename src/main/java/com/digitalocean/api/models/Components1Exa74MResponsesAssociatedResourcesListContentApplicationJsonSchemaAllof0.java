@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 {
     /*
@@ -39,7 +44,7 @@ public class Components1Exa74MResponsesAssociatedResourcesListContentApplication
 
     /**
      * Get the reservedIps property: The reserved_ips property.
-     *
+     * 
      * @return the reservedIps value.
      */
     public List<AssociatedResource> getReservedIps() {
@@ -48,19 +53,18 @@ public class Components1Exa74MResponsesAssociatedResourcesListContentApplication
 
     /**
      * Set the reservedIps property: The reserved_ips property.
-     *
+     * 
      * @param reservedIps the reservedIps value to set.
      * @return the Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 object itself.
      */
-    public Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 setReservedIps(
-            List<AssociatedResource> reservedIps) {
+    public Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 setReservedIps(List<AssociatedResource> reservedIps) {
         this.reservedIps = reservedIps;
         return this;
     }
 
     /**
      * Get the floatingIps property: The floating_ips property.
-     *
+     * 
      * @return the floatingIps value.
      */
     public List<AssociatedResource> getFloatingIps() {
@@ -69,19 +73,18 @@ public class Components1Exa74MResponsesAssociatedResourcesListContentApplication
 
     /**
      * Set the floatingIps property: The floating_ips property.
-     *
+     * 
      * @param floatingIps the floatingIps value to set.
      * @return the Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 object itself.
      */
-    public Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 setFloatingIps(
-            List<AssociatedResource> floatingIps) {
+    public Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 setFloatingIps(List<AssociatedResource> floatingIps) {
         this.floatingIps = floatingIps;
         return this;
     }
 
     /**
      * Get the snapshots property: The snapshots property.
-     *
+     * 
      * @return the snapshots value.
      */
     public List<AssociatedResource> getSnapshots() {
@@ -90,19 +93,18 @@ public class Components1Exa74MResponsesAssociatedResourcesListContentApplication
 
     /**
      * Set the snapshots property: The snapshots property.
-     *
+     * 
      * @param snapshots the snapshots value to set.
      * @return the Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 object itself.
      */
-    public Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 setSnapshots(
-            List<AssociatedResource> snapshots) {
+    public Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 setSnapshots(List<AssociatedResource> snapshots) {
         this.snapshots = snapshots;
         return this;
     }
 
     /**
      * Get the volumes property: The volumes property.
-     *
+     * 
      * @return the volumes value.
      */
     public List<AssociatedResource> getVolumes() {
@@ -111,19 +113,18 @@ public class Components1Exa74MResponsesAssociatedResourcesListContentApplication
 
     /**
      * Set the volumes property: The volumes property.
-     *
+     * 
      * @param volumes the volumes value to set.
      * @return the Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 object itself.
      */
-    public Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 setVolumes(
-            List<AssociatedResource> volumes) {
+    public Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 setVolumes(List<AssociatedResource> volumes) {
         this.volumes = volumes;
         return this;
     }
 
     /**
      * Get the volumeSnapshots property: The volume_snapshots property.
-     *
+     * 
      * @return the volumeSnapshots value.
      */
     public List<AssociatedResource> getVolumeSnapshots() {
@@ -132,12 +133,11 @@ public class Components1Exa74MResponsesAssociatedResourcesListContentApplication
 
     /**
      * Set the volumeSnapshots property: The volume_snapshots property.
-     *
+     * 
      * @param volumeSnapshots the volumeSnapshots value to set.
      * @return the Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 object itself.
      */
-    public Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 setVolumeSnapshots(
-            List<AssociatedResource> volumeSnapshots) {
+    public Components1Exa74MResponsesAssociatedResourcesListContentApplicationJsonSchemaAllof0 setVolumeSnapshots(List<AssociatedResource> volumeSnapshots) {
         this.volumeSnapshots = volumeSnapshots;
         return this;
     }

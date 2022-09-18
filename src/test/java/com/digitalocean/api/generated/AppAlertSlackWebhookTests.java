@@ -1,16 +1,17 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.AppAlertSlackWebhook;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class AppAlertSlackWebhookTests {
     @Test
     public void testDeserialize() {
-        AppAlertSlackWebhook model =
-                BinaryData.fromString("{\"url\":\"apfgsdpcvessm\",\"channel\":\"h\"}")
-                        .toObject(AppAlertSlackWebhook.class);
+        AppAlertSlackWebhook model = BinaryData.fromString("{\"url\":\"apfgsdpcvessm\",\"channel\":\"h\"}").toObject(AppAlertSlackWebhook.class);
         Assertions.assertEquals("apfgsdpcvessm", model.getUrl());
         Assertions.assertEquals("h", model.getChannel());
     }

@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The GarbageCollection model. */
+/**
+ * The GarbageCollection model.
+ */
 @Fluent
 public final class GarbageCollection {
     /*
@@ -51,7 +57,7 @@ public final class GarbageCollection {
 
     /**
      * Get the uuid property: A string specifying the UUID of the garbage collection.
-     *
+     * 
      * @return the uuid value.
      */
     public String getUuid() {
@@ -60,7 +66,7 @@ public final class GarbageCollection {
 
     /**
      * Set the uuid property: A string specifying the UUID of the garbage collection.
-     *
+     * 
      * @param uuid the uuid value to set.
      * @return the GarbageCollection object itself.
      */
@@ -71,7 +77,7 @@ public final class GarbageCollection {
 
     /**
      * Get the registryName property: The name of the container registry.
-     *
+     * 
      * @return the registryName value.
      */
     public String getRegistryName() {
@@ -80,7 +86,7 @@ public final class GarbageCollection {
 
     /**
      * Set the registryName property: The name of the container registry.
-     *
+     * 
      * @param registryName the registryName value to set.
      * @return the GarbageCollection object itself.
      */
@@ -91,7 +97,7 @@ public final class GarbageCollection {
 
     /**
      * Get the status property: The current status of this garbage collection.
-     *
+     * 
      * @return the status value.
      */
     public GarbageCollectionStatus getStatus() {
@@ -100,7 +106,7 @@ public final class GarbageCollection {
 
     /**
      * Set the status property: The current status of this garbage collection.
-     *
+     * 
      * @param status the status value to set.
      * @return the GarbageCollection object itself.
      */
@@ -111,7 +117,7 @@ public final class GarbageCollection {
 
     /**
      * Get the createdAt property: The time the garbage collection was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -120,7 +126,7 @@ public final class GarbageCollection {
 
     /**
      * Set the createdAt property: The time the garbage collection was created.
-     *
+     * 
      * @param createdAt the createdAt value to set.
      * @return the GarbageCollection object itself.
      */
@@ -131,7 +137,7 @@ public final class GarbageCollection {
 
     /**
      * Get the updatedAt property: The time the garbage collection was last updated.
-     *
+     * 
      * @return the updatedAt value.
      */
     public OffsetDateTime getUpdatedAt() {
@@ -140,7 +146,7 @@ public final class GarbageCollection {
 
     /**
      * Set the updatedAt property: The time the garbage collection was last updated.
-     *
+     * 
      * @param updatedAt the updatedAt value to set.
      * @return the GarbageCollection object itself.
      */
@@ -151,7 +157,7 @@ public final class GarbageCollection {
 
     /**
      * Get the blobsDeleted property: The number of blobs deleted as a result of this garbage collection.
-     *
+     * 
      * @return the blobsDeleted value.
      */
     public Integer getBlobsDeleted() {
@@ -160,7 +166,7 @@ public final class GarbageCollection {
 
     /**
      * Set the blobsDeleted property: The number of blobs deleted as a result of this garbage collection.
-     *
+     * 
      * @param blobsDeleted the blobsDeleted value to set.
      * @return the GarbageCollection object itself.
      */
@@ -171,7 +177,7 @@ public final class GarbageCollection {
 
     /**
      * Get the freedBytes property: The number of bytes freed as a result of this garbage collection.
-     *
+     * 
      * @return the freedBytes value.
      */
     public Integer getFreedBytes() {
@@ -180,7 +186,7 @@ public final class GarbageCollection {
 
     /**
      * Set the freedBytes property: The number of bytes freed as a result of this garbage collection.
-     *
+     * 
      * @param freedBytes the freedBytes value to set.
      * @return the GarbageCollection object itself.
      */

@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components1StqgosResponsesAllDomainRecordsResponseContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The Components1StqgosResponsesAllDomainRecordsResponseContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class Components1StqgosResponsesAllDomainRecordsResponseContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class Components1StqgosResponsesAllDomainRecordsResponseContentApplicatio
 
     /**
      * Get the domainRecords property: The domain_records property.
-     *
+     * 
      * @return the domainRecords value.
      */
     public List<DomainRecord> getDomainRecords() {
@@ -24,12 +29,11 @@ public class Components1StqgosResponsesAllDomainRecordsResponseContentApplicatio
 
     /**
      * Set the domainRecords property: The domain_records property.
-     *
+     * 
      * @param domainRecords the domainRecords value to set.
      * @return the Components1StqgosResponsesAllDomainRecordsResponseContentApplicationJsonSchemaAllof0 object itself.
      */
-    public Components1StqgosResponsesAllDomainRecordsResponseContentApplicationJsonSchemaAllof0 setDomainRecords(
-            List<DomainRecord> domainRecords) {
+    public Components1StqgosResponsesAllDomainRecordsResponseContentApplicationJsonSchemaAllof0 setDomainRecords(List<DomainRecord> domainRecords) {
         this.domainRecords = domainRecords;
         return this;
     }

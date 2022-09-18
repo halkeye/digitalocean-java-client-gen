@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Database model. */
+/**
+ * The Database model.
+ */
 @Fluent
 public final class Database {
     /*
@@ -14,7 +19,7 @@ public final class Database {
 
     /**
      * Get the name property: The name of the database.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -23,7 +28,7 @@ public final class Database {
 
     /**
      * Set the name property: The name of the database.
-     *
+     * 
      * @param name the name value to set.
      * @return the Database object itself.
      */

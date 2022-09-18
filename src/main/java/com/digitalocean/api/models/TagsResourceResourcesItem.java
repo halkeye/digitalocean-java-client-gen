@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The TagsResourceResourcesItem model. */
+/**
+ * The TagsResourceResourcesItem model.
+ */
 @Fluent
 public final class TagsResourceResourcesItem {
     /*
@@ -20,7 +26,7 @@ public final class TagsResourceResourcesItem {
 
     /**
      * Get the resourceId property: The identifier of a resource.
-     *
+     * 
      * @return the resourceId value.
      */
     public String getResourceId() {
@@ -29,7 +35,7 @@ public final class TagsResourceResourcesItem {
 
     /**
      * Set the resourceId property: The identifier of a resource.
-     *
+     * 
      * @param resourceId the resourceId value to set.
      * @return the TagsResourceResourcesItem object itself.
      */
@@ -40,7 +46,7 @@ public final class TagsResourceResourcesItem {
 
     /**
      * Get the resourceType property: The type of the resource.
-     *
+     * 
      * @return the resourceType value.
      */
     public TagsResourceResourcesItemResourceType getResourceType() {
@@ -49,7 +55,7 @@ public final class TagsResourceResourcesItem {
 
     /**
      * Set the resourceType property: The type of the resource.
-     *
+     * 
      * @param resourceType the resourceType value to set.
      * @return the TagsResourceResourcesItem object itself.
      */

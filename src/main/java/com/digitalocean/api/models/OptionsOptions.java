@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The OptionsOptions model. */
+/**
+ * The OptionsOptions model.
+ */
 @Fluent
 public final class OptionsOptions {
     /*
@@ -32,7 +37,7 @@ public final class OptionsOptions {
 
     /**
      * Get the mongodb property: The mongodb property.
-     *
+     * 
      * @return the mongodb value.
      */
     public OptionsMongodb getMongodb() {
@@ -41,7 +46,7 @@ public final class OptionsOptions {
 
     /**
      * Set the mongodb property: The mongodb property.
-     *
+     * 
      * @param mongodb the mongodb value to set.
      * @return the OptionsOptions object itself.
      */
@@ -52,7 +57,7 @@ public final class OptionsOptions {
 
     /**
      * Get the pg property: The pg property.
-     *
+     * 
      * @return the pg value.
      */
     public OptionsPg getPg() {
@@ -61,7 +66,7 @@ public final class OptionsOptions {
 
     /**
      * Set the pg property: The pg property.
-     *
+     * 
      * @param pg the pg value to set.
      * @return the OptionsOptions object itself.
      */
@@ -72,7 +77,7 @@ public final class OptionsOptions {
 
     /**
      * Get the mysql property: The mysql property.
-     *
+     * 
      * @return the mysql value.
      */
     public OptionsMysql getMysql() {
@@ -81,7 +86,7 @@ public final class OptionsOptions {
 
     /**
      * Set the mysql property: The mysql property.
-     *
+     * 
      * @param mysql the mysql value to set.
      * @return the OptionsOptions object itself.
      */
@@ -92,7 +97,7 @@ public final class OptionsOptions {
 
     /**
      * Get the redis property: The redis property.
-     *
+     * 
      * @return the redis value.
      */
     public OptionsRedis getRedis() {
@@ -101,7 +106,7 @@ public final class OptionsOptions {
 
     /**
      * Set the redis property: The redis property.
-     *
+     * 
      * @param redis the redis value to set.
      * @return the OptionsOptions object itself.
      */

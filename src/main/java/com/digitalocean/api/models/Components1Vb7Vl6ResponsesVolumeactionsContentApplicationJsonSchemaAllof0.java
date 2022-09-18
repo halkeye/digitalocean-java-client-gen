@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components1Vb7Vl6ResponsesVolumeactionsContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The Components1Vb7Vl6ResponsesVolumeactionsContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class Components1Vb7Vl6ResponsesVolumeactionsContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class Components1Vb7Vl6ResponsesVolumeactionsContentApplicationJsonSchema
 
     /**
      * Get the actions property: The actions property.
-     *
+     * 
      * @return the actions value.
      */
     public List<VolumeAction> getActions() {
@@ -24,12 +29,11 @@ public class Components1Vb7Vl6ResponsesVolumeactionsContentApplicationJsonSchema
 
     /**
      * Set the actions property: The actions property.
-     *
+     * 
      * @param actions the actions value to set.
      * @return the Components1Vb7Vl6ResponsesVolumeactionsContentApplicationJsonSchemaAllof0 object itself.
      */
-    public Components1Vb7Vl6ResponsesVolumeactionsContentApplicationJsonSchemaAllof0 setActions(
-            List<VolumeAction> actions) {
+    public Components1Vb7Vl6ResponsesVolumeactionsContentApplicationJsonSchemaAllof0 setActions(List<VolumeAction> actions) {
         this.actions = actions;
         return this;
     }

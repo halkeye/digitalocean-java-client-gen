@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ComponentsOispf1ResponsesNewCertificateContentApplicationJsonSchema model. */
+/**
+ * The ComponentsOispf1ResponsesNewCertificateContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsOispf1ResponsesNewCertificateContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class ComponentsOispf1ResponsesNewCertificateContentApplicationJson
 
     /**
      * Get the certificate property: The certificate property.
-     *
+     * 
      * @return the certificate value.
      */
     public Certificate getCertificate() {
@@ -23,7 +28,7 @@ public final class ComponentsOispf1ResponsesNewCertificateContentApplicationJson
 
     /**
      * Set the certificate property: The certificate property.
-     *
+     * 
      * @param certificate the certificate value to set.
      * @return the ComponentsOispf1ResponsesNewCertificateContentApplicationJsonSchema object itself.
      */

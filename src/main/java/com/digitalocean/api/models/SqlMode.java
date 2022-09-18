@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The SqlMode model. */
+/**
+ * The SqlMode model.
+ */
 @Fluent
 public final class SqlMode {
     /*
@@ -14,7 +19,7 @@ public final class SqlMode {
 
     /**
      * Get the sqlMode property: A string specifying the configured SQL modes for the MySQL cluster.
-     *
+     * 
      * @return the sqlMode value.
      */
     public String getSqlMode() {
@@ -23,7 +28,7 @@ public final class SqlMode {
 
     /**
      * Set the sqlMode property: A string specifying the configured SQL modes for the MySQL cluster.
-     *
+     * 
      * @param sqlMode the sqlMode value to set.
      * @return the SqlMode object itself.
      */

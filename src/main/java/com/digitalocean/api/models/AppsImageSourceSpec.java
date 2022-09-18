@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The AppsImageSourceSpec model. */
+/**
+ * The AppsImageSourceSpec model.
+ */
 @Fluent
 public final class AppsImageSourceSpec {
     /*
@@ -33,7 +39,7 @@ public final class AppsImageSourceSpec {
 
     /**
      * Get the registry property: The registry name. Must be left empty for the `DOCR` registry type.
-     *
+     * 
      * @return the registry value.
      */
     public String getRegistry() {
@@ -42,7 +48,7 @@ public final class AppsImageSourceSpec {
 
     /**
      * Set the registry property: The registry name. Must be left empty for the `DOCR` registry type.
-     *
+     * 
      * @param registry the registry value to set.
      * @return the AppsImageSourceSpec object itself.
      */
@@ -52,9 +58,9 @@ public final class AppsImageSourceSpec {
     }
 
     /**
-     * Get the registryType property: - DOCKER_HUB: The DockerHub container registry type. - DOCR: The DigitalOcean
-     * container registry type.
-     *
+     * Get the registryType property: - DOCKER_HUB: The DockerHub container registry type.
+     * - DOCR: The DigitalOcean container registry type.
+     * 
      * @return the registryType value.
      */
     public AppsImageSourceSpecRegistryType getRegistryType() {
@@ -62,9 +68,9 @@ public final class AppsImageSourceSpec {
     }
 
     /**
-     * Set the registryType property: - DOCKER_HUB: The DockerHub container registry type. - DOCR: The DigitalOcean
-     * container registry type.
-     *
+     * Set the registryType property: - DOCKER_HUB: The DockerHub container registry type.
+     * - DOCR: The DigitalOcean container registry type.
+     * 
      * @param registryType the registryType value to set.
      * @return the AppsImageSourceSpec object itself.
      */
@@ -75,7 +81,7 @@ public final class AppsImageSourceSpec {
 
     /**
      * Get the repository property: The repository name.
-     *
+     * 
      * @return the repository value.
      */
     public String getRepository() {
@@ -84,7 +90,7 @@ public final class AppsImageSourceSpec {
 
     /**
      * Set the repository property: The repository name.
-     *
+     * 
      * @param repository the repository value to set.
      * @return the AppsImageSourceSpec object itself.
      */
@@ -95,7 +101,7 @@ public final class AppsImageSourceSpec {
 
     /**
      * Get the tag property: The repository tag. Defaults to `latest` if not provided.
-     *
+     * 
      * @return the tag value.
      */
     public String getTag() {
@@ -104,7 +110,7 @@ public final class AppsImageSourceSpec {
 
     /**
      * Set the tag property: The repository tag. Defaults to `latest` if not provided.
-     *
+     * 
      * @param tag the tag value to set.
      * @return the AppsImageSourceSpec object itself.
      */

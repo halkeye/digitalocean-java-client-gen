@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsO23W2TResponsesAllImagesContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The ComponentsO23W2TResponsesAllImagesContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class ComponentsO23W2TResponsesAllImagesContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsO23W2TResponsesAllImagesContentApplicationJsonSchemaAllof
 
     /**
      * Get the images property: The images property.
-     *
+     * 
      * @return the images value.
      */
     public List<Image> getImages() {
@@ -24,7 +29,7 @@ public class ComponentsO23W2TResponsesAllImagesContentApplicationJsonSchemaAllof
 
     /**
      * Set the images property: The images property.
-     *
+     * 
      * @param images the images value to set.
      * @return the ComponentsO23W2TResponsesAllImagesContentApplicationJsonSchemaAllof0 object itself.
      */

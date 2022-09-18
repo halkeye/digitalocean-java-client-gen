@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The BillingHistory model. */
+/**
+ * The BillingHistory model.
+ */
 @Fluent
 public final class BillingHistory {
     /*
@@ -45,7 +51,7 @@ public final class BillingHistory {
 
     /**
      * Get the description property: Description of the billing history entry.
-     *
+     * 
      * @return the description value.
      */
     public String getDescription() {
@@ -54,7 +60,7 @@ public final class BillingHistory {
 
     /**
      * Set the description property: Description of the billing history entry.
-     *
+     * 
      * @param description the description value to set.
      * @return the BillingHistory object itself.
      */
@@ -65,7 +71,7 @@ public final class BillingHistory {
 
     /**
      * Get the amount property: Amount of the billing history entry.
-     *
+     * 
      * @return the amount value.
      */
     public String getAmount() {
@@ -74,7 +80,7 @@ public final class BillingHistory {
 
     /**
      * Set the amount property: Amount of the billing history entry.
-     *
+     * 
      * @param amount the amount value to set.
      * @return the BillingHistory object itself.
      */
@@ -84,8 +90,8 @@ public final class BillingHistory {
     }
 
     /**
-     * Get the invoiceId property: ID of the invoice associated with the billing history entry, if applicable.
-     *
+     * Get the invoiceId property: ID of the invoice associated with the billing history entry, if  applicable.
+     * 
      * @return the invoiceId value.
      */
     public String getInvoiceId() {
@@ -93,8 +99,8 @@ public final class BillingHistory {
     }
 
     /**
-     * Set the invoiceId property: ID of the invoice associated with the billing history entry, if applicable.
-     *
+     * Set the invoiceId property: ID of the invoice associated with the billing history entry, if  applicable.
+     * 
      * @param invoiceId the invoiceId value to set.
      * @return the BillingHistory object itself.
      */
@@ -104,8 +110,8 @@ public final class BillingHistory {
     }
 
     /**
-     * Get the invoiceUuid property: UUID of the invoice associated with the billing history entry, if applicable.
-     *
+     * Get the invoiceUuid property: UUID of the invoice associated with the billing history entry, if  applicable.
+     * 
      * @return the invoiceUuid value.
      */
     public String getInvoiceUuid() {
@@ -113,8 +119,8 @@ public final class BillingHistory {
     }
 
     /**
-     * Set the invoiceUuid property: UUID of the invoice associated with the billing history entry, if applicable.
-     *
+     * Set the invoiceUuid property: UUID of the invoice associated with the billing history entry, if  applicable.
+     * 
      * @param invoiceUuid the invoiceUuid value to set.
      * @return the BillingHistory object itself.
      */
@@ -125,7 +131,7 @@ public final class BillingHistory {
 
     /**
      * Get the date property: Time the billing history entry occured.
-     *
+     * 
      * @return the date value.
      */
     public OffsetDateTime getDate() {
@@ -134,7 +140,7 @@ public final class BillingHistory {
 
     /**
      * Set the date property: Time the billing history entry occured.
-     *
+     * 
      * @param date the date value to set.
      * @return the BillingHistory object itself.
      */
@@ -145,7 +151,7 @@ public final class BillingHistory {
 
     /**
      * Get the type property: Type of billing history entry.
-     *
+     * 
      * @return the type value.
      */
     public BillingHistoryType getType() {
@@ -154,7 +160,7 @@ public final class BillingHistory {
 
     /**
      * Set the type property: Type of billing history entry.
-     *
+     * 
      * @param type the type value to set.
      * @return the BillingHistory object itself.
      */

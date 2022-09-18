@@ -1,10 +1,24 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.azure.core.http.HttpHeader;
 import com.azure.core.http.HttpHeaders;
+import com.azure.core.util.logging.ClientLogger;
+import com.azure.core.util.serializer.JacksonAdapter;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.net.URL;
+import java.util.Base64;
+import java.util.HashMap;
+import java.util.UUID;
+import java.util.regex.Pattern;
 
-/** The VolumeSnapshotsGetByIdHeaders model. */
+/**
+ * The VolumeSnapshotsGetByIdHeaders model.
+ */
 @Fluent
 public final class VolumeSnapshotsGetByIdHeaders {
     /*
@@ -28,7 +42,7 @@ public final class VolumeSnapshotsGetByIdHeaders {
     // HttpHeaders containing the raw property values.
     /**
      * Creates an instance of VolumeSnapshotsGetByIdHeaders class.
-     *
+     * 
      * @param rawHeaders The raw HttpHeaders that will be used to create the property values.
      */
     public VolumeSnapshotsGetByIdHeaders(HttpHeaders rawHeaders) {
@@ -39,7 +53,7 @@ public final class VolumeSnapshotsGetByIdHeaders {
 
     /**
      * Get the ratelimitLimit property: The ratelimit-limit property.
-     *
+     * 
      * @return the ratelimitLimit value.
      */
     public Integer getRatelimitLimit() {
@@ -48,7 +62,7 @@ public final class VolumeSnapshotsGetByIdHeaders {
 
     /**
      * Set the ratelimitLimit property: The ratelimit-limit property.
-     *
+     * 
      * @param ratelimitLimit the ratelimitLimit value to set.
      * @return the VolumeSnapshotsGetByIdHeaders object itself.
      */
@@ -59,7 +73,7 @@ public final class VolumeSnapshotsGetByIdHeaders {
 
     /**
      * Get the ratelimitRemaining property: The ratelimit-remaining property.
-     *
+     * 
      * @return the ratelimitRemaining value.
      */
     public Integer getRatelimitRemaining() {
@@ -68,7 +82,7 @@ public final class VolumeSnapshotsGetByIdHeaders {
 
     /**
      * Set the ratelimitRemaining property: The ratelimit-remaining property.
-     *
+     * 
      * @param ratelimitRemaining the ratelimitRemaining value to set.
      * @return the VolumeSnapshotsGetByIdHeaders object itself.
      */
@@ -79,7 +93,7 @@ public final class VolumeSnapshotsGetByIdHeaders {
 
     /**
      * Get the ratelimitReset property: The ratelimit-reset property.
-     *
+     * 
      * @return the ratelimitReset value.
      */
     public Integer getRatelimitReset() {
@@ -88,7 +102,7 @@ public final class VolumeSnapshotsGetByIdHeaders {
 
     /**
      * Set the ratelimitReset property: The ratelimit-reset property.
-     *
+     * 
      * @param ratelimitReset the ratelimitReset value to set.
      * @return the VolumeSnapshotsGetByIdHeaders object itself.
      */

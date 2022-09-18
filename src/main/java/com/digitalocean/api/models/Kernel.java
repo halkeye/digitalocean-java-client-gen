@@ -1,14 +1,18 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
 /**
- * **Note**: All Droplets created after March 2017 use internal kernels by default. These Droplets will have this
- * attribute set to `null`.
- *
- * <p>The current [kernel](https://www.digitalocean.com/docs/droplets/how-to/kernel/) for Droplets with externally
- * managed kernels. This will initially be set to the kernel of the base image when the Droplet is created.
+ * **Note**: All Droplets created after March 2017 use internal kernels by default.
+ * These Droplets will have this attribute set to `null`.
+ * 
+ * The current [kernel](https://www.digitalocean.com/docs/droplets/how-to/kernel/)
+ * for Droplets with externally managed kernels. This will initially be set to
+ * the kernel of the base image when the Droplet is created.
  */
 @Fluent
 public final class Kernel {
@@ -33,7 +37,7 @@ public final class Kernel {
 
     /**
      * Get the id property: A unique number used to identify and reference a specific kernel.
-     *
+     * 
      * @return the id value.
      */
     public Integer getId() {
@@ -42,7 +46,7 @@ public final class Kernel {
 
     /**
      * Set the id property: A unique number used to identify and reference a specific kernel.
-     *
+     * 
      * @param id the id value to set.
      * @return the Kernel object itself.
      */
@@ -52,9 +56,9 @@ public final class Kernel {
     }
 
     /**
-     * Get the name property: The display name of the kernel. This is shown in the web UI and is generally a descriptive
-     * title for the kernel in question.
-     *
+     * Get the name property: The display name of the kernel. This is shown in the web UI and is generally a
+     * descriptive title for the kernel in question.
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -62,9 +66,9 @@ public final class Kernel {
     }
 
     /**
-     * Set the name property: The display name of the kernel. This is shown in the web UI and is generally a descriptive
-     * title for the kernel in question.
-     *
+     * Set the name property: The display name of the kernel. This is shown in the web UI and is generally a
+     * descriptive title for the kernel in question.
+     * 
      * @param name the name value to set.
      * @return the Kernel object itself.
      */
@@ -76,7 +80,7 @@ public final class Kernel {
     /**
      * Get the version property: A standard kernel version string representing the version, patch, and release
      * information.
-     *
+     * 
      * @return the version value.
      */
     public String getVersion() {
@@ -86,7 +90,7 @@ public final class Kernel {
     /**
      * Set the version property: A standard kernel version string representing the version, patch, and release
      * information.
-     *
+     * 
      * @param version the version value to set.
      * @return the Kernel object itself.
      */

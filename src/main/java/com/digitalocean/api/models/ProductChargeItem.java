@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ProductChargeItem model. */
+/**
+ * The ProductChargeItem model.
+ */
 @Fluent
 public final class ProductChargeItem {
     /*
@@ -26,7 +31,7 @@ public final class ProductChargeItem {
 
     /**
      * Get the amount property: Amount of the charge.
-     *
+     * 
      * @return the amount value.
      */
     public String getAmount() {
@@ -35,7 +40,7 @@ public final class ProductChargeItem {
 
     /**
      * Set the amount property: Amount of the charge.
-     *
+     * 
      * @param amount the amount value to set.
      * @return the ProductChargeItem object itself.
      */
@@ -46,7 +51,7 @@ public final class ProductChargeItem {
 
     /**
      * Get the name property: Description of the charge.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -55,7 +60,7 @@ public final class ProductChargeItem {
 
     /**
      * Set the name property: Description of the charge.
-     *
+     * 
      * @param name the name value to set.
      * @return the ProductChargeItem object itself.
      */
@@ -66,7 +71,7 @@ public final class ProductChargeItem {
 
     /**
      * Get the count property: Number of times the charge was applied.
-     *
+     * 
      * @return the count value.
      */
     public String getCount() {
@@ -75,7 +80,7 @@ public final class ProductChargeItem {
 
     /**
      * Set the count property: Number of times the charge was applied.
-     *
+     * 
      * @param count the count value to set.
      * @return the ProductChargeItem object itself.
      */

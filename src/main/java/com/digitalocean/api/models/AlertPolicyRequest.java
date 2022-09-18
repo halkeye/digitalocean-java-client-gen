@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The AlertPolicyRequest model. */
+/**
+ * The AlertPolicyRequest model.
+ */
 @Fluent
 public final class AlertPolicyRequest {
     /*
@@ -63,7 +69,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Get the alerts property: The alerts property.
-     *
+     * 
      * @return the alerts value.
      */
     public Alerts getAlerts() {
@@ -72,7 +78,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Set the alerts property: The alerts property.
-     *
+     * 
      * @param alerts the alerts value to set.
      * @return the AlertPolicyRequest object itself.
      */
@@ -83,7 +89,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Get the compare property: The compare property.
-     *
+     * 
      * @return the compare value.
      */
     public AlertPolicyRequestCompare getCompare() {
@@ -92,7 +98,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Set the compare property: The compare property.
-     *
+     * 
      * @param compare the compare value to set.
      * @return the AlertPolicyRequest object itself.
      */
@@ -103,7 +109,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Get the description property: The description property.
-     *
+     * 
      * @return the description value.
      */
     public String getDescription() {
@@ -112,7 +118,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Set the description property: The description property.
-     *
+     * 
      * @param description the description value to set.
      * @return the AlertPolicyRequest object itself.
      */
@@ -123,7 +129,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Get the enabled property: The enabled property.
-     *
+     * 
      * @return the enabled value.
      */
     public boolean isEnabled() {
@@ -132,7 +138,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Set the enabled property: The enabled property.
-     *
+     * 
      * @param enabled the enabled value to set.
      * @return the AlertPolicyRequest object itself.
      */
@@ -143,7 +149,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Get the entities property: The entities property.
-     *
+     * 
      * @return the entities value.
      */
     public List<String> getEntities() {
@@ -152,7 +158,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Set the entities property: The entities property.
-     *
+     * 
      * @param entities the entities value to set.
      * @return the AlertPolicyRequest object itself.
      */
@@ -163,7 +169,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Get the tags property: The tags property.
-     *
+     * 
      * @return the tags value.
      */
     public List<String> getTags() {
@@ -172,7 +178,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Set the tags property: The tags property.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the AlertPolicyRequest object itself.
      */
@@ -183,7 +189,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Get the type property: The type property.
-     *
+     * 
      * @return the type value.
      */
     public AlertPolicyRequestType getType() {
@@ -192,7 +198,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Set the type property: The type property.
-     *
+     * 
      * @param type the type value to set.
      * @return the AlertPolicyRequest object itself.
      */
@@ -203,7 +209,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Get the value property: The value property.
-     *
+     * 
      * @return the value value.
      */
     public float getValue() {
@@ -212,7 +218,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Set the value property: The value property.
-     *
+     * 
      * @param value the value value to set.
      * @return the AlertPolicyRequest object itself.
      */
@@ -223,7 +229,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Get the window property: The window property.
-     *
+     * 
      * @return the window value.
      */
     public AlertPolicyRequestWindow getWindow() {
@@ -232,7 +238,7 @@ public final class AlertPolicyRequest {
 
     /**
      * Set the window property: The window property.
-     *
+     * 
      * @param window the window value to set.
      * @return the AlertPolicyRequest object itself.
      */

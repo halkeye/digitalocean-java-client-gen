@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The Components187F1GeSchemasLoadBalancerCreateOneof0Allof1 model. */
+/**
+ * The Components187F1GeSchemasLoadBalancerCreateOneof0Allof1 model.
+ */
 @Fluent
 public class Components187F1GeSchemasLoadBalancerCreateOneof0Allof1 {
     /*
@@ -13,8 +19,8 @@ public class Components187F1GeSchemasLoadBalancerCreateOneof0Allof1 {
     private RegionSlug region;
 
     /**
-     * Get the region property: The slug identifier for the region where the resource will initially be available.
-     *
+     * Get the region property: The slug identifier for the region where the resource will initially be  available.
+     * 
      * @return the region value.
      */
     public RegionSlug getRegion() {
@@ -22,8 +28,8 @@ public class Components187F1GeSchemasLoadBalancerCreateOneof0Allof1 {
     }
 
     /**
-     * Set the region property: The slug identifier for the region where the resource will initially be available.
-     *
+     * Set the region property: The slug identifier for the region where the resource will initially be  available.
+     * 
      * @param region the region value to set.
      * @return the Components187F1GeSchemasLoadBalancerCreateOneof0Allof1 object itself.
      */

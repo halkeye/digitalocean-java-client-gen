@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The PathsU3Jsx2V2FirewallsFirewallIdTagsPostRequestbodyContentApplicationJsonSchema model. */
+/**
+ * The PathsU3Jsx2V2FirewallsFirewallIdTagsPostRequestbodyContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class PathsU3Jsx2V2FirewallsFirewallIdTagsPostRequestbodyContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class PathsU3Jsx2V2FirewallsFirewallIdTagsPostRequestbodyContentApp
 
     /**
      * Get the tags property: Any object.
-     *
+     * 
      * @return the tags value.
      */
     public Object getTags() {
@@ -23,7 +28,7 @@ public final class PathsU3Jsx2V2FirewallsFirewallIdTagsPostRequestbodyContentApp
 
     /**
      * Set the tags property: Any object.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the PathsU3Jsx2V2FirewallsFirewallIdTagsPostRequestbodyContentApplicationJsonSchema object itself.
      */

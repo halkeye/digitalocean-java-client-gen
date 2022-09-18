@@ -1,16 +1,19 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.FirewallRuleBase;
 import com.digitalocean.api.models.FirewallRuleBaseProtocol;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.stream.Collectors;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class FirewallRuleBaseTests {
     @Test
     public void testDeserialize() {
-        FirewallRuleBase model =
-                BinaryData.fromString("{\"protocol\":\"icmp\",\"ports\":\"uqbdq\"}").toObject(FirewallRuleBase.class);
+        FirewallRuleBase model = BinaryData.fromString("{\"protocol\":\"icmp\",\"ports\":\"uqbdq\"}").toObject(FirewallRuleBase.class);
         Assertions.assertEquals(FirewallRuleBaseProtocol.ICMP, model.getProtocol());
         Assertions.assertEquals("uqbdq", model.getPorts());
     }

@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsKa40RcResponsesInvoiceContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The ComponentsKa40RcResponsesInvoiceContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class ComponentsKa40RcResponsesInvoiceContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsKa40RcResponsesInvoiceContentApplicationJsonSchemaAllof0 
 
     /**
      * Get the invoiceItems property: The invoice_items property.
-     *
+     * 
      * @return the invoiceItems value.
      */
     public List<InvoiceItem> getInvoiceItems() {
@@ -24,12 +29,11 @@ public class ComponentsKa40RcResponsesInvoiceContentApplicationJsonSchemaAllof0 
 
     /**
      * Set the invoiceItems property: The invoice_items property.
-     *
+     * 
      * @param invoiceItems the invoiceItems value to set.
      * @return the ComponentsKa40RcResponsesInvoiceContentApplicationJsonSchemaAllof0 object itself.
      */
-    public ComponentsKa40RcResponsesInvoiceContentApplicationJsonSchemaAllof0 setInvoiceItems(
-            List<InvoiceItem> invoiceItems) {
+    public ComponentsKa40RcResponsesInvoiceContentApplicationJsonSchemaAllof0 setInvoiceItems(List<InvoiceItem> invoiceItems) {
         this.invoiceItems = invoiceItems;
         return this;
     }

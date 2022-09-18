@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The LinkToPrevPage model. */
+/**
+ * The LinkToPrevPage model.
+ */
 @Fluent
 public class LinkToPrevPage {
     /*
@@ -14,7 +19,7 @@ public class LinkToPrevPage {
 
     /**
      * Get the prev property: URI of the previous page of the results.
-     *
+     * 
      * @return the prev value.
      */
     public String getPrev() {
@@ -23,7 +28,7 @@ public class LinkToPrevPage {
 
     /**
      * Set the prev property: URI of the previous page of the results.
-     *
+     * 
      * @param prev the prev value to set.
      * @return the LinkToPrevPage object itself.
      */

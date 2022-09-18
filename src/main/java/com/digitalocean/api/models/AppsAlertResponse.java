@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsAlertResponse model. */
+/**
+ * The AppsAlertResponse model.
+ */
 @Fluent
 public final class AppsAlertResponse {
     /*
@@ -14,7 +19,7 @@ public final class AppsAlertResponse {
 
     /**
      * Get the alert property: The alert property.
-     *
+     * 
      * @return the alert value.
      */
     public AppAlert getAlert() {
@@ -23,7 +28,7 @@ public final class AppsAlertResponse {
 
     /**
      * Set the alert property: The alert property.
-     *
+     * 
      * @param alert the alert value to set.
      * @return the AppsAlertResponse object itself.
      */

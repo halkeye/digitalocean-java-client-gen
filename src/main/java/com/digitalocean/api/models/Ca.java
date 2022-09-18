@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
+import com.azure.core.annotation.Fluent;
 import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Ca model. */
+/**
+ * The Ca model.
+ */
 @Immutable
 public final class Ca {
     /*
@@ -14,7 +19,7 @@ public final class Ca {
 
     /**
      * Get the certificate property: base64 encoding of the certificate used to secure database connections.
-     *
+     * 
      * @return the certificate value.
      */
     public String getCertificate() {

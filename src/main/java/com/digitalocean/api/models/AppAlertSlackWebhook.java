@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppAlertSlackWebhook model. */
+/**
+ * The AppAlertSlackWebhook model.
+ */
 @Fluent
 public final class AppAlertSlackWebhook {
     /*
@@ -20,7 +25,7 @@ public final class AppAlertSlackWebhook {
 
     /**
      * Get the url property: URL of the Slack webhook.
-     *
+     * 
      * @return the url value.
      */
     public String getUrl() {
@@ -29,7 +34,7 @@ public final class AppAlertSlackWebhook {
 
     /**
      * Set the url property: URL of the Slack webhook.
-     *
+     * 
      * @param url the url value to set.
      * @return the AppAlertSlackWebhook object itself.
      */
@@ -40,7 +45,7 @@ public final class AppAlertSlackWebhook {
 
     /**
      * Get the channel property: Name of the Slack Webhook Channel.
-     *
+     * 
      * @return the channel value.
      */
     public String getChannel() {
@@ -49,7 +54,7 @@ public final class AppAlertSlackWebhook {
 
     /**
      * Set the channel property: Name of the Slack Webhook Channel.
-     *
+     * 
      * @param channel the channel value to set.
      * @return the AppAlertSlackWebhook object itself.
      */

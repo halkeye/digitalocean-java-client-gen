@@ -13,29 +13,36 @@ import com.azure.core.annotation.ServiceInterface;
 import com.azure.core.annotation.ServiceMethod;
 import com.azure.core.annotation.UnexpectedResponseExceptionType;
 import com.azure.core.http.rest.RestProxy;
+import com.azure.core.util.Context;
 import com.digitalocean.api.models.ErrorException;
 import com.digitalocean.api.models.ReservedIPsActionsGetResponse;
 import com.digitalocean.api.models.ReservedIPsActionsListResponse;
 import com.digitalocean.api.models.ReservedIPsActionsPostResponse;
+import java.util.Objects;
+import java.util.stream.Collectors;
 import reactor.core.publisher.Mono;
 
-/** An instance of this class provides access to all the operations defined in ReservedIPsActions. */
+/**
+ * An instance of this class provides access to all the operations defined in ReservedIPsActions.
+ */
 public final class ReservedIPsActions {
-    /** The proxy service used to perform REST calls. */
+    /**
+     * The proxy service used to perform REST calls.
+     */
     private final ReservedIPsActionsService service;
 
-    /** The service client containing this operation class. */
+    /**
+     * The service client containing this operation class.
+     */
     private final GeneratedClient client;
 
     /**
      * Initializes an instance of ReservedIPsActions.
-     *
+     * 
      * @param client the instance of the service client containing this operation class.
      */
-    ReservedIPsActions(GeneratedClient client) {
-        this.service =
-                RestProxy.create(
-                        ReservedIPsActionsService.class, client.getHttpPipeline(), client.getSerializerAdapter());
+     ReservedIPsActions(GeneratedClient client) {
+        this.service = RestProxy.create(ReservedIPsActionsService.class, client.getHttpPipeline(), client.getSerializerAdapter());
         this.client = client;
     }
 
@@ -49,36 +56,24 @@ public final class ReservedIPsActions {
         @Get("/v2/reserved_ips/{reserved_ip}/actions")
         @ExpectedResponses({200, 401, 404, 429, 500})
         @UnexpectedResponseExceptionType(ErrorException.class)
-        Mono<ReservedIPsActionsListResponse> list(
-                @HostParam("$host") String host,
-                @PathParam("reserved_ip") String reservedIp,
-                @HeaderParam("Accept") String accept);
+        Mono<ReservedIPsActionsListResponse> list(@HostParam("$host") String host, @PathParam("reserved_ip") String reservedIp, @HeaderParam("Accept") String accept);
 
         @Post("/v2/reserved_ips/{reserved_ip}/actions")
         @ExpectedResponses({201, 401, 404, 429, 500})
         @UnexpectedResponseExceptionType(ErrorException.class)
-        Mono<ReservedIPsActionsPostResponse> post(
-                @HostParam("$host") String host,
-                @PathParam("reserved_ip") String reservedIp,
-                @BodyParam("application/json") Object body,
-                @HeaderParam("Accept") String accept);
+        Mono<ReservedIPsActionsPostResponse> post(@HostParam("$host") String host, @PathParam("reserved_ip") String reservedIp, @BodyParam("application/json") Object body, @HeaderParam("Accept") String accept);
 
         @Get("/v2/reserved_ips/{reserved_ip}/actions/{action_id}")
         @ExpectedResponses({200, 401, 404, 429, 500})
         @UnexpectedResponseExceptionType(ErrorException.class)
-        Mono<ReservedIPsActionsGetResponse> get(
-                @HostParam("$host") String host,
-                @PathParam("reserved_ip") String reservedIp,
-                @PathParam("action_id") int actionId,
-                @HeaderParam("Accept") String accept);
+        Mono<ReservedIPsActionsGetResponse> get(@HostParam("$host") String host, @PathParam("reserved_ip") String reservedIp, @PathParam("action_id") int actionId, @HeaderParam("Accept") String accept);
     }
 
     /**
      * List All Actions for a Reserved IP
-     *
-     * <p>To retrieve all actions that have been executed on a reserved IP, send a GET request to
-     * `/v2/reserved_ips/$RESERVED_IP/actions`.
-     *
+     * 
+     * To retrieve all actions that have been executed on a reserved IP, send a GET request to `/v2/reserved_ips/$RESERVED_IP/actions`.
+     * 
      * @param reservedIp A reserved IP address.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
      * @throws ErrorException thrown if the request is rejected by server.
@@ -93,10 +88,9 @@ public final class ReservedIPsActions {
 
     /**
      * List All Actions for a Reserved IP
-     *
-     * <p>To retrieve all actions that have been executed on a reserved IP, send a GET request to
-     * `/v2/reserved_ips/$RESERVED_IP/actions`.
-     *
+     * 
+     * To retrieve all actions that have been executed on a reserved IP, send a GET request to `/v2/reserved_ips/$RESERVED_IP/actions`.
+     * 
      * @param reservedIp A reserved IP address.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
      * @throws ErrorException thrown if the request is rejected by server.
@@ -105,21 +99,24 @@ public final class ReservedIPsActions {
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Object> listAsync(String reservedIp) {
-        return listWithResponseAsync(reservedIp).flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return listWithResponseAsync(reservedIp)
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 
     /**
      * Initiate a Reserved IP Action
-     *
-     * <p>To initiate an action on a reserved IP send a POST request to `/v2/reserved_ips/$RESERVED_IP/actions`. In the
-     * JSON body to the request, set the `type` attribute to on of the supported action types:
-     *
-     * <p>| Action | Details |------------|-------- | `assign` | Assigns a reserved IP to a Droplet | `unassign` |
-     * Unassign a reserved IP from a Droplet.
-     *
+     * 
+     * To initiate an action on a reserved IP send a POST request to
+     * `/v2/reserved_ips/$RESERVED_IP/actions`. In the JSON body to the request,
+     * set the `type` attribute to on of the supported action types:
+     * 
+     * | Action     | Details
+     * |------------|--------
+     * | `assign`   | Assigns a reserved IP to a Droplet
+     * | `unassign` | Unassign a reserved IP from a Droplet.
+     * 
      * @param reservedIp A reserved IP address.
-     * @param body The `type` attribute set in the request body will specify the action that will be taken on the
-     *     reserved IP.
+     * @param body The `type` attribute set in the request body will specify the action that
+     * will be taken on the reserved IP.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
      * @throws ErrorException thrown if the request is rejected by server.
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent.
@@ -133,16 +130,19 @@ public final class ReservedIPsActions {
 
     /**
      * Initiate a Reserved IP Action
-     *
-     * <p>To initiate an action on a reserved IP send a POST request to `/v2/reserved_ips/$RESERVED_IP/actions`. In the
-     * JSON body to the request, set the `type` attribute to on of the supported action types:
-     *
-     * <p>| Action | Details |------------|-------- | `assign` | Assigns a reserved IP to a Droplet | `unassign` |
-     * Unassign a reserved IP from a Droplet.
-     *
+     * 
+     * To initiate an action on a reserved IP send a POST request to
+     * `/v2/reserved_ips/$RESERVED_IP/actions`. In the JSON body to the request,
+     * set the `type` attribute to on of the supported action types:
+     * 
+     * | Action     | Details
+     * |------------|--------
+     * | `assign`   | Assigns a reserved IP to a Droplet
+     * | `unassign` | Unassign a reserved IP from a Droplet.
+     * 
      * @param reservedIp A reserved IP address.
-     * @param body The `type` attribute set in the request body will specify the action that will be taken on the
-     *     reserved IP.
+     * @param body The `type` attribute set in the request body will specify the action that
+     * will be taken on the reserved IP.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
      * @throws ErrorException thrown if the request is rejected by server.
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent.
@@ -150,15 +150,14 @@ public final class ReservedIPsActions {
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Object> postAsync(String reservedIp, Object body) {
-        return postWithResponseAsync(reservedIp, body).flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return postWithResponseAsync(reservedIp, body)
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 
     /**
      * Retrieve an Existing Reserved IP Action
-     *
-     * <p>To retrieve the status of a reserved IP action, send a GET request to
-     * `/v2/reserved_ips/$RESERVED_IP/actions/$ACTION_ID`.
-     *
+     * 
+     * To retrieve the status of a reserved IP action, send a GET request to `/v2/reserved_ips/$RESERVED_IP/actions/$ACTION_ID`.
+     * 
      * @param reservedIp A reserved IP address.
      * @param actionId A unique numeric ID that can be used to identify and reference an action.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
@@ -174,10 +173,9 @@ public final class ReservedIPsActions {
 
     /**
      * Retrieve an Existing Reserved IP Action
-     *
-     * <p>To retrieve the status of a reserved IP action, send a GET request to
-     * `/v2/reserved_ips/$RESERVED_IP/actions/$ACTION_ID`.
-     *
+     * 
+     * To retrieve the status of a reserved IP action, send a GET request to `/v2/reserved_ips/$RESERVED_IP/actions/$ACTION_ID`.
+     * 
      * @param reservedIp A reserved IP address.
      * @param actionId A unique numeric ID that can be used to identify and reference an action.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
@@ -187,6 +185,6 @@ public final class ReservedIPsActions {
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Object> getAsync(String reservedIp, int actionId) {
-        return getWithResponseAsync(reservedIp, actionId).flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return getWithResponseAsync(reservedIp, actionId)
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 }

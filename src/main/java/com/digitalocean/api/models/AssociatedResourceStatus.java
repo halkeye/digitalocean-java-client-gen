@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
 
-/** An objects containing information about a resources scheduled for deletion. */
+/**
+ * An objects containing information about a resources scheduled for deletion.
+ */
 @Fluent
 public final class AssociatedResourceStatus {
     /*
@@ -33,7 +38,7 @@ public final class AssociatedResourceStatus {
 
     /**
      * Get the droplet property: An object containing information about a resource scheduled for deletion.
-     *
+     * 
      * @return the droplet value.
      */
     public DestroyedAssociatedResource getDroplet() {
@@ -42,7 +47,7 @@ public final class AssociatedResourceStatus {
 
     /**
      * Set the droplet property: An object containing information about a resource scheduled for deletion.
-     *
+     * 
      * @param droplet the droplet value to set.
      * @return the AssociatedResourceStatus object itself.
      */
@@ -54,7 +59,7 @@ public final class AssociatedResourceStatus {
     /**
      * Get the resources property: An object containing additional information about resource related to a Droplet
      * requested to be destroyed.
-     *
+     * 
      * @return the resources value.
      */
     public AssociatedResourceStatusResources getResources() {
@@ -64,7 +69,7 @@ public final class AssociatedResourceStatus {
     /**
      * Set the resources property: An object containing additional information about resource related to a Droplet
      * requested to be destroyed.
-     *
+     * 
      * @param resources the resources value to set.
      * @return the AssociatedResourceStatus object itself.
      */
@@ -76,7 +81,7 @@ public final class AssociatedResourceStatus {
     /**
      * Get the completedAt property: A time value given in ISO8601 combined date and time format indicating when the
      * requested action was completed.
-     *
+     * 
      * @return the completedAt value.
      */
     public OffsetDateTime getCompletedAt() {
@@ -86,7 +91,7 @@ public final class AssociatedResourceStatus {
     /**
      * Set the completedAt property: A time value given in ISO8601 combined date and time format indicating when the
      * requested action was completed.
-     *
+     * 
      * @param completedAt the completedAt value to set.
      * @return the AssociatedResourceStatus object itself.
      */
@@ -97,7 +102,7 @@ public final class AssociatedResourceStatus {
 
     /**
      * Get the failures property: A count of the associated resources that failed to be destroyed, if any.
-     *
+     * 
      * @return the failures value.
      */
     public Integer getFailures() {
@@ -106,7 +111,7 @@ public final class AssociatedResourceStatus {
 
     /**
      * Set the failures property: A count of the associated resources that failed to be destroyed, if any.
-     *
+     * 
      * @param failures the failures value to set.
      * @return the AssociatedResourceStatus object itself.
      */

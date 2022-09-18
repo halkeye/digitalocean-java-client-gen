@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The OnlineMigration model. */
+/**
+ * The OnlineMigration model.
+ */
 @Fluent
 public final class OnlineMigration {
     /*
@@ -26,7 +31,7 @@ public final class OnlineMigration {
 
     /**
      * Get the id property: The ID of the currently running migration.
-     *
+     * 
      * @return the id value.
      */
     public String getId() {
@@ -35,7 +40,7 @@ public final class OnlineMigration {
 
     /**
      * Set the id property: The ID of the currently running migration.
-     *
+     * 
      * @param id the id value to set.
      * @return the OnlineMigration object itself.
      */
@@ -46,7 +51,7 @@ public final class OnlineMigration {
 
     /**
      * Get the status property: The current status of the migration.
-     *
+     * 
      * @return the status value.
      */
     public String getStatus() {
@@ -55,7 +60,7 @@ public final class OnlineMigration {
 
     /**
      * Set the status property: The current status of the migration.
-     *
+     * 
      * @param status the status value to set.
      * @return the OnlineMigration object itself.
      */
@@ -66,7 +71,7 @@ public final class OnlineMigration {
 
     /**
      * Get the createdAt property: The time the migration was initiated, in ISO 8601 format.
-     *
+     * 
      * @return the createdAt value.
      */
     public String getCreatedAt() {
@@ -75,7 +80,7 @@ public final class OnlineMigration {
 
     /**
      * Set the createdAt property: The time the migration was initiated, in ISO 8601 format.
-     *
+     * 
      * @param createdAt the createdAt value to set.
      * @return the OnlineMigration object itself.
      */

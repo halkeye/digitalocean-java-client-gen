@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The KubernetesVersion model. */
+/**
+ * The KubernetesVersion model.
+ */
 @Fluent
 public final class KubernetesVersion {
     /*
@@ -30,7 +35,7 @@ public final class KubernetesVersion {
      * Get the slug property: The slug identifier for an available version of Kubernetes for use when creating or
      * updating a cluster. The string contains both the upstream version of Kubernetes as well as the DigitalOcean
      * revision.
-     *
+     * 
      * @return the slug value.
      */
     public String getSlug() {
@@ -41,7 +46,7 @@ public final class KubernetesVersion {
      * Set the slug property: The slug identifier for an available version of Kubernetes for use when creating or
      * updating a cluster. The string contains both the upstream version of Kubernetes as well as the DigitalOcean
      * revision.
-     *
+     * 
      * @param slug the slug value to set.
      * @return the KubernetesVersion object itself.
      */
@@ -51,9 +56,9 @@ public final class KubernetesVersion {
     }
 
     /**
-     * Get the kubernetesVersion property: The upstream version string for the version of Kubernetes provided by a given
-     * slug.
-     *
+     * Get the kubernetesVersion property: The upstream version string for the version of Kubernetes provided by a
+     * given slug.
+     * 
      * @return the kubernetesVersion value.
      */
     public String getKubernetesVersion() {
@@ -61,9 +66,9 @@ public final class KubernetesVersion {
     }
 
     /**
-     * Set the kubernetesVersion property: The upstream version string for the version of Kubernetes provided by a given
-     * slug.
-     *
+     * Set the kubernetesVersion property: The upstream version string for the version of Kubernetes provided by a
+     * given slug.
+     * 
      * @param kubernetesVersion the kubernetesVersion value to set.
      * @return the KubernetesVersion object itself.
      */
@@ -75,7 +80,7 @@ public final class KubernetesVersion {
     /**
      * Get the supportedFeatures property: The features available with the version of Kubernetes provided by a given
      * slug.
-     *
+     * 
      * @return the supportedFeatures value.
      */
     public List<String> getSupportedFeatures() {
@@ -85,7 +90,7 @@ public final class KubernetesVersion {
     /**
      * Set the supportedFeatures property: The features available with the version of Kubernetes provided by a given
      * slug.
-     *
+     * 
      * @param supportedFeatures the supportedFeatures value to set.
      * @return the KubernetesVersion object itself.
      */

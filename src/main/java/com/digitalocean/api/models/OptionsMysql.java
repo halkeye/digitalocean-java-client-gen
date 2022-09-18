@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
+import com.azure.core.annotation.Fluent;
 import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The OptionsMysql model. */
+/**
+ * The OptionsMysql model.
+ */
 @Immutable
 public final class OptionsMysql extends DatabaseRegionOptions {
     /*
@@ -23,7 +28,7 @@ public final class OptionsMysql extends DatabaseRegionOptions {
 
     /**
      * Get the versions property: An array of strings containing the names of available regions.
-     *
+     * 
      * @return the versions value.
      */
     public List<String> getVersions() {
@@ -34,7 +39,7 @@ public final class OptionsMysql extends DatabaseRegionOptions {
      * Get the layouts property: An array of objects, each indicating the node sizes (otherwise referred to as slugs)
      * that are available with various numbers of nodes in the database cluster. Each slugs denotes the node's
      * identifier, CPU, and RAM (in that order).
-     *
+     * 
      * @return the layouts value.
      */
     public List<DatabaseLayoutOption> getLayouts() {

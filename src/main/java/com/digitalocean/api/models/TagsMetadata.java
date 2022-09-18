@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** Tagged Resource Statistics include metadata regarding the resource type that has been tagged. */
+/**
+ * Tagged Resource Statistics include metadata regarding the resource type that has been tagged.
+ */
 @Fluent
 public class TagsMetadata {
     /*
@@ -20,7 +25,7 @@ public class TagsMetadata {
 
     /**
      * Get the count property: The number of tagged objects for this type of resource.
-     *
+     * 
      * @return the count value.
      */
     public Integer getCount() {
@@ -29,7 +34,7 @@ public class TagsMetadata {
 
     /**
      * Set the count property: The number of tagged objects for this type of resource.
-     *
+     * 
      * @param count the count value to set.
      * @return the TagsMetadata object itself.
      */
@@ -40,7 +45,7 @@ public class TagsMetadata {
 
     /**
      * Get the lastTaggedUri property: The URI for the last tagged object for this type of resource.
-     *
+     * 
      * @return the lastTaggedUri value.
      */
     public String getLastTaggedUri() {
@@ -49,7 +54,7 @@ public class TagsMetadata {
 
     /**
      * Set the lastTaggedUri property: The URI for the last tagged object for this type of resource.
-     *
+     * 
      * @param lastTaggedUri the lastTaggedUri value to set.
      * @return the TagsMetadata object itself.
      */

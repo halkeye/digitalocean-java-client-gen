@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ComponentsH7SbeiResponsesUserContentApplicationJsonSchema model. */
+/**
+ * The ComponentsH7SbeiResponsesUserContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsH7SbeiResponsesUserContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class ComponentsH7SbeiResponsesUserContentApplicationJsonSchema {
 
     /**
      * Get the user property: The user property.
-     *
+     * 
      * @return the user value.
      */
     public DatabaseUser getUser() {
@@ -23,7 +28,7 @@ public final class ComponentsH7SbeiResponsesUserContentApplicationJsonSchema {
 
     /**
      * Set the user property: The user property.
-     *
+     * 
      * @param user the user value to set.
      * @return the ComponentsH7SbeiResponsesUserContentApplicationJsonSchema object itself.
      */

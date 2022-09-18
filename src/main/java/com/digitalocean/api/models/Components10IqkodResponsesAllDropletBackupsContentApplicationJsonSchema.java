@@ -1,13 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components10IqkodResponsesAllDropletBackupsContentApplicationJsonSchema model. */
+/**
+ * The Components10IqkodResponsesAllDropletBackupsContentApplicationJsonSchema model.
+ */
 @Fluent
-public final class Components10IqkodResponsesAllDropletBackupsContentApplicationJsonSchema
-        extends ComponentsRan85FResponsesAllDropletBackupsContentApplicationJsonSchemaAllof0 {
+public final class Components10IqkodResponsesAllDropletBackupsContentApplicationJsonSchema extends ComponentsRan85FResponsesAllDropletBackupsContentApplicationJsonSchemaAllof0 {
     /*
      * The links property.
      */
@@ -22,7 +26,7 @@ public final class Components10IqkodResponsesAllDropletBackupsContentApplication
 
     /**
      * Get the links property: The links property.
-     *
+     * 
      * @return the links value.
      */
     public PageLinks getLinks() {
@@ -31,7 +35,7 @@ public final class Components10IqkodResponsesAllDropletBackupsContentApplication
 
     /**
      * Set the links property: The links property.
-     *
+     * 
      * @param links the links value to set.
      * @return the Components10IqkodResponsesAllDropletBackupsContentApplicationJsonSchema object itself.
      */
@@ -42,7 +46,7 @@ public final class Components10IqkodResponsesAllDropletBackupsContentApplication
 
     /**
      * Get the meta property: The meta property.
-     *
+     * 
      * @return the meta value.
      */
     public MetaMeta getMeta() {
@@ -51,7 +55,7 @@ public final class Components10IqkodResponsesAllDropletBackupsContentApplication
 
     /**
      * Set the meta property: The meta property.
-     *
+     * 
      * @param meta the meta value to set.
      * @return the Components10IqkodResponsesAllDropletBackupsContentApplicationJsonSchema object itself.
      */
@@ -60,10 +64,11 @@ public final class Components10IqkodResponsesAllDropletBackupsContentApplication
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public Components10IqkodResponsesAllDropletBackupsContentApplicationJsonSchema setBackups(
-            List<DropletSnapshot> backups) {
+    public Components10IqkodResponsesAllDropletBackupsContentApplicationJsonSchema setBackups(List<DropletSnapshot> backups) {
         super.setBackups(backups);
         return this;
     }

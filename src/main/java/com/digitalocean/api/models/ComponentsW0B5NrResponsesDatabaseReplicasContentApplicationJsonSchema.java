@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsW0B5NrResponsesDatabaseReplicasContentApplicationJsonSchema model. */
+/**
+ * The ComponentsW0B5NrResponsesDatabaseReplicasContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsW0B5NrResponsesDatabaseReplicasContentApplicationJsonSchema {
     /*
@@ -15,7 +20,7 @@ public final class ComponentsW0B5NrResponsesDatabaseReplicasContentApplicationJs
 
     /**
      * Get the replicas property: The replicas property.
-     *
+     * 
      * @return the replicas value.
      */
     public List<DatabaseReplica> getReplicas() {
@@ -24,12 +29,11 @@ public final class ComponentsW0B5NrResponsesDatabaseReplicasContentApplicationJs
 
     /**
      * Set the replicas property: The replicas property.
-     *
+     * 
      * @param replicas the replicas value to set.
      * @return the ComponentsW0B5NrResponsesDatabaseReplicasContentApplicationJsonSchema object itself.
      */
-    public ComponentsW0B5NrResponsesDatabaseReplicasContentApplicationJsonSchema setReplicas(
-            List<DatabaseReplica> replicas) {
+    public ComponentsW0B5NrResponsesDatabaseReplicasContentApplicationJsonSchema setReplicas(List<DatabaseReplica> replicas) {
         this.replicas = replicas;
         return this;
     }

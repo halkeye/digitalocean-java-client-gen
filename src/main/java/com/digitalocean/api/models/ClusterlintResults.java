@@ -1,11 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ClusterlintResults model. */
+/**
+ * The ClusterlintResults model.
+ */
 @Fluent
 public final class ClusterlintResults {
     /*
@@ -36,7 +41,7 @@ public final class ClusterlintResults {
 
     /**
      * Get the runId property: Id of the clusterlint run that can be used later to fetch the diagnostics.
-     *
+     * 
      * @return the runId value.
      */
     public String getRunId() {
@@ -45,7 +50,7 @@ public final class ClusterlintResults {
 
     /**
      * Set the runId property: Id of the clusterlint run that can be used later to fetch the diagnostics.
-     *
+     * 
      * @param runId the runId value to set.
      * @return the ClusterlintResults object itself.
      */
@@ -57,7 +62,7 @@ public final class ClusterlintResults {
     /**
      * Get the requestedAt property: A time value given in ISO8601 combined date and time format that represents when
      * the schedule clusterlint run request was made.
-     *
+     * 
      * @return the requestedAt value.
      */
     public OffsetDateTime getRequestedAt() {
@@ -67,7 +72,7 @@ public final class ClusterlintResults {
     /**
      * Set the requestedAt property: A time value given in ISO8601 combined date and time format that represents when
      * the schedule clusterlint run request was made.
-     *
+     * 
      * @param requestedAt the requestedAt value to set.
      * @return the ClusterlintResults object itself.
      */
@@ -79,7 +84,7 @@ public final class ClusterlintResults {
     /**
      * Get the completedAt property: A time value given in ISO8601 combined date and time format that represents when
      * the schedule clusterlint run request was completed.
-     *
+     * 
      * @return the completedAt value.
      */
     public OffsetDateTime getCompletedAt() {
@@ -89,7 +94,7 @@ public final class ClusterlintResults {
     /**
      * Set the completedAt property: A time value given in ISO8601 combined date and time format that represents when
      * the schedule clusterlint run request was completed.
-     *
+     * 
      * @param completedAt the completedAt value to set.
      * @return the ClusterlintResults object itself.
      */
@@ -100,7 +105,7 @@ public final class ClusterlintResults {
 
     /**
      * Get the diagnostics property: An array of diagnostics reporting potential problems for the given cluster.
-     *
+     * 
      * @return the diagnostics value.
      */
     public List<ClusterlintResultsDiagnosticsItem> getDiagnostics() {
@@ -109,7 +114,7 @@ public final class ClusterlintResults {
 
     /**
      * Set the diagnostics property: An array of diagnostics reporting potential problems for the given cluster.
-     *
+     * 
      * @param diagnostics the diagnostics value to set.
      * @return the ClusterlintResults object itself.
      */

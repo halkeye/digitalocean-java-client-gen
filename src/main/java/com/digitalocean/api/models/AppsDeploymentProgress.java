@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The AppsDeploymentProgress model. */
+/**
+ * The AppsDeploymentProgress model.
+ */
 @Fluent
 public final class AppsDeploymentProgress {
     /*
@@ -51,7 +56,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Get the errorSteps property: Number of unsuccessful steps.
-     *
+     * 
      * @return the errorSteps value.
      */
     public Integer getErrorSteps() {
@@ -60,7 +65,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Set the errorSteps property: Number of unsuccessful steps.
-     *
+     * 
      * @param errorSteps the errorSteps value to set.
      * @return the AppsDeploymentProgress object itself.
      */
@@ -71,7 +76,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Get the pendingSteps property: Number of pending steps.
-     *
+     * 
      * @return the pendingSteps value.
      */
     public Integer getPendingSteps() {
@@ -80,7 +85,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Set the pendingSteps property: Number of pending steps.
-     *
+     * 
      * @param pendingSteps the pendingSteps value to set.
      * @return the AppsDeploymentProgress object itself.
      */
@@ -91,7 +96,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Get the runningSteps property: Number of currently running steps.
-     *
+     * 
      * @return the runningSteps value.
      */
     public Integer getRunningSteps() {
@@ -100,7 +105,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Set the runningSteps property: Number of currently running steps.
-     *
+     * 
      * @param runningSteps the runningSteps value to set.
      * @return the AppsDeploymentProgress object itself.
      */
@@ -111,7 +116,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Get the steps property: The deployment's steps.
-     *
+     * 
      * @return the steps value.
      */
     public List<AppsDeploymentProgressStep> getSteps() {
@@ -120,7 +125,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Set the steps property: The deployment's steps.
-     *
+     * 
      * @param steps the steps value to set.
      * @return the AppsDeploymentProgress object itself.
      */
@@ -131,7 +136,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Get the successSteps property: Number of successful steps.
-     *
+     * 
      * @return the successSteps value.
      */
     public Integer getSuccessSteps() {
@@ -140,7 +145,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Set the successSteps property: Number of successful steps.
-     *
+     * 
      * @param successSteps the successSteps value to set.
      * @return the AppsDeploymentProgress object itself.
      */
@@ -151,7 +156,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Get the summarySteps property: A flattened summary of the steps.
-     *
+     * 
      * @return the summarySteps value.
      */
     public List<AppsDeploymentProgressStep> getSummarySteps() {
@@ -160,7 +165,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Set the summarySteps property: A flattened summary of the steps.
-     *
+     * 
      * @param summarySteps the summarySteps value to set.
      * @return the AppsDeploymentProgress object itself.
      */
@@ -171,7 +176,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Get the totalSteps property: Total number of steps.
-     *
+     * 
      * @return the totalSteps value.
      */
     public Integer getTotalSteps() {
@@ -180,7 +185,7 @@ public final class AppsDeploymentProgress {
 
     /**
      * Set the totalSteps property: Total number of steps.
-     *
+     * 
      * @param totalSteps the totalSteps value to set.
      * @return the AppsDeploymentProgress object itself.
      */

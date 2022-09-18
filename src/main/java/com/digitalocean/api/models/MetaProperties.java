@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** Information about the response itself. */
+/**
+ * Information about the response itself.
+ */
 @Fluent
 public class MetaProperties {
     /*
@@ -14,7 +19,7 @@ public class MetaProperties {
 
     /**
      * Get the total property: Number of objects returned by the request.
-     *
+     * 
      * @return the total value.
      */
     public Integer getTotal() {
@@ -23,7 +28,7 @@ public class MetaProperties {
 
     /**
      * Set the total property: Number of objects returned by the request.
-     *
+     * 
      * @param total the total value to set.
      * @return the MetaProperties object itself.
      */

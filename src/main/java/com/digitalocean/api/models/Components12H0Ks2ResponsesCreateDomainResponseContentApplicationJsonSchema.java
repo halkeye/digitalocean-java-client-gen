@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components12H0Ks2ResponsesCreateDomainResponseContentApplicationJsonSchema model. */
+/**
+ * The Components12H0Ks2ResponsesCreateDomainResponseContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components12H0Ks2ResponsesCreateDomainResponseContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components12H0Ks2ResponsesCreateDomainResponseContentApplicat
 
     /**
      * Get the domain property: The domain property.
-     *
+     * 
      * @return the domain value.
      */
     public Domain getDomain() {
@@ -23,7 +28,7 @@ public final class Components12H0Ks2ResponsesCreateDomainResponseContentApplicat
 
     /**
      * Set the domain property: The domain property.
-     *
+     * 
      * @param domain the domain value to set.
      * @return the Components12H0Ks2ResponsesCreateDomainResponseContentApplicationJsonSchema object itself.
      */

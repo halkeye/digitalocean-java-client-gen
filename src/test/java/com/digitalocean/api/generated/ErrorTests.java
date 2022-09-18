@@ -1,16 +1,17 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.Error;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class ErrorTests {
     @Test
     public void testDeserialize() {
-        Error model =
-                BinaryData.fromString("{\"id\":\"tbmufpo\",\"message\":\"noi\",\"request_id\":\"wlrxyb\"}")
-                        .toObject(Error.class);
+        Error model = BinaryData.fromString("{\"id\":\"tbmufpo\",\"message\":\"noi\",\"request_id\":\"wlrxyb\"}").toObject(Error.class);
         Assertions.assertEquals("tbmufpo", model.getId());
         Assertions.assertEquals("noi", model.getMessage());
         Assertions.assertEquals("wlrxyb", model.getRequestId());

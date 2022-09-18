@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** PGBouncer connection pooling settings. */
+/**
+ * PGBouncer connection pooling settings.
+ */
 @Fluent
 public final class Pgbouncer {
     /*
@@ -66,7 +72,7 @@ public final class Pgbouncer {
 
     /**
      * Get the serverResetQueryAlways property: Run server_reset_query (DISCARD ALL) in all pooling modes.
-     *
+     * 
      * @return the serverResetQueryAlways value.
      */
     public Boolean isServerResetQueryAlways() {
@@ -75,7 +81,7 @@ public final class Pgbouncer {
 
     /**
      * Set the serverResetQueryAlways property: Run server_reset_query (DISCARD ALL) in all pooling modes.
-     *
+     * 
      * @param serverResetQueryAlways the serverResetQueryAlways value to set.
      * @return the Pgbouncer object itself.
      */
@@ -86,7 +92,7 @@ public final class Pgbouncer {
 
     /**
      * Get the ignoreStartupParameters property: List of parameters to ignore when given in startup packet.
-     *
+     * 
      * @return the ignoreStartupParameters value.
      */
     public List<PgbouncerIgnoreStartupParametersItem> getIgnoreStartupParameters() {
@@ -95,7 +101,7 @@ public final class Pgbouncer {
 
     /**
      * Set the ignoreStartupParameters property: List of parameters to ignore when given in startup packet.
-     *
+     * 
      * @param ignoreStartupParameters the ignoreStartupParameters value to set.
      * @return the Pgbouncer object itself.
      */
@@ -106,9 +112,9 @@ public final class Pgbouncer {
 
     /**
      * Get the minPoolSize property: If current server connections are below this number, adds more. Improves behavior
-     * when usual load comes suddenly back after period of total inactivity. The value is effectively capped at the pool
-     * size.
-     *
+     * when usual load comes suddenly back after period of total inactivity. The value is effectively capped at the
+     * pool size.
+     * 
      * @return the minPoolSize value.
      */
     public Integer getMinPoolSize() {
@@ -117,9 +123,9 @@ public final class Pgbouncer {
 
     /**
      * Set the minPoolSize property: If current server connections are below this number, adds more. Improves behavior
-     * when usual load comes suddenly back after period of total inactivity. The value is effectively capped at the pool
-     * size.
-     *
+     * when usual load comes suddenly back after period of total inactivity. The value is effectively capped at the
+     * pool size.
+     * 
      * @param minPoolSize the minPoolSize value to set.
      * @return the Pgbouncer object itself.
      */
@@ -131,7 +137,7 @@ public final class Pgbouncer {
     /**
      * Get the serverLifetime property: The pooler closes any unused server connection that has been connected longer
      * than this amount of seconds.
-     *
+     * 
      * @return the serverLifetime value.
      */
     public Integer getServerLifetime() {
@@ -141,7 +147,7 @@ public final class Pgbouncer {
     /**
      * Set the serverLifetime property: The pooler closes any unused server connection that has been connected longer
      * than this amount of seconds.
-     *
+     * 
      * @param serverLifetime the serverLifetime value to set.
      * @return the Pgbouncer object itself.
      */
@@ -153,7 +159,7 @@ public final class Pgbouncer {
     /**
      * Get the serverIdleTimeout property: Drops server connections if they have been idle more than this many seconds.
      * If 0, timeout is disabled.
-     *
+     * 
      * @return the serverIdleTimeout value.
      */
     public Integer getServerIdleTimeout() {
@@ -163,7 +169,7 @@ public final class Pgbouncer {
     /**
      * Set the serverIdleTimeout property: Drops server connections if they have been idle more than this many seconds.
      * If 0, timeout is disabled.
-     *
+     * 
      * @param serverIdleTimeout the serverIdleTimeout value to set.
      * @return the Pgbouncer object itself.
      */
@@ -175,7 +181,7 @@ public final class Pgbouncer {
     /**
      * Get the autodbPoolSize property: If non-zero, automatically creates a pool of that size per user when a pool
      * doesn't exist.
-     *
+     * 
      * @return the autodbPoolSize value.
      */
     public Integer getAutodbPoolSize() {
@@ -185,7 +191,7 @@ public final class Pgbouncer {
     /**
      * Set the autodbPoolSize property: If non-zero, automatically creates a pool of that size per user when a pool
      * doesn't exist.
-     *
+     * 
      * @param autodbPoolSize the autodbPoolSize value to set.
      * @return the Pgbouncer object itself.
      */
@@ -196,7 +202,7 @@ public final class Pgbouncer {
 
     /**
      * Get the autodbPoolMode property: PGBouncer pool mode.
-     *
+     * 
      * @return the autodbPoolMode value.
      */
     public PgbouncerAutodbPoolMode getAutodbPoolMode() {
@@ -205,7 +211,7 @@ public final class Pgbouncer {
 
     /**
      * Set the autodbPoolMode property: PGBouncer pool mode.
-     *
+     * 
      * @param autodbPoolMode the autodbPoolMode value to set.
      * @return the Pgbouncer object itself.
      */
@@ -217,7 +223,7 @@ public final class Pgbouncer {
     /**
      * Get the autodbMaxDbConnections property: Only allows a maximum this many server connections per database
      * (regardless of user). If 0, allows unlimited connections.
-     *
+     * 
      * @return the autodbMaxDbConnections value.
      */
     public Integer getAutodbMaxDbConnections() {
@@ -227,7 +233,7 @@ public final class Pgbouncer {
     /**
      * Set the autodbMaxDbConnections property: Only allows a maximum this many server connections per database
      * (regardless of user). If 0, allows unlimited connections.
-     *
+     * 
      * @param autodbMaxDbConnections the autodbMaxDbConnections value to set.
      * @return the Pgbouncer object itself.
      */
@@ -239,7 +245,7 @@ public final class Pgbouncer {
     /**
      * Get the autodbIdleTimeout property: If the automatically-created database pools have been unused this many
      * seconds, they are freed. If 0, timeout is disabled.
-     *
+     * 
      * @return the autodbIdleTimeout value.
      */
     public Integer getAutodbIdleTimeout() {
@@ -249,7 +255,7 @@ public final class Pgbouncer {
     /**
      * Set the autodbIdleTimeout property: If the automatically-created database pools have been unused this many
      * seconds, they are freed. If 0, timeout is disabled.
-     *
+     * 
      * @param autodbIdleTimeout the autodbIdleTimeout value to set.
      * @return the Pgbouncer object itself.
      */

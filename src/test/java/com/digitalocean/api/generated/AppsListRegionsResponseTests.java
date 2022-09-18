@@ -1,24 +1,25 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.AppsListRegionsResponse;
 import com.digitalocean.api.models.AppsRegion;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Arrays;
+import java.util.List;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class AppsListRegionsResponseTests {
     @Test
     public void testDeserialize() {
-        AppsListRegionsResponse model =
-                BinaryData.fromString(
-                                "{\"regions\":[{\"continent\":\"mrutznabaobnsluj\",\"data_centers\":[\"tymkmvguihywart\",\"pphkixkykxds\",\"j\",\"emmucfxh\"],\"default\":false,\"disabled\":true,\"flag\":\"mymyincqlhri\",\"label\":\"sl\",\"reason\":\"iiovgqcgxu\",\"slug\":\"qkctotiowlxte\"},{\"continent\":\"ptjgwdt\",\"data_centers\":[\"ranblwphqlkccu\",\"gygqwah\",\"iul\",\"gniiprglvaw\"],\"default\":false,\"disabled\":false,\"flag\":\"ypivlsbb\",\"label\":\"mcub\",\"reason\":\"ifoxxkubvphav\",\"slug\":\"h\"}]}")
-                        .toObject(AppsListRegionsResponse.class);
+        AppsListRegionsResponse model = BinaryData.fromString("{\"regions\":[{\"continent\":\"mrutznabaobnsluj\",\"data_centers\":[\"tymkmvguihywart\",\"pphkixkykxds\",\"j\",\"emmucfxh\"],\"default\":false,\"disabled\":true,\"flag\":\"mymyincqlhri\",\"label\":\"sl\",\"reason\":\"iiovgqcgxu\",\"slug\":\"qkctotiowlxte\"},{\"continent\":\"ptjgwdt\",\"data_centers\":[\"ranblwphqlkccu\",\"gygqwah\",\"iul\",\"gniiprglvaw\"],\"default\":false,\"disabled\":false,\"flag\":\"ypivlsbb\",\"label\":\"mcub\",\"reason\":\"ifoxxkubvphav\",\"slug\":\"h\"}]}").toObject(AppsListRegionsResponse.class);
     }
 
     @Test
     public void testSerialize() {
-        AppsListRegionsResponse model =
-                new AppsListRegionsResponse().setRegions(Arrays.asList(new AppsRegion(), new AppsRegion()));
+        AppsListRegionsResponse model = new AppsListRegionsResponse().setRegions(Arrays.asList(new AppsRegion(), new AppsRegion()));
         model = BinaryData.fromObject(model).toObject(AppsListRegionsResponse.class);
     }
 }

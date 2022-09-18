@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components1Rzg8D5ResponsesExistingNodePoolContentApplicationJsonSchema model. */
+/**
+ * The Components1Rzg8D5ResponsesExistingNodePoolContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components1Rzg8D5ResponsesExistingNodePoolContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components1Rzg8D5ResponsesExistingNodePoolContentApplicationJ
 
     /**
      * Get the nodePool property: The node_pool property.
-     *
+     * 
      * @return the nodePool value.
      */
     public KubernetesNodePool getNodePool() {
@@ -23,12 +28,11 @@ public final class Components1Rzg8D5ResponsesExistingNodePoolContentApplicationJ
 
     /**
      * Set the nodePool property: The node_pool property.
-     *
+     * 
      * @param nodePool the nodePool value to set.
      * @return the Components1Rzg8D5ResponsesExistingNodePoolContentApplicationJsonSchema object itself.
      */
-    public Components1Rzg8D5ResponsesExistingNodePoolContentApplicationJsonSchema setNodePool(
-            KubernetesNodePool nodePool) {
+    public Components1Rzg8D5ResponsesExistingNodePoolContentApplicationJsonSchema setNodePool(KubernetesNodePool nodePool) {
         this.nodePool = nodePool;
         return this;
     }

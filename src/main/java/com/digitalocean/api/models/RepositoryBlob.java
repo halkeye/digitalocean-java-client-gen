@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The RepositoryBlob model. */
+/**
+ * The RepositoryBlob model.
+ */
 @Fluent
 public final class RepositoryBlob {
     /*
@@ -20,7 +25,7 @@ public final class RepositoryBlob {
 
     /**
      * Get the digest property: The digest of the blob.
-     *
+     * 
      * @return the digest value.
      */
     public String getDigest() {
@@ -29,7 +34,7 @@ public final class RepositoryBlob {
 
     /**
      * Set the digest property: The digest of the blob.
-     *
+     * 
      * @param digest the digest value to set.
      * @return the RepositoryBlob object itself.
      */
@@ -40,7 +45,7 @@ public final class RepositoryBlob {
 
     /**
      * Get the compressedSizeBytes property: The compressed size of the blob in bytes.
-     *
+     * 
      * @return the compressedSizeBytes value.
      */
     public Integer getCompressedSizeBytes() {
@@ -49,7 +54,7 @@ public final class RepositoryBlob {
 
     /**
      * Set the compressedSizeBytes property: The compressed size of the blob in bytes.
-     *
+     * 
      * @param compressedSizeBytes the compressedSizeBytes value to set.
      * @return the RepositoryBlob object itself.
      */

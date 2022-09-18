@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components1Ie0A5GResponsesSubscriptionResponseContentApplicationJsonSchema model. */
+/**
+ * The Components1Ie0A5GResponsesSubscriptionResponseContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components1Ie0A5GResponsesSubscriptionResponseContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components1Ie0A5GResponsesSubscriptionResponseContentApplicat
 
     /**
      * Get the subscription property: The subscription property.
-     *
+     * 
      * @return the subscription value.
      */
     public Subscription getSubscription() {
@@ -23,12 +28,11 @@ public final class Components1Ie0A5GResponsesSubscriptionResponseContentApplicat
 
     /**
      * Set the subscription property: The subscription property.
-     *
+     * 
      * @param subscription the subscription value to set.
      * @return the Components1Ie0A5GResponsesSubscriptionResponseContentApplicationJsonSchema object itself.
      */
-    public Components1Ie0A5GResponsesSubscriptionResponseContentApplicationJsonSchema setSubscription(
-            Subscription subscription) {
+    public Components1Ie0A5GResponsesSubscriptionResponseContentApplicationJsonSchema setSubscription(Subscription subscription) {
         this.subscription = subscription;
         return this;
     }

@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ComponentsFwoxchResponsesFloatingIpCreatedContentApplicationJsonSchema model. */
+/**
+ * The ComponentsFwoxchResponsesFloatingIpCreatedContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsFwoxchResponsesFloatingIpCreatedContentApplicationJsonSchema {
     /*
@@ -20,7 +25,7 @@ public final class ComponentsFwoxchResponsesFloatingIpCreatedContentApplicationJ
 
     /**
      * Get the floatingIp property: The floating_ip property.
-     *
+     * 
      * @return the floatingIp value.
      */
     public FloatingIp getFloatingIp() {
@@ -29,7 +34,7 @@ public final class ComponentsFwoxchResponsesFloatingIpCreatedContentApplicationJ
 
     /**
      * Set the floatingIp property: The floating_ip property.
-     *
+     * 
      * @param floatingIp the floatingIp value to set.
      * @return the ComponentsFwoxchResponsesFloatingIpCreatedContentApplicationJsonSchema object itself.
      */
@@ -40,7 +45,7 @@ public final class ComponentsFwoxchResponsesFloatingIpCreatedContentApplicationJ
 
     /**
      * Get the links property: The links property.
-     *
+     * 
      * @return the links value.
      */
     public FloatingIpCreatedApplicationJsonProperties getLinks() {
@@ -49,12 +54,11 @@ public final class ComponentsFwoxchResponsesFloatingIpCreatedContentApplicationJ
 
     /**
      * Set the links property: The links property.
-     *
+     * 
      * @param links the links value to set.
      * @return the ComponentsFwoxchResponsesFloatingIpCreatedContentApplicationJsonSchema object itself.
      */
-    public ComponentsFwoxchResponsesFloatingIpCreatedContentApplicationJsonSchema setLinks(
-            FloatingIpCreatedApplicationJsonProperties links) {
+    public ComponentsFwoxchResponsesFloatingIpCreatedContentApplicationJsonSchema setLinks(FloatingIpCreatedApplicationJsonProperties links) {
         this.links = links;
         return this;
     }

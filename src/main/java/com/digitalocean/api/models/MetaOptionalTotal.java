@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The MetaOptionalTotal model. */
+/**
+ * The MetaOptionalTotal model.
+ */
 @Fluent
 public class MetaOptionalTotal {
     /*
@@ -14,7 +19,7 @@ public class MetaOptionalTotal {
 
     /**
      * Get the meta property: Information about the response itself.
-     *
+     * 
      * @return the meta value.
      */
     public MetaProperties getMeta() {
@@ -23,7 +28,7 @@ public class MetaOptionalTotal {
 
     /**
      * Set the meta property: Information about the response itself.
-     *
+     * 
      * @param meta the meta value to set.
      * @return the MetaOptionalTotal object itself.
      */

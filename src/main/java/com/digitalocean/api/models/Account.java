@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The Account model. */
+/**
+ * The Account model.
+ */
 @Fluent
 public final class Account {
     /*
@@ -56,7 +62,7 @@ public final class Account {
 
     /**
      * Get the dropletLimit property: The total number of Droplets current user or team may have active at one time.
-     *
+     * 
      * @return the dropletLimit value.
      */
     public int getDropletLimit() {
@@ -65,7 +71,7 @@ public final class Account {
 
     /**
      * Set the dropletLimit property: The total number of Droplets current user or team may have active at one time.
-     *
+     * 
      * @param dropletLimit the dropletLimit value to set.
      * @return the Account object itself.
      */
@@ -76,7 +82,7 @@ public final class Account {
 
     /**
      * Get the floatingIpLimit property: The total number of Floating IPs the current user or team may have.
-     *
+     * 
      * @return the floatingIpLimit value.
      */
     public int getFloatingIpLimit() {
@@ -85,7 +91,7 @@ public final class Account {
 
     /**
      * Set the floatingIpLimit property: The total number of Floating IPs the current user or team may have.
-     *
+     * 
      * @param floatingIpLimit the floatingIpLimit value to set.
      * @return the Account object itself.
      */
@@ -96,7 +102,7 @@ public final class Account {
 
     /**
      * Get the email property: The email address used by the current user to register for DigitalOcean.
-     *
+     * 
      * @return the email value.
      */
     public String getEmail() {
@@ -105,7 +111,7 @@ public final class Account {
 
     /**
      * Set the email property: The email address used by the current user to register for DigitalOcean.
-     *
+     * 
      * @param email the email value to set.
      * @return the Account object itself.
      */
@@ -116,7 +122,7 @@ public final class Account {
 
     /**
      * Get the uuid property: The unique universal identifier for the current user.
-     *
+     * 
      * @return the uuid value.
      */
     public String getUuid() {
@@ -125,7 +131,7 @@ public final class Account {
 
     /**
      * Set the uuid property: The unique universal identifier for the current user.
-     *
+     * 
      * @param uuid the uuid value to set.
      * @return the Account object itself.
      */
@@ -136,7 +142,7 @@ public final class Account {
 
     /**
      * Get the emailVerified property: If true, the user has verified their account via email. False otherwise.
-     *
+     * 
      * @return the emailVerified value.
      */
     public boolean isEmailVerified() {
@@ -145,7 +151,7 @@ public final class Account {
 
     /**
      * Set the emailVerified property: If true, the user has verified their account via email. False otherwise.
-     *
+     * 
      * @param emailVerified the emailVerified value to set.
      * @return the Account object itself.
      */
@@ -156,7 +162,7 @@ public final class Account {
 
     /**
      * Get the status property: This value is one of "active", "warning" or "locked".
-     *
+     * 
      * @return the status value.
      */
     public AccountStatus getStatus() {
@@ -165,7 +171,7 @@ public final class Account {
 
     /**
      * Set the status property: This value is one of "active", "warning" or "locked".
-     *
+     * 
      * @param status the status value to set.
      * @return the Account object itself.
      */
@@ -176,7 +182,7 @@ public final class Account {
 
     /**
      * Get the statusMessage property: A human-readable message giving more details about the status of the account.
-     *
+     * 
      * @return the statusMessage value.
      */
     public String getStatusMessage() {
@@ -185,7 +191,7 @@ public final class Account {
 
     /**
      * Set the statusMessage property: A human-readable message giving more details about the status of the account.
-     *
+     * 
      * @param statusMessage the statusMessage value to set.
      * @return the Account object itself.
      */
@@ -196,7 +202,7 @@ public final class Account {
 
     /**
      * Get the team property: When authorized in a team context, includes information about the current team.
-     *
+     * 
      * @return the team value.
      */
     public AccountTeam getTeam() {
@@ -205,7 +211,7 @@ public final class Account {
 
     /**
      * Set the team property: When authorized in a team context, includes information about the current team.
-     *
+     * 
      * @param team the team value to set.
      * @return the Account object itself.
      */

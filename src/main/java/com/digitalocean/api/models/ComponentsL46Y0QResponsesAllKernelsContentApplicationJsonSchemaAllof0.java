@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsL46Y0QResponsesAllKernelsContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The ComponentsL46Y0QResponsesAllKernelsContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class ComponentsL46Y0QResponsesAllKernelsContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsL46Y0QResponsesAllKernelsContentApplicationJsonSchemaAllo
 
     /**
      * Get the kernels property: The kernels property.
-     *
+     * 
      * @return the kernels value.
      */
     public List<Kernel> getKernels() {
@@ -24,7 +29,7 @@ public class ComponentsL46Y0QResponsesAllKernelsContentApplicationJsonSchemaAllo
 
     /**
      * Set the kernels property: The kernels property.
-     *
+     * 
      * @param kernels the kernels value to set.
      * @return the ComponentsL46Y0QResponsesAllKernelsContentApplicationJsonSchemaAllof0 object itself.
      */

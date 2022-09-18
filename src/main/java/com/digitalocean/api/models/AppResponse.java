@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppResponse model. */
+/**
+ * The AppResponse model.
+ */
 @Fluent
 public final class AppResponse {
     /*
@@ -14,7 +19,7 @@ public final class AppResponse {
 
     /**
      * Get the app property: An application's configuration and status.
-     *
+     * 
      * @return the app value.
      */
     public App getApp() {
@@ -23,7 +28,7 @@ public final class AppResponse {
 
     /**
      * Set the app property: An application's configuration and status.
-     *
+     * 
      * @param app the app value to set.
      * @return the AppResponse object itself.
      */

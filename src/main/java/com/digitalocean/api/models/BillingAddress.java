@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The BillingAddress model. */
+/**
+ * The BillingAddress model.
+ */
 @Fluent
 public class BillingAddress {
     /*
@@ -56,7 +61,7 @@ public class BillingAddress {
 
     /**
      * Get the addressLine1 property: Street address line 1.
-     *
+     * 
      * @return the addressLine1 value.
      */
     public String getAddressLine1() {
@@ -65,7 +70,7 @@ public class BillingAddress {
 
     /**
      * Set the addressLine1 property: Street address line 1.
-     *
+     * 
      * @param addressLine1 the addressLine1 value to set.
      * @return the BillingAddress object itself.
      */
@@ -76,7 +81,7 @@ public class BillingAddress {
 
     /**
      * Get the addressLine2 property: Street address line 2.
-     *
+     * 
      * @return the addressLine2 value.
      */
     public String getAddressLine2() {
@@ -85,7 +90,7 @@ public class BillingAddress {
 
     /**
      * Set the addressLine2 property: Street address line 2.
-     *
+     * 
      * @param addressLine2 the addressLine2 value to set.
      * @return the BillingAddress object itself.
      */
@@ -96,7 +101,7 @@ public class BillingAddress {
 
     /**
      * Get the city property: City.
-     *
+     * 
      * @return the city value.
      */
     public String getCity() {
@@ -105,7 +110,7 @@ public class BillingAddress {
 
     /**
      * Set the city property: City.
-     *
+     * 
      * @param city the city value to set.
      * @return the BillingAddress object itself.
      */
@@ -116,7 +121,7 @@ public class BillingAddress {
 
     /**
      * Get the region property: Region.
-     *
+     * 
      * @return the region value.
      */
     public String getRegion() {
@@ -125,7 +130,7 @@ public class BillingAddress {
 
     /**
      * Set the region property: Region.
-     *
+     * 
      * @param region the region value to set.
      * @return the BillingAddress object itself.
      */
@@ -136,7 +141,7 @@ public class BillingAddress {
 
     /**
      * Get the postalCode property: Postal code.
-     *
+     * 
      * @return the postalCode value.
      */
     public String getPostalCode() {
@@ -145,7 +150,7 @@ public class BillingAddress {
 
     /**
      * Set the postalCode property: Postal code.
-     *
+     * 
      * @param postalCode the postalCode value to set.
      * @return the BillingAddress object itself.
      */
@@ -156,7 +161,7 @@ public class BillingAddress {
 
     /**
      * Get the countryIso2Code property: Country (ISO2) code.
-     *
+     * 
      * @return the countryIso2Code value.
      */
     public String getCountryIso2Code() {
@@ -165,7 +170,7 @@ public class BillingAddress {
 
     /**
      * Set the countryIso2Code property: Country (ISO2) code.
-     *
+     * 
      * @param countryIso2Code the countryIso2Code value to set.
      * @return the BillingAddress object itself.
      */
@@ -176,7 +181,7 @@ public class BillingAddress {
 
     /**
      * Get the createdAt property: Timestamp billing address was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public String getCreatedAt() {
@@ -185,7 +190,7 @@ public class BillingAddress {
 
     /**
      * Set the createdAt property: Timestamp billing address was created.
-     *
+     * 
      * @param createdAt the createdAt value to set.
      * @return the BillingAddress object itself.
      */
@@ -196,7 +201,7 @@ public class BillingAddress {
 
     /**
      * Get the updatedAt property: Timestamp billing address was updated.
-     *
+     * 
      * @return the updatedAt value.
      */
     public String getUpdatedAt() {
@@ -205,7 +210,7 @@ public class BillingAddress {
 
     /**
      * Set the updatedAt property: Timestamp billing address was updated.
-     *
+     * 
      * @param updatedAt the updatedAt value to set.
      * @return the BillingAddress object itself.
      */

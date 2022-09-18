@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsYfiiqgResponsesAllFirewallsContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The ComponentsYfiiqgResponsesAllFirewallsContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class ComponentsYfiiqgResponsesAllFirewallsContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsYfiiqgResponsesAllFirewallsContentApplicationJsonSchemaAl
 
     /**
      * Get the firewalls property: The firewalls property.
-     *
+     * 
      * @return the firewalls value.
      */
     public List<Firewall> getFirewalls() {
@@ -24,12 +29,11 @@ public class ComponentsYfiiqgResponsesAllFirewallsContentApplicationJsonSchemaAl
 
     /**
      * Set the firewalls property: The firewalls property.
-     *
+     * 
      * @param firewalls the firewalls value to set.
      * @return the ComponentsYfiiqgResponsesAllFirewallsContentApplicationJsonSchemaAllof0 object itself.
      */
-    public ComponentsYfiiqgResponsesAllFirewallsContentApplicationJsonSchemaAllof0 setFirewalls(
-            List<Firewall> firewalls) {
+    public ComponentsYfiiqgResponsesAllFirewallsContentApplicationJsonSchemaAllof0 setFirewalls(List<Firewall> firewalls) {
         this.firewalls = firewalls;
         return this;
     }

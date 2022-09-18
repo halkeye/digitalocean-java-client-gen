@@ -1,14 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
 /**
- * The PathsQ9AxjgV2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostRequestbodyContentApplicationJsonSchema model.
+ * The PathsQ9AxjgV2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostRequestbodyContentApplicationJsonSchema
+ * model.
  */
 @Fluent
-public final
-class PathsQ9AxjgV2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostRequestbodyContentApplicationJsonSchema {
+public final class PathsQ9AxjgV2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostRequestbodyContentApplicationJsonSchema {
     /*
      * The mysql_settings property.
      */
@@ -17,7 +20,7 @@ class PathsQ9AxjgV2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostRequest
 
     /**
      * Get the mysqlSettings property: The mysql_settings property.
-     *
+     * 
      * @return the mysqlSettings value.
      */
     public MysqlSettings getMysqlSettings() {
@@ -26,14 +29,13 @@ class PathsQ9AxjgV2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostRequest
 
     /**
      * Set the mysqlSettings property: The mysql_settings property.
-     *
+     * 
      * @param mysqlSettings the mysqlSettings value to set.
      * @return the
-     *     PathsQ9AxjgV2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostRequestbodyContentApplicationJsonSchema
-     *     object itself.
+     * PathsQ9AxjgV2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostRequestbodyContentApplicationJsonSchema
+     * object itself.
      */
-    public PathsQ9AxjgV2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostRequestbodyContentApplicationJsonSchema
-            setMysqlSettings(MysqlSettings mysqlSettings) {
+    public PathsQ9AxjgV2DatabasesDatabaseClusterUuidUsersUsernameResetAuthPostRequestbodyContentApplicationJsonSchema setMysqlSettings(MysqlSettings mysqlSettings) {
         this.mysqlSettings = mysqlSettings;
         return this;
     }

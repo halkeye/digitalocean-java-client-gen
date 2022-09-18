@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The Action model. */
+/**
+ * The Action model.
+ */
 @Fluent
 public class Action {
     /*
@@ -64,7 +70,7 @@ public class Action {
 
     /**
      * Get the id property: A unique numeric ID that can be used to identify and reference an action.
-     *
+     * 
      * @return the id value.
      */
     public Integer getId() {
@@ -73,7 +79,7 @@ public class Action {
 
     /**
      * Set the id property: A unique numeric ID that can be used to identify and reference an action.
-     *
+     * 
      * @param id the id value to set.
      * @return the Action object itself.
      */
@@ -84,7 +90,7 @@ public class Action {
 
     /**
      * Get the status property: The current status of the action. This can be "in-progress", "completed", or "errored".
-     *
+     * 
      * @return the status value.
      */
     public ActionStatus getStatus() {
@@ -93,7 +99,7 @@ public class Action {
 
     /**
      * Set the status property: The current status of the action. This can be "in-progress", "completed", or "errored".
-     *
+     * 
      * @param status the status value to set.
      * @return the Action object itself.
      */
@@ -105,7 +111,7 @@ public class Action {
     /**
      * Get the type property: This is the type of action that the object represents. For example, this could be
      * "transfer" to represent the state of an image transfer action.
-     *
+     * 
      * @return the type value.
      */
     public String getType() {
@@ -115,7 +121,7 @@ public class Action {
     /**
      * Set the type property: This is the type of action that the object represents. For example, this could be
      * "transfer" to represent the state of an image transfer action.
-     *
+     * 
      * @param type the type value to set.
      * @return the Action object itself.
      */
@@ -127,7 +133,7 @@ public class Action {
     /**
      * Get the startedAt property: A time value given in ISO8601 combined date and time format that represents when the
      * action was initiated.
-     *
+     * 
      * @return the startedAt value.
      */
     public OffsetDateTime getStartedAt() {
@@ -137,7 +143,7 @@ public class Action {
     /**
      * Set the startedAt property: A time value given in ISO8601 combined date and time format that represents when the
      * action was initiated.
-     *
+     * 
      * @param startedAt the startedAt value to set.
      * @return the Action object itself.
      */
@@ -149,7 +155,7 @@ public class Action {
     /**
      * Get the completedAt property: A time value given in ISO8601 combined date and time format that represents when
      * the action was completed.
-     *
+     * 
      * @return the completedAt value.
      */
     public OffsetDateTime getCompletedAt() {
@@ -159,7 +165,7 @@ public class Action {
     /**
      * Set the completedAt property: A time value given in ISO8601 combined date and time format that represents when
      * the action was completed.
-     *
+     * 
      * @param completedAt the completedAt value to set.
      * @return the Action object itself.
      */
@@ -170,7 +176,7 @@ public class Action {
 
     /**
      * Get the resourceId property: A unique identifier for the resource that the action is associated with.
-     *
+     * 
      * @return the resourceId value.
      */
     public Integer getResourceId() {
@@ -179,7 +185,7 @@ public class Action {
 
     /**
      * Set the resourceId property: A unique identifier for the resource that the action is associated with.
-     *
+     * 
      * @param resourceId the resourceId value to set.
      * @return the Action object itself.
      */
@@ -190,7 +196,7 @@ public class Action {
 
     /**
      * Get the resourceType property: The type of resource that the action is associated with.
-     *
+     * 
      * @return the resourceType value.
      */
     public String getResourceType() {
@@ -199,7 +205,7 @@ public class Action {
 
     /**
      * Set the resourceType property: The type of resource that the action is associated with.
-     *
+     * 
      * @param resourceType the resourceType value to set.
      * @return the Action object itself.
      */
@@ -210,7 +216,7 @@ public class Action {
 
     /**
      * Get the region property: The region property.
-     *
+     * 
      * @return the region value.
      */
     public Region getRegion() {
@@ -219,7 +225,7 @@ public class Action {
 
     /**
      * Set the region property: The region property.
-     *
+     * 
      * @param region the region value to set.
      * @return the Action object itself.
      */
@@ -230,7 +236,7 @@ public class Action {
 
     /**
      * Get the regionSlug property: Any object.
-     *
+     * 
      * @return the regionSlug value.
      */
     public Object getRegionSlug() {
@@ -239,7 +245,7 @@ public class Action {
 
     /**
      * Set the regionSlug property: Any object.
-     *
+     * 
      * @param regionSlug the regionSlug value to set.
      * @return the Action object itself.
      */

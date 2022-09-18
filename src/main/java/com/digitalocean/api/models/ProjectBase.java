@@ -1,11 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.UUID;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The ProjectBase model. */
+/**
+ * The ProjectBase model.
+ */
 @Fluent
 public class ProjectBase {
     /*
@@ -41,7 +47,7 @@ public class ProjectBase {
     /*
      * The purpose of the project. The maximum length is 255 characters. It can
      * have one of the following values:
-     *
+     * 
      * - Just trying out DigitalOcean
      * - Class project / Educational purposes
      * - Website or blog
@@ -51,10 +57,10 @@ public class ProjectBase {
      * - Machine learning / AI / Data processing
      * - IoT
      * - Operational / Developer tooling
-     *
+     * 
      * If another value for purpose is specified, for example, "your custom purpose",
      * your purpose will be stored as `Other: your custom purpose`.
-     *
+     * 
      */
     @JsonProperty(value = "purpose")
     private String purpose;
@@ -79,7 +85,7 @@ public class ProjectBase {
 
     /**
      * Get the id property: The unique universal identifier of this project.
-     *
+     * 
      * @return the id value.
      */
     public UUID getId() {
@@ -88,7 +94,7 @@ public class ProjectBase {
 
     /**
      * Get the ownerUuid property: The unique universal identifier of the project owner.
-     *
+     * 
      * @return the ownerUuid value.
      */
     public String getOwnerUuid() {
@@ -97,7 +103,7 @@ public class ProjectBase {
 
     /**
      * Get the ownerId property: The integer id of the project owner.
-     *
+     * 
      * @return the ownerId value.
      */
     public Integer getOwnerId() {
@@ -105,9 +111,9 @@ public class ProjectBase {
     }
 
     /**
-     * Get the name property: The human-readable name for the project. The maximum length is 175 characters and the name
-     * must be unique.
-     *
+     * Get the name property: The human-readable name for the project. The maximum length is 175 characters and the
+     * name must be unique.
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -115,9 +121,9 @@ public class ProjectBase {
     }
 
     /**
-     * Set the name property: The human-readable name for the project. The maximum length is 175 characters and the name
-     * must be unique.
-     *
+     * Set the name property: The human-readable name for the project. The maximum length is 175 characters and the
+     * name must be unique.
+     * 
      * @param name the name value to set.
      * @return the ProjectBase object itself.
      */
@@ -128,7 +134,7 @@ public class ProjectBase {
 
     /**
      * Get the description property: The description of the project. The maximum length is 255 characters.
-     *
+     * 
      * @return the description value.
      */
     public String getDescription() {
@@ -137,7 +143,7 @@ public class ProjectBase {
 
     /**
      * Set the description property: The description of the project. The maximum length is 255 characters.
-     *
+     * 
      * @param description the description value to set.
      * @return the ProjectBase object itself.
      */
@@ -147,16 +153,22 @@ public class ProjectBase {
     }
 
     /**
-     * Get the purpose property: The purpose of the project. The maximum length is 255 characters. It can have one of
-     * the following values:
-     *
-     * <p>- Just trying out DigitalOcean - Class project / Educational purposes - Website or blog - Web Application -
-     * Service or API - Mobile Application - Machine learning / AI / Data processing - IoT - Operational / Developer
-     * tooling
-     *
-     * <p>If another value for purpose is specified, for example, "your custom purpose", your purpose will be stored as
-     * `Other: your custom purpose`.
-     *
+     * Get the purpose property: The purpose of the project. The maximum length is 255 characters. It can
+     * have one of the following values:
+     * 
+     * - Just trying out DigitalOcean
+     * - Class project / Educational purposes
+     * - Website or blog
+     * - Web Application
+     * - Service or API
+     * - Mobile Application
+     * - Machine learning / AI / Data processing
+     * - IoT
+     * - Operational / Developer tooling
+     * 
+     * If another value for purpose is specified, for example, "your custom purpose",
+     * your purpose will be stored as `Other: your custom purpose`.
+     * 
      * @return the purpose value.
      */
     public String getPurpose() {
@@ -164,16 +176,22 @@ public class ProjectBase {
     }
 
     /**
-     * Set the purpose property: The purpose of the project. The maximum length is 255 characters. It can have one of
-     * the following values:
-     *
-     * <p>- Just trying out DigitalOcean - Class project / Educational purposes - Website or blog - Web Application -
-     * Service or API - Mobile Application - Machine learning / AI / Data processing - IoT - Operational / Developer
-     * tooling
-     *
-     * <p>If another value for purpose is specified, for example, "your custom purpose", your purpose will be stored as
-     * `Other: your custom purpose`.
-     *
+     * Set the purpose property: The purpose of the project. The maximum length is 255 characters. It can
+     * have one of the following values:
+     * 
+     * - Just trying out DigitalOcean
+     * - Class project / Educational purposes
+     * - Website or blog
+     * - Web Application
+     * - Service or API
+     * - Mobile Application
+     * - Machine learning / AI / Data processing
+     * - IoT
+     * - Operational / Developer tooling
+     * 
+     * If another value for purpose is specified, for example, "your custom purpose",
+     * your purpose will be stored as `Other: your custom purpose`.
+     * 
      * @param purpose the purpose value to set.
      * @return the ProjectBase object itself.
      */
@@ -184,7 +202,7 @@ public class ProjectBase {
 
     /**
      * Get the environment property: The environment of the project's resources.
-     *
+     * 
      * @return the environment value.
      */
     public ProjectBaseEnvironment getEnvironment() {
@@ -193,7 +211,7 @@ public class ProjectBase {
 
     /**
      * Set the environment property: The environment of the project's resources.
-     *
+     * 
      * @param environment the environment value to set.
      * @return the ProjectBase object itself.
      */
@@ -205,7 +223,7 @@ public class ProjectBase {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * project was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -215,7 +233,7 @@ public class ProjectBase {
     /**
      * Get the updatedAt property: A time value given in ISO8601 combined date and time format that represents when the
      * project was updated.
-     *
+     * 
      * @return the updatedAt value.
      */
     public OffsetDateTime getUpdatedAt() {

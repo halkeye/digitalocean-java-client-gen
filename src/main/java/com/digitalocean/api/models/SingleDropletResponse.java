@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** Single Droplet Response. */
+/**
+ * Single Droplet Response.
+ */
 @Fluent
 public final class SingleDropletResponse {
     /*
@@ -20,7 +25,7 @@ public final class SingleDropletResponse {
 
     /**
      * Get the droplet property: The droplet property.
-     *
+     * 
      * @return the droplet value.
      */
     public Droplet getDroplet() {
@@ -29,7 +34,7 @@ public final class SingleDropletResponse {
 
     /**
      * Set the droplet property: The droplet property.
-     *
+     * 
      * @param droplet the droplet value to set.
      * @return the SingleDropletResponse object itself.
      */
@@ -40,7 +45,7 @@ public final class SingleDropletResponse {
 
     /**
      * Get the links property: The links property.
-     *
+     * 
      * @return the links value.
      */
     public DropletCreateApplicationJsonOneOfProperties getLinks() {
@@ -49,7 +54,7 @@ public final class SingleDropletResponse {
 
     /**
      * Set the links property: The links property.
-     *
+     * 
      * @param links the links value to set.
      * @return the SingleDropletResponse object itself.
      */

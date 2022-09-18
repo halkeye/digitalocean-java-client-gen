@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The KubernetesRegion model. */
+/**
+ * The KubernetesRegion model.
+ */
 @Fluent
 public final class KubernetesRegion {
     /*
@@ -20,7 +25,7 @@ public final class KubernetesRegion {
 
     /**
      * Get the name property: A DigitalOcean region where Kubernetes is available.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -29,7 +34,7 @@ public final class KubernetesRegion {
 
     /**
      * Set the name property: A DigitalOcean region where Kubernetes is available.
-     *
+     * 
      * @param name the name value to set.
      * @return the KubernetesRegion object itself.
      */
@@ -40,7 +45,7 @@ public final class KubernetesRegion {
 
     /**
      * Get the slug property: The identifier for a region for use when creating a new cluster.
-     *
+     * 
      * @return the slug value.
      */
     public String getSlug() {
@@ -49,7 +54,7 @@ public final class KubernetesRegion {
 
     /**
      * Set the slug property: The identifier for a region for use when creating a new cluster.
-     *
+     * 
      * @param slug the slug value to set.
      * @return the KubernetesRegion object itself.
      */

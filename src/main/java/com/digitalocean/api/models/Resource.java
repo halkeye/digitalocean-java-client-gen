@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The Resource model. */
+/**
+ * The Resource model.
+ */
 @Fluent
 public final class Resource {
     /*
@@ -34,7 +40,7 @@ public final class Resource {
     /**
      * Get the urn property: The uniform resource name (URN) for the resource in the format
      * do:resource_type:resource_id.
-     *
+     * 
      * @return the urn value.
      */
     public String getUrn() {
@@ -44,7 +50,7 @@ public final class Resource {
     /**
      * Set the urn property: The uniform resource name (URN) for the resource in the format
      * do:resource_type:resource_id.
-     *
+     * 
      * @param urn the urn value to set.
      * @return the Resource object itself.
      */
@@ -54,9 +60,9 @@ public final class Resource {
     }
 
     /**
-     * Get the assignedAt property: A time value given in ISO8601 combined date and time format that represents when the
-     * project was created.
-     *
+     * Get the assignedAt property: A time value given in ISO8601 combined date and time format that represents when
+     * the project was created.
+     * 
      * @return the assignedAt value.
      */
     public OffsetDateTime getAssignedAt() {
@@ -64,9 +70,9 @@ public final class Resource {
     }
 
     /**
-     * Set the assignedAt property: A time value given in ISO8601 combined date and time format that represents when the
-     * project was created.
-     *
+     * Set the assignedAt property: A time value given in ISO8601 combined date and time format that represents when
+     * the project was created.
+     * 
      * @param assignedAt the assignedAt value to set.
      * @return the Resource object itself.
      */
@@ -77,7 +83,7 @@ public final class Resource {
 
     /**
      * Get the links property: The links object contains the `self` object, which contains the resource relationship.
-     *
+     * 
      * @return the links value.
      */
     public ResourceLinks getLinks() {
@@ -86,7 +92,7 @@ public final class Resource {
 
     /**
      * Set the links property: The links object contains the `self` object, which contains the resource relationship.
-     *
+     * 
      * @param links the links value to set.
      * @return the Resource object itself.
      */
@@ -97,7 +103,7 @@ public final class Resource {
 
     /**
      * Get the status property: The status of assigning and fetching the resources.
-     *
+     * 
      * @return the status value.
      */
     public ResourceStatus getStatus() {
@@ -106,7 +112,7 @@ public final class Resource {
 
     /**
      * Set the status property: The status of assigning and fetching the resources.
-     *
+     * 
      * @param status the status value to set.
      * @return the Resource object itself.
      */

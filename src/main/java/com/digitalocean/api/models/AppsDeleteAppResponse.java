@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsDeleteAppResponse model. */
+/**
+ * The AppsDeleteAppResponse model.
+ */
 @Fluent
 public final class AppsDeleteAppResponse {
     /*
@@ -14,7 +19,7 @@ public final class AppsDeleteAppResponse {
 
     /**
      * Get the id property: The ID of the app that was deleted.
-     *
+     * 
      * @return the id value.
      */
     public String getId() {
@@ -23,7 +28,7 @@ public final class AppsDeleteAppResponse {
 
     /**
      * Set the id property: The ID of the app that was deleted.
-     *
+     * 
      * @param id the id value to set.
      * @return the AppsDeleteAppResponse object itself.
      */

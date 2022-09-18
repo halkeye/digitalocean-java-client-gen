@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ComponentsV728JgResponsesGarbageCollectionContentApplicationJsonSchema model. */
+/**
+ * The ComponentsV728JgResponsesGarbageCollectionContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsV728JgResponsesGarbageCollectionContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class ComponentsV728JgResponsesGarbageCollectionContentApplicationJ
 
     /**
      * Get the garbageCollection property: The garbage_collection property.
-     *
+     * 
      * @return the garbageCollection value.
      */
     public GarbageCollection getGarbageCollection() {
@@ -23,12 +28,11 @@ public final class ComponentsV728JgResponsesGarbageCollectionContentApplicationJ
 
     /**
      * Set the garbageCollection property: The garbage_collection property.
-     *
+     * 
      * @param garbageCollection the garbageCollection value to set.
      * @return the ComponentsV728JgResponsesGarbageCollectionContentApplicationJsonSchema object itself.
      */
-    public ComponentsV728JgResponsesGarbageCollectionContentApplicationJsonSchema setGarbageCollection(
-            GarbageCollection garbageCollection) {
+    public ComponentsV728JgResponsesGarbageCollectionContentApplicationJsonSchema setGarbageCollection(GarbageCollection garbageCollection) {
         this.garbageCollection = garbageCollection;
         return this;
     }

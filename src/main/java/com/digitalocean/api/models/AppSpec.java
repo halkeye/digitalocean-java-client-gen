@@ -1,13 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * AppSpec
- *
- * <p>The desired configuration of an application.
+ * 
+ * The desired configuration of an application.
  */
 @Fluent
 public final class AppSpec {
@@ -68,7 +72,7 @@ public final class AppSpec {
 
     /**
      * Get the name property: The name of the app. Must be unique across all apps in the same account.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -77,7 +81,7 @@ public final class AppSpec {
 
     /**
      * Set the name property: The name of the app. Must be unique across all apps in the same account.
-     *
+     * 
      * @param name the name value to set.
      * @return the AppSpec object itself.
      */
@@ -88,7 +92,7 @@ public final class AppSpec {
 
     /**
      * Get the region property: The slug form of the geographical origin of the app. Default: `nearest available`.
-     *
+     * 
      * @return the region value.
      */
     public AppSpecRegion getRegion() {
@@ -97,7 +101,7 @@ public final class AppSpec {
 
     /**
      * Set the region property: The slug form of the geographical origin of the app. Default: `nearest available`.
-     *
+     * 
      * @param region the region value to set.
      * @return the AppSpec object itself.
      */
@@ -108,7 +112,7 @@ public final class AppSpec {
 
     /**
      * Get the domains property: A set of hostnames where the application will be available.
-     *
+     * 
      * @return the domains value.
      */
     public List<AppDomainSpec> getDomains() {
@@ -117,7 +121,7 @@ public final class AppSpec {
 
     /**
      * Set the domains property: A set of hostnames where the application will be available.
-     *
+     * 
      * @param domains the domains value to set.
      * @return the AppSpec object itself.
      */
@@ -128,7 +132,7 @@ public final class AppSpec {
 
     /**
      * Get the services property: Workloads which expose publicly-accessible HTTP services.
-     *
+     * 
      * @return the services value.
      */
     public List<AppServiceSpec> getServices() {
@@ -137,7 +141,7 @@ public final class AppSpec {
 
     /**
      * Set the services property: Workloads which expose publicly-accessible HTTP services.
-     *
+     * 
      * @param services the services value to set.
      * @return the AppSpec object itself.
      */
@@ -148,7 +152,7 @@ public final class AppSpec {
 
     /**
      * Get the staticSites property: Content which can be rendered to static web assets.
-     *
+     * 
      * @return the staticSites value.
      */
     public List<AppStaticSiteSpec> getStaticSites() {
@@ -157,7 +161,7 @@ public final class AppSpec {
 
     /**
      * Set the staticSites property: Content which can be rendered to static web assets.
-     *
+     * 
      * @param staticSites the staticSites value to set.
      * @return the AppSpec object itself.
      */
@@ -168,7 +172,7 @@ public final class AppSpec {
 
     /**
      * Get the jobs property: Pre and post deployment workloads which do not expose publicly-accessible HTTP routes.
-     *
+     * 
      * @return the jobs value.
      */
     public List<AppJobSpec> getJobs() {
@@ -177,7 +181,7 @@ public final class AppSpec {
 
     /**
      * Set the jobs property: Pre and post deployment workloads which do not expose publicly-accessible HTTP routes.
-     *
+     * 
      * @param jobs the jobs value to set.
      * @return the AppSpec object itself.
      */
@@ -188,7 +192,7 @@ public final class AppSpec {
 
     /**
      * Get the workers property: Workloads which do not expose publicly-accessible HTTP services.
-     *
+     * 
      * @return the workers value.
      */
     public List<AppWorkerSpec> getWorkers() {
@@ -197,7 +201,7 @@ public final class AppSpec {
 
     /**
      * Set the workers property: Workloads which do not expose publicly-accessible HTTP services.
-     *
+     * 
      * @param workers the workers value to set.
      * @return the AppSpec object itself.
      */
@@ -208,7 +212,7 @@ public final class AppSpec {
 
     /**
      * Get the functions property: Workloads which expose publicly-accessible HTTP services via Functions Components.
-     *
+     * 
      * @return the functions value.
      */
     public List<AppFunctionsSpec> getFunctions() {
@@ -217,7 +221,7 @@ public final class AppSpec {
 
     /**
      * Set the functions property: Workloads which expose publicly-accessible HTTP services via Functions Components.
-     *
+     * 
      * @param functions the functions value to set.
      * @return the AppSpec object itself.
      */
@@ -227,8 +231,9 @@ public final class AppSpec {
     }
 
     /**
-     * Get the databases property: Database instances which can provide persistence to workloads within the application.
-     *
+     * Get the databases property: Database instances which can provide persistence to workloads within the
+     * application.
+     * 
      * @return the databases value.
      */
     public List<AppDatabaseSpec> getDatabases() {
@@ -236,8 +241,9 @@ public final class AppSpec {
     }
 
     /**
-     * Set the databases property: Database instances which can provide persistence to workloads within the application.
-     *
+     * Set the databases property: Database instances which can provide persistence to workloads within the
+     * application.
+     * 
      * @param databases the databases value to set.
      * @return the AppSpec object itself.
      */

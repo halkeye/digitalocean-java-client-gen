@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ClusterUpdate model. */
+/**
+ * The ClusterUpdate model.
+ */
 @Fluent
 public final class ClusterUpdate {
     /*
@@ -42,7 +47,7 @@ public final class ClusterUpdate {
 
     /**
      * Get the name property: A human-readable name for a Kubernetes cluster.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -51,7 +56,7 @@ public final class ClusterUpdate {
 
     /**
      * Set the name property: A human-readable name for a Kubernetes cluster.
-     *
+     * 
      * @param name the name value to set.
      * @return the ClusterUpdate object itself.
      */
@@ -63,7 +68,7 @@ public final class ClusterUpdate {
     /**
      * Get the tags property: An array of tags applied to the Kubernetes cluster. All clusters are automatically tagged
      * `k8s` and `k8s:$K8S_CLUSTER_ID`.
-     *
+     * 
      * @return the tags value.
      */
     public List<String> getTags() {
@@ -73,7 +78,7 @@ public final class ClusterUpdate {
     /**
      * Set the tags property: An array of tags applied to the Kubernetes cluster. All clusters are automatically tagged
      * `k8s` and `k8s:$K8S_CLUSTER_ID`.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the ClusterUpdate object itself.
      */
@@ -85,7 +90,7 @@ public final class ClusterUpdate {
     /**
      * Get the maintenancePolicy property: An object specifying the maintenance window policy for the Kubernetes
      * cluster.
-     *
+     * 
      * @return the maintenancePolicy value.
      */
     public MaintenancePolicy getMaintenancePolicy() {
@@ -95,7 +100,7 @@ public final class ClusterUpdate {
     /**
      * Set the maintenancePolicy property: An object specifying the maintenance window policy for the Kubernetes
      * cluster.
-     *
+     * 
      * @param maintenancePolicy the maintenancePolicy value to set.
      * @return the ClusterUpdate object itself.
      */
@@ -107,7 +112,7 @@ public final class ClusterUpdate {
     /**
      * Get the autoUpgrade property: A boolean value indicating whether the cluster will be automatically upgraded to
      * new patch releases during its maintenance window.
-     *
+     * 
      * @return the autoUpgrade value.
      */
     public Boolean isAutoUpgrade() {
@@ -117,7 +122,7 @@ public final class ClusterUpdate {
     /**
      * Set the autoUpgrade property: A boolean value indicating whether the cluster will be automatically upgraded to
      * new patch releases during its maintenance window.
-     *
+     * 
      * @param autoUpgrade the autoUpgrade value to set.
      * @return the ClusterUpdate object itself.
      */
@@ -130,7 +135,7 @@ public final class ClusterUpdate {
      * Get the surgeUpgrade property: A boolean value indicating whether surge upgrade is enabled/disabled for the
      * cluster. Surge upgrade makes cluster upgrades fast and reliable by bringing up new nodes before destroying the
      * outdated nodes.
-     *
+     * 
      * @return the surgeUpgrade value.
      */
     public Boolean isSurgeUpgrade() {
@@ -141,7 +146,7 @@ public final class ClusterUpdate {
      * Set the surgeUpgrade property: A boolean value indicating whether surge upgrade is enabled/disabled for the
      * cluster. Surge upgrade makes cluster upgrades fast and reliable by bringing up new nodes before destroying the
      * outdated nodes.
-     *
+     * 
      * @param surgeUpgrade the surgeUpgrade value to set.
      * @return the ClusterUpdate object itself.
      */

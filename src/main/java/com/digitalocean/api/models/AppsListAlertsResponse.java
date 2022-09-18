@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The AppsListAlertsResponse model. */
+/**
+ * The AppsListAlertsResponse model.
+ */
 @Fluent
 public final class AppsListAlertsResponse {
     /*
@@ -15,7 +20,7 @@ public final class AppsListAlertsResponse {
 
     /**
      * Get the alerts property: The alerts property.
-     *
+     * 
      * @return the alerts value.
      */
     public List<AppAlert> getAlerts() {
@@ -24,7 +29,7 @@ public final class AppsListAlertsResponse {
 
     /**
      * Set the alerts property: The alerts property.
-     *
+     * 
      * @param alerts the alerts value to set.
      * @return the AppsListAlertsResponse object itself.
      */

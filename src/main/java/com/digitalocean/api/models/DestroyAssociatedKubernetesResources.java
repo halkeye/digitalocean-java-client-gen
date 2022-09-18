@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** An object containing the IDs of resources to be destroyed along with their associated with a Kubernetes cluster. */
+/**
+ * An object containing the IDs of resources to be destroyed along with their associated with a Kubernetes cluster.
+ */
 @Fluent
 public final class DestroyAssociatedKubernetesResources {
     /*
@@ -27,7 +32,7 @@ public final class DestroyAssociatedKubernetesResources {
 
     /**
      * Get the loadBalancers property: A list of IDs for associated load balancers to destroy along with the cluster.
-     *
+     * 
      * @return the loadBalancers value.
      */
     public List<String> getLoadBalancers() {
@@ -36,7 +41,7 @@ public final class DestroyAssociatedKubernetesResources {
 
     /**
      * Set the loadBalancers property: A list of IDs for associated load balancers to destroy along with the cluster.
-     *
+     * 
      * @param loadBalancers the loadBalancers value to set.
      * @return the DestroyAssociatedKubernetesResources object itself.
      */
@@ -47,7 +52,7 @@ public final class DestroyAssociatedKubernetesResources {
 
     /**
      * Get the volumes property: A list of IDs for associated volumes to destroy along with the cluster.
-     *
+     * 
      * @return the volumes value.
      */
     public List<String> getVolumes() {
@@ -56,7 +61,7 @@ public final class DestroyAssociatedKubernetesResources {
 
     /**
      * Set the volumes property: A list of IDs for associated volumes to destroy along with the cluster.
-     *
+     * 
      * @param volumes the volumes value to set.
      * @return the DestroyAssociatedKubernetesResources object itself.
      */
@@ -68,7 +73,7 @@ public final class DestroyAssociatedKubernetesResources {
     /**
      * Get the volumeSnapshots property: A list of IDs for associated volume snapshots to destroy along with the
      * cluster.
-     *
+     * 
      * @return the volumeSnapshots value.
      */
     public List<String> getVolumeSnapshots() {
@@ -78,7 +83,7 @@ public final class DestroyAssociatedKubernetesResources {
     /**
      * Set the volumeSnapshots property: A list of IDs for associated volume snapshots to destroy along with the
      * cluster.
-     *
+     * 
      * @param volumeSnapshots the volumeSnapshots value to set.
      * @return the DestroyAssociatedKubernetesResources object itself.
      */

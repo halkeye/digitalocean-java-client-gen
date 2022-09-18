@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components1Ndvt7KResponsesReservedIpContentApplicationJsonSchema model. */
+/**
+ * The Components1Ndvt7KResponsesReservedIpContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components1Ndvt7KResponsesReservedIpContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components1Ndvt7KResponsesReservedIpContentApplicationJsonSch
 
     /**
      * Get the reservedIp property: The reserved_ip property.
-     *
+     * 
      * @return the reservedIp value.
      */
     public ReservedIp getReservedIp() {
@@ -23,7 +28,7 @@ public final class Components1Ndvt7KResponsesReservedIpContentApplicationJsonSch
 
     /**
      * Set the reservedIp property: The reserved_ip property.
-     *
+     * 
      * @param reservedIp the reservedIp value to set.
      * @return the Components1Ndvt7KResponsesReservedIpContentApplicationJsonSchema object itself.
      */

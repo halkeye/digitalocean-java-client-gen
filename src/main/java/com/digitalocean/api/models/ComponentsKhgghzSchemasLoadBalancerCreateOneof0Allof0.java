@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsKhgghzSchemasLoadBalancerCreateOneof0Allof0 model. */
+/**
+ * The ComponentsKhgghzSchemasLoadBalancerCreateOneof0Allof0 model.
+ */
 @Fluent
 public class ComponentsKhgghzSchemasLoadBalancerCreateOneof0Allof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsKhgghzSchemasLoadBalancerCreateOneof0Allof0 {
 
     /**
      * Get the dropletIds property: An array containing the IDs of the Droplets assigned to the load balancer.
-     *
+     * 
      * @return the dropletIds value.
      */
     public List<Integer> getDropletIds() {
@@ -24,7 +29,7 @@ public class ComponentsKhgghzSchemasLoadBalancerCreateOneof0Allof0 {
 
     /**
      * Set the dropletIds property: An array containing the IDs of the Droplets assigned to the load balancer.
-     *
+     * 
      * @param dropletIds the dropletIds value to set.
      * @return the ComponentsKhgghzSchemasLoadBalancerCreateOneof0Allof0 object itself.
      */

@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The DatabaseUser model. */
+/**
+ * The DatabaseUser model.
+ */
 @Fluent
 public final class DatabaseUser {
     /*
@@ -15,7 +21,7 @@ public final class DatabaseUser {
     /*
      * A string representing the database user's role. The value will be either
      * "primary" or "normal".
-     *
+     * 
      */
     @JsonProperty(value = "role", access = JsonProperty.Access.WRITE_ONLY)
     private DatabaseUserRole role;
@@ -34,7 +40,7 @@ public final class DatabaseUser {
 
     /**
      * Get the name property: The name of a database user.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -43,7 +49,7 @@ public final class DatabaseUser {
 
     /**
      * Set the name property: The name of a database user.
-     *
+     * 
      * @param name the name value to set.
      * @return the DatabaseUser object itself.
      */
@@ -53,9 +59,9 @@ public final class DatabaseUser {
     }
 
     /**
-     * Get the role property: A string representing the database user's role. The value will be either "primary" or
-     * "normal".
-     *
+     * Get the role property: A string representing the database user's role. The value will be either
+     * "primary" or "normal".
+     * 
      * @return the role value.
      */
     public DatabaseUserRole getRole() {
@@ -64,7 +70,7 @@ public final class DatabaseUser {
 
     /**
      * Get the password property: A randomly generated password for the database user.
-     *
+     * 
      * @return the password value.
      */
     public String getPassword() {
@@ -73,7 +79,7 @@ public final class DatabaseUser {
 
     /**
      * Get the mysqlSettings property: The mysql_settings property.
-     *
+     * 
      * @return the mysqlSettings value.
      */
     public MysqlSettings getMysqlSettings() {
@@ -82,7 +88,7 @@ public final class DatabaseUser {
 
     /**
      * Set the mysqlSettings property: The mysql_settings property.
-     *
+     * 
      * @param mysqlSettings the mysqlSettings value to set.
      * @return the DatabaseUser object itself.
      */

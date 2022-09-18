@@ -1,13 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJsonSchema model. */
+/**
+ * The ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJsonSchema model.
+ */
 @Fluent
-public final class ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJsonSchema
-        extends Components1MywxwzResponsesAllLoadBalancersContentApplicationJsonSchemaAllof0 {
+public final class ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJsonSchema extends Components1MywxwzResponsesAllLoadBalancersContentApplicationJsonSchemaAllof0 {
     /*
      * The links property.
      */
@@ -22,7 +26,7 @@ public final class ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJs
 
     /**
      * Get the links property: The links property.
-     *
+     * 
      * @return the links value.
      */
     public PageLinks getLinks() {
@@ -31,7 +35,7 @@ public final class ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJs
 
     /**
      * Set the links property: The links property.
-     *
+     * 
      * @param links the links value to set.
      * @return the ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJsonSchema object itself.
      */
@@ -42,7 +46,7 @@ public final class ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJs
 
     /**
      * Get the meta property: The meta property.
-     *
+     * 
      * @return the meta value.
      */
     public MetaMeta getMeta() {
@@ -51,7 +55,7 @@ public final class ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJs
 
     /**
      * Set the meta property: The meta property.
-     *
+     * 
      * @param meta the meta value to set.
      * @return the ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJsonSchema object itself.
      */
@@ -60,10 +64,11 @@ public final class ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJs
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJsonSchema setLoadBalancers(
-            List<LoadBalancer> loadBalancers) {
+    public ComponentsZl28R5ResponsesAllLoadBalancersContentApplicationJsonSchema setLoadBalancers(List<LoadBalancer> loadBalancers) {
         super.setLoadBalancers(loadBalancers);
         return this;
     }

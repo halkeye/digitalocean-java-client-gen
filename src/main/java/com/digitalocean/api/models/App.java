@@ -1,11 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** An application's configuration and status. */
+/**
+ * An application's configuration and status.
+ */
 @Fluent
 public final class App {
     /*
@@ -82,7 +87,7 @@ public final class App {
 
     /*
      * AppSpec
-     *
+     * 
      * The desired configuration of an application.
      */
     @JsonProperty(value = "spec", required = true)
@@ -108,7 +113,7 @@ public final class App {
 
     /**
      * Get the activeDeployment property: An app deployment.
-     *
+     * 
      * @return the activeDeployment value.
      */
     public AppsDeployment getActiveDeployment() {
@@ -117,7 +122,7 @@ public final class App {
 
     /**
      * Set the activeDeployment property: An app deployment.
-     *
+     * 
      * @param activeDeployment the activeDeployment value to set.
      * @return the App object itself.
      */
@@ -128,7 +133,7 @@ public final class App {
 
     /**
      * Get the createdAt property: The creation time of the app.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -137,7 +142,7 @@ public final class App {
 
     /**
      * Get the defaultIngress property: The default hostname on which the app is accessible.
-     *
+     * 
      * @return the defaultIngress value.
      */
     public String getDefaultIngress() {
@@ -146,7 +151,7 @@ public final class App {
 
     /**
      * Get the domains property: Contains all domains for the app.
-     *
+     * 
      * @return the domains value.
      */
     public List<AppsDomain> getDomains() {
@@ -155,7 +160,7 @@ public final class App {
 
     /**
      * Get the id property: The ID of the application.
-     *
+     * 
      * @return the id value.
      */
     public String getId() {
@@ -164,7 +169,7 @@ public final class App {
 
     /**
      * Get the inProgressDeployment property: An app deployment.
-     *
+     * 
      * @return the inProgressDeployment value.
      */
     public AppsDeployment getInProgressDeployment() {
@@ -173,7 +178,7 @@ public final class App {
 
     /**
      * Set the inProgressDeployment property: An app deployment.
-     *
+     * 
      * @param inProgressDeployment the inProgressDeployment value to set.
      * @return the App object itself.
      */
@@ -184,7 +189,7 @@ public final class App {
 
     /**
      * Get the lastDeploymentCreatedAt property: The creation time of the last deployment.
-     *
+     * 
      * @return the lastDeploymentCreatedAt value.
      */
     public OffsetDateTime getLastDeploymentCreatedAt() {
@@ -193,7 +198,7 @@ public final class App {
 
     /**
      * Get the liveDomain property: The live domain of the app.
-     *
+     * 
      * @return the liveDomain value.
      */
     public String getLiveDomain() {
@@ -202,7 +207,7 @@ public final class App {
 
     /**
      * Get the liveUrl property: The live URL of the app.
-     *
+     * 
      * @return the liveUrl value.
      */
     public String getLiveUrl() {
@@ -211,7 +216,7 @@ public final class App {
 
     /**
      * Get the liveUrlBase property: The live URL base of the app, the URL excluding the path.
-     *
+     * 
      * @return the liveUrlBase value.
      */
     public String getLiveUrlBase() {
@@ -220,7 +225,7 @@ public final class App {
 
     /**
      * Get the ownerUuid property: The ID of the account to which the application belongs.
-     *
+     * 
      * @return the ownerUuid value.
      */
     public String getOwnerUuid() {
@@ -229,7 +234,7 @@ public final class App {
 
     /**
      * Get the region property: Geographical information about an app origin.
-     *
+     * 
      * @return the region value.
      */
     public AppsRegion getRegion() {
@@ -238,7 +243,7 @@ public final class App {
 
     /**
      * Set the region property: Geographical information about an app origin.
-     *
+     * 
      * @param region the region value to set.
      * @return the App object itself.
      */
@@ -249,9 +254,9 @@ public final class App {
 
     /**
      * Get the spec property: AppSpec
-     *
-     * <p>The desired configuration of an application.
-     *
+     * 
+     * The desired configuration of an application.
+     * 
      * @return the spec value.
      */
     public AppSpec getSpec() {
@@ -260,9 +265,9 @@ public final class App {
 
     /**
      * Set the spec property: AppSpec
-     *
-     * <p>The desired configuration of an application.
-     *
+     * 
+     * The desired configuration of an application.
+     * 
      * @param spec the spec value to set.
      * @return the App object itself.
      */
@@ -273,7 +278,7 @@ public final class App {
 
     /**
      * Get the tierSlug property: The current pricing tier slug of the app.
-     *
+     * 
      * @return the tierSlug value.
      */
     public String getTierSlug() {
@@ -282,7 +287,7 @@ public final class App {
 
     /**
      * Get the updatedAt property: Time of the app's last configuration update.
-     *
+     * 
      * @return the updatedAt value.
      */
     public OffsetDateTime getUpdatedAt() {
@@ -291,7 +296,7 @@ public final class App {
 
     /**
      * Get the pinnedDeployment property: The pinned_deployment property.
-     *
+     * 
      * @return the pinnedDeployment value.
      */
     public AppPinnedDeployment getPinnedDeployment() {
@@ -300,7 +305,7 @@ public final class App {
 
     /**
      * Set the pinnedDeployment property: The pinned_deployment property.
-     *
+     * 
      * @param pinnedDeployment the pinnedDeployment value to set.
      * @return the App object itself.
      */

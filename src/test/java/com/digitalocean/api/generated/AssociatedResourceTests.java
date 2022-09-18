@@ -1,16 +1,17 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.AssociatedResource;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class AssociatedResourceTests {
     @Test
     public void testDeserialize() {
-        AssociatedResource model =
-                BinaryData.fromString("{\"id\":\"pryfmxmdutzfkgi\",\"name\":\"oudccgndjg\",\"cost\":\"r\"}")
-                        .toObject(AssociatedResource.class);
+        AssociatedResource model = BinaryData.fromString("{\"id\":\"pryfmxmdutzfkgi\",\"name\":\"oudccgndjg\",\"cost\":\"r\"}").toObject(AssociatedResource.class);
         Assertions.assertEquals("pryfmxmdutzfkgi", model.getId());
         Assertions.assertEquals("oudccgndjg", model.getName());
         Assertions.assertEquals("r", model.getCost());

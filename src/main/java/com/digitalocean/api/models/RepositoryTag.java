@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
 
-/** The RepositoryTag model. */
+/**
+ * The RepositoryTag model.
+ */
 @Fluent
 public final class RepositoryTag {
     /*
@@ -52,7 +57,7 @@ public final class RepositoryTag {
 
     /**
      * Get the registryName property: The name of the container registry.
-     *
+     * 
      * @return the registryName value.
      */
     public String getRegistryName() {
@@ -61,7 +66,7 @@ public final class RepositoryTag {
 
     /**
      * Set the registryName property: The name of the container registry.
-     *
+     * 
      * @param registryName the registryName value to set.
      * @return the RepositoryTag object itself.
      */
@@ -72,7 +77,7 @@ public final class RepositoryTag {
 
     /**
      * Get the repository property: The name of the repository.
-     *
+     * 
      * @return the repository value.
      */
     public String getRepository() {
@@ -81,7 +86,7 @@ public final class RepositoryTag {
 
     /**
      * Set the repository property: The name of the repository.
-     *
+     * 
      * @param repository the repository value to set.
      * @return the RepositoryTag object itself.
      */
@@ -92,7 +97,7 @@ public final class RepositoryTag {
 
     /**
      * Get the tag property: The name of the tag.
-     *
+     * 
      * @return the tag value.
      */
     public String getTag() {
@@ -101,7 +106,7 @@ public final class RepositoryTag {
 
     /**
      * Set the tag property: The name of the tag.
-     *
+     * 
      * @param tag the tag value to set.
      * @return the RepositoryTag object itself.
      */
@@ -112,7 +117,7 @@ public final class RepositoryTag {
 
     /**
      * Get the manifestDigest property: The digest of the manifest associated with the tag.
-     *
+     * 
      * @return the manifestDigest value.
      */
     public String getManifestDigest() {
@@ -121,7 +126,7 @@ public final class RepositoryTag {
 
     /**
      * Set the manifestDigest property: The digest of the manifest associated with the tag.
-     *
+     * 
      * @param manifestDigest the manifestDigest value to set.
      * @return the RepositoryTag object itself.
      */
@@ -132,7 +137,7 @@ public final class RepositoryTag {
 
     /**
      * Get the compressedSizeBytes property: The compressed size of the tag in bytes.
-     *
+     * 
      * @return the compressedSizeBytes value.
      */
     public Integer getCompressedSizeBytes() {
@@ -141,7 +146,7 @@ public final class RepositoryTag {
 
     /**
      * Set the compressedSizeBytes property: The compressed size of the tag in bytes.
-     *
+     * 
      * @param compressedSizeBytes the compressedSizeBytes value to set.
      * @return the RepositoryTag object itself.
      */
@@ -153,7 +158,7 @@ public final class RepositoryTag {
     /**
      * Get the sizeBytes property: The uncompressed size of the tag in bytes (this size is calculated asynchronously so
      * it may not be immediately available).
-     *
+     * 
      * @return the sizeBytes value.
      */
     public Integer getSizeBytes() {
@@ -163,7 +168,7 @@ public final class RepositoryTag {
     /**
      * Set the sizeBytes property: The uncompressed size of the tag in bytes (this size is calculated asynchronously so
      * it may not be immediately available).
-     *
+     * 
      * @param sizeBytes the sizeBytes value to set.
      * @return the RepositoryTag object itself.
      */
@@ -174,7 +179,7 @@ public final class RepositoryTag {
 
     /**
      * Get the updatedAt property: The time the tag was last updated.
-     *
+     * 
      * @return the updatedAt value.
      */
     public OffsetDateTime getUpdatedAt() {
@@ -183,7 +188,7 @@ public final class RepositoryTag {
 
     /**
      * Set the updatedAt property: The time the tag was last updated.
-     *
+     * 
      * @param updatedAt the updatedAt value to set.
      * @return the RepositoryTag object itself.
      */

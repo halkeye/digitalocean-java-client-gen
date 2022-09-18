@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components1Mgw0OqResponsesAllVpcsContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The Components1Mgw0OqResponsesAllVpcsContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class Components1Mgw0OqResponsesAllVpcsContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class Components1Mgw0OqResponsesAllVpcsContentApplicationJsonSchemaAllof0
 
     /**
      * Get the vpcs property: The vpcs property.
-     *
+     * 
      * @return the vpcs value.
      */
     public List<Vpc> getVpcs() {
@@ -24,7 +29,7 @@ public class Components1Mgw0OqResponsesAllVpcsContentApplicationJsonSchemaAllof0
 
     /**
      * Set the vpcs property: The vpcs property.
-     *
+     * 
      * @param vpcs the vpcs value to set.
      * @return the Components1Mgw0OqResponsesAllVpcsContentApplicationJsonSchemaAllof0 object itself.
      */

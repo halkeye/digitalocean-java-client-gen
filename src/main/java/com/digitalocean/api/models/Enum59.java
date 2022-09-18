@@ -4,17 +4,23 @@ import com.azure.core.util.ExpandableStringEnum;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import java.util.Collection;
 
-/** Defines values for Enum59. */
+/**
+ * Defines values for Enum59.
+ */
 public final class Enum59 extends ExpandableStringEnum<Enum59> {
-    /** Static value application for Enum59. */
+    /**
+     * Static value application for Enum59.
+     */
     public static final Enum59 APPLICATION = fromString("application");
 
-    /** Static value distribution for Enum59. */
+    /**
+     * Static value distribution for Enum59.
+     */
     public static final Enum59 DISTRIBUTION = fromString("distribution");
 
     /**
      * Creates or finds a Enum59 from its string representation.
-     *
+     * 
      * @param name a name to look for.
      * @return the corresponding Enum59.
      */
@@ -25,7 +31,7 @@ public final class Enum59 extends ExpandableStringEnum<Enum59> {
 
     /**
      * Gets known Enum59 values.
-     *
+     * 
      * @return known Enum59 values.
      */
     public static Collection<Enum59> values() {

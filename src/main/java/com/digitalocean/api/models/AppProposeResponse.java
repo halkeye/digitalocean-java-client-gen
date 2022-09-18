@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppProposeResponse model. */
+/**
+ * The AppProposeResponse model.
+ */
 @Fluent
 public final class AppProposeResponse {
     /*
@@ -32,7 +37,7 @@ public final class AppProposeResponse {
 
     /*
      * AppSpec
-     *
+     * 
      * The desired configuration of an application.
      */
     @JsonProperty(value = "spec")
@@ -56,7 +61,7 @@ public final class AppProposeResponse {
 
     /**
      * Get the appIsStatic property: Indicates whether the app is a static app.
-     *
+     * 
      * @return the appIsStatic value.
      */
     public Boolean isAppIsStatic() {
@@ -65,7 +70,7 @@ public final class AppProposeResponse {
 
     /**
      * Set the appIsStatic property: Indicates whether the app is a static app.
-     *
+     * 
      * @param appIsStatic the appIsStatic value to set.
      * @return the AppProposeResponse object itself.
      */
@@ -76,7 +81,7 @@ public final class AppProposeResponse {
 
     /**
      * Get the appNameAvailable property: Indicates whether the app name is available.
-     *
+     * 
      * @return the appNameAvailable value.
      */
     public Boolean isAppNameAvailable() {
@@ -85,7 +90,7 @@ public final class AppProposeResponse {
 
     /**
      * Set the appNameAvailable property: Indicates whether the app name is available.
-     *
+     * 
      * @param appNameAvailable the appNameAvailable value to set.
      * @return the AppProposeResponse object itself.
      */
@@ -96,7 +101,7 @@ public final class AppProposeResponse {
 
     /**
      * Get the appNameSuggestion property: The suggested name if the proposed app name is unavailable.
-     *
+     * 
      * @return the appNameSuggestion value.
      */
     public String getAppNameSuggestion() {
@@ -105,7 +110,7 @@ public final class AppProposeResponse {
 
     /**
      * Set the appNameSuggestion property: The suggested name if the proposed app name is unavailable.
-     *
+     * 
      * @param appNameSuggestion the appNameSuggestion value to set.
      * @return the AppProposeResponse object itself.
      */
@@ -117,7 +122,7 @@ public final class AppProposeResponse {
     /**
      * Get the existingStaticApps property: The maximum number of free static apps the account can have. We will charge
      * you for any additional static apps.
-     *
+     * 
      * @return the existingStaticApps value.
      */
     public String getExistingStaticApps() {
@@ -127,7 +132,7 @@ public final class AppProposeResponse {
     /**
      * Set the existingStaticApps property: The maximum number of free static apps the account can have. We will charge
      * you for any additional static apps.
-     *
+     * 
      * @param existingStaticApps the existingStaticApps value to set.
      * @return the AppProposeResponse object itself.
      */
@@ -138,9 +143,9 @@ public final class AppProposeResponse {
 
     /**
      * Get the spec property: AppSpec
-     *
-     * <p>The desired configuration of an application.
-     *
+     * 
+     * The desired configuration of an application.
+     * 
      * @return the spec value.
      */
     public AppSpec getSpec() {
@@ -149,9 +154,9 @@ public final class AppProposeResponse {
 
     /**
      * Set the spec property: AppSpec
-     *
-     * <p>The desired configuration of an application.
-     *
+     * 
+     * The desired configuration of an application.
+     * 
      * @param spec the spec value to set.
      * @return the AppProposeResponse object itself.
      */
@@ -165,7 +170,7 @@ public final class AppProposeResponse {
      * example, if you propose an app that uses the Basic tier, the `app_tier_upgrade_cost` field displays the monthly
      * cost of the app if it were to use the Professional tier. If the proposed app already uses the most expensive
      * tier, the field is empty.
-     *
+     * 
      * @return the appCost value.
      */
     public Integer getAppCost() {
@@ -177,7 +182,7 @@ public final class AppProposeResponse {
      * example, if you propose an app that uses the Basic tier, the `app_tier_upgrade_cost` field displays the monthly
      * cost of the app if it were to use the Professional tier. If the proposed app already uses the most expensive
      * tier, the field is empty.
-     *
+     * 
      * @param appCost the appCost value to set.
      * @return the AppProposeResponse object itself.
      */
@@ -189,9 +194,9 @@ public final class AppProposeResponse {
     /**
      * Get the appTierDowngradeCost property: The monthly cost of the proposed app in USD using the previous pricing
      * plan tier. For example, if you propose an app that uses the Professional tier, the `app_tier_downgrade_cost`
-     * field displays the monthly cost of the app if it were to use the Basic tier. If the proposed app already uses the
-     * lest expensive tier, the field is empty.
-     *
+     * field displays the monthly cost of the app if it were to use the Basic tier. If the proposed app already uses
+     * the lest expensive tier, the field is empty.
+     * 
      * @return the appTierDowngradeCost value.
      */
     public Integer getAppTierDowngradeCost() {
@@ -201,9 +206,9 @@ public final class AppProposeResponse {
     /**
      * Set the appTierDowngradeCost property: The monthly cost of the proposed app in USD using the previous pricing
      * plan tier. For example, if you propose an app that uses the Professional tier, the `app_tier_downgrade_cost`
-     * field displays the monthly cost of the app if it were to use the Basic tier. If the proposed app already uses the
-     * lest expensive tier, the field is empty.
-     *
+     * field displays the monthly cost of the app if it were to use the Basic tier. If the proposed app already uses
+     * the lest expensive tier, the field is empty.
+     * 
      * @param appTierDowngradeCost the appTierDowngradeCost value to set.
      * @return the AppProposeResponse object itself.
      */

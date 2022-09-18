@@ -1,11 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 
-/** The MetricsResult model. */
+/**
+ * The MetricsResult model.
+ */
 @Fluent
 public final class MetricsResult {
     /*
@@ -22,7 +28,7 @@ public final class MetricsResult {
 
     /**
      * Get the metric property: An object containing the metric labels.
-     *
+     * 
      * @return the metric value.
      */
     public Map<String, String> getMetric() {
@@ -31,7 +37,7 @@ public final class MetricsResult {
 
     /**
      * Set the metric property: An object containing the metric labels.
-     *
+     * 
      * @param metric the metric value to set.
      * @return the MetricsResult object itself.
      */
@@ -42,7 +48,7 @@ public final class MetricsResult {
 
     /**
      * Get the values property: The values property.
-     *
+     * 
      * @return the values value.
      */
     public List<List<Object>> getValues() {
@@ -51,7 +57,7 @@ public final class MetricsResult {
 
     /**
      * Set the values property: The values property.
-     *
+     * 
      * @param values the values value to set.
      * @return the MetricsResult object itself.
      */

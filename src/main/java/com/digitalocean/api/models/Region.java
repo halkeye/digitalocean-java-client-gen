@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Region model. */
+/**
+ * The Region model.
+ */
 @Fluent
 public class Region {
     /*
@@ -38,9 +43,9 @@ public class Region {
     private Object sizes;
 
     /**
-     * Get the name property: The display name of the region. This will be a full name that is used in the control panel
-     * and other interfaces.
-     *
+     * Get the name property: The display name of the region.  This will be a full name that is used in the control
+     * panel and other interfaces.
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -48,9 +53,9 @@ public class Region {
     }
 
     /**
-     * Set the name property: The display name of the region. This will be a full name that is used in the control panel
-     * and other interfaces.
-     *
+     * Set the name property: The display name of the region.  This will be a full name that is used in the control
+     * panel and other interfaces.
+     * 
      * @param name the name value to set.
      * @return the Region object itself.
      */
@@ -61,7 +66,7 @@ public class Region {
 
     /**
      * Get the slug property: A human-readable string that is used as a unique identifier for each region.
-     *
+     * 
      * @return the slug value.
      */
     public String getSlug() {
@@ -70,7 +75,7 @@ public class Region {
 
     /**
      * Set the slug property: A human-readable string that is used as a unique identifier for each region.
-     *
+     * 
      * @param slug the slug value to set.
      * @return the Region object itself.
      */
@@ -81,7 +86,7 @@ public class Region {
 
     /**
      * Get the features property: This attribute is set to an array which contains features available in this region.
-     *
+     * 
      * @return the features value.
      */
     public Object getFeatures() {
@@ -90,7 +95,7 @@ public class Region {
 
     /**
      * Set the features property: This attribute is set to an array which contains features available in this region.
-     *
+     * 
      * @param features the features value to set.
      * @return the Region object itself.
      */
@@ -102,7 +107,7 @@ public class Region {
     /**
      * Get the available property: This is a boolean value that represents whether new Droplets can be created in this
      * region.
-     *
+     * 
      * @return the available value.
      */
     public boolean isAvailable() {
@@ -112,7 +117,7 @@ public class Region {
     /**
      * Set the available property: This is a boolean value that represents whether new Droplets can be created in this
      * region.
-     *
+     * 
      * @param available the available value to set.
      * @return the Region object itself.
      */
@@ -124,7 +129,7 @@ public class Region {
     /**
      * Get the sizes property: This attribute is set to an array which contains the identifying slugs for the sizes
      * available in this region.
-     *
+     * 
      * @return the sizes value.
      */
     public Object getSizes() {
@@ -134,7 +139,7 @@ public class Region {
     /**
      * Set the sizes property: This attribute is set to an array which contains the identifying slugs for the sizes
      * available in this region.
-     *
+     * 
      * @param sizes the sizes value to set.
      * @return the Region object itself.
      */

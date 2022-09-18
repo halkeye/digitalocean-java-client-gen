@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The FirewallRule model. */
+/**
+ * The FirewallRule model.
+ */
 @Fluent
 public final class FirewallRule {
     /*
@@ -40,7 +46,7 @@ public final class FirewallRule {
 
     /**
      * Get the uuid property: A unique ID for the firewall rule itself.
-     *
+     * 
      * @return the uuid value.
      */
     public String getUuid() {
@@ -49,7 +55,7 @@ public final class FirewallRule {
 
     /**
      * Set the uuid property: A unique ID for the firewall rule itself.
-     *
+     * 
      * @param uuid the uuid value to set.
      * @return the FirewallRule object itself.
      */
@@ -60,7 +66,7 @@ public final class FirewallRule {
 
     /**
      * Get the clusterUuid property: A unique ID for the database cluster to which the rule is applied.
-     *
+     * 
      * @return the clusterUuid value.
      */
     public String getClusterUuid() {
@@ -69,7 +75,7 @@ public final class FirewallRule {
 
     /**
      * Set the clusterUuid property: A unique ID for the database cluster to which the rule is applied.
-     *
+     * 
      * @param clusterUuid the clusterUuid value to set.
      * @return the FirewallRule object itself.
      */
@@ -80,7 +86,7 @@ public final class FirewallRule {
 
     /**
      * Get the type property: The type of resource that the firewall rule allows to access the database cluster.
-     *
+     * 
      * @return the type value.
      */
     public FirewallRuleType getType() {
@@ -89,7 +95,7 @@ public final class FirewallRule {
 
     /**
      * Set the type property: The type of resource that the firewall rule allows to access the database cluster.
-     *
+     * 
      * @param type the type value to set.
      * @return the FirewallRule object itself.
      */
@@ -101,7 +107,7 @@ public final class FirewallRule {
     /**
      * Get the value property: The ID of the specific resource, the name of a tag applied to a group of resources, or
      * the IP address that the firewall rule allows to access the database cluster.
-     *
+     * 
      * @return the value value.
      */
     public String getValue() {
@@ -111,7 +117,7 @@ public final class FirewallRule {
     /**
      * Set the value property: The ID of the specific resource, the name of a tag applied to a group of resources, or
      * the IP address that the firewall rule allows to access the database cluster.
-     *
+     * 
      * @param value the value value to set.
      * @return the FirewallRule object itself.
      */
@@ -123,7 +129,7 @@ public final class FirewallRule {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * firewall rule was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {

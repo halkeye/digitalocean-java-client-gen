@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** A criterion for routing HTTP traffic to a component. */
+/**
+ * A criterion for routing HTTP traffic to a component.
+ */
 @Fluent
 public final class AppRouteSpec {
     /*
@@ -23,7 +28,7 @@ public final class AppRouteSpec {
     /**
      * Get the path property: An HTTP path prefix. Paths must start with / and must be unique across all components
      * within an app.
-     *
+     * 
      * @return the path value.
      */
     public String getPath() {
@@ -33,7 +38,7 @@ public final class AppRouteSpec {
     /**
      * Set the path property: An HTTP path prefix. Paths must start with / and must be unique across all components
      * within an app.
-     *
+     * 
      * @param path the path value to set.
      * @return the AppRouteSpec object itself.
      */
@@ -47,7 +52,7 @@ public final class AppRouteSpec {
      * service. By default, the HTTP request path will be trimmed from the left when forwarded to the component. For
      * example, a component with `path=/api` will have requests to `/api/list` trimmed to `/list`. If this value is
      * `true`, the path will remain `/api/list`.
-     *
+     * 
      * @return the preservePathPrefix value.
      */
     public Boolean isPreservePathPrefix() {
@@ -59,7 +64,7 @@ public final class AppRouteSpec {
      * service. By default, the HTTP request path will be trimmed from the left when forwarded to the component. For
      * example, a component with `path=/api` will have requests to `/api/list` trimmed to `/list`. If this value is
      * `true`, the path will remain `/api/list`.
-     *
+     * 
      * @param preservePathPrefix the preservePathPrefix value to set.
      * @return the AppRouteSpec object itself.
      */

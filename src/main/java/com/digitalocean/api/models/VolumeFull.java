@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The VolumeFull model. */
+/**
+ * The VolumeFull model.
+ */
 @Fluent
 public final class VolumeFull extends VolumeBase {
     /*
@@ -27,7 +32,7 @@ public final class VolumeFull extends VolumeBase {
 
     /**
      * Get the region property: The region property.
-     *
+     * 
      * @return the region value.
      */
     public VolumeFullRegion getRegion() {
@@ -36,7 +41,7 @@ public final class VolumeFull extends VolumeBase {
 
     /**
      * Get the filesystemType property: The type of filesystem currently in-use on the volume.
-     *
+     * 
      * @return the filesystemType value.
      */
     public String getFilesystemType() {
@@ -45,7 +50,7 @@ public final class VolumeFull extends VolumeBase {
 
     /**
      * Set the filesystemType property: The type of filesystem currently in-use on the volume.
-     *
+     * 
      * @param filesystemType the filesystemType value to set.
      * @return the VolumeFull object itself.
      */
@@ -56,7 +61,7 @@ public final class VolumeFull extends VolumeBase {
 
     /**
      * Get the filesystemLabel property: The label currently applied to the filesystem.
-     *
+     * 
      * @return the filesystemLabel value.
      */
     public String getFilesystemLabel() {
@@ -65,7 +70,7 @@ public final class VolumeFull extends VolumeBase {
 
     /**
      * Set the filesystemLabel property: The label currently applied to the filesystem.
-     *
+     * 
      * @param filesystemLabel the filesystemLabel value to set.
      * @return the VolumeFull object itself.
      */
@@ -74,28 +79,36 @@ public final class VolumeFull extends VolumeBase {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public VolumeFull setName(String name) {
         super.setName(name);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public VolumeFull setDescription(String description) {
         super.setDescription(description);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public VolumeFull setSizeGigabytes(Integer sizeGigabytes) {
         super.setSizeGigabytes(sizeGigabytes);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public VolumeFull setTags(List<String> tags) {
         super.setTags(tags);

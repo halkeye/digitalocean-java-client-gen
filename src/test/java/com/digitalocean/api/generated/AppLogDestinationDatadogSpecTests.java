@@ -1,16 +1,17 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.AppLogDestinationDatadogSpec;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class AppLogDestinationDatadogSpecTests {
     @Test
     public void testDeserialize() {
-        AppLogDestinationDatadogSpec model =
-                BinaryData.fromString("{\"endpoint\":\"vhxnk\",\"api_key\":\"mtk\"}")
-                        .toObject(AppLogDestinationDatadogSpec.class);
+        AppLogDestinationDatadogSpec model = BinaryData.fromString("{\"endpoint\":\"vhxnk\",\"api_key\":\"mtk\"}").toObject(AppLogDestinationDatadogSpec.class);
         Assertions.assertEquals("vhxnk", model.getEndpoint());
         Assertions.assertEquals("mtk", model.getApiKey());
     }

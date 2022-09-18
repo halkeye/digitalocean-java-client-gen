@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The linked actions can be used to check the status of a Droplet's create event. */
+/**
+ * The linked actions can be used to check the status of a Droplet's create event.
+ */
 @Fluent
 public final class ActionLink {
     /*
@@ -26,7 +31,7 @@ public final class ActionLink {
 
     /**
      * Get the id property: A unique numeric ID that can be used to identify and reference an action.
-     *
+     * 
      * @return the id value.
      */
     public Integer getId() {
@@ -35,7 +40,7 @@ public final class ActionLink {
 
     /**
      * Set the id property: A unique numeric ID that can be used to identify and reference an action.
-     *
+     * 
      * @param id the id value to set.
      * @return the ActionLink object itself.
      */
@@ -46,7 +51,7 @@ public final class ActionLink {
 
     /**
      * Get the rel property: A string specifying the type of the related action.
-     *
+     * 
      * @return the rel value.
      */
     public String getRel() {
@@ -55,7 +60,7 @@ public final class ActionLink {
 
     /**
      * Set the rel property: A string specifying the type of the related action.
-     *
+     * 
      * @param rel the rel value to set.
      * @return the ActionLink object itself.
      */
@@ -66,7 +71,7 @@ public final class ActionLink {
 
     /**
      * Get the href property: A URL that can be used to access the action.
-     *
+     * 
      * @return the href value.
      */
     public String getHref() {
@@ -75,7 +80,7 @@ public final class ActionLink {
 
     /**
      * Set the href property: A URL that can be used to access the action.
-     *
+     * 
      * @param href the href value to set.
      * @return the ActionLink object itself.
      */

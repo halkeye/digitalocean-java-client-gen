@@ -11,24 +11,33 @@ import com.azure.core.annotation.ServiceInterface;
 import com.azure.core.annotation.ServiceMethod;
 import com.azure.core.annotation.UnexpectedResponseExceptionType;
 import com.azure.core.http.rest.RestProxy;
+import com.azure.core.util.Context;
 import com.digitalocean.api.models.ErrorException;
 import com.digitalocean.api.models.SizesListResponse;
+import java.util.Objects;
+import java.util.stream.Collectors;
 import reactor.core.publisher.Mono;
 
-/** An instance of this class provides access to all the operations defined in Sizes. */
+/**
+ * An instance of this class provides access to all the operations defined in Sizes.
+ */
 public final class Sizes {
-    /** The proxy service used to perform REST calls. */
+    /**
+     * The proxy service used to perform REST calls.
+     */
     private final SizesService service;
 
-    /** The service client containing this operation class. */
+    /**
+     * The service client containing this operation class.
+     */
     private final GeneratedClient client;
 
     /**
      * Initializes an instance of Sizes.
-     *
+     * 
      * @param client the instance of the service client containing this operation class.
      */
-    Sizes(GeneratedClient client) {
+     Sizes(GeneratedClient client) {
         this.service = RestProxy.create(SizesService.class, client.getHttpPipeline(), client.getSerializerAdapter());
         this.client = client;
     }
@@ -43,20 +52,15 @@ public final class Sizes {
         @Get("/v2/sizes")
         @ExpectedResponses({200, 401, 429, 500})
         @UnexpectedResponseExceptionType(ErrorException.class)
-        Mono<SizesListResponse> list(
-                @HostParam("$host") String host,
-                @QueryParam("per_page") Integer perPage,
-                @QueryParam("page") Integer page,
-                @HeaderParam("Accept") String accept);
+        Mono<SizesListResponse> list(@HostParam("$host") String host, @QueryParam("per_page") Integer perPage, @QueryParam("page") Integer page, @HeaderParam("Accept") String accept);
     }
 
     /**
      * List All Droplet Sizes
-     *
-     * <p>To list all of available Droplet sizes, send a GET request to `/v2/sizes`. The response will be a JSON object
-     * with a key called `sizes`. The value of this will be an array of `size` objects each of which contain the
-     * standard size attributes.
-     *
+     * 
+     * To list all of available Droplet sizes, send a GET request to `/v2/sizes`.
+     * The response will be a JSON object with a key called `sizes`. The value of this will be an array of `size` objects each of which contain the standard size attributes.
+     * 
      * @param perPage Number of items returned per page.
      * @param page Which 'page' of paginated results to return.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
@@ -72,11 +76,10 @@ public final class Sizes {
 
     /**
      * List All Droplet Sizes
-     *
-     * <p>To list all of available Droplet sizes, send a GET request to `/v2/sizes`. The response will be a JSON object
-     * with a key called `sizes`. The value of this will be an array of `size` objects each of which contain the
-     * standard size attributes.
-     *
+     * 
+     * To list all of available Droplet sizes, send a GET request to `/v2/sizes`.
+     * The response will be a JSON object with a key called `sizes`. The value of this will be an array of `size` objects each of which contain the standard size attributes.
+     * 
      * @param perPage Number of items returned per page.
      * @param page Which 'page' of paginated results to return.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
@@ -86,6 +89,6 @@ public final class Sizes {
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Object> listAsync(Integer perPage, Integer page) {
-        return listWithResponseAsync(perPage, page).flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return listWithResponseAsync(perPage, page)
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 }

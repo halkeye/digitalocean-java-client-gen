@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsCreateDeploymentRequest model. */
+/**
+ * The AppsCreateDeploymentRequest model.
+ */
 @Fluent
 public final class AppsCreateDeploymentRequest {
     /*
@@ -15,7 +20,7 @@ public final class AppsCreateDeploymentRequest {
     /**
      * Get the forceBuild property: Indicates whether to force a build of app from source even if an existing cached
      * build is suitable for re-use.
-     *
+     * 
      * @return the forceBuild value.
      */
     public Boolean isForceBuild() {
@@ -25,7 +30,7 @@ public final class AppsCreateDeploymentRequest {
     /**
      * Set the forceBuild property: Indicates whether to force a build of app from source even if an existing cached
      * build is suitable for re-use.
-     *
+     * 
      * @param forceBuild the forceBuild value to set.
      * @return the AppsCreateDeploymentRequest object itself.
      */

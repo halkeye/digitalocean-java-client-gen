@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The LinkToNextPage model. */
+/**
+ * The LinkToNextPage model.
+ */
 @Fluent
 public class LinkToNextPage {
     /*
@@ -14,7 +19,7 @@ public class LinkToNextPage {
 
     /**
      * Get the next property: URI of the next page of the results.
-     *
+     * 
      * @return the next value.
      */
     public String getNext() {
@@ -23,7 +28,7 @@ public class LinkToNextPage {
 
     /**
      * Set the next property: URI of the next page of the results.
-     *
+     * 
      * @param next the next value to set.
      * @return the LinkToNextPage object itself.
      */

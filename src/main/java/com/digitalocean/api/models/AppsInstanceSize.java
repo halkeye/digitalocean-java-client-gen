@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The AppsInstanceSize model. */
+/**
+ * The AppsInstanceSize model.
+ */
 @Fluent
 public final class AppsInstanceSize {
     /*
@@ -68,8 +74,9 @@ public final class AppsInstanceSize {
     private String usdPerSecond;
 
     /**
-     * Get the cpuType property: - SHARED: Shared vCPU cores - DEDICATED: Dedicated vCPU cores.
-     *
+     * Get the cpuType property: - SHARED: Shared vCPU cores
+     * - DEDICATED: Dedicated vCPU cores.
+     * 
      * @return the cpuType value.
      */
     public InstanceSizeCpuType getCpuType() {
@@ -77,8 +84,9 @@ public final class AppsInstanceSize {
     }
 
     /**
-     * Set the cpuType property: - SHARED: Shared vCPU cores - DEDICATED: Dedicated vCPU cores.
-     *
+     * Set the cpuType property: - SHARED: Shared vCPU cores
+     * - DEDICATED: Dedicated vCPU cores.
+     * 
      * @param cpuType the cpuType value to set.
      * @return the AppsInstanceSize object itself.
      */
@@ -89,7 +97,7 @@ public final class AppsInstanceSize {
 
     /**
      * Get the cpus property: The number of allotted vCPU cores.
-     *
+     * 
      * @return the cpus value.
      */
     public String getCpus() {
@@ -98,7 +106,7 @@ public final class AppsInstanceSize {
 
     /**
      * Set the cpus property: The number of allotted vCPU cores.
-     *
+     * 
      * @param cpus the cpus value to set.
      * @return the AppsInstanceSize object itself.
      */
@@ -109,7 +117,7 @@ public final class AppsInstanceSize {
 
     /**
      * Get the memoryBytes property: The allotted memory in bytes.
-     *
+     * 
      * @return the memoryBytes value.
      */
     public String getMemoryBytes() {
@@ -118,7 +126,7 @@ public final class AppsInstanceSize {
 
     /**
      * Set the memoryBytes property: The allotted memory in bytes.
-     *
+     * 
      * @param memoryBytes the memoryBytes value to set.
      * @return the AppsInstanceSize object itself.
      */
@@ -129,7 +137,7 @@ public final class AppsInstanceSize {
 
     /**
      * Get the name property: A human-readable name of the instance size.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -138,7 +146,7 @@ public final class AppsInstanceSize {
 
     /**
      * Set the name property: A human-readable name of the instance size.
-     *
+     * 
      * @param name the name value to set.
      * @return the AppsInstanceSize object itself.
      */
@@ -149,7 +157,7 @@ public final class AppsInstanceSize {
 
     /**
      * Get the slug property: The slug of the instance size.
-     *
+     * 
      * @return the slug value.
      */
     public String getSlug() {
@@ -158,7 +166,7 @@ public final class AppsInstanceSize {
 
     /**
      * Set the slug property: The slug of the instance size.
-     *
+     * 
      * @param slug the slug value to set.
      * @return the AppsInstanceSize object itself.
      */
@@ -169,7 +177,7 @@ public final class AppsInstanceSize {
 
     /**
      * Get the tierDowngradeTo property: The slug of the corresponding downgradable instance size on the lower tier.
-     *
+     * 
      * @return the tierDowngradeTo value.
      */
     public String getTierDowngradeTo() {
@@ -178,7 +186,7 @@ public final class AppsInstanceSize {
 
     /**
      * Set the tierDowngradeTo property: The slug of the corresponding downgradable instance size on the lower tier.
-     *
+     * 
      * @param tierDowngradeTo the tierDowngradeTo value to set.
      * @return the AppsInstanceSize object itself.
      */
@@ -189,7 +197,7 @@ public final class AppsInstanceSize {
 
     /**
      * Get the tierSlug property: The slug of the tier to which this instance size belongs.
-     *
+     * 
      * @return the tierSlug value.
      */
     public String getTierSlug() {
@@ -198,7 +206,7 @@ public final class AppsInstanceSize {
 
     /**
      * Set the tierSlug property: The slug of the tier to which this instance size belongs.
-     *
+     * 
      * @param tierSlug the tierSlug value to set.
      * @return the AppsInstanceSize object itself.
      */
@@ -209,7 +217,7 @@ public final class AppsInstanceSize {
 
     /**
      * Get the tierUpgradeTo property: The slug of the corresponding upgradable instance size on the higher tier.
-     *
+     * 
      * @return the tierUpgradeTo value.
      */
     public String getTierUpgradeTo() {
@@ -218,7 +226,7 @@ public final class AppsInstanceSize {
 
     /**
      * Set the tierUpgradeTo property: The slug of the corresponding upgradable instance size on the higher tier.
-     *
+     * 
      * @param tierUpgradeTo the tierUpgradeTo value to set.
      * @return the AppsInstanceSize object itself.
      */
@@ -229,7 +237,7 @@ public final class AppsInstanceSize {
 
     /**
      * Get the usdPerMonth property: The cost of this instance size in USD per month.
-     *
+     * 
      * @return the usdPerMonth value.
      */
     public String getUsdPerMonth() {
@@ -238,7 +246,7 @@ public final class AppsInstanceSize {
 
     /**
      * Set the usdPerMonth property: The cost of this instance size in USD per month.
-     *
+     * 
      * @param usdPerMonth the usdPerMonth value to set.
      * @return the AppsInstanceSize object itself.
      */
@@ -249,7 +257,7 @@ public final class AppsInstanceSize {
 
     /**
      * Get the usdPerSecond property: The cost of this instance size in USD per second.
-     *
+     * 
      * @return the usdPerSecond value.
      */
     public String getUsdPerSecond() {
@@ -258,7 +266,7 @@ public final class AppsInstanceSize {
 
     /**
      * Set the usdPerSecond property: The cost of this instance size in USD per second.
-     *
+     * 
      * @param usdPerSecond the usdPerSecond value to set.
      * @return the AppsInstanceSize object itself.
      */

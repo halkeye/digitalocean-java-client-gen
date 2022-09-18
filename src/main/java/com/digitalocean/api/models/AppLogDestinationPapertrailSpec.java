@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** Papertrail configuration. */
+/**
+ * Papertrail configuration.
+ */
 @Fluent
 public final class AppLogDestinationPapertrailSpec {
     /*
@@ -14,7 +19,7 @@ public final class AppLogDestinationPapertrailSpec {
 
     /**
      * Get the endpoint property: Papertrail syslog endpoint.
-     *
+     * 
      * @return the endpoint value.
      */
     public String getEndpoint() {
@@ -23,7 +28,7 @@ public final class AppLogDestinationPapertrailSpec {
 
     /**
      * Set the endpoint property: Papertrail syslog endpoint.
-     *
+     * 
      * @param endpoint the endpoint value to set.
      * @return the AppLogDestinationPapertrailSpec object itself.
      */

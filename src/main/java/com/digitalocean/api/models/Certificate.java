@@ -1,12 +1,18 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The Certificate model. */
+/**
+ * The Certificate model.
+ */
 @Fluent
 public final class Certificate {
     /*
@@ -60,7 +66,7 @@ public final class Certificate {
 
     /**
      * Get the id property: A unique ID that can be used to identify and reference a certificate.
-     *
+     * 
      * @return the id value.
      */
     public UUID getId() {
@@ -69,7 +75,7 @@ public final class Certificate {
 
     /**
      * Get the name property: A unique human-readable name referring to a certificate.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -78,7 +84,7 @@ public final class Certificate {
 
     /**
      * Set the name property: A unique human-readable name referring to a certificate.
-     *
+     * 
      * @param name the name value to set.
      * @return the Certificate object itself.
      */
@@ -90,7 +96,7 @@ public final class Certificate {
     /**
      * Get the notAfter property: A time value given in ISO8601 combined date and time format that represents the
      * certificate's expiration date.
-     *
+     * 
      * @return the notAfter value.
      */
     public OffsetDateTime getNotAfter() {
@@ -99,7 +105,7 @@ public final class Certificate {
 
     /**
      * Get the sha1Fingerprint property: A unique identifier generated from the SHA-1 fingerprint of the certificate.
-     *
+     * 
      * @return the sha1Fingerprint value.
      */
     public String getSha1Fingerprint() {
@@ -109,7 +115,7 @@ public final class Certificate {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * certificate was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -117,8 +123,9 @@ public final class Certificate {
     }
 
     /**
-     * Get the dnsNames property: An array of fully qualified domain names (FQDNs) for which the certificate was issued.
-     *
+     * Get the dnsNames property: An array of fully qualified domain names (FQDNs) for which the certificate was
+     * issued.
+     * 
      * @return the dnsNames value.
      */
     public List<String> getDnsNames() {
@@ -126,8 +133,9 @@ public final class Certificate {
     }
 
     /**
-     * Set the dnsNames property: An array of fully qualified domain names (FQDNs) for which the certificate was issued.
-     *
+     * Set the dnsNames property: An array of fully qualified domain names (FQDNs) for which the certificate was
+     * issued.
+     * 
      * @param dnsNames the dnsNames value to set.
      * @return the Certificate object itself.
      */
@@ -139,7 +147,7 @@ public final class Certificate {
     /**
      * Get the state property: A string representing the current state of the certificate. It may be `pending`,
      * `verified`, or `error`.
-     *
+     * 
      * @return the state value.
      */
     public CertificateState getState() {
@@ -149,7 +157,7 @@ public final class Certificate {
     /**
      * Get the type property: A string representing the type of the certificate. The value will be `custom` for a
      * user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
+     * 
      * @return the type value.
      */
     public CertificateType getType() {
@@ -159,7 +167,7 @@ public final class Certificate {
     /**
      * Set the type property: A string representing the type of the certificate. The value will be `custom` for a
      * user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
+     * 
      * @param type the type value to set.
      * @return the Certificate object itself.
      */

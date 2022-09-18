@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The VolumeActionPostResize model. */
+/**
+ * The VolumeActionPostResize model.
+ */
 @Fluent
 public final class VolumeActionPostResize extends VolumeActionPostBase {
     /*
@@ -14,7 +20,7 @@ public final class VolumeActionPostResize extends VolumeActionPostBase {
 
     /**
      * Get the sizeGigabytes property: The new size of the block storage volume in GiB (1024^3).
-     *
+     * 
      * @return the sizeGigabytes value.
      */
     public int getSizeGigabytes() {
@@ -23,7 +29,7 @@ public final class VolumeActionPostResize extends VolumeActionPostBase {
 
     /**
      * Set the sizeGigabytes property: The new size of the block storage volume in GiB (1024^3).
-     *
+     * 
      * @param sizeGigabytes the sizeGigabytes value to set.
      * @return the VolumeActionPostResize object itself.
      */
@@ -32,14 +38,18 @@ public final class VolumeActionPostResize extends VolumeActionPostBase {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public VolumeActionPostResize setType(VolumeActionPostBaseType type) {
         super.setType(type);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public VolumeActionPostResize setRegion(RegionSlug region) {
         super.setRegion(region);

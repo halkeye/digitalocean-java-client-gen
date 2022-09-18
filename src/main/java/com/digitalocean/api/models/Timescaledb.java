@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** TimescaleDB extension configuration values. */
+/**
+ * TimescaleDB extension configuration values.
+ */
 @Fluent
 public final class Timescaledb {
     /*
@@ -14,10 +19,10 @@ public final class Timescaledb {
     private Integer maxBackgroundWorkers;
 
     /**
-     * Get the maxBackgroundWorkers property: The number of background workers for timescaledb operations. Set to the
+     * Get the maxBackgroundWorkers property: The number of background workers for timescaledb operations.  Set to the
      * sum of your number of databases and the total number of concurrent background workers you want running at any
      * given point in time.
-     *
+     * 
      * @return the maxBackgroundWorkers value.
      */
     public Integer getMaxBackgroundWorkers() {
@@ -25,10 +30,10 @@ public final class Timescaledb {
     }
 
     /**
-     * Set the maxBackgroundWorkers property: The number of background workers for timescaledb operations. Set to the
+     * Set the maxBackgroundWorkers property: The number of background workers for timescaledb operations.  Set to the
      * sum of your number of databases and the total number of concurrent background workers you want running at any
      * given point in time.
-     *
+     * 
      * @param maxBackgroundWorkers the maxBackgroundWorkers value to set.
      * @return the Timescaledb object itself.
      */

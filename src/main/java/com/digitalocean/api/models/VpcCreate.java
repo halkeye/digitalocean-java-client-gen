@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The VpcCreate model. */
+/**
+ * The VpcCreate model.
+ */
 @Fluent
 public class VpcCreate {
     /*
@@ -23,7 +28,7 @@ public class VpcCreate {
 
     /**
      * Get the region property: The slug identifier for the region where the VPC will be created.
-     *
+     * 
      * @return the region value.
      */
     public String getRegion() {
@@ -32,7 +37,7 @@ public class VpcCreate {
 
     /**
      * Set the region property: The slug identifier for the region where the VPC will be created.
-     *
+     * 
      * @param region the region value to set.
      * @return the VpcCreate object itself.
      */
@@ -46,7 +51,7 @@ public class VpcCreate {
      * with other networks in the same account and must be in range of private addresses as defined in RFC1918. It may
      * not be smaller than `/28` nor larger than `/16`. If no IP range is specified, a `/20` network range is generated
      * that won't conflict with other VPC networks in your account.
-     *
+     * 
      * @return the ipRange value.
      */
     public String getIpRange() {
@@ -58,7 +63,7 @@ public class VpcCreate {
      * with other networks in the same account and must be in range of private addresses as defined in RFC1918. It may
      * not be smaller than `/28` nor larger than `/16`. If no IP range is specified, a `/20` network range is generated
      * that won't conflict with other VPC networks in your account.
-     *
+     * 
      * @param ipRange the ipRange value to set.
      * @return the VpcCreate object itself.
      */

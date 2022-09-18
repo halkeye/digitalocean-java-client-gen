@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The SimpleCharge model. */
+/**
+ * The SimpleCharge model.
+ */
 @Fluent
 public class SimpleCharge {
     /*
@@ -20,7 +25,7 @@ public class SimpleCharge {
 
     /**
      * Get the name property: Name of the charge.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -29,7 +34,7 @@ public class SimpleCharge {
 
     /**
      * Set the name property: Name of the charge.
-     *
+     * 
      * @param name the name value to set.
      * @return the SimpleCharge object itself.
      */
@@ -40,7 +45,7 @@ public class SimpleCharge {
 
     /**
      * Get the amount property: Total amount charged in USD.
-     *
+     * 
      * @return the amount value.
      */
     public String getAmount() {
@@ -49,7 +54,7 @@ public class SimpleCharge {
 
     /**
      * Set the amount property: Total amount charged in USD.
-     *
+     * 
      * @param amount the amount value to set.
      * @return the SimpleCharge object itself.
      */

@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The SubscriptionTierBase model. */
+/**
+ * The SubscriptionTierBase model.
+ */
 @Fluent
 public class SubscriptionTierBase {
     /*
@@ -58,7 +63,7 @@ public class SubscriptionTierBase {
 
     /**
      * Get the name property: The name of the subscription tier.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -67,7 +72,7 @@ public class SubscriptionTierBase {
 
     /**
      * Set the name property: The name of the subscription tier.
-     *
+     * 
      * @param name the name value to set.
      * @return the SubscriptionTierBase object itself.
      */
@@ -78,7 +83,7 @@ public class SubscriptionTierBase {
 
     /**
      * Get the slug property: The slug identifier of the subscription tier.
-     *
+     * 
      * @return the slug value.
      */
     public String getSlug() {
@@ -87,7 +92,7 @@ public class SubscriptionTierBase {
 
     /**
      * Set the slug property: The slug identifier of the subscription tier.
-     *
+     * 
      * @param slug the slug value to set.
      * @return the SubscriptionTierBase object itself.
      */
@@ -99,7 +104,7 @@ public class SubscriptionTierBase {
     /**
      * Get the includedRepositories property: The number of repositories included in the subscription tier. `0`
      * indicates that the subscription tier includes unlimited repositories.
-     *
+     * 
      * @return the includedRepositories value.
      */
     public Integer getIncludedRepositories() {
@@ -109,7 +114,7 @@ public class SubscriptionTierBase {
     /**
      * Set the includedRepositories property: The number of repositories included in the subscription tier. `0`
      * indicates that the subscription tier includes unlimited repositories.
-     *
+     * 
      * @param includedRepositories the includedRepositories value to set.
      * @return the SubscriptionTierBase object itself.
      */
@@ -120,7 +125,7 @@ public class SubscriptionTierBase {
 
     /**
      * Get the includedStorageBytes property: The amount of storage included in the subscription tier in bytes.
-     *
+     * 
      * @return the includedStorageBytes value.
      */
     public Integer getIncludedStorageBytes() {
@@ -129,7 +134,7 @@ public class SubscriptionTierBase {
 
     /**
      * Set the includedStorageBytes property: The amount of storage included in the subscription tier in bytes.
-     *
+     * 
      * @param includedStorageBytes the includedStorageBytes value to set.
      * @return the SubscriptionTierBase object itself.
      */
@@ -141,7 +146,7 @@ public class SubscriptionTierBase {
     /**
      * Get the allowStorageOverage property: A boolean indicating whether the subscription tier supports additional
      * storage above what is included in the base plan at an additional cost per GiB used.
-     *
+     * 
      * @return the allowStorageOverage value.
      */
     public Boolean isAllowStorageOverage() {
@@ -151,7 +156,7 @@ public class SubscriptionTierBase {
     /**
      * Set the allowStorageOverage property: A boolean indicating whether the subscription tier supports additional
      * storage above what is included in the base plan at an additional cost per GiB used.
-     *
+     * 
      * @param allowStorageOverage the allowStorageOverage value to set.
      * @return the SubscriptionTierBase object itself.
      */
@@ -163,7 +168,7 @@ public class SubscriptionTierBase {
     /**
      * Get the includedBandwidthBytes property: The amount of outbound data transfer included in the subscription tier
      * in bytes.
-     *
+     * 
      * @return the includedBandwidthBytes value.
      */
     public Integer getIncludedBandwidthBytes() {
@@ -173,7 +178,7 @@ public class SubscriptionTierBase {
     /**
      * Set the includedBandwidthBytes property: The amount of outbound data transfer included in the subscription tier
      * in bytes.
-     *
+     * 
      * @param includedBandwidthBytes the includedBandwidthBytes value to set.
      * @return the SubscriptionTierBase object itself.
      */
@@ -184,7 +189,7 @@ public class SubscriptionTierBase {
 
     /**
      * Get the monthlyPriceInCents property: The monthly cost of the subscription tier in cents.
-     *
+     * 
      * @return the monthlyPriceInCents value.
      */
     public Integer getMonthlyPriceInCents() {
@@ -193,7 +198,7 @@ public class SubscriptionTierBase {
 
     /**
      * Set the monthlyPriceInCents property: The monthly cost of the subscription tier in cents.
-     *
+     * 
      * @param monthlyPriceInCents the monthlyPriceInCents value to set.
      * @return the SubscriptionTierBase object itself.
      */
@@ -205,7 +210,7 @@ public class SubscriptionTierBase {
     /**
      * Get the storageOveragePriceInCents property: The price paid in cents per GiB for additional storage beyond what
      * is included in the subscription plan.
-     *
+     * 
      * @return the storageOveragePriceInCents value.
      */
     public Integer getStorageOveragePriceInCents() {
@@ -215,7 +220,7 @@ public class SubscriptionTierBase {
     /**
      * Set the storageOveragePriceInCents property: The price paid in cents per GiB for additional storage beyond what
      * is included in the subscription plan.
-     *
+     * 
      * @param storageOveragePriceInCents the storageOveragePriceInCents value to set.
      * @return the SubscriptionTierBase object itself.
      */

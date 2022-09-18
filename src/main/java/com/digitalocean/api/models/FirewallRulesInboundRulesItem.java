@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The FirewallRulesInboundRulesItem model. */
+/**
+ * The FirewallRulesInboundRulesItem model.
+ */
 @Fluent
 public final class FirewallRulesInboundRulesItem extends FirewallRuleBase {
     /*
@@ -14,7 +20,7 @@ public final class FirewallRulesInboundRulesItem extends FirewallRuleBase {
 
     /**
      * Get the sources property: The sources property.
-     *
+     * 
      * @return the sources value.
      */
     public FirewallRulesInboundRulesAllOfProperties getSources() {
@@ -23,7 +29,7 @@ public final class FirewallRulesInboundRulesItem extends FirewallRuleBase {
 
     /**
      * Set the sources property: The sources property.
-     *
+     * 
      * @param sources the sources value to set.
      * @return the FirewallRulesInboundRulesItem object itself.
      */
@@ -32,14 +38,18 @@ public final class FirewallRulesInboundRulesItem extends FirewallRuleBase {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public FirewallRulesInboundRulesItem setProtocol(FirewallRuleBaseProtocol protocol) {
         super.setProtocol(protocol);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public FirewallRulesInboundRulesItem setPorts(String ports) {
         super.setPorts(ports);

@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsVpcoyeResponsesRepositoryManifestsContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The ComponentsVpcoyeResponsesRepositoryManifestsContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class ComponentsVpcoyeResponsesRepositoryManifestsContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsVpcoyeResponsesRepositoryManifestsContentApplicationJsonS
 
     /**
      * Get the manifests property: The manifests property.
-     *
+     * 
      * @return the manifests value.
      */
     public List<RepositoryManifest> getManifests() {
@@ -24,12 +29,11 @@ public class ComponentsVpcoyeResponsesRepositoryManifestsContentApplicationJsonS
 
     /**
      * Set the manifests property: The manifests property.
-     *
+     * 
      * @param manifests the manifests value to set.
      * @return the ComponentsVpcoyeResponsesRepositoryManifestsContentApplicationJsonSchemaAllof0 object itself.
      */
-    public ComponentsVpcoyeResponsesRepositoryManifestsContentApplicationJsonSchemaAllof0 setManifests(
-            List<RepositoryManifest> manifests) {
+    public ComponentsVpcoyeResponsesRepositoryManifestsContentApplicationJsonSchemaAllof0 setManifests(List<RepositoryManifest> manifests) {
         this.manifests = manifests;
         return this;
     }

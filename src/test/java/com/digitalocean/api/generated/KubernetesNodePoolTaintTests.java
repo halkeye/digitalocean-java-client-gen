@@ -1,17 +1,19 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.KubernetesNodePoolTaint;
 import com.digitalocean.api.models.KubernetesNodePoolTaintEffect;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.stream.Collectors;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class KubernetesNodePoolTaintTests {
     @Test
     public void testDeserialize() {
-        KubernetesNodePoolTaint model =
-                BinaryData.fromString("{\"key\":\"pumdd\",\"value\":\"ajk\",\"effect\":\"PreferNoSchedule\"}")
-                        .toObject(KubernetesNodePoolTaint.class);
+        KubernetesNodePoolTaint model = BinaryData.fromString("{\"key\":\"pumdd\",\"value\":\"ajk\",\"effect\":\"PreferNoSchedule\"}").toObject(KubernetesNodePoolTaint.class);
         Assertions.assertEquals("pumdd", model.getKey());
         Assertions.assertEquals("ajk", model.getValue());
         Assertions.assertEquals(KubernetesNodePoolTaintEffect.PREFER_NO_SCHEDULE, model.getEffect());
@@ -19,11 +21,7 @@ public final class KubernetesNodePoolTaintTests {
 
     @Test
     public void testSerialize() {
-        KubernetesNodePoolTaint model =
-                new KubernetesNodePoolTaint()
-                        .setKey("pumdd")
-                        .setValue("ajk")
-                        .setEffect(KubernetesNodePoolTaintEffect.PREFER_NO_SCHEDULE);
+        KubernetesNodePoolTaint model = new KubernetesNodePoolTaint().setKey("pumdd").setValue("ajk").setEffect(KubernetesNodePoolTaintEffect.PREFER_NO_SCHEDULE);
         model = BinaryData.fromObject(model).toObject(KubernetesNodePoolTaint.class);
         Assertions.assertEquals("pumdd", model.getKey());
         Assertions.assertEquals("ajk", model.getValue());

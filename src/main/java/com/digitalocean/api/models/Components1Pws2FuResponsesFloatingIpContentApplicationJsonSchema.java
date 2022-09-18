@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components1Pws2FuResponsesFloatingIpContentApplicationJsonSchema model. */
+/**
+ * The Components1Pws2FuResponsesFloatingIpContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components1Pws2FuResponsesFloatingIpContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components1Pws2FuResponsesFloatingIpContentApplicationJsonSch
 
     /**
      * Get the floatingIp property: The floating_ip property.
-     *
+     * 
      * @return the floatingIp value.
      */
     public FloatingIp getFloatingIp() {
@@ -23,7 +28,7 @@ public final class Components1Pws2FuResponsesFloatingIpContentApplicationJsonSch
 
     /**
      * Set the floatingIp property: The floating_ip property.
-     *
+     * 
      * @param floatingIp the floatingIp value to set.
      * @return the Components1Pws2FuResponsesFloatingIpContentApplicationJsonSchema object itself.
      */

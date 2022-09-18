@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Size model. */
+/**
+ * The Size model.
+ */
 @Fluent
 public final class Size {
     /*
@@ -72,7 +77,7 @@ public final class Size {
 
     /**
      * Get the slug property: A human-readable string that is used to uniquely identify each size.
-     *
+     * 
      * @return the slug value.
      */
     public String getSlug() {
@@ -81,7 +86,7 @@ public final class Size {
 
     /**
      * Set the slug property: A human-readable string that is used to uniquely identify each size.
-     *
+     * 
      * @param slug the slug value to set.
      * @return the Size object itself.
      */
@@ -93,7 +98,7 @@ public final class Size {
     /**
      * Get the memory property: The amount of RAM allocated to Droplets created of this size. The value is represented
      * in megabytes.
-     *
+     * 
      * @return the memory value.
      */
     public int getMemory() {
@@ -103,7 +108,7 @@ public final class Size {
     /**
      * Set the memory property: The amount of RAM allocated to Droplets created of this size. The value is represented
      * in megabytes.
-     *
+     * 
      * @param memory the memory value to set.
      * @return the Size object itself.
      */
@@ -114,7 +119,7 @@ public final class Size {
 
     /**
      * Get the vcpus property: The integer of number CPUs allocated to Droplets of this size.
-     *
+     * 
      * @return the vcpus value.
      */
     public int getVcpus() {
@@ -123,7 +128,7 @@ public final class Size {
 
     /**
      * Set the vcpus property: The integer of number CPUs allocated to Droplets of this size.
-     *
+     * 
      * @param vcpus the vcpus value to set.
      * @return the Size object itself.
      */
@@ -135,7 +140,7 @@ public final class Size {
     /**
      * Get the disk property: The amount of disk space set aside for Droplets of this size. The value is represented in
      * gigabytes.
-     *
+     * 
      * @return the disk value.
      */
     public int getDisk() {
@@ -145,7 +150,7 @@ public final class Size {
     /**
      * Set the disk property: The amount of disk space set aside for Droplets of this size. The value is represented in
      * gigabytes.
-     *
+     * 
      * @param disk the disk value to set.
      * @return the Size object itself.
      */
@@ -157,7 +162,7 @@ public final class Size {
     /**
      * Get the transfer property: The amount of transfer bandwidth that is available for Droplets created in this size.
      * This only counts traffic on the public interface. The value is given in terabytes.
-     *
+     * 
      * @return the transfer value.
      */
     public float getTransfer() {
@@ -167,7 +172,7 @@ public final class Size {
     /**
      * Set the transfer property: The amount of transfer bandwidth that is available for Droplets created in this size.
      * This only counts traffic on the public interface. The value is given in terabytes.
-     *
+     * 
      * @param transfer the transfer value to set.
      * @return the Size object itself.
      */
@@ -179,7 +184,7 @@ public final class Size {
     /**
      * Get the priceMonthly property: This attribute describes the monthly cost of this Droplet size if the Droplet is
      * kept for an entire month. The value is measured in US dollars.
-     *
+     * 
      * @return the priceMonthly value.
      */
     public float getPriceMonthly() {
@@ -189,7 +194,7 @@ public final class Size {
     /**
      * Set the priceMonthly property: This attribute describes the monthly cost of this Droplet size if the Droplet is
      * kept for an entire month. The value is measured in US dollars.
-     *
+     * 
      * @param priceMonthly the priceMonthly value to set.
      * @return the Size object itself.
      */
@@ -201,7 +206,7 @@ public final class Size {
     /**
      * Get the priceHourly property: This describes the price of the Droplet size as measured hourly. The value is
      * measured in US dollars.
-     *
+     * 
      * @return the priceHourly value.
      */
     public float getPriceHourly() {
@@ -211,7 +216,7 @@ public final class Size {
     /**
      * Set the priceHourly property: This describes the price of the Droplet size as measured hourly. The value is
      * measured in US dollars.
-     *
+     * 
      * @param priceHourly the priceHourly value to set.
      * @return the Size object itself.
      */
@@ -222,7 +227,7 @@ public final class Size {
 
     /**
      * Get the regions property: An array containing the region slugs where this size is available for Droplet creates.
-     *
+     * 
      * @return the regions value.
      */
     public List<String> getRegions() {
@@ -231,7 +236,7 @@ public final class Size {
 
     /**
      * Set the regions property: An array containing the region slugs where this size is available for Droplet creates.
-     *
+     * 
      * @param regions the regions value to set.
      * @return the Size object itself.
      */
@@ -241,9 +246,9 @@ public final class Size {
     }
 
     /**
-     * Get the available property: This is a boolean value that represents whether new Droplets can be created with this
-     * size.
-     *
+     * Get the available property: This is a boolean value that represents whether new Droplets can be created with
+     * this size.
+     * 
      * @return the available value.
      */
     public boolean isAvailable() {
@@ -251,9 +256,9 @@ public final class Size {
     }
 
     /**
-     * Set the available property: This is a boolean value that represents whether new Droplets can be created with this
-     * size.
-     *
+     * Set the available property: This is a boolean value that represents whether new Droplets can be created with
+     * this size.
+     * 
      * @param available the available value to set.
      * @return the Size object itself.
      */
@@ -265,7 +270,7 @@ public final class Size {
     /**
      * Get the description property: A string describing the class of Droplets created from this size. For example:
      * Basic, General Purpose, CPU-Optimized, Memory-Optimized, or Storage-Optimized.
-     *
+     * 
      * @return the description value.
      */
     public String getDescription() {
@@ -275,7 +280,7 @@ public final class Size {
     /**
      * Set the description property: A string describing the class of Droplets created from this size. For example:
      * Basic, General Purpose, CPU-Optimized, Memory-Optimized, or Storage-Optimized.
-     *
+     * 
      * @param description the description value to set.
      * @return the Size object itself.
      */

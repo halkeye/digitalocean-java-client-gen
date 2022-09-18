@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Paths18B54PqV2LoadBalancersLbIdForwardingRulesDeleteRequestbodyContentApplicationJsonSchema model. */
+/**
+ * The Paths18B54PqV2LoadBalancersLbIdForwardingRulesDeleteRequestbodyContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Paths18B54PqV2LoadBalancersLbIdForwardingRulesDeleteRequestbodyContentApplicationJsonSchema {
     /*
@@ -15,7 +20,7 @@ public final class Paths18B54PqV2LoadBalancersLbIdForwardingRulesDeleteRequestbo
 
     /**
      * Get the forwardingRules property: The forwarding_rules property.
-     *
+     * 
      * @return the forwardingRules value.
      */
     public List<ForwardingRule> getForwardingRules() {
@@ -24,13 +29,12 @@ public final class Paths18B54PqV2LoadBalancersLbIdForwardingRulesDeleteRequestbo
 
     /**
      * Set the forwardingRules property: The forwarding_rules property.
-     *
+     * 
      * @param forwardingRules the forwardingRules value to set.
      * @return the Paths18B54PqV2LoadBalancersLbIdForwardingRulesDeleteRequestbodyContentApplicationJsonSchema object
-     *     itself.
+     * itself.
      */
-    public Paths18B54PqV2LoadBalancersLbIdForwardingRulesDeleteRequestbodyContentApplicationJsonSchema
-            setForwardingRules(List<ForwardingRule> forwardingRules) {
+    public Paths18B54PqV2LoadBalancersLbIdForwardingRulesDeleteRequestbodyContentApplicationJsonSchema setForwardingRules(List<ForwardingRule> forwardingRules) {
         this.forwardingRules = forwardingRules;
         return this;
     }

@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** Let's Encrypt Certificate Request. */
+/**
+ * Let's Encrypt Certificate Request.
+ */
 @Fluent
 public final class CertificateRequestLetsEncrypt extends CertificateCreateBase {
     /*
@@ -15,9 +21,9 @@ public final class CertificateRequestLetsEncrypt extends CertificateCreateBase {
     private List<String> dnsNames;
 
     /**
-     * Get the dnsNames property: An array of fully qualified domain names (FQDNs) for which the certificate was issued.
-     * A certificate covering all subdomains can be issued using a wildcard (e.g. `*.example.com`).
-     *
+     * Get the dnsNames property: An array of fully qualified domain names (FQDNs) for which the certificate was
+     * issued. A certificate covering all subdomains can be issued using a wildcard (e.g. `*.example.com`).
+     * 
      * @return the dnsNames value.
      */
     public List<String> getDnsNames() {
@@ -25,9 +31,9 @@ public final class CertificateRequestLetsEncrypt extends CertificateCreateBase {
     }
 
     /**
-     * Set the dnsNames property: An array of fully qualified domain names (FQDNs) for which the certificate was issued.
-     * A certificate covering all subdomains can be issued using a wildcard (e.g. `*.example.com`).
-     *
+     * Set the dnsNames property: An array of fully qualified domain names (FQDNs) for which the certificate was
+     * issued. A certificate covering all subdomains can be issued using a wildcard (e.g. `*.example.com`).
+     * 
      * @param dnsNames the dnsNames value to set.
      * @return the CertificateRequestLetsEncrypt object itself.
      */
@@ -36,14 +42,18 @@ public final class CertificateRequestLetsEncrypt extends CertificateCreateBase {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public CertificateRequestLetsEncrypt setName(String name) {
         super.setName(name);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public CertificateRequestLetsEncrypt setType(CertificateCreateBaseType type) {
         super.setType(type);

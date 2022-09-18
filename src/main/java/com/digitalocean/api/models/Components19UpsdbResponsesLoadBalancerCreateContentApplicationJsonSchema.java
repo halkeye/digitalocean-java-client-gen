@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components19UpsdbResponsesLoadBalancerCreateContentApplicationJsonSchema model. */
+/**
+ * The Components19UpsdbResponsesLoadBalancerCreateContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components19UpsdbResponsesLoadBalancerCreateContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components19UpsdbResponsesLoadBalancerCreateContentApplicatio
 
     /**
      * Get the loadBalancer property: The load_balancer property.
-     *
+     * 
      * @return the loadBalancer value.
      */
     public LoadBalancer getLoadBalancer() {
@@ -23,12 +28,11 @@ public final class Components19UpsdbResponsesLoadBalancerCreateContentApplicatio
 
     /**
      * Set the loadBalancer property: The load_balancer property.
-     *
+     * 
      * @param loadBalancer the loadBalancer value to set.
      * @return the Components19UpsdbResponsesLoadBalancerCreateContentApplicationJsonSchema object itself.
      */
-    public Components19UpsdbResponsesLoadBalancerCreateContentApplicationJsonSchema setLoadBalancer(
-            LoadBalancer loadBalancer) {
+    public Components19UpsdbResponsesLoadBalancerCreateContentApplicationJsonSchema setLoadBalancer(LoadBalancer loadBalancer) {
         this.loadBalancer = loadBalancer;
         return this;
     }

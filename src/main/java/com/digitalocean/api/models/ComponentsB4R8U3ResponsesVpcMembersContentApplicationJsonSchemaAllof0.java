@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsB4R8U3ResponsesVpcMembersContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The ComponentsB4R8U3ResponsesVpcMembersContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class ComponentsB4R8U3ResponsesVpcMembersContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsB4R8U3ResponsesVpcMembersContentApplicationJsonSchemaAllo
 
     /**
      * Get the members property: The members property.
-     *
+     * 
      * @return the members value.
      */
     public List<VpcMember> getMembers() {
@@ -24,7 +29,7 @@ public class ComponentsB4R8U3ResponsesVpcMembersContentApplicationJsonSchemaAllo
 
     /**
      * Set the members property: The members property.
-     *
+     * 
      * @param members the members value to set.
      * @return the ComponentsB4R8U3ResponsesVpcMembersContentApplicationJsonSchemaAllof0 object itself.
      */

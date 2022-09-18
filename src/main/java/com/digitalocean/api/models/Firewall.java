@@ -1,11 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The Firewall model. */
+/**
+ * The Firewall model.
+ */
 @Fluent
 public class Firewall extends FirewallRules {
     /*
@@ -55,7 +61,7 @@ public class Firewall extends FirewallRules {
 
     /**
      * Get the id property: A unique ID that can be used to identify and reference a firewall.
-     *
+     * 
      * @return the id value.
      */
     public String getId() {
@@ -65,7 +71,7 @@ public class Firewall extends FirewallRules {
     /**
      * Get the status property: A status string indicating the current state of the firewall. This can be "waiting",
      * "succeeded", or "failed".
-     *
+     * 
      * @return the status value.
      */
     public FirewallStatus getStatus() {
@@ -75,7 +81,7 @@ public class Firewall extends FirewallRules {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * firewall was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -84,9 +90,9 @@ public class Firewall extends FirewallRules {
 
     /**
      * Get the pendingChanges property: An array of objects each containing the fields "droplet_id", "removing", and
-     * "status". It is provided to detail exactly which Droplets are having their security policies updated. When empty,
-     * all changes have been successfully applied.
-     *
+     * "status". It is provided to detail exactly which Droplets are having their security policies updated. When
+     * empty, all changes have been successfully applied.
+     * 
      * @return the pendingChanges value.
      */
     public List<FirewallPendingChangesItem> getPendingChanges() {
@@ -96,7 +102,7 @@ public class Firewall extends FirewallRules {
     /**
      * Get the name property: A human-readable name for a firewall. The name must begin with an alphanumeric character.
      * Subsequent characters must either be alphanumeric characters, a period (.), or a dash (-).
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -106,7 +112,7 @@ public class Firewall extends FirewallRules {
     /**
      * Set the name property: A human-readable name for a firewall. The name must begin with an alphanumeric character.
      * Subsequent characters must either be alphanumeric characters, a period (.), or a dash (-).
-     *
+     * 
      * @param name the name value to set.
      * @return the Firewall object itself.
      */
@@ -117,7 +123,7 @@ public class Firewall extends FirewallRules {
 
     /**
      * Get the dropletIds property: An array containing the IDs of the Droplets assigned to the firewall.
-     *
+     * 
      * @return the dropletIds value.
      */
     public List<Integer> getDropletIds() {
@@ -126,7 +132,7 @@ public class Firewall extends FirewallRules {
 
     /**
      * Set the dropletIds property: An array containing the IDs of the Droplets assigned to the firewall.
-     *
+     * 
      * @param dropletIds the dropletIds value to set.
      * @return the Firewall object itself.
      */
@@ -137,7 +143,7 @@ public class Firewall extends FirewallRules {
 
     /**
      * Get the tags property: Any object.
-     *
+     * 
      * @return the tags value.
      */
     public Object getTags() {
@@ -146,7 +152,7 @@ public class Firewall extends FirewallRules {
 
     /**
      * Set the tags property: Any object.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the Firewall object itself.
      */
@@ -155,14 +161,18 @@ public class Firewall extends FirewallRules {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Firewall setInboundRules(List<FirewallRulesInboundRulesItem> inboundRules) {
         super.setInboundRules(inboundRules);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Firewall setOutboundRules(List<FirewallRulesOutboundRulesItem> outboundRules) {
         super.setOutboundRules(outboundRules);

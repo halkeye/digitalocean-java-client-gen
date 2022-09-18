@@ -1,11 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** An app deployment. */
+/**
+ * An app deployment.
+ */
 @Fluent
 public class AppsDeployment {
     /*
@@ -70,7 +76,7 @@ public class AppsDeployment {
 
     /*
      * AppSpec
-     *
+     * 
      * The desired configuration of an application.
      */
     @JsonProperty(value = "spec")
@@ -102,7 +108,7 @@ public class AppsDeployment {
 
     /**
      * Get the cause property: What caused this deployment to be created.
-     *
+     * 
      * @return the cause value.
      */
     public String getCause() {
@@ -111,7 +117,7 @@ public class AppsDeployment {
 
     /**
      * Set the cause property: What caused this deployment to be created.
-     *
+     * 
      * @param cause the cause value to set.
      * @return the AppsDeployment object itself.
      */
@@ -122,7 +128,7 @@ public class AppsDeployment {
 
     /**
      * Get the clonedFrom property: The ID of a previous deployment that this deployment was cloned from.
-     *
+     * 
      * @return the clonedFrom value.
      */
     public String getClonedFrom() {
@@ -131,7 +137,7 @@ public class AppsDeployment {
 
     /**
      * Set the clonedFrom property: The ID of a previous deployment that this deployment was cloned from.
-     *
+     * 
      * @param clonedFrom the clonedFrom value to set.
      * @return the AppsDeployment object itself.
      */
@@ -142,7 +148,7 @@ public class AppsDeployment {
 
     /**
      * Get the createdAt property: The creation time of the deployment.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -151,7 +157,7 @@ public class AppsDeployment {
 
     /**
      * Set the createdAt property: The creation time of the deployment.
-     *
+     * 
      * @param createdAt the createdAt value to set.
      * @return the AppsDeployment object itself.
      */
@@ -162,7 +168,7 @@ public class AppsDeployment {
 
     /**
      * Get the id property: The ID of the deployment.
-     *
+     * 
      * @return the id value.
      */
     public String getId() {
@@ -171,7 +177,7 @@ public class AppsDeployment {
 
     /**
      * Set the id property: The ID of the deployment.
-     *
+     * 
      * @param id the id value to set.
      * @return the AppsDeployment object itself.
      */
@@ -182,7 +188,7 @@ public class AppsDeployment {
 
     /**
      * Get the jobs property: Job components that are part of this deployment.
-     *
+     * 
      * @return the jobs value.
      */
     public List<AppsDeploymentJob> getJobs() {
@@ -191,7 +197,7 @@ public class AppsDeployment {
 
     /**
      * Set the jobs property: Job components that are part of this deployment.
-     *
+     * 
      * @param jobs the jobs value to set.
      * @return the AppsDeployment object itself.
      */
@@ -202,7 +208,7 @@ public class AppsDeployment {
 
     /**
      * Get the functions property: Functions components that are part of this deployment.
-     *
+     * 
      * @return the functions value.
      */
     public List<AppsDeploymentFunctions> getFunctions() {
@@ -211,7 +217,7 @@ public class AppsDeployment {
 
     /**
      * Set the functions property: Functions components that are part of this deployment.
-     *
+     * 
      * @param functions the functions value to set.
      * @return the AppsDeployment object itself.
      */
@@ -222,7 +228,7 @@ public class AppsDeployment {
 
     /**
      * Get the phase property: The phase property.
-     *
+     * 
      * @return the phase value.
      */
     public AppsDeploymentPhase getPhase() {
@@ -231,7 +237,7 @@ public class AppsDeployment {
 
     /**
      * Set the phase property: The phase property.
-     *
+     * 
      * @param phase the phase value to set.
      * @return the AppsDeployment object itself.
      */
@@ -242,7 +248,7 @@ public class AppsDeployment {
 
     /**
      * Get the phaseLastUpdatedAt property: When the deployment phase was last updated.
-     *
+     * 
      * @return the phaseLastUpdatedAt value.
      */
     public OffsetDateTime getPhaseLastUpdatedAt() {
@@ -251,7 +257,7 @@ public class AppsDeployment {
 
     /**
      * Set the phaseLastUpdatedAt property: When the deployment phase was last updated.
-     *
+     * 
      * @param phaseLastUpdatedAt the phaseLastUpdatedAt value to set.
      * @return the AppsDeployment object itself.
      */
@@ -262,7 +268,7 @@ public class AppsDeployment {
 
     /**
      * Get the progress property: The progress property.
-     *
+     * 
      * @return the progress value.
      */
     public AppsDeploymentProgress getProgress() {
@@ -271,7 +277,7 @@ public class AppsDeployment {
 
     /**
      * Set the progress property: The progress property.
-     *
+     * 
      * @param progress the progress value to set.
      * @return the AppsDeployment object itself.
      */
@@ -282,7 +288,7 @@ public class AppsDeployment {
 
     /**
      * Get the services property: Service components that are part of this deployment.
-     *
+     * 
      * @return the services value.
      */
     public List<AppsDeploymentService> getServices() {
@@ -291,7 +297,7 @@ public class AppsDeployment {
 
     /**
      * Set the services property: Service components that are part of this deployment.
-     *
+     * 
      * @param services the services value to set.
      * @return the AppsDeployment object itself.
      */
@@ -302,9 +308,9 @@ public class AppsDeployment {
 
     /**
      * Get the spec property: AppSpec
-     *
-     * <p>The desired configuration of an application.
-     *
+     * 
+     * The desired configuration of an application.
+     * 
      * @return the spec value.
      */
     public AppSpec getSpec() {
@@ -313,9 +319,9 @@ public class AppsDeployment {
 
     /**
      * Set the spec property: AppSpec
-     *
-     * <p>The desired configuration of an application.
-     *
+     * 
+     * The desired configuration of an application.
+     * 
      * @param spec the spec value to set.
      * @return the AppsDeployment object itself.
      */
@@ -326,7 +332,7 @@ public class AppsDeployment {
 
     /**
      * Get the staticSites property: Static Site components that are part of this deployment.
-     *
+     * 
      * @return the staticSites value.
      */
     public List<AppsDeploymentStaticSite> getStaticSites() {
@@ -335,7 +341,7 @@ public class AppsDeployment {
 
     /**
      * Set the staticSites property: Static Site components that are part of this deployment.
-     *
+     * 
      * @param staticSites the staticSites value to set.
      * @return the AppsDeployment object itself.
      */
@@ -346,7 +352,7 @@ public class AppsDeployment {
 
     /**
      * Get the tierSlug property: The current pricing tier slug of the deployment.
-     *
+     * 
      * @return the tierSlug value.
      */
     public String getTierSlug() {
@@ -355,7 +361,7 @@ public class AppsDeployment {
 
     /**
      * Get the updatedAt property: When the deployment was last updated.
-     *
+     * 
      * @return the updatedAt value.
      */
     public OffsetDateTime getUpdatedAt() {
@@ -364,7 +370,7 @@ public class AppsDeployment {
 
     /**
      * Set the updatedAt property: When the deployment was last updated.
-     *
+     * 
      * @param updatedAt the updatedAt value to set.
      * @return the AppsDeployment object itself.
      */
@@ -375,7 +381,7 @@ public class AppsDeployment {
 
     /**
      * Get the workers property: Worker components that are part of this deployment.
-     *
+     * 
      * @return the workers value.
      */
     public List<AppsDeploymentWorker> getWorkers() {
@@ -384,7 +390,7 @@ public class AppsDeployment {
 
     /**
      * Set the workers property: Worker components that are part of this deployment.
-     *
+     * 
      * @param workers the workers value to set.
      * @return the AppsDeployment object itself.
      */

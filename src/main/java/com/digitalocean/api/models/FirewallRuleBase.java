@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The FirewallRuleBase model. */
+/**
+ * The FirewallRuleBase model.
+ */
 @Fluent
 public class FirewallRuleBase {
     /*
@@ -22,7 +28,7 @@ public class FirewallRuleBase {
 
     /**
      * Get the protocol property: The type of traffic to be allowed. This may be one of `tcp`, `udp`, or `icmp`.
-     *
+     * 
      * @return the protocol value.
      */
     public FirewallRuleBaseProtocol getProtocol() {
@@ -31,7 +37,7 @@ public class FirewallRuleBase {
 
     /**
      * Set the protocol property: The type of traffic to be allowed. This may be one of `tcp`, `udp`, or `icmp`.
-     *
+     * 
      * @param protocol the protocol value to set.
      * @return the FirewallRuleBase object itself.
      */
@@ -44,7 +50,7 @@ public class FirewallRuleBase {
      * Get the ports property: The ports on which traffic will be allowed specified as a string containing a single
      * port, a range (e.g. "8000-9000"), or "0" when all ports are open for a protocol. For ICMP rules this parameter
      * will always return "0".
-     *
+     * 
      * @return the ports value.
      */
     public String getPorts() {
@@ -55,7 +61,7 @@ public class FirewallRuleBase {
      * Set the ports property: The ports on which traffic will be allowed specified as a string containing a single
      * port, a range (e.g. "8000-9000"), or "0" when all ports are open for a protocol. For ICMP rules this parameter
      * will always return "0".
-     *
+     * 
      * @param ports the ports value to set.
      * @return the FirewallRuleBase object itself.
      */

@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The SourceDatabase model. */
+/**
+ * The SourceDatabase model.
+ */
 @Fluent
 public final class SourceDatabase {
     /*
@@ -20,7 +25,7 @@ public final class SourceDatabase {
 
     /**
      * Get the source property: The source property.
-     *
+     * 
      * @return the source value.
      */
     public SourceDatabaseSource getSource() {
@@ -29,7 +34,7 @@ public final class SourceDatabase {
 
     /**
      * Set the source property: The source property.
-     *
+     * 
      * @param source the source value to set.
      * @return the SourceDatabase object itself.
      */
@@ -40,7 +45,7 @@ public final class SourceDatabase {
 
     /**
      * Get the disableSsl property: Enables SSL encryption when connecting to the source database.
-     *
+     * 
      * @return the disableSsl value.
      */
     public Boolean isDisableSsl() {
@@ -49,7 +54,7 @@ public final class SourceDatabase {
 
     /**
      * Set the disableSsl property: Enables SSL encryption when connecting to the source database.
-     *
+     * 
      * @param disableSsl the disableSsl value to set.
      * @return the SourceDatabase object itself.
      */

@@ -1,8 +1,11 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
 
 /**
  * The details of the Droplet's backups feature, if backups are configured for the Droplet. This object contains keys
@@ -25,7 +28,7 @@ public final class DropletNextBackupWindow {
     /**
      * Get the start property: A time value given in ISO8601 combined date and time format specifying the start of the
      * Droplet's backup window.
-     *
+     * 
      * @return the start value.
      */
     public OffsetDateTime getStart() {
@@ -35,7 +38,7 @@ public final class DropletNextBackupWindow {
     /**
      * Set the start property: A time value given in ISO8601 combined date and time format specifying the start of the
      * Droplet's backup window.
-     *
+     * 
      * @param start the start value to set.
      * @return the DropletNextBackupWindow object itself.
      */
@@ -47,7 +50,7 @@ public final class DropletNextBackupWindow {
     /**
      * Get the end property: A time value given in ISO8601 combined date and time format specifying the end of the
      * Droplet's backup window.
-     *
+     * 
      * @return the end value.
      */
     public OffsetDateTime getEnd() {
@@ -57,7 +60,7 @@ public final class DropletNextBackupWindow {
     /**
      * Set the end property: A time value given in ISO8601 combined date and time format specifying the end of the
      * Droplet's backup window.
-     *
+     * 
      * @param end the end value to set.
      * @return the DropletNextBackupWindow object itself.
      */

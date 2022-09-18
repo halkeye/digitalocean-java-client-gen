@@ -4,20 +4,28 @@ import com.azure.core.util.ExpandableStringEnum;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import java.util.Collection;
 
-/** This value is one of "active", "warning" or "locked". */
+/**
+ * This value is one of "active", "warning" or "locked".
+ */
 public final class AccountStatus extends ExpandableStringEnum<AccountStatus> {
-    /** Static value active for AccountStatus. */
+    /**
+     * Static value active for AccountStatus.
+     */
     public static final AccountStatus ACTIVE = fromString("active");
 
-    /** Static value warning for AccountStatus. */
+    /**
+     * Static value warning for AccountStatus.
+     */
     public static final AccountStatus WARNING = fromString("warning");
 
-    /** Static value locked for AccountStatus. */
+    /**
+     * Static value locked for AccountStatus.
+     */
     public static final AccountStatus LOCKED = fromString("locked");
 
     /**
      * Creates or finds a AccountStatus from its string representation.
-     *
+     * 
      * @param name a name to look for.
      * @return the corresponding AccountStatus.
      */
@@ -28,7 +36,7 @@ public final class AccountStatus extends ExpandableStringEnum<AccountStatus> {
 
     /**
      * Gets known AccountStatus values.
-     *
+     * 
      * @return known AccountStatus values.
      */
     public static Collection<AccountStatus> values() {

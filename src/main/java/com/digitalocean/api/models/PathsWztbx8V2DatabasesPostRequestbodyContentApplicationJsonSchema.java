@@ -1,11 +1,18 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema model. */
+/**
+ * The PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema extends DatabaseCluster {
     /*
@@ -16,7 +23,7 @@ public final class PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSc
 
     /**
      * Get the backupRestore property: The backup_restore property.
-     *
+     * 
      * @return the backupRestore value.
      */
     public DatabaseBackup getBackupRestore() {
@@ -25,105 +32,126 @@ public final class PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSc
 
     /**
      * Set the backupRestore property: The backup_restore property.
-     *
+     * 
      * @param backupRestore the backupRestore value to set.
      * @return the PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema object itself.
      */
-    public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setBackupRestore(
-            DatabaseBackup backupRestore) {
+    public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setBackupRestore(DatabaseBackup backupRestore) {
         this.backupRestore = backupRestore;
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setName(String name) {
         super.setName(name);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setEngine(DatabaseClusterEngine engine) {
         super.setEngine(engine);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setVersion(String version) {
         super.setVersion(version);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setNumNodes(int numNodes) {
         super.setNumNodes(numNodes);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setSize(String size) {
         super.setSize(size);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setRegion(String region) {
         super.setRegion(region);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setPrivateNetworkUuid(
-            String privateNetworkUuid) {
+    public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setPrivateNetworkUuid(String privateNetworkUuid) {
         super.setPrivateNetworkUuid(privateNetworkUuid);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setTags(List<String> tags) {
         super.setTags(tags);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setConnection(
-            DatabaseClusterConnection connection) {
+    public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setConnection(DatabaseClusterConnection connection) {
         super.setConnection(connection);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setPrivateConnection(
-            DatabaseClusterPrivateConnection privateConnection) {
+    public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setPrivateConnection(DatabaseClusterPrivateConnection privateConnection) {
         super.setPrivateConnection(privateConnection);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setMaintenanceWindow(
-            DatabaseClusterMaintenanceWindow maintenanceWindow) {
+    public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setMaintenanceWindow(DatabaseClusterMaintenanceWindow maintenanceWindow) {
         super.setMaintenanceWindow(maintenanceWindow);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setProjectId(UUID projectId) {
         super.setProjectId(projectId);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public PathsWztbx8V2DatabasesPostRequestbodyContentApplicationJsonSchema setRules(List<FirewallRule> rules) {
         super.setRules(rules);

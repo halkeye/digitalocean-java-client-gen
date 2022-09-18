@@ -1,44 +1,30 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.Metrics;
 import com.digitalocean.api.models.MetricsData;
 import com.digitalocean.api.models.MetricsResult;
 import com.digitalocean.api.models.MetricsStatus;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class MetricsTests {
     @Test
     public void testDeserialize() {
-        Metrics model =
-                BinaryData.fromString(
-                                "{\"data\":{\"result\":[{\"metric\":{},\"values\":[]},{\"metric\":{},\"values\":[]},{\"metric\":{},\"values\":[]}]},\"status\":\"success\"}")
-                        .toObject(Metrics.class);
+        Metrics model = BinaryData.fromString("{\"data\":{\"result\":[{\"metric\":{},\"values\":[]},{\"metric\":{},\"values\":[]},{\"metric\":{},\"values\":[]}]},\"status\":\"success\"}").toObject(Metrics.class);
         Assertions.assertEquals(MetricsStatus.SUCCESS, model.getStatus());
     }
 
     @Test
     public void testSerialize() {
-        Metrics model =
-                new Metrics()
-                        .setData(
-                                new MetricsData()
-                                        .setResult(
-                                                Arrays.asList(
-                                                        new MetricsResult()
-                                                                .setMetric(mapOf())
-                                                                .setValues(Arrays.asList()),
-                                                        new MetricsResult()
-                                                                .setMetric(mapOf())
-                                                                .setValues(Arrays.asList()),
-                                                        new MetricsResult()
-                                                                .setMetric(mapOf())
-                                                                .setValues(Arrays.asList()))))
-                        .setStatus(MetricsStatus.SUCCESS);
+        Metrics model = new Metrics().setData(new MetricsData().setResult(Arrays.asList(new MetricsResult().setMetric(mapOf()).setValues(Arrays.asList()), new MetricsResult().setMetric(mapOf()).setValues(Arrays.asList()), new MetricsResult().setMetric(mapOf()).setValues(Arrays.asList())))).setStatus(MetricsStatus.SUCCESS);
         model = BinaryData.fromObject(model).toObject(Metrics.class);
         Assertions.assertEquals(MetricsStatus.SUCCESS, model.getStatus());
     }

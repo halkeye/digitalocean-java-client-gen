@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The BackwardLinks model. */
+/**
+ * The BackwardLinks model.
+ */
 @Fluent
 public final class BackwardLinks extends LinkToFirstPage {
     /*
@@ -14,7 +19,7 @@ public final class BackwardLinks extends LinkToFirstPage {
 
     /**
      * Get the prev property: URI of the previous page of the results.
-     *
+     * 
      * @return the prev value.
      */
     public String getPrev() {
@@ -23,7 +28,7 @@ public final class BackwardLinks extends LinkToFirstPage {
 
     /**
      * Set the prev property: URI of the previous page of the results.
-     *
+     * 
      * @param prev the prev value to set.
      * @return the BackwardLinks object itself.
      */
@@ -32,7 +37,9 @@ public final class BackwardLinks extends LinkToFirstPage {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public BackwardLinks setFirst(String first) {
         super.setFirst(first);

@@ -1,11 +1,18 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The LoadBalancer model. */
+/**
+ * The LoadBalancer model.
+ */
 @Fluent
 public final class LoadBalancer extends LoadBalancerBase {
     /*
@@ -16,7 +23,7 @@ public final class LoadBalancer extends LoadBalancerBase {
 
     /**
      * Get the tag property: The name of a Droplet tag corresponding to Droplets assigned to the load balancer.
-     *
+     * 
      * @return the tag value.
      */
     public String getTag() {
@@ -25,7 +32,7 @@ public final class LoadBalancer extends LoadBalancerBase {
 
     /**
      * Set the tag property: The name of a Droplet tag corresponding to Droplets assigned to the load balancer.
-     *
+     * 
      * @param tag the tag value to set.
      * @return the LoadBalancer object itself.
      */
@@ -34,84 +41,108 @@ public final class LoadBalancer extends LoadBalancerBase {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public LoadBalancer setName(String name) {
         super.setName(name);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public LoadBalancer setSizeUnit(Integer sizeUnit) {
         super.setSizeUnit(sizeUnit);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public LoadBalancer setSize(LoadBalancerBaseSize size) {
         super.setSize(size);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public LoadBalancer setAlgorithm(LoadBalancerBaseAlgorithm algorithm) {
         super.setAlgorithm(algorithm);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public LoadBalancer setForwardingRules(List<ForwardingRule> forwardingRules) {
         super.setForwardingRules(forwardingRules);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public LoadBalancer setHealthCheck(HealthCheck healthCheck) {
         super.setHealthCheck(healthCheck);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public LoadBalancer setStickySessions(StickySessions stickySessions) {
         super.setStickySessions(stickySessions);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public LoadBalancer setRedirectHttpToHttps(Boolean redirectHttpToHttps) {
         super.setRedirectHttpToHttps(redirectHttpToHttps);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public LoadBalancer setEnableProxyProtocol(Boolean enableProxyProtocol) {
         super.setEnableProxyProtocol(enableProxyProtocol);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public LoadBalancer setEnableBackendKeepalive(Boolean enableBackendKeepalive) {
         super.setEnableBackendKeepalive(enableBackendKeepalive);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public LoadBalancer setVpcUuid(UUID vpcUuid) {
         super.setVpcUuid(vpcUuid);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public LoadBalancer setDisableLetsEncryptDnsRecords(Boolean disableLetsEncryptDnsRecords) {
         super.setDisableLetsEncryptDnsRecords(disableLetsEncryptDnsRecords);

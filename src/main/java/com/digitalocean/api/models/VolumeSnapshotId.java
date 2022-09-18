@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The VolumeSnapshotId model. */
+/**
+ * The VolumeSnapshotId model.
+ */
 @Fluent
 public class VolumeSnapshotId {
     /*
@@ -14,7 +19,7 @@ public class VolumeSnapshotId {
 
     /**
      * Get the snapshotId property: The unique identifier for the volume snapshot from which to create the volume.
-     *
+     * 
      * @return the snapshotId value.
      */
     public String getSnapshotId() {
@@ -23,7 +28,7 @@ public class VolumeSnapshotId {
 
     /**
      * Set the snapshotId property: The unique identifier for the volume snapshot from which to create the volume.
-     *
+     * 
      * @param snapshotId the snapshotId value to set.
      * @return the VolumeSnapshotId object itself.
      */

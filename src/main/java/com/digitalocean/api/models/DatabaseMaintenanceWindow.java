@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The DatabaseMaintenanceWindow model. */
+/**
+ * The DatabaseMaintenanceWindow model.
+ */
 @Fluent
 public class DatabaseMaintenanceWindow {
     /*
@@ -33,7 +38,7 @@ public class DatabaseMaintenanceWindow {
 
     /**
      * Get the day property: The day of the week on which to apply maintenance updates.
-     *
+     * 
      * @return the day value.
      */
     public String getDay() {
@@ -42,7 +47,7 @@ public class DatabaseMaintenanceWindow {
 
     /**
      * Set the day property: The day of the week on which to apply maintenance updates.
-     *
+     * 
      * @param day the day value to set.
      * @return the DatabaseMaintenanceWindow object itself.
      */
@@ -53,7 +58,7 @@ public class DatabaseMaintenanceWindow {
 
     /**
      * Get the hour property: The hour in UTC at which maintenance updates will be applied in 24 hour format.
-     *
+     * 
      * @return the hour value.
      */
     public String getHour() {
@@ -62,7 +67,7 @@ public class DatabaseMaintenanceWindow {
 
     /**
      * Set the hour property: The hour in UTC at which maintenance updates will be applied in 24 hour format.
-     *
+     * 
      * @param hour the hour value to set.
      * @return the DatabaseMaintenanceWindow object itself.
      */
@@ -74,7 +79,7 @@ public class DatabaseMaintenanceWindow {
     /**
      * Get the pending property: A boolean value indicating whether any maintenance is scheduled to be performed in the
      * next window.
-     *
+     * 
      * @return the pending value.
      */
     public Boolean isPending() {
@@ -83,7 +88,7 @@ public class DatabaseMaintenanceWindow {
 
     /**
      * Get the description property: A list of strings, each containing information about a pending maintenance update.
-     *
+     * 
      * @return the description value.
      */
     public List<String> getDescription() {

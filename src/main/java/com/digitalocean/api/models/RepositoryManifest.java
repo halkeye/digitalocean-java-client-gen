@@ -1,11 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The RepositoryManifest model. */
+/**
+ * The RepositoryManifest model.
+ */
 @Fluent
 public final class RepositoryManifest {
     /*
@@ -59,7 +64,7 @@ public final class RepositoryManifest {
 
     /**
      * Get the registryName property: The name of the container registry.
-     *
+     * 
      * @return the registryName value.
      */
     public String getRegistryName() {
@@ -68,7 +73,7 @@ public final class RepositoryManifest {
 
     /**
      * Set the registryName property: The name of the container registry.
-     *
+     * 
      * @param registryName the registryName value to set.
      * @return the RepositoryManifest object itself.
      */
@@ -79,7 +84,7 @@ public final class RepositoryManifest {
 
     /**
      * Get the repository property: The name of the repository.
-     *
+     * 
      * @return the repository value.
      */
     public String getRepository() {
@@ -88,7 +93,7 @@ public final class RepositoryManifest {
 
     /**
      * Set the repository property: The name of the repository.
-     *
+     * 
      * @param repository the repository value to set.
      * @return the RepositoryManifest object itself.
      */
@@ -99,7 +104,7 @@ public final class RepositoryManifest {
 
     /**
      * Get the digest property: The manifest digest.
-     *
+     * 
      * @return the digest value.
      */
     public String getDigest() {
@@ -108,7 +113,7 @@ public final class RepositoryManifest {
 
     /**
      * Set the digest property: The manifest digest.
-     *
+     * 
      * @param digest the digest value to set.
      * @return the RepositoryManifest object itself.
      */
@@ -119,7 +124,7 @@ public final class RepositoryManifest {
 
     /**
      * Get the compressedSizeBytes property: The compressed size of the manifest in bytes.
-     *
+     * 
      * @return the compressedSizeBytes value.
      */
     public Integer getCompressedSizeBytes() {
@@ -128,7 +133,7 @@ public final class RepositoryManifest {
 
     /**
      * Set the compressedSizeBytes property: The compressed size of the manifest in bytes.
-     *
+     * 
      * @param compressedSizeBytes the compressedSizeBytes value to set.
      * @return the RepositoryManifest object itself.
      */
@@ -140,7 +145,7 @@ public final class RepositoryManifest {
     /**
      * Get the sizeBytes property: The uncompressed size of the manifest in bytes (this size is calculated
      * asynchronously so it may not be immediately available).
-     *
+     * 
      * @return the sizeBytes value.
      */
     public Integer getSizeBytes() {
@@ -150,7 +155,7 @@ public final class RepositoryManifest {
     /**
      * Set the sizeBytes property: The uncompressed size of the manifest in bytes (this size is calculated
      * asynchronously so it may not be immediately available).
-     *
+     * 
      * @param sizeBytes the sizeBytes value to set.
      * @return the RepositoryManifest object itself.
      */
@@ -161,7 +166,7 @@ public final class RepositoryManifest {
 
     /**
      * Get the updatedAt property: The time the manifest was last updated.
-     *
+     * 
      * @return the updatedAt value.
      */
     public OffsetDateTime getUpdatedAt() {
@@ -170,7 +175,7 @@ public final class RepositoryManifest {
 
     /**
      * Set the updatedAt property: The time the manifest was last updated.
-     *
+     * 
      * @param updatedAt the updatedAt value to set.
      * @return the RepositoryManifest object itself.
      */
@@ -181,7 +186,7 @@ public final class RepositoryManifest {
 
     /**
      * Get the tags property: All tags associated with this manifest.
-     *
+     * 
      * @return the tags value.
      */
     public List<String> getTags() {
@@ -190,7 +195,7 @@ public final class RepositoryManifest {
 
     /**
      * Set the tags property: All tags associated with this manifest.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the RepositoryManifest object itself.
      */
@@ -201,7 +206,7 @@ public final class RepositoryManifest {
 
     /**
      * Get the blobs property: All blobs associated with this manifest.
-     *
+     * 
      * @return the blobs value.
      */
     public List<RepositoryBlob> getBlobs() {
@@ -210,7 +215,7 @@ public final class RepositoryManifest {
 
     /**
      * Set the blobs property: All blobs associated with this manifest.
-     *
+     * 
      * @param blobs the blobs value to set.
      * @return the RepositoryManifest object itself.
      */

@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components1Pxj82UResponsesAllRegionsContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The Components1Pxj82UResponsesAllRegionsContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class Components1Pxj82UResponsesAllRegionsContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class Components1Pxj82UResponsesAllRegionsContentApplicationJsonSchemaAll
 
     /**
      * Get the regions property: The regions property.
-     *
+     * 
      * @return the regions value.
      */
     public List<Region> getRegions() {
@@ -24,7 +29,7 @@ public class Components1Pxj82UResponsesAllRegionsContentApplicationJsonSchemaAll
 
     /**
      * Set the regions property: The regions property.
-     *
+     * 
      * @param regions the regions value to set.
      * @return the Components1Pxj82UResponsesAllRegionsContentApplicationJsonSchemaAllof0 object itself.
      */

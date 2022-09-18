@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsDeploymentFunctions model. */
+/**
+ * The AppsDeploymentFunctions model.
+ */
 @Fluent
 public final class AppsDeploymentFunctions {
     /*
@@ -26,7 +31,7 @@ public final class AppsDeploymentFunctions {
 
     /**
      * Get the name property: The name of this functions component.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -35,7 +40,7 @@ public final class AppsDeploymentFunctions {
 
     /**
      * Set the name property: The name of this functions component.
-     *
+     * 
      * @param name the name value to set.
      * @return the AppsDeploymentFunctions object itself.
      */
@@ -47,7 +52,7 @@ public final class AppsDeploymentFunctions {
     /**
      * Get the sourceCommitHash property: The commit hash of the repository that was used to build this functions
      * component.
-     *
+     * 
      * @return the sourceCommitHash value.
      */
     public String getSourceCommitHash() {
@@ -57,7 +62,7 @@ public final class AppsDeploymentFunctions {
     /**
      * Set the sourceCommitHash property: The commit hash of the repository that was used to build this functions
      * component.
-     *
+     * 
      * @param sourceCommitHash the sourceCommitHash value to set.
      * @return the AppsDeploymentFunctions object itself.
      */
@@ -68,7 +73,7 @@ public final class AppsDeploymentFunctions {
 
     /**
      * Get the namespace property: The namespace where the functions are deployed.
-     *
+     * 
      * @return the namespace value.
      */
     public String getNamespace() {
@@ -77,7 +82,7 @@ public final class AppsDeploymentFunctions {
 
     /**
      * Set the namespace property: The namespace where the functions are deployed.
-     *
+     * 
      * @param namespace the namespace value to set.
      * @return the AppsDeploymentFunctions object itself.
      */

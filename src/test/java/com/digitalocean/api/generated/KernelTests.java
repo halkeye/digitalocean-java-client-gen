@@ -1,16 +1,17 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.Kernel;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class KernelTests {
     @Test
     public void testDeserialize() {
-        Kernel model =
-                BinaryData.fromString("{\"id\":1414494959,\"name\":\"odfcbjq\",\"version\":\"mtqsmoxsazu\"}")
-                        .toObject(Kernel.class);
+        Kernel model = BinaryData.fromString("{\"id\":1414494959,\"name\":\"odfcbjq\",\"version\":\"mtqsmoxsazu\"}").toObject(Kernel.class);
         Assertions.assertEquals(1414494959, model.getId());
         Assertions.assertEquals("odfcbjq", model.getName());
         Assertions.assertEquals("mtqsmoxsazu", model.getVersion());

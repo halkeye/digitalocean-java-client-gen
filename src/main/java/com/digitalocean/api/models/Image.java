@@ -1,11 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The Image model. */
+/**
+ * The Image model.
+ */
 @Fluent
 public final class Image {
     /*
@@ -106,7 +112,7 @@ public final class Image {
 
     /**
      * Get the id property: A unique number that can be used to identify and reference a specific image.
-     *
+     * 
      * @return the id value.
      */
     public Integer getId() {
@@ -114,9 +120,9 @@ public final class Image {
     }
 
     /**
-     * Get the name property: The display name that has been given to an image. This is what is shown in the control
+     * Get the name property: The display name that has been given to an image.  This is what is shown in the control
      * panel and is generally a descriptive title for the image in question.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -124,9 +130,9 @@ public final class Image {
     }
 
     /**
-     * Set the name property: The display name that has been given to an image. This is what is shown in the control
+     * Set the name property: The display name that has been given to an image.  This is what is shown in the control
      * panel and is generally a descriptive title for the image in question.
-     *
+     * 
      * @param name the name value to set.
      * @return the Image object itself.
      */
@@ -140,7 +146,7 @@ public final class Image {
      * `admin`. Respectively, this specifies whether an image is a DigitalOcean base OS image, user-generated Droplet
      * snapshot, automatically created Droplet backup, user-provided virtual machine image, or an image used for
      * DigitalOcean managed resources (e.g. DOKS worker nodes).
-     *
+     * 
      * @return the type value.
      */
     public ImageType getType() {
@@ -152,7 +158,7 @@ public final class Image {
      * `admin`. Respectively, this specifies whether an image is a DigitalOcean base OS image, user-generated Droplet
      * snapshot, automatically created Droplet backup, user-provided virtual machine image, or an image used for
      * DigitalOcean managed resources (e.g. DOKS worker nodes).
-     *
+     * 
      * @param type the type value to set.
      * @return the Image object itself.
      */
@@ -162,11 +168,11 @@ public final class Image {
     }
 
     /**
-     * Get the distribution property: The name of a custom image's distribution. Currently, the valid values are `Arch
-     * Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`, `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`,
-     * `Rocky Linux`, `Ubuntu`, and `Unknown`. Any other value will be accepted but ignored, and `Unknown` will be used
-     * in its place.
-     *
+     * Get the distribution property: The name of a custom image's distribution. Currently, the valid values are  `Arch
+     * Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`,
+     * `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be
+     * used in its place.
+     * 
      * @return the distribution value.
      */
     public Distribution getDistribution() {
@@ -174,11 +180,11 @@ public final class Image {
     }
 
     /**
-     * Set the distribution property: The name of a custom image's distribution. Currently, the valid values are `Arch
-     * Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`, `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`,
-     * `Rocky Linux`, `Ubuntu`, and `Unknown`. Any other value will be accepted but ignored, and `Unknown` will be used
-     * in its place.
-     *
+     * Set the distribution property: The name of a custom image's distribution. Currently, the valid values are  `Arch
+     * Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`,
+     * `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be
+     * used in its place.
+     * 
      * @param distribution the distribution value to set.
      * @return the Image object itself.
      */
@@ -190,7 +196,7 @@ public final class Image {
     /**
      * Get the slug property: A uniquely identifying string that is associated with each of the DigitalOcean-provided
      * public images. These can be used to reference a public image as an alternative to the numeric id.
-     *
+     * 
      * @return the slug value.
      */
     public String getSlug() {
@@ -200,7 +206,7 @@ public final class Image {
     /**
      * Set the slug property: A uniquely identifying string that is associated with each of the DigitalOcean-provided
      * public images. These can be used to reference a public image as an alternative to the numeric id.
-     *
+     * 
      * @param slug the slug value to set.
      * @return the Image object itself.
      */
@@ -213,7 +219,7 @@ public final class Image {
      * Get the publicProperty property: This is a boolean value that indicates whether the image in question is public
      * or not. An image that is public is available to all accounts. A non-public image is only accessible from your
      * account.
-     *
+     * 
      * @return the publicProperty value.
      */
     public Boolean isPublicProperty() {
@@ -224,7 +230,7 @@ public final class Image {
      * Set the publicProperty property: This is a boolean value that indicates whether the image in question is public
      * or not. An image that is public is available to all accounts. A non-public image is only accessible from your
      * account.
-     *
+     * 
      * @param publicProperty the publicProperty value to set.
      * @return the Image object itself.
      */
@@ -236,7 +242,7 @@ public final class Image {
     /**
      * Get the regions property: This attribute is an array of the regions that the image is available in. The regions
      * are represented by their identifying slug values.
-     *
+     * 
      * @return the regions value.
      */
     public List<RegionSlug> getRegions() {
@@ -246,7 +252,7 @@ public final class Image {
     /**
      * Set the regions property: This attribute is an array of the regions that the image is available in. The regions
      * are represented by their identifying slug values.
-     *
+     * 
      * @param regions the regions value to set.
      * @return the Image object itself.
      */
@@ -258,7 +264,7 @@ public final class Image {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * image was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -268,7 +274,7 @@ public final class Image {
     /**
      * Set the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * image was created.
-     *
+     * 
      * @param createdAt the createdAt value to set.
      * @return the Image object itself.
      */
@@ -279,7 +285,7 @@ public final class Image {
 
     /**
      * Get the minDiskSize property: The minimum disk size in GB required for a Droplet to use this image.
-     *
+     * 
      * @return the minDiskSize value.
      */
     public Integer getMinDiskSize() {
@@ -288,7 +294,7 @@ public final class Image {
 
     /**
      * Set the minDiskSize property: The minimum disk size in GB required for a Droplet to use this image.
-     *
+     * 
      * @param minDiskSize the minDiskSize value to set.
      * @return the Image object itself.
      */
@@ -299,7 +305,7 @@ public final class Image {
 
     /**
      * Get the sizeGigabytes property: The size of the image in gigabytes.
-     *
+     * 
      * @return the sizeGigabytes value.
      */
     public Float getSizeGigabytes() {
@@ -308,7 +314,7 @@ public final class Image {
 
     /**
      * Set the sizeGigabytes property: The size of the image in gigabytes.
-     *
+     * 
      * @param sizeGigabytes the sizeGigabytes value to set.
      * @return the Image object itself.
      */
@@ -319,7 +325,7 @@ public final class Image {
 
     /**
      * Get the description property: An optional free-form text field to describe an image.
-     *
+     * 
      * @return the description value.
      */
     public String getDescription() {
@@ -328,7 +334,7 @@ public final class Image {
 
     /**
      * Set the description property: An optional free-form text field to describe an image.
-     *
+     * 
      * @param description the description value to set.
      * @return the Image object itself.
      */
@@ -340,7 +346,7 @@ public final class Image {
     /**
      * Get the tags property: A flat array of tag names as strings to be applied to the resource. Tag names may be for
      * either existing or new tags.
-     *
+     * 
      * @return the tags value.
      */
     public List<String> getTags() {
@@ -350,7 +356,7 @@ public final class Image {
     /**
      * Set the tags property: A flat array of tag names as strings to be applied to the resource. Tag names may be for
      * either existing or new tags.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the Image object itself.
      */
@@ -360,9 +366,9 @@ public final class Image {
     }
 
     /**
-     * Get the status property: A status string indicating the state of a custom image. This may be `NEW`, `available`,
-     * `pending`, `deleted`, or `retired`.
-     *
+     * Get the status property: A status string indicating the state of a custom image. This may be `NEW`,
+     * `available`, `pending`, `deleted`, or `retired`.
+     * 
      * @return the status value.
      */
     public ImageStatus getStatus() {
@@ -370,9 +376,9 @@ public final class Image {
     }
 
     /**
-     * Set the status property: A status string indicating the state of a custom image. This may be `NEW`, `available`,
-     * `pending`, `deleted`, or `retired`.
-     *
+     * Set the status property: A status string indicating the state of a custom image. This may be `NEW`,
+     * `available`, `pending`, `deleted`, or `retired`.
+     * 
      * @param status the status value to set.
      * @return the Image object itself.
      */
@@ -382,9 +388,9 @@ public final class Image {
     }
 
     /**
-     * Get the errorMessage property: A string containing information about errors that may occur when importing a
-     * custom image.
-     *
+     * Get the errorMessage property: A string containing information about errors that may occur when importing
+     * a custom image.
+     * 
      * @return the errorMessage value.
      */
     public String getErrorMessage() {
@@ -392,9 +398,9 @@ public final class Image {
     }
 
     /**
-     * Set the errorMessage property: A string containing information about errors that may occur when importing a
-     * custom image.
-     *
+     * Set the errorMessage property: A string containing information about errors that may occur when importing
+     * a custom image.
+     * 
      * @param errorMessage the errorMessage value to set.
      * @return the Image object itself.
      */

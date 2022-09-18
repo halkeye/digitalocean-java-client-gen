@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components1L315YvResponsesVolumesnapshotContentApplicationJsonSchema model. */
+/**
+ * The Components1L315YvResponsesVolumesnapshotContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components1L315YvResponsesVolumesnapshotContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components1L315YvResponsesVolumesnapshotContentApplicationJso
 
     /**
      * Get the snapshot property: The snapshot property.
-     *
+     * 
      * @return the snapshot value.
      */
     public Snapshots getSnapshot() {
@@ -23,7 +28,7 @@ public final class Components1L315YvResponsesVolumesnapshotContentApplicationJso
 
     /**
      * Set the snapshot property: The snapshot property.
-     *
+     * 
      * @param snapshot the snapshot value to set.
      * @return the Components1L315YvResponsesVolumesnapshotContentApplicationJsonSchema object itself.
      */

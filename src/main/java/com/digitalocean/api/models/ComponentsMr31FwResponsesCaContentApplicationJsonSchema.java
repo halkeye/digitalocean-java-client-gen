@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ComponentsMr31FwResponsesCaContentApplicationJsonSchema model. */
+/**
+ * The ComponentsMr31FwResponsesCaContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsMr31FwResponsesCaContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class ComponentsMr31FwResponsesCaContentApplicationJsonSchema {
 
     /**
      * Get the ca property: The ca property.
-     *
+     * 
      * @return the ca value.
      */
     public Ca getCa() {
@@ -23,7 +28,7 @@ public final class ComponentsMr31FwResponsesCaContentApplicationJsonSchema {
 
     /**
      * Set the ca property: The ca property.
-     *
+     * 
      * @param ca the ca value to set.
      * @return the ComponentsMr31FwResponsesCaContentApplicationJsonSchema object itself.
      */

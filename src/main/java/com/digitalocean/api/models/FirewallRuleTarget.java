@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The FirewallRuleTarget model. */
+/**
+ * The FirewallRuleTarget model.
+ */
 @Fluent
 public class FirewallRuleTarget {
     /*
@@ -39,9 +44,9 @@ public class FirewallRuleTarget {
     private Object tags;
 
     /**
-     * Get the addresses property: An array of strings containing the IPv4 addresses, IPv6 addresses, IPv4 CIDRs, and/or
-     * IPv6 CIDRs to which the firewall will allow traffic.
-     *
+     * Get the addresses property: An array of strings containing the IPv4 addresses, IPv6 addresses, IPv4 CIDRs,
+     * and/or IPv6 CIDRs to which the firewall will allow traffic.
+     * 
      * @return the addresses value.
      */
     public List<String> getAddresses() {
@@ -49,9 +54,9 @@ public class FirewallRuleTarget {
     }
 
     /**
-     * Set the addresses property: An array of strings containing the IPv4 addresses, IPv6 addresses, IPv4 CIDRs, and/or
-     * IPv6 CIDRs to which the firewall will allow traffic.
-     *
+     * Set the addresses property: An array of strings containing the IPv4 addresses, IPv6 addresses, IPv4 CIDRs,
+     * and/or IPv6 CIDRs to which the firewall will allow traffic.
+     * 
      * @param addresses the addresses value to set.
      * @return the FirewallRuleTarget object itself.
      */
@@ -63,7 +68,7 @@ public class FirewallRuleTarget {
     /**
      * Get the dropletIds property: An array containing the IDs of the Droplets to which the firewall will allow
      * traffic.
-     *
+     * 
      * @return the dropletIds value.
      */
     public List<Integer> getDropletIds() {
@@ -73,7 +78,7 @@ public class FirewallRuleTarget {
     /**
      * Set the dropletIds property: An array containing the IDs of the Droplets to which the firewall will allow
      * traffic.
-     *
+     * 
      * @param dropletIds the dropletIds value to set.
      * @return the FirewallRuleTarget object itself.
      */
@@ -85,7 +90,7 @@ public class FirewallRuleTarget {
     /**
      * Get the loadBalancerUids property: An array containing the IDs of the load balancers to which the firewall will
      * allow traffic.
-     *
+     * 
      * @return the loadBalancerUids value.
      */
     public List<String> getLoadBalancerUids() {
@@ -95,7 +100,7 @@ public class FirewallRuleTarget {
     /**
      * Set the loadBalancerUids property: An array containing the IDs of the load balancers to which the firewall will
      * allow traffic.
-     *
+     * 
      * @param loadBalancerUids the loadBalancerUids value to set.
      * @return the FirewallRuleTarget object itself.
      */
@@ -105,9 +110,9 @@ public class FirewallRuleTarget {
     }
 
     /**
-     * Get the kubernetesIds property: An array containing the IDs of the Kubernetes clusters to which the firewall will
-     * allow traffic.
-     *
+     * Get the kubernetesIds property: An array containing the IDs of the Kubernetes clusters to which the firewall
+     * will allow traffic.
+     * 
      * @return the kubernetesIds value.
      */
     public List<String> getKubernetesIds() {
@@ -115,9 +120,9 @@ public class FirewallRuleTarget {
     }
 
     /**
-     * Set the kubernetesIds property: An array containing the IDs of the Kubernetes clusters to which the firewall will
-     * allow traffic.
-     *
+     * Set the kubernetesIds property: An array containing the IDs of the Kubernetes clusters to which the firewall
+     * will allow traffic.
+     * 
      * @param kubernetesIds the kubernetesIds value to set.
      * @return the FirewallRuleTarget object itself.
      */
@@ -128,7 +133,7 @@ public class FirewallRuleTarget {
 
     /**
      * Get the tags property: Any object.
-     *
+     * 
      * @return the tags value.
      */
     public Object getTags() {
@@ -137,7 +142,7 @@ public class FirewallRuleTarget {
 
     /**
      * Set the tags property: Any object.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the FirewallRuleTarget object itself.
      */

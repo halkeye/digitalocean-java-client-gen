@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The DatabaseClusterResize model. */
+/**
+ * The DatabaseClusterResize model.
+ */
 @Fluent
 public final class DatabaseClusterResize {
     /*
@@ -21,7 +26,7 @@ public final class DatabaseClusterResize {
 
     /**
      * Get the size property: A slug identifier representing desired the size of the nodes in the database cluster.
-     *
+     * 
      * @return the size value.
      */
     public String getSize() {
@@ -30,7 +35,7 @@ public final class DatabaseClusterResize {
 
     /**
      * Set the size property: A slug identifier representing desired the size of the nodes in the database cluster.
-     *
+     * 
      * @param size the size value to set.
      * @return the DatabaseClusterResize object itself.
      */
@@ -42,7 +47,7 @@ public final class DatabaseClusterResize {
     /**
      * Get the numNodes property: The number of nodes in the database cluster. Valid values are are 1-3. In addition to
      * the primary node, up to two standby nodes may be added for highly available configurations.
-     *
+     * 
      * @return the numNodes value.
      */
     public int getNumNodes() {
@@ -52,7 +57,7 @@ public final class DatabaseClusterResize {
     /**
      * Set the numNodes property: The number of nodes in the database cluster. Valid values are are 1-3. In addition to
      * the primary node, up to two standby nodes may be added for highly available configurations.
-     *
+     * 
      * @param numNodes the numNodes value to set.
      * @return the DatabaseClusterResize object itself.
      */

@@ -1,11 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** A step that is run as part of the deployment's lifecycle. */
+/**
+ * A step that is run as part of the deployment's lifecycle.
+ */
 @Fluent
 public final class AppsDeploymentProgressStep {
     /*
@@ -23,7 +29,7 @@ public final class AppsDeploymentProgressStep {
     /*
      * The base of a human-readable description of the step intended to be combined with the component name for
      * presentation. For example:
-     *
+     * 
      * `message_base` = "Building service"
      * `component_name` = "api"
      */
@@ -62,7 +68,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Get the componentName property: The component name that this step is associated with.
-     *
+     * 
      * @return the componentName value.
      */
     public String getComponentName() {
@@ -71,7 +77,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Set the componentName property: The component name that this step is associated with.
-     *
+     * 
      * @param componentName the componentName value to set.
      * @return the AppsDeploymentProgressStep object itself.
      */
@@ -82,7 +88,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Get the endedAt property: The end time of this step.
-     *
+     * 
      * @return the endedAt value.
      */
     public OffsetDateTime getEndedAt() {
@@ -91,7 +97,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Set the endedAt property: The end time of this step.
-     *
+     * 
      * @param endedAt the endedAt value to set.
      * @return the AppsDeploymentProgressStep object itself.
      */
@@ -103,9 +109,10 @@ public final class AppsDeploymentProgressStep {
     /**
      * Get the messageBase property: The base of a human-readable description of the step intended to be combined with
      * the component name for presentation. For example:
-     *
-     * <p>`message_base` = "Building service" `component_name` = "api".
-     *
+     * 
+     * `message_base` = "Building service"
+     * `component_name` = "api".
+     * 
      * @return the messageBase value.
      */
     public String getMessageBase() {
@@ -115,9 +122,10 @@ public final class AppsDeploymentProgressStep {
     /**
      * Set the messageBase property: The base of a human-readable description of the step intended to be combined with
      * the component name for presentation. For example:
-     *
-     * <p>`message_base` = "Building service" `component_name` = "api".
-     *
+     * 
+     * `message_base` = "Building service"
+     * `component_name` = "api".
+     * 
      * @param messageBase the messageBase value to set.
      * @return the AppsDeploymentProgressStep object itself.
      */
@@ -128,7 +136,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Get the name property: The name of this step.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -137,7 +145,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Set the name property: The name of this step.
-     *
+     * 
      * @param name the name value to set.
      * @return the AppsDeploymentProgressStep object itself.
      */
@@ -148,7 +156,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Get the reason property: The reason property.
-     *
+     * 
      * @return the reason value.
      */
     public AppsDeploymentProgressStepReason getReason() {
@@ -157,7 +165,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Set the reason property: The reason property.
-     *
+     * 
      * @param reason the reason value to set.
      * @return the AppsDeploymentProgressStep object itself.
      */
@@ -168,7 +176,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Get the startedAt property: The start time of this step.
-     *
+     * 
      * @return the startedAt value.
      */
     public OffsetDateTime getStartedAt() {
@@ -177,7 +185,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Set the startedAt property: The start time of this step.
-     *
+     * 
      * @param startedAt the startedAt value to set.
      * @return the AppsDeploymentProgressStep object itself.
      */
@@ -188,7 +196,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Get the status property: The status property.
-     *
+     * 
      * @return the status value.
      */
     public AppsDeploymentProgressStepStatus getStatus() {
@@ -197,7 +205,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Set the status property: The status property.
-     *
+     * 
      * @param status the status value to set.
      * @return the AppsDeploymentProgressStep object itself.
      */
@@ -208,7 +216,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Get the steps property: Child steps of this step.
-     *
+     * 
      * @return the steps value.
      */
     public List<Object> getSteps() {
@@ -217,7 +225,7 @@ public final class AppsDeploymentProgressStep {
 
     /**
      * Set the steps property: Child steps of this step.
-     *
+     * 
      * @param steps the steps value to set.
      * @return the AppsDeploymentProgressStep object itself.
      */

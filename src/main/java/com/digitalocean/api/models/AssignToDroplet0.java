@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** Assign to Droplet. */
+/**
+ * Assign to Droplet.
+ */
 @Fluent
 public final class AssignToDroplet0 {
     /*
@@ -14,7 +19,7 @@ public final class AssignToDroplet0 {
 
     /**
      * Get the dropletId property: The ID of the Droplet that the reserved IP will be assigned to.
-     *
+     * 
      * @return the dropletId value.
      */
     public int getDropletId() {
@@ -23,7 +28,7 @@ public final class AssignToDroplet0 {
 
     /**
      * Set the dropletId property: The ID of the Droplet that the reserved IP will be assigned to.
-     *
+     * 
      * @param dropletId the dropletId value to set.
      * @return the AssignToDroplet0 object itself.
      */

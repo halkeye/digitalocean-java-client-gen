@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The UserKubernetesClusterUser model. */
+/**
+ * The UserKubernetesClusterUser model.
+ */
 @Fluent
 public final class UserKubernetesClusterUser {
     /*
@@ -21,7 +26,7 @@ public final class UserKubernetesClusterUser {
 
     /**
      * Get the username property: The username for the cluster admin user.
-     *
+     * 
      * @return the username value.
      */
     public String getUsername() {
@@ -30,7 +35,7 @@ public final class UserKubernetesClusterUser {
 
     /**
      * Set the username property: The username for the cluster admin user.
-     *
+     * 
      * @param username the username value to set.
      * @return the UserKubernetesClusterUser object itself.
      */
@@ -41,7 +46,7 @@ public final class UserKubernetesClusterUser {
 
     /**
      * Get the groups property: A list of in-cluster groups that the user belongs to.
-     *
+     * 
      * @return the groups value.
      */
     public List<String> getGroups() {
@@ -50,7 +55,7 @@ public final class UserKubernetesClusterUser {
 
     /**
      * Set the groups property: A list of in-cluster groups that the user belongs to.
-     *
+     * 
      * @param groups the groups value to set.
      * @return the UserKubernetesClusterUser object itself.
      */

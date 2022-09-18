@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AssociatedKubernetesResource model. */
+/**
+ * The AssociatedKubernetesResource model.
+ */
 @Fluent
 public final class AssociatedKubernetesResource {
     /*
@@ -20,7 +25,7 @@ public final class AssociatedKubernetesResource {
 
     /**
      * Get the id property: The ID of a resource associated with a Kubernetes cluster.
-     *
+     * 
      * @return the id value.
      */
     public String getId() {
@@ -29,7 +34,7 @@ public final class AssociatedKubernetesResource {
 
     /**
      * Set the id property: The ID of a resource associated with a Kubernetes cluster.
-     *
+     * 
      * @param id the id value to set.
      * @return the AssociatedKubernetesResource object itself.
      */
@@ -40,7 +45,7 @@ public final class AssociatedKubernetesResource {
 
     /**
      * Get the name property: The name of a resource associated with a Kubernetes cluster.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -49,7 +54,7 @@ public final class AssociatedKubernetesResource {
 
     /**
      * Set the name property: The name of a resource associated with a Kubernetes cluster.
-     *
+     * 
      * @param name the name value to set.
      * @return the AssociatedKubernetesResource object itself.
      */

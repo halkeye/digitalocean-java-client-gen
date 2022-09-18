@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components1Roprh1ResponsesDatabaseConfigContentApplicationJsonSchema model. */
+/**
+ * The Components1Roprh1ResponsesDatabaseConfigContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components1Roprh1ResponsesDatabaseConfigContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components1Roprh1ResponsesDatabaseConfigContentApplicationJso
 
     /**
      * Get the config property: The config property.
-     *
+     * 
      * @return the config value.
      */
     public Object getConfig() {
@@ -23,7 +28,7 @@ public final class Components1Roprh1ResponsesDatabaseConfigContentApplicationJso
 
     /**
      * Set the config property: The config property.
-     *
+     * 
      * @param config the config value to set.
      * @return the Components1Roprh1ResponsesDatabaseConfigContentApplicationJsonSchema object itself.
      */

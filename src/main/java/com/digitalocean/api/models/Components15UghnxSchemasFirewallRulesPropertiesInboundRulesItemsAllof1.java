@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components15UghnxSchemasFirewallRulesPropertiesInboundRulesItemsAllof1 model. */
+/**
+ * The Components15UghnxSchemasFirewallRulesPropertiesInboundRulesItemsAllof1 model.
+ */
 @Fluent
 public class Components15UghnxSchemasFirewallRulesPropertiesInboundRulesItemsAllof1 {
     /*
@@ -14,7 +19,7 @@ public class Components15UghnxSchemasFirewallRulesPropertiesInboundRulesItemsAll
 
     /**
      * Get the sources property: The sources property.
-     *
+     * 
      * @return the sources value.
      */
     public FirewallRulesInboundRulesAllOfProperties getSources() {
@@ -23,12 +28,11 @@ public class Components15UghnxSchemasFirewallRulesPropertiesInboundRulesItemsAll
 
     /**
      * Set the sources property: The sources property.
-     *
+     * 
      * @param sources the sources value to set.
      * @return the Components15UghnxSchemasFirewallRulesPropertiesInboundRulesItemsAllof1 object itself.
      */
-    public Components15UghnxSchemasFirewallRulesPropertiesInboundRulesItemsAllof1 setSources(
-            FirewallRulesInboundRulesAllOfProperties sources) {
+    public Components15UghnxSchemasFirewallRulesPropertiesInboundRulesItemsAllof1 setSources(FirewallRulesInboundRulesAllOfProperties sources) {
         this.sources = sources;
         return this;
     }

@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components1Sa8LwhResponsesBillingHistoryContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The Components1Sa8LwhResponsesBillingHistoryContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class Components1Sa8LwhResponsesBillingHistoryContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class Components1Sa8LwhResponsesBillingHistoryContentApplicationJsonSchem
 
     /**
      * Get the billingHistory property: The billing_history property.
-     *
+     * 
      * @return the billingHistory value.
      */
     public List<BillingHistory> getBillingHistory() {
@@ -24,12 +29,11 @@ public class Components1Sa8LwhResponsesBillingHistoryContentApplicationJsonSchem
 
     /**
      * Set the billingHistory property: The billing_history property.
-     *
+     * 
      * @param billingHistory the billingHistory value to set.
      * @return the Components1Sa8LwhResponsesBillingHistoryContentApplicationJsonSchemaAllof0 object itself.
      */
-    public Components1Sa8LwhResponsesBillingHistoryContentApplicationJsonSchemaAllof0 setBillingHistory(
-            List<BillingHistory> billingHistory) {
+    public Components1Sa8LwhResponsesBillingHistoryContentApplicationJsonSchemaAllof0 setBillingHistory(List<BillingHistory> billingHistory) {
         this.billingHistory = billingHistory;
         return this;
     }

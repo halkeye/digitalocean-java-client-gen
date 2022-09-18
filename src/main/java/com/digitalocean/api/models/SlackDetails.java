@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The SlackDetails model. */
+/**
+ * The SlackDetails model.
+ */
 @Fluent
 public final class SlackDetails {
     /*
@@ -20,7 +25,7 @@ public final class SlackDetails {
 
     /**
      * Get the channel property: Slack channel to notify of an alert trigger.
-     *
+     * 
      * @return the channel value.
      */
     public String getChannel() {
@@ -29,7 +34,7 @@ public final class SlackDetails {
 
     /**
      * Set the channel property: Slack channel to notify of an alert trigger.
-     *
+     * 
      * @param channel the channel value to set.
      * @return the SlackDetails object itself.
      */
@@ -40,7 +45,7 @@ public final class SlackDetails {
 
     /**
      * Get the url property: Slack Webhook URL.
-     *
+     * 
      * @return the url value.
      */
     public String getUrl() {
@@ -49,7 +54,7 @@ public final class SlackDetails {
 
     /**
      * Set the url property: Slack Webhook URL.
-     *
+     * 
      * @param url the url value to set.
      * @return the SlackDetails object itself.
      */

@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The AppAlertProgressStep model. */
+/**
+ * The AppAlertProgressStep model.
+ */
 @Fluent
 public final class AppAlertProgressStep {
     /*
@@ -39,7 +45,7 @@ public final class AppAlertProgressStep {
 
     /**
      * Get the name property: The name of this step.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -48,7 +54,7 @@ public final class AppAlertProgressStep {
 
     /**
      * Set the name property: The name of this step.
-     *
+     * 
      * @param name the name value to set.
      * @return the AppAlertProgressStep object itself.
      */
@@ -59,7 +65,7 @@ public final class AppAlertProgressStep {
 
     /**
      * Get the status property: The status property.
-     *
+     * 
      * @return the status value.
      */
     public AppAlertProgressStepStatus getStatus() {
@@ -68,7 +74,7 @@ public final class AppAlertProgressStep {
 
     /**
      * Set the status property: The status property.
-     *
+     * 
      * @param status the status value to set.
      * @return the AppAlertProgressStep object itself.
      */
@@ -79,7 +85,7 @@ public final class AppAlertProgressStep {
 
     /**
      * Get the startedAt property: The start time of this step.
-     *
+     * 
      * @return the startedAt value.
      */
     public OffsetDateTime getStartedAt() {
@@ -88,7 +94,7 @@ public final class AppAlertProgressStep {
 
     /**
      * Set the startedAt property: The start time of this step.
-     *
+     * 
      * @param startedAt the startedAt value to set.
      * @return the AppAlertProgressStep object itself.
      */
@@ -99,7 +105,7 @@ public final class AppAlertProgressStep {
 
     /**
      * Get the endedAt property: The start time of this step.
-     *
+     * 
      * @return the endedAt value.
      */
     public OffsetDateTime getEndedAt() {
@@ -108,7 +114,7 @@ public final class AppAlertProgressStep {
 
     /**
      * Set the endedAt property: The start time of this step.
-     *
+     * 
      * @param endedAt the endedAt value to set.
      * @return the AppAlertProgressStep object itself.
      */
@@ -119,7 +125,7 @@ public final class AppAlertProgressStep {
 
     /**
      * Get the reason property: The reason property.
-     *
+     * 
      * @return the reason value.
      */
     public AppAlertProgressStepReason getReason() {
@@ -128,7 +134,7 @@ public final class AppAlertProgressStep {
 
     /**
      * Set the reason property: The reason property.
-     *
+     * 
      * @param reason the reason value to set.
      * @return the AppAlertProgressStep object itself.
      */

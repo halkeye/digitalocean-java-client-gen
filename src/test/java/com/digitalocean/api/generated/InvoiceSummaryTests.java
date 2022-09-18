@@ -1,5 +1,7 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.InvoiceSummary;
 import com.digitalocean.api.models.InvoiceSummaryCreditsAndAdjustments;
@@ -8,6 +10,7 @@ import com.digitalocean.api.models.InvoiceSummaryProductCharges;
 import com.digitalocean.api.models.InvoiceSummaryTaxes;
 import com.digitalocean.api.models.InvoiceSummaryUserBillingAddress;
 import com.digitalocean.api.models.ProductChargeItem;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -15,10 +18,7 @@ import org.junit.jupiter.api.Test;
 public final class InvoiceSummaryTests {
     @Test
     public void testDeserialize() {
-        InvoiceSummary model =
-                BinaryData.fromString(
-                                "{\"invoice_uuid\":\"iisb\",\"billing_period\":\"nppcce\",\"amount\":\"ztdsbeza\",\"user_name\":\"f\",\"user_billing_address\":{\"address_line1\":\"xuizhyhnepkpet\",\"address_line2\":\"rx\",\"city\":\"ubxdukecpxdazvdh\",\"region\":\"mmkoszudb\",\"postal_code\":\"s\",\"country_iso2_code\":\"rpcaqkiofkbtf\",\"created_at\":\"kl\",\"updated_at\":\"l\"},\"user_company\":\"vcb\",\"user_email\":\"ezyquw\",\"product_charges\":{\"name\":\"xut\",\"amount\":\"brruyuuatv\",\"items\":[{\"amount\":\"wcolbmxl\",\"name\":\"w\",\"count\":\"cpahprzrvxhm\"},{\"amount\":\"hocn\",\"name\":\"cmj\",\"count\":\"gxnoqrxtdis\"},{\"amount\":\"evhdlmydid\",\"name\":\"epfwwt\",\"count\":\"doesxxhmwcdb\"}]},\"overages\":{\"name\":\"oikxkxhnegk\",\"amount\":\"z\"},\"taxes\":{\"name\":\"t\",\"amount\":\"plvukaobrlbpg\"},\"credits_and_adjustments\":{\"name\":\"agnchjhgemuowaky\",\"amount\":\"lhjym\"}}")
-                        .toObject(InvoiceSummary.class);
+        InvoiceSummary model = BinaryData.fromString("{\"invoice_uuid\":\"iisb\",\"billing_period\":\"nppcce\",\"amount\":\"ztdsbeza\",\"user_name\":\"f\",\"user_billing_address\":{\"address_line1\":\"xuizhyhnepkpet\",\"address_line2\":\"rx\",\"city\":\"ubxdukecpxdazvdh\",\"region\":\"mmkoszudb\",\"postal_code\":\"s\",\"country_iso2_code\":\"rpcaqkiofkbtf\",\"created_at\":\"kl\",\"updated_at\":\"l\"},\"user_company\":\"vcb\",\"user_email\":\"ezyquw\",\"product_charges\":{\"name\":\"xut\",\"amount\":\"brruyuuatv\",\"items\":[{\"amount\":\"wcolbmxl\",\"name\":\"w\",\"count\":\"cpahprzrvxhm\"},{\"amount\":\"hocn\",\"name\":\"cmj\",\"count\":\"gxnoqrxtdis\"},{\"amount\":\"evhdlmydid\",\"name\":\"epfwwt\",\"count\":\"doesxxhmwcdb\"}]},\"overages\":{\"name\":\"oikxkxhnegk\",\"amount\":\"z\"},\"taxes\":{\"name\":\"t\",\"amount\":\"plvukaobrlbpg\"},\"credits_and_adjustments\":{\"name\":\"agnchjhgemuowaky\",\"amount\":\"lhjym\"}}").toObject(InvoiceSummary.class);
         Assertions.assertEquals("iisb", model.getInvoiceUuid());
         Assertions.assertEquals("nppcce", model.getBillingPeriod());
         Assertions.assertEquals("ztdsbeza", model.getAmount());
@@ -48,48 +48,7 @@ public final class InvoiceSummaryTests {
 
     @Test
     public void testSerialize() {
-        InvoiceSummary model =
-                new InvoiceSummary()
-                        .setInvoiceUuid("iisb")
-                        .setBillingPeriod("nppcce")
-                        .setAmount("ztdsbeza")
-                        .setUserName("f")
-                        .setUserBillingAddress(
-                                new InvoiceSummaryUserBillingAddress()
-                                        .setAddressLine1("xuizhyhnepkpet")
-                                        .setAddressLine2("rx")
-                                        .setCity("ubxdukecpxdazvdh")
-                                        .setRegion("mmkoszudb")
-                                        .setPostalCode("s")
-                                        .setCountryIso2Code("rpcaqkiofkbtf")
-                                        .setCreatedAt("kl")
-                                        .setUpdatedAt("l"))
-                        .setUserCompany("vcb")
-                        .setUserEmail("ezyquw")
-                        .setProductCharges(
-                                new InvoiceSummaryProductCharges()
-                                        .setName("xut")
-                                        .setAmount("brruyuuatv")
-                                        .setItems(
-                                                Arrays.asList(
-                                                        new ProductChargeItem()
-                                                                .setAmount("wcolbmxl")
-                                                                .setName("w")
-                                                                .setCount("cpahprzrvxhm"),
-                                                        new ProductChargeItem()
-                                                                .setAmount("hocn")
-                                                                .setName("cmj")
-                                                                .setCount("gxnoqrxtdis"),
-                                                        new ProductChargeItem()
-                                                                .setAmount("evhdlmydid")
-                                                                .setName("epfwwt")
-                                                                .setCount("doesxxhmwcdb"))))
-                        .setOverages(new InvoiceSummaryOverages().setName("oikxkxhnegk").setAmount("z"))
-                        .setTaxes(new InvoiceSummaryTaxes().setName("t").setAmount("plvukaobrlbpg"))
-                        .setCreditsAndAdjustments(
-                                new InvoiceSummaryCreditsAndAdjustments()
-                                        .setName("agnchjhgemuowaky")
-                                        .setAmount("lhjym"));
+        InvoiceSummary model = new InvoiceSummary().setInvoiceUuid("iisb").setBillingPeriod("nppcce").setAmount("ztdsbeza").setUserName("f").setUserBillingAddress(new InvoiceSummaryUserBillingAddress().setAddressLine1("xuizhyhnepkpet").setAddressLine2("rx").setCity("ubxdukecpxdazvdh").setRegion("mmkoszudb").setPostalCode("s").setCountryIso2Code("rpcaqkiofkbtf").setCreatedAt("kl").setUpdatedAt("l")).setUserCompany("vcb").setUserEmail("ezyquw").setProductCharges(new InvoiceSummaryProductCharges().setName("xut").setAmount("brruyuuatv").setItems(Arrays.asList(new ProductChargeItem().setAmount("wcolbmxl").setName("w").setCount("cpahprzrvxhm"), new ProductChargeItem().setAmount("hocn").setName("cmj").setCount("gxnoqrxtdis"), new ProductChargeItem().setAmount("evhdlmydid").setName("epfwwt").setCount("doesxxhmwcdb")))).setOverages(new InvoiceSummaryOverages().setName("oikxkxhnegk").setAmount("z")).setTaxes(new InvoiceSummaryTaxes().setName("t").setAmount("plvukaobrlbpg")).setCreditsAndAdjustments(new InvoiceSummaryCreditsAndAdjustments().setName("agnchjhgemuowaky").setAmount("lhjym"));
         model = BinaryData.fromObject(model).toObject(InvoiceSummary.class);
         Assertions.assertEquals("iisb", model.getInvoiceUuid());
         Assertions.assertEquals("nppcce", model.getBillingPeriod());

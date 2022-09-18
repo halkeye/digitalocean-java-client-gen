@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The DropletActionRename model. */
+/**
+ * The DropletActionRename model.
+ */
 @Fluent
 public final class DropletActionRename extends DropletAction {
     /*
@@ -14,7 +20,7 @@ public final class DropletActionRename extends DropletAction {
 
     /**
      * Get the name property: The new name for the Droplet.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -23,7 +29,7 @@ public final class DropletActionRename extends DropletAction {
 
     /**
      * Set the name property: The new name for the Droplet.
-     *
+     * 
      * @param name the name value to set.
      * @return the DropletActionRename object itself.
      */
@@ -32,7 +38,9 @@ public final class DropletActionRename extends DropletAction {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletActionRename setType(DropletActionType type) {
         super.setType(type);

@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The VolumeActionPostDetach model. */
+/**
+ * The VolumeActionPostDetach model.
+ */
 @Fluent
 public final class VolumeActionPostDetach extends VolumeActionPostBase {
     /*
@@ -14,7 +20,7 @@ public final class VolumeActionPostDetach extends VolumeActionPostBase {
 
     /**
      * Get the dropletId property: The unique identifier for the Droplet the volume will be attached or detached from.
-     *
+     * 
      * @return the dropletId value.
      */
     public int getDropletId() {
@@ -23,7 +29,7 @@ public final class VolumeActionPostDetach extends VolumeActionPostBase {
 
     /**
      * Set the dropletId property: The unique identifier for the Droplet the volume will be attached or detached from.
-     *
+     * 
      * @param dropletId the dropletId value to set.
      * @return the VolumeActionPostDetach object itself.
      */
@@ -32,14 +38,18 @@ public final class VolumeActionPostDetach extends VolumeActionPostBase {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public VolumeActionPostDetach setType(VolumeActionPostBaseType type) {
         super.setType(type);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public VolumeActionPostDetach setRegion(RegionSlug region) {
         super.setRegion(region);

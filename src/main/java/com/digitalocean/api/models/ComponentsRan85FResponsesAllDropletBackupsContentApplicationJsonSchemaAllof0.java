@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsRan85FResponsesAllDropletBackupsContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The ComponentsRan85FResponsesAllDropletBackupsContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class ComponentsRan85FResponsesAllDropletBackupsContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsRan85FResponsesAllDropletBackupsContentApplicationJsonSch
 
     /**
      * Get the backups property: The backups property.
-     *
+     * 
      * @return the backups value.
      */
     public List<DropletSnapshot> getBackups() {
@@ -24,12 +29,11 @@ public class ComponentsRan85FResponsesAllDropletBackupsContentApplicationJsonSch
 
     /**
      * Set the backups property: The backups property.
-     *
+     * 
      * @param backups the backups value to set.
      * @return the ComponentsRan85FResponsesAllDropletBackupsContentApplicationJsonSchemaAllof0 object itself.
      */
-    public ComponentsRan85FResponsesAllDropletBackupsContentApplicationJsonSchemaAllof0 setBackups(
-            List<DropletSnapshot> backups) {
+    public ComponentsRan85FResponsesAllDropletBackupsContentApplicationJsonSchemaAllof0 setBackups(List<DropletSnapshot> backups) {
         this.backups = backups;
         return this;
     }

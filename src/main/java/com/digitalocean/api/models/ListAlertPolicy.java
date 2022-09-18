@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ListAlertPolicy model. */
+/**
+ * The ListAlertPolicy model.
+ */
 @Fluent
 public class ListAlertPolicy {
     /*
@@ -15,7 +20,7 @@ public class ListAlertPolicy {
 
     /**
      * Get the policies property: The policies property.
-     *
+     * 
      * @return the policies value.
      */
     public List<AlertPolicy> getPolicies() {
@@ -24,7 +29,7 @@ public class ListAlertPolicy {
 
     /**
      * Set the policies property: The policies property.
-     *
+     * 
      * @param policies the policies value to set.
      * @return the ListAlertPolicy object itself.
      */

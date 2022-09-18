@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The InvoiceItem model. */
+/**
+ * The InvoiceItem model.
+ */
 @Fluent
 public final class InvoiceItem {
     /*
@@ -74,7 +79,7 @@ public final class InvoiceItem {
 
     /**
      * Get the product property: Name of the product being billed in the invoice item.
-     *
+     * 
      * @return the product value.
      */
     public String getProduct() {
@@ -83,7 +88,7 @@ public final class InvoiceItem {
 
     /**
      * Set the product property: Name of the product being billed in the invoice item.
-     *
+     * 
      * @param product the product value to set.
      * @return the InvoiceItem object itself.
      */
@@ -94,7 +99,7 @@ public final class InvoiceItem {
 
     /**
      * Get the resourceUuid property: UUID of the resource billing in the invoice item if available.
-     *
+     * 
      * @return the resourceUuid value.
      */
     public String getResourceUuid() {
@@ -103,7 +108,7 @@ public final class InvoiceItem {
 
     /**
      * Set the resourceUuid property: UUID of the resource billing in the invoice item if available.
-     *
+     * 
      * @param resourceUuid the resourceUuid value to set.
      * @return the InvoiceItem object itself.
      */
@@ -114,7 +119,7 @@ public final class InvoiceItem {
 
     /**
      * Get the resourceId property: ID of the resource billing in the invoice item if available.
-     *
+     * 
      * @return the resourceId value.
      */
     public String getResourceId() {
@@ -123,7 +128,7 @@ public final class InvoiceItem {
 
     /**
      * Set the resourceId property: ID of the resource billing in the invoice item if available.
-     *
+     * 
      * @param resourceId the resourceId value to set.
      * @return the InvoiceItem object itself.
      */
@@ -133,9 +138,9 @@ public final class InvoiceItem {
     }
 
     /**
-     * Get the groupDescription property: Description of the invoice item when it is a grouped set of usage, such as
+     * Get the groupDescription property: Description of the invoice item when it is a grouped set of usage, such  as
      * DOKS or databases.
-     *
+     * 
      * @return the groupDescription value.
      */
     public String getGroupDescription() {
@@ -143,9 +148,9 @@ public final class InvoiceItem {
     }
 
     /**
-     * Set the groupDescription property: Description of the invoice item when it is a grouped set of usage, such as
+     * Set the groupDescription property: Description of the invoice item when it is a grouped set of usage, such  as
      * DOKS or databases.
-     *
+     * 
      * @param groupDescription the groupDescription value to set.
      * @return the InvoiceItem object itself.
      */
@@ -156,7 +161,7 @@ public final class InvoiceItem {
 
     /**
      * Get the description property: Description of the invoice item.
-     *
+     * 
      * @return the description value.
      */
     public String getDescription() {
@@ -165,7 +170,7 @@ public final class InvoiceItem {
 
     /**
      * Set the description property: Description of the invoice item.
-     *
+     * 
      * @param description the description value to set.
      * @return the InvoiceItem object itself.
      */
@@ -176,7 +181,7 @@ public final class InvoiceItem {
 
     /**
      * Get the amount property: Billed amount of this invoice item. Billed in USD.
-     *
+     * 
      * @return the amount value.
      */
     public String getAmount() {
@@ -185,7 +190,7 @@ public final class InvoiceItem {
 
     /**
      * Set the amount property: Billed amount of this invoice item. Billed in USD.
-     *
+     * 
      * @param amount the amount value to set.
      * @return the InvoiceItem object itself.
      */
@@ -196,7 +201,7 @@ public final class InvoiceItem {
 
     /**
      * Get the duration property: Duration of time this invoice item was used and subsequently billed.
-     *
+     * 
      * @return the duration value.
      */
     public String getDuration() {
@@ -205,7 +210,7 @@ public final class InvoiceItem {
 
     /**
      * Set the duration property: Duration of time this invoice item was used and subsequently billed.
-     *
+     * 
      * @param duration the duration value to set.
      * @return the InvoiceItem object itself.
      */
@@ -216,7 +221,7 @@ public final class InvoiceItem {
 
     /**
      * Get the durationUnit property: Unit of time for duration.
-     *
+     * 
      * @return the durationUnit value.
      */
     public String getDurationUnit() {
@@ -225,7 +230,7 @@ public final class InvoiceItem {
 
     /**
      * Set the durationUnit property: Unit of time for duration.
-     *
+     * 
      * @param durationUnit the durationUnit value to set.
      * @return the InvoiceItem object itself.
      */
@@ -236,7 +241,7 @@ public final class InvoiceItem {
 
     /**
      * Get the startTime property: Time the invoice item began to be billed for usage.
-     *
+     * 
      * @return the startTime value.
      */
     public String getStartTime() {
@@ -245,7 +250,7 @@ public final class InvoiceItem {
 
     /**
      * Set the startTime property: Time the invoice item began to be billed for usage.
-     *
+     * 
      * @param startTime the startTime value to set.
      * @return the InvoiceItem object itself.
      */
@@ -256,7 +261,7 @@ public final class InvoiceItem {
 
     /**
      * Get the endTime property: Time the invoice item stoped being billed for usage.
-     *
+     * 
      * @return the endTime value.
      */
     public String getEndTime() {
@@ -265,7 +270,7 @@ public final class InvoiceItem {
 
     /**
      * Set the endTime property: Time the invoice item stoped being billed for usage.
-     *
+     * 
      * @param endTime the endTime value to set.
      * @return the InvoiceItem object itself.
      */
@@ -276,7 +281,7 @@ public final class InvoiceItem {
 
     /**
      * Get the projectName property: Name of the DigitalOcean Project this resource belongs to.
-     *
+     * 
      * @return the projectName value.
      */
     public String getProjectName() {
@@ -285,7 +290,7 @@ public final class InvoiceItem {
 
     /**
      * Set the projectName property: Name of the DigitalOcean Project this resource belongs to.
-     *
+     * 
      * @param projectName the projectName value to set.
      * @return the InvoiceItem object itself.
      */

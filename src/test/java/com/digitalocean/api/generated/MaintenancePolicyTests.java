@@ -1,17 +1,19 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.MaintenancePolicy;
 import com.digitalocean.api.models.MaintenancePolicyDay;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.stream.Collectors;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class MaintenancePolicyTests {
     @Test
     public void testDeserialize() {
-        MaintenancePolicy model =
-                BinaryData.fromString("{\"start_time\":\"cwzvc\",\"duration\":\"p\",\"day\":\"monday\"}")
-                        .toObject(MaintenancePolicy.class);
+        MaintenancePolicy model = BinaryData.fromString("{\"start_time\":\"cwzvc\",\"duration\":\"p\",\"day\":\"monday\"}").toObject(MaintenancePolicy.class);
         Assertions.assertEquals("cwzvc", model.getStartTime());
         Assertions.assertEquals(MaintenancePolicyDay.MONDAY, model.getDay());
     }

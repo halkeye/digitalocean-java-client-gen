@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Pagination model. */
+/**
+ * The Pagination model.
+ */
 @Fluent
 public class Pagination {
     /*
@@ -14,7 +19,7 @@ public class Pagination {
 
     /**
      * Get the links property: The links property.
-     *
+     * 
      * @return the links value.
      */
     public PageLinks getLinks() {
@@ -23,7 +28,7 @@ public class Pagination {
 
     /**
      * Set the links property: The links property.
-     *
+     * 
      * @param links the links value to set.
      * @return the Pagination object itself.
      */

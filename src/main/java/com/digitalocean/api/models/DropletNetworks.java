@@ -1,13 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
- * The details of the network that are configured for the Droplet instance. This is an object that contains keys for
- * IPv4 and IPv6. The value of each of these is an array that contains objects describing an individual IP resource
- * allocated to the Droplet. These will define attributes like the IP address, netmask, and gateway of the specific
+ * The details of the network that are configured for the Droplet instance.  This is an object that contains keys for
+ * IPv4 and IPv6.  The value of each of these is an array that contains objects describing an individual IP resource
+ * allocated to the Droplet.  These will define attributes like the IP address, netmask, and gateway of the specific
  * network depending on the type of network it is.
  */
 @Fluent
@@ -26,7 +29,7 @@ public final class DropletNetworks {
 
     /**
      * Get the v4 property: The v4 property.
-     *
+     * 
      * @return the v4 value.
      */
     public List<NetworkV4> getV4() {
@@ -35,7 +38,7 @@ public final class DropletNetworks {
 
     /**
      * Set the v4 property: The v4 property.
-     *
+     * 
      * @param v4 the v4 value to set.
      * @return the DropletNetworks object itself.
      */
@@ -46,7 +49,7 @@ public final class DropletNetworks {
 
     /**
      * Get the v6 property: The v6 property.
-     *
+     * 
      * @return the v6 value.
      */
     public List<NetworkV6> getV6() {
@@ -55,7 +58,7 @@ public final class DropletNetworks {
 
     /**
      * Set the v6 property: The v6 property.
-     *
+     * 
      * @param v6 the v6 value to set.
      * @return the DropletNetworks object itself.
      */

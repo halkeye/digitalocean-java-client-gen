@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components1Sllx9CResponsesDropletActionContentApplicationJsonSchema model. */
+/**
+ * The Components1Sllx9CResponsesDropletActionContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components1Sllx9CResponsesDropletActionContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components1Sllx9CResponsesDropletActionContentApplicationJson
 
     /**
      * Get the action property: The action property.
-     *
+     * 
      * @return the action value.
      */
     public Action getAction() {
@@ -23,7 +28,7 @@ public final class Components1Sllx9CResponsesDropletActionContentApplicationJson
 
     /**
      * Set the action property: The action property.
-     *
+     * 
      * @param action the action value to set.
      * @return the Components1Sllx9CResponsesDropletActionContentApplicationJsonSchema object itself.
      */

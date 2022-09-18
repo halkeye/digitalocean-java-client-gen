@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The ImageUpdate model. */
+/**
+ * The ImageUpdate model.
+ */
 @Fluent
 public class ImageUpdate {
     /*
@@ -28,9 +34,9 @@ public class ImageUpdate {
     private String description;
 
     /**
-     * Get the name property: The display name that has been given to an image. This is what is shown in the control
+     * Get the name property: The display name that has been given to an image.  This is what is shown in the control
      * panel and is generally a descriptive title for the image in question.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -38,9 +44,9 @@ public class ImageUpdate {
     }
 
     /**
-     * Set the name property: The display name that has been given to an image. This is what is shown in the control
+     * Set the name property: The display name that has been given to an image.  This is what is shown in the control
      * panel and is generally a descriptive title for the image in question.
-     *
+     * 
      * @param name the name value to set.
      * @return the ImageUpdate object itself.
      */
@@ -50,11 +56,11 @@ public class ImageUpdate {
     }
 
     /**
-     * Get the distribution property: The name of a custom image's distribution. Currently, the valid values are `Arch
-     * Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`, `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`,
-     * `Rocky Linux`, `Ubuntu`, and `Unknown`. Any other value will be accepted but ignored, and `Unknown` will be used
-     * in its place.
-     *
+     * Get the distribution property: The name of a custom image's distribution. Currently, the valid values are  `Arch
+     * Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`,
+     * `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be
+     * used in its place.
+     * 
      * @return the distribution value.
      */
     public Distribution getDistribution() {
@@ -62,11 +68,11 @@ public class ImageUpdate {
     }
 
     /**
-     * Set the distribution property: The name of a custom image's distribution. Currently, the valid values are `Arch
-     * Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`, `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`,
-     * `Rocky Linux`, `Ubuntu`, and `Unknown`. Any other value will be accepted but ignored, and `Unknown` will be used
-     * in its place.
-     *
+     * Set the distribution property: The name of a custom image's distribution. Currently, the valid values are  `Arch
+     * Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`,  `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`,
+     * `Rocky Linux`, `Ubuntu`, and `Unknown`.  Any other value will be accepted but ignored, and `Unknown` will be
+     * used in its place.
+     * 
      * @param distribution the distribution value to set.
      * @return the ImageUpdate object itself.
      */
@@ -77,7 +83,7 @@ public class ImageUpdate {
 
     /**
      * Get the description property: An optional free-form text field to describe an image.
-     *
+     * 
      * @return the description value.
      */
     public String getDescription() {
@@ -86,7 +92,7 @@ public class ImageUpdate {
 
     /**
      * Set the description property: An optional free-form text field to describe an image.
-     *
+     * 
      * @param description the description value to set.
      * @return the ImageUpdate object itself.
      */

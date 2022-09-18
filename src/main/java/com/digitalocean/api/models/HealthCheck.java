@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** An object specifying health check settings for the load balancer. */
+/**
+ * An object specifying health check settings for the load balancer.
+ */
 @Fluent
 public final class HealthCheck {
     /*
@@ -55,7 +61,7 @@ public final class HealthCheck {
     /**
      * Get the protocol property: The protocol used for health checks sent to the backend Droplets. The possible values
      * are `http`, `https`, or `tcp`.
-     *
+     * 
      * @return the protocol value.
      */
     public HealthCheckProtocol getProtocol() {
@@ -65,7 +71,7 @@ public final class HealthCheck {
     /**
      * Set the protocol property: The protocol used for health checks sent to the backend Droplets. The possible values
      * are `http`, `https`, or `tcp`.
-     *
+     * 
      * @param protocol the protocol value to set.
      * @return the HealthCheck object itself.
      */
@@ -77,7 +83,7 @@ public final class HealthCheck {
     /**
      * Get the port property: An integer representing the port on the backend Droplets on which the health check will
      * attempt a connection.
-     *
+     * 
      * @return the port value.
      */
     public Integer getPort() {
@@ -87,7 +93,7 @@ public final class HealthCheck {
     /**
      * Set the port property: An integer representing the port on the backend Droplets on which the health check will
      * attempt a connection.
-     *
+     * 
      * @param port the port value to set.
      * @return the HealthCheck object itself.
      */
@@ -98,7 +104,7 @@ public final class HealthCheck {
 
     /**
      * Get the path property: The path on the backend Droplets to which the load balancer instance will send a request.
-     *
+     * 
      * @return the path value.
      */
     public String getPath() {
@@ -107,7 +113,7 @@ public final class HealthCheck {
 
     /**
      * Set the path property: The path on the backend Droplets to which the load balancer instance will send a request.
-     *
+     * 
      * @param path the path value to set.
      * @return the HealthCheck object itself.
      */
@@ -118,7 +124,7 @@ public final class HealthCheck {
 
     /**
      * Get the checkIntervalSeconds property: The number of seconds between between two consecutive health checks.
-     *
+     * 
      * @return the checkIntervalSeconds value.
      */
     public Integer getCheckIntervalSeconds() {
@@ -127,7 +133,7 @@ public final class HealthCheck {
 
     /**
      * Set the checkIntervalSeconds property: The number of seconds between between two consecutive health checks.
-     *
+     * 
      * @param checkIntervalSeconds the checkIntervalSeconds value to set.
      * @return the HealthCheck object itself.
      */
@@ -139,7 +145,7 @@ public final class HealthCheck {
     /**
      * Get the responseTimeoutSeconds property: The number of seconds the load balancer instance will wait for a
      * response until marking a health check as failed.
-     *
+     * 
      * @return the responseTimeoutSeconds value.
      */
     public Integer getResponseTimeoutSeconds() {
@@ -149,7 +155,7 @@ public final class HealthCheck {
     /**
      * Set the responseTimeoutSeconds property: The number of seconds the load balancer instance will wait for a
      * response until marking a health check as failed.
-     *
+     * 
      * @param responseTimeoutSeconds the responseTimeoutSeconds value to set.
      * @return the HealthCheck object itself.
      */
@@ -161,7 +167,7 @@ public final class HealthCheck {
     /**
      * Get the unhealthyThreshold property: The number of times a health check must fail for a backend Droplet to be
      * marked "unhealthy" and be removed from the pool.
-     *
+     * 
      * @return the unhealthyThreshold value.
      */
     public Integer getUnhealthyThreshold() {
@@ -171,7 +177,7 @@ public final class HealthCheck {
     /**
      * Set the unhealthyThreshold property: The number of times a health check must fail for a backend Droplet to be
      * marked "unhealthy" and be removed from the pool.
-     *
+     * 
      * @param unhealthyThreshold the unhealthyThreshold value to set.
      * @return the HealthCheck object itself.
      */
@@ -183,7 +189,7 @@ public final class HealthCheck {
     /**
      * Get the healthyThreshold property: The number of times a health check must pass for a backend Droplet to be
      * marked "healthy" and be re-added to the pool.
-     *
+     * 
      * @return the healthyThreshold value.
      */
     public Integer getHealthyThreshold() {
@@ -193,7 +199,7 @@ public final class HealthCheck {
     /**
      * Set the healthyThreshold property: The number of times a health check must pass for a backend Droplet to be
      * marked "healthy" and be re-added to the pool.
-     *
+     * 
      * @param healthyThreshold the healthyThreshold value to set.
      * @return the HealthCheck object itself.
      */

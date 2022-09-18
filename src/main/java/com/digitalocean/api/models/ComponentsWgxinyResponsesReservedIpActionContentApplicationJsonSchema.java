@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ComponentsWgxinyResponsesReservedIpActionContentApplicationJsonSchema model. */
+/**
+ * The ComponentsWgxinyResponsesReservedIpActionContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsWgxinyResponsesReservedIpActionContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class ComponentsWgxinyResponsesReservedIpActionContentApplicationJs
 
     /**
      * Get the action property: The action property.
-     *
+     * 
      * @return the action value.
      */
     public Action getAction() {
@@ -23,7 +28,7 @@ public final class ComponentsWgxinyResponsesReservedIpActionContentApplicationJs
 
     /**
      * Set the action property: The action property.
-     *
+     * 
      * @param action the action value to set.
      * @return the ComponentsWgxinyResponsesReservedIpActionContentApplicationJsonSchema object itself.
      */

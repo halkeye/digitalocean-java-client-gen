@@ -4,29 +4,26 @@ import com.azure.core.http.HttpHeaders;
 import com.azure.core.http.HttpRequest;
 import com.azure.core.http.rest.ResponseBase;
 
-/** Contains all response data for the deleteByName operation. */
+/**
+ * Contains all response data for the deleteByName operation.
+ */
 public final class VolumesDeleteByNameResponse extends ResponseBase<VolumesDeleteByNameHeaders, Error> {
     /**
      * Creates an instance of VolumesDeleteByNameResponse.
-     *
+     * 
      * @param request the request which resulted in this VolumesDeleteByNameResponse.
      * @param statusCode the status code of the HTTP response.
      * @param rawHeaders the raw headers of the HTTP response.
      * @param value the deserialized value of the HTTP response.
      * @param headers the deserialized headers of the HTTP response.
      */
-    public VolumesDeleteByNameResponse(
-            HttpRequest request,
-            int statusCode,
-            HttpHeaders rawHeaders,
-            Error value,
-            VolumesDeleteByNameHeaders headers) {
+    public VolumesDeleteByNameResponse(HttpRequest request, int statusCode, HttpHeaders rawHeaders, Error value, VolumesDeleteByNameHeaders headers) {
         super(request, statusCode, rawHeaders, value, headers);
     }
 
     /**
      * Gets the deserialized response body.
-     *
+     * 
      * @return the deserialized response body.
      */
     @Override

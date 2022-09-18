@@ -1,16 +1,17 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.ActionLink;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class ActionLinkTests {
     @Test
     public void testDeserialize() {
-        ActionLink model =
-                BinaryData.fromString("{\"id\":1624416011,\"rel\":\"ovu\",\"href\":\"xhmehjnhjiotif\"}")
-                        .toObject(ActionLink.class);
+        ActionLink model = BinaryData.fromString("{\"id\":1624416011,\"rel\":\"ovu\",\"href\":\"xhmehjnhjiotif\"}").toObject(ActionLink.class);
         Assertions.assertEquals(1624416011, model.getId());
         Assertions.assertEquals("ovu", model.getRel());
         Assertions.assertEquals("xhmehjnhjiotif", model.getHref());

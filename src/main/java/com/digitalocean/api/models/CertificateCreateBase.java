@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The CertificateCreateBase model. */
+/**
+ * The CertificateCreateBase model.
+ */
 @Fluent
 public class CertificateCreateBase {
     /*
@@ -21,7 +27,7 @@ public class CertificateCreateBase {
 
     /**
      * Get the name property: A unique human-readable name referring to a certificate.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -30,7 +36,7 @@ public class CertificateCreateBase {
 
     /**
      * Set the name property: A unique human-readable name referring to a certificate.
-     *
+     * 
      * @param name the name value to set.
      * @return the CertificateCreateBase object itself.
      */
@@ -42,7 +48,7 @@ public class CertificateCreateBase {
     /**
      * Get the type property: A string representing the type of the certificate. The value will be `custom` for a
      * user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
+     * 
      * @return the type value.
      */
     public CertificateCreateBaseType getType() {
@@ -52,7 +58,7 @@ public class CertificateCreateBase {
     /**
      * Set the type property: A string representing the type of the certificate. The value will be `custom` for a
      * user-uploaded certificate or `lets_encrypt` for one automatically generated with Let's Encrypt.
-     *
+     * 
      * @param type the type value to set.
      * @return the CertificateCreateBase object itself.
      */

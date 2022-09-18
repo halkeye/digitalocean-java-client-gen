@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components1Hqp2PyResponsesAllRepositoriesV2ContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The Components1Hqp2PyResponsesAllRepositoriesV2ContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class Components1Hqp2PyResponsesAllRepositoriesV2ContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class Components1Hqp2PyResponsesAllRepositoriesV2ContentApplicationJsonSc
 
     /**
      * Get the repositories property: The repositories property.
-     *
+     * 
      * @return the repositories value.
      */
     public List<RepositoryV2> getRepositories() {
@@ -24,12 +29,11 @@ public class Components1Hqp2PyResponsesAllRepositoriesV2ContentApplicationJsonSc
 
     /**
      * Set the repositories property: The repositories property.
-     *
+     * 
      * @param repositories the repositories value to set.
      * @return the Components1Hqp2PyResponsesAllRepositoriesV2ContentApplicationJsonSchemaAllof0 object itself.
      */
-    public Components1Hqp2PyResponsesAllRepositoriesV2ContentApplicationJsonSchemaAllof0 setRepositories(
-            List<RepositoryV2> repositories) {
+    public Components1Hqp2PyResponsesAllRepositoriesV2ContentApplicationJsonSchemaAllof0 setRepositories(List<RepositoryV2> repositories) {
         this.repositories = repositories;
         return this;
     }

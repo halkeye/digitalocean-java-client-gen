@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The DropletActionChangeKernel model. */
+/**
+ * The DropletActionChangeKernel model.
+ */
 @Fluent
 public final class DropletActionChangeKernel extends DropletAction {
     /*
@@ -14,7 +20,7 @@ public final class DropletActionChangeKernel extends DropletAction {
 
     /**
      * Get the kernel property: A unique number used to identify and reference a specific kernel.
-     *
+     * 
      * @return the kernel value.
      */
     public Integer getKernel() {
@@ -23,7 +29,7 @@ public final class DropletActionChangeKernel extends DropletAction {
 
     /**
      * Set the kernel property: A unique number used to identify and reference a specific kernel.
-     *
+     * 
      * @param kernel the kernel value to set.
      * @return the DropletActionChangeKernel object itself.
      */
@@ -32,7 +38,9 @@ public final class DropletActionChangeKernel extends DropletAction {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletActionChangeKernel setType(DropletActionType type) {
         super.setType(type);

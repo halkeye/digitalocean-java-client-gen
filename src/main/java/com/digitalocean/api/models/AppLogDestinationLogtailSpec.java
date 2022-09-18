@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** Logtail configuration. */
+/**
+ * Logtail configuration.
+ */
 @Fluent
 public final class AppLogDestinationLogtailSpec {
     /*
@@ -14,7 +19,7 @@ public final class AppLogDestinationLogtailSpec {
 
     /**
      * Get the token property: Logtail token.
-     *
+     * 
      * @return the token value.
      */
     public String getToken() {
@@ -23,7 +28,7 @@ public final class AppLogDestinationLogtailSpec {
 
     /**
      * Set the token property: Logtail token.
-     *
+     * 
      * @param token the token value to set.
      * @return the AppLogDestinationLogtailSpec object itself.
      */

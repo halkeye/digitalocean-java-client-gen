@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** Configurations for external logging. */
+/**
+ * Configurations for external logging.
+ */
 @Fluent
 public final class AppLogDestinationDefinition {
     /*
@@ -32,7 +37,7 @@ public final class AppLogDestinationDefinition {
 
     /**
      * Get the name property: The name property.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -41,7 +46,7 @@ public final class AppLogDestinationDefinition {
 
     /**
      * Set the name property: The name property.
-     *
+     * 
      * @param name the name value to set.
      * @return the AppLogDestinationDefinition object itself.
      */
@@ -52,7 +57,7 @@ public final class AppLogDestinationDefinition {
 
     /**
      * Get the papertrail property: Papertrail configuration.
-     *
+     * 
      * @return the papertrail value.
      */
     public AppLogDestinationPapertrailSpec getPapertrail() {
@@ -61,7 +66,7 @@ public final class AppLogDestinationDefinition {
 
     /**
      * Set the papertrail property: Papertrail configuration.
-     *
+     * 
      * @param papertrail the papertrail value to set.
      * @return the AppLogDestinationDefinition object itself.
      */
@@ -72,7 +77,7 @@ public final class AppLogDestinationDefinition {
 
     /**
      * Get the datadog property: DataDog configuration.
-     *
+     * 
      * @return the datadog value.
      */
     public AppLogDestinationDatadogSpec getDatadog() {
@@ -81,7 +86,7 @@ public final class AppLogDestinationDefinition {
 
     /**
      * Set the datadog property: DataDog configuration.
-     *
+     * 
      * @param datadog the datadog value to set.
      * @return the AppLogDestinationDefinition object itself.
      */
@@ -92,7 +97,7 @@ public final class AppLogDestinationDefinition {
 
     /**
      * Get the logtail property: Logtail configuration.
-     *
+     * 
      * @return the logtail value.
      */
     public AppLogDestinationLogtailSpec getLogtail() {
@@ -101,7 +106,7 @@ public final class AppLogDestinationDefinition {
 
     /**
      * Set the logtail property: Logtail configuration.
-     *
+     * 
      * @param logtail the logtail value to set.
      * @return the AppLogDestinationDefinition object itself.
      */

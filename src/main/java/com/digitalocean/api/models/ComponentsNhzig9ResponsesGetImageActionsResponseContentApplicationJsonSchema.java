@@ -1,13 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsNhzig9ResponsesGetImageActionsResponseContentApplicationJsonSchema model. */
+/**
+ * The ComponentsNhzig9ResponsesGetImageActionsResponseContentApplicationJsonSchema model.
+ */
 @Fluent
-public final class ComponentsNhzig9ResponsesGetImageActionsResponseContentApplicationJsonSchema
-        extends Components1IjwlbpResponsesGetImageActionsResponseContentApplicationJsonSchemaAllof0 {
+public final class ComponentsNhzig9ResponsesGetImageActionsResponseContentApplicationJsonSchema extends Components1IjwlbpResponsesGetImageActionsResponseContentApplicationJsonSchemaAllof0 {
     /*
      * The links property.
      */
@@ -22,7 +26,7 @@ public final class ComponentsNhzig9ResponsesGetImageActionsResponseContentApplic
 
     /**
      * Get the links property: The links property.
-     *
+     * 
      * @return the links value.
      */
     public PageLinks getLinks() {
@@ -31,7 +35,7 @@ public final class ComponentsNhzig9ResponsesGetImageActionsResponseContentApplic
 
     /**
      * Set the links property: The links property.
-     *
+     * 
      * @param links the links value to set.
      * @return the ComponentsNhzig9ResponsesGetImageActionsResponseContentApplicationJsonSchema object itself.
      */
@@ -42,7 +46,7 @@ public final class ComponentsNhzig9ResponsesGetImageActionsResponseContentApplic
 
     /**
      * Get the meta property: The meta property.
-     *
+     * 
      * @return the meta value.
      */
     public MetaMeta getMeta() {
@@ -51,7 +55,7 @@ public final class ComponentsNhzig9ResponsesGetImageActionsResponseContentApplic
 
     /**
      * Set the meta property: The meta property.
-     *
+     * 
      * @param meta the meta value to set.
      * @return the ComponentsNhzig9ResponsesGetImageActionsResponseContentApplicationJsonSchema object itself.
      */
@@ -60,10 +64,11 @@ public final class ComponentsNhzig9ResponsesGetImageActionsResponseContentApplic
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public ComponentsNhzig9ResponsesGetImageActionsResponseContentApplicationJsonSchema setActions(
-            List<Action> actions) {
+    public ComponentsNhzig9ResponsesGetImageActionsResponseContentApplicationJsonSchema setActions(List<Action> actions) {
         super.setActions(actions);
         return this;
     }

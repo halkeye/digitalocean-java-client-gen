@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsDeploymentResponse model. */
+/**
+ * The AppsDeploymentResponse model.
+ */
 @Fluent
 public final class AppsDeploymentResponse {
     /*
@@ -14,7 +19,7 @@ public final class AppsDeploymentResponse {
 
     /**
      * Get the deployment property: An app deployment.
-     *
+     * 
      * @return the deployment value.
      */
     public AppsDeployment getDeployment() {
@@ -23,7 +28,7 @@ public final class AppsDeploymentResponse {
 
     /**
      * Set the deployment property: An app deployment.
-     *
+     * 
      * @param deployment the deployment value to set.
      * @return the AppsDeploymentResponse object itself.
      */

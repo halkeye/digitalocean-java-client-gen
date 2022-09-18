@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsStringMatch model. */
+/**
+ * The AppsStringMatch model.
+ */
 @Fluent
 public final class AppsStringMatch {
     /*
@@ -27,7 +32,7 @@ public final class AppsStringMatch {
 
     /**
      * Get the exact property: Exact string match. Only 1 of `exact`, `prefix`, or `regex` must be set.
-     *
+     * 
      * @return the exact value.
      */
     public String getExact() {
@@ -36,7 +41,7 @@ public final class AppsStringMatch {
 
     /**
      * Set the exact property: Exact string match. Only 1 of `exact`, `prefix`, or `regex` must be set.
-     *
+     * 
      * @param exact the exact value to set.
      * @return the AppsStringMatch object itself.
      */
@@ -47,7 +52,7 @@ public final class AppsStringMatch {
 
     /**
      * Get the prefix property: Prefix-based match. Only 1 of `exact`, `prefix`, or `regex` must be set.
-     *
+     * 
      * @return the prefix value.
      */
     public String getPrefix() {
@@ -56,7 +61,7 @@ public final class AppsStringMatch {
 
     /**
      * Set the prefix property: Prefix-based match. Only 1 of `exact`, `prefix`, or `regex` must be set.
-     *
+     * 
      * @param prefix the prefix value to set.
      * @return the AppsStringMatch object itself.
      */
@@ -68,7 +73,7 @@ public final class AppsStringMatch {
     /**
      * Get the regex property: RE2 style regex-based match. Only 1 of `exact`, `prefix`, or `regex` must be set. For
      * more information about RE2 syntax, see: https://github.com/google/re2/wiki/Syntax.
-     *
+     * 
      * @return the regex value.
      */
     public String getRegex() {
@@ -78,7 +83,7 @@ public final class AppsStringMatch {
     /**
      * Set the regex property: RE2 style regex-based match. Only 1 of `exact`, `prefix`, or `regex` must be set. For
      * more information about RE2 syntax, see: https://github.com/google/re2/wiki/Syntax.
-     *
+     * 
      * @param regex the regex value to set.
      * @return the AppsStringMatch object itself.
      */

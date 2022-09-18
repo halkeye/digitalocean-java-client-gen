@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsTier model. */
+/**
+ * The AppsTier model.
+ */
 @Fluent
 public final class AppsTier {
     /*
@@ -38,7 +43,7 @@ public final class AppsTier {
 
     /**
      * Get the buildSeconds property: The amount of included build time in seconds.
-     *
+     * 
      * @return the buildSeconds value.
      */
     public String getBuildSeconds() {
@@ -47,7 +52,7 @@ public final class AppsTier {
 
     /**
      * Set the buildSeconds property: The amount of included build time in seconds.
-     *
+     * 
      * @param buildSeconds the buildSeconds value to set.
      * @return the AppsTier object itself.
      */
@@ -58,7 +63,7 @@ public final class AppsTier {
 
     /**
      * Get the egressBandwidthBytes property: The amount of included outbound bandwidth in bytes.
-     *
+     * 
      * @return the egressBandwidthBytes value.
      */
     public String getEgressBandwidthBytes() {
@@ -67,7 +72,7 @@ public final class AppsTier {
 
     /**
      * Set the egressBandwidthBytes property: The amount of included outbound bandwidth in bytes.
-     *
+     * 
      * @param egressBandwidthBytes the egressBandwidthBytes value to set.
      * @return the AppsTier object itself.
      */
@@ -78,7 +83,7 @@ public final class AppsTier {
 
     /**
      * Get the name property: A human-readable name of the tier.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -87,7 +92,7 @@ public final class AppsTier {
 
     /**
      * Set the name property: A human-readable name of the tier.
-     *
+     * 
      * @param name the name value to set.
      * @return the AppsTier object itself.
      */
@@ -98,7 +103,7 @@ public final class AppsTier {
 
     /**
      * Get the slug property: The slug of the tier.
-     *
+     * 
      * @return the slug value.
      */
     public String getSlug() {
@@ -107,7 +112,7 @@ public final class AppsTier {
 
     /**
      * Set the slug property: The slug of the tier.
-     *
+     * 
      * @param slug the slug value to set.
      * @return the AppsTier object itself.
      */
@@ -118,7 +123,7 @@ public final class AppsTier {
 
     /**
      * Get the storageBytes property: The allotted disk space in bytes.
-     *
+     * 
      * @return the storageBytes value.
      */
     public String getStorageBytes() {
@@ -127,7 +132,7 @@ public final class AppsTier {
 
     /**
      * Set the storageBytes property: The allotted disk space in bytes.
-     *
+     * 
      * @param storageBytes the storageBytes value to set.
      * @return the AppsTier object itself.
      */

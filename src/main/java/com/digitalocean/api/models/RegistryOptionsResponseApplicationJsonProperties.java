@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The RegistryOptionsResponseApplicationJsonProperties model. */
+/**
+ * The RegistryOptionsResponseApplicationJsonProperties model.
+ */
 @Fluent
 public final class RegistryOptionsResponseApplicationJsonProperties {
     /*
@@ -17,13 +22,11 @@ public final class RegistryOptionsResponseApplicationJsonProperties {
      * The subscription_tiers property.
      */
     @JsonProperty(value = "subscription_tiers")
-    private List<
-                    Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems>
-            subscriptionTiers;
+    private List<Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems> subscriptionTiers;
 
     /**
      * Get the availableRegions property: The available_regions property.
-     *
+     * 
      * @return the availableRegions value.
      */
     public List<String> getAvailableRegions() {
@@ -32,7 +35,7 @@ public final class RegistryOptionsResponseApplicationJsonProperties {
 
     /**
      * Set the availableRegions property: The available_regions property.
-     *
+     * 
      * @param availableRegions the availableRegions value to set.
      * @return the RegistryOptionsResponseApplicationJsonProperties object itself.
      */
@@ -43,25 +46,20 @@ public final class RegistryOptionsResponseApplicationJsonProperties {
 
     /**
      * Get the subscriptionTiers property: The subscription_tiers property.
-     *
+     * 
      * @return the subscriptionTiers value.
      */
-    public List<
-                    Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems>
-            getSubscriptionTiers() {
+    public List<Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems> getSubscriptionTiers() {
         return this.subscriptionTiers;
     }
 
     /**
      * Set the subscriptionTiers property: The subscription_tiers property.
-     *
+     * 
      * @param subscriptionTiers the subscriptionTiers value to set.
      * @return the RegistryOptionsResponseApplicationJsonProperties object itself.
      */
-    public RegistryOptionsResponseApplicationJsonProperties setSubscriptionTiers(
-            List<
-                            Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems>
-                    subscriptionTiers) {
+    public RegistryOptionsResponseApplicationJsonProperties setSubscriptionTiers(List<Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems> subscriptionTiers) {
         this.subscriptionTiers = subscriptionTiers;
         return this;
     }

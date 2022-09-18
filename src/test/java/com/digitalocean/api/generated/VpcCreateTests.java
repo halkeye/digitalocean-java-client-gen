@@ -1,15 +1,17 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.VpcCreate;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class VpcCreateTests {
     @Test
     public void testDeserialize() {
-        VpcCreate model =
-                BinaryData.fromString("{\"region\":\"czepdpc\",\"ip_range\":\"g\"}").toObject(VpcCreate.class);
+        VpcCreate model = BinaryData.fromString("{\"region\":\"czepdpc\",\"ip_range\":\"g\"}").toObject(VpcCreate.class);
         Assertions.assertEquals("czepdpc", model.getRegion());
         Assertions.assertEquals("g", model.getIpRange());
     }

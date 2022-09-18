@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The invoice preview. */
+/**
+ * The invoice preview.
+ */
 @Fluent
 public final class InvoicePreview {
     /*
@@ -32,7 +37,7 @@ public final class InvoicePreview {
 
     /**
      * Get the invoiceUuid property: The UUID of the invoice. The canonical reference for the invoice.
-     *
+     * 
      * @return the invoiceUuid value.
      */
     public String getInvoiceUuid() {
@@ -41,7 +46,7 @@ public final class InvoicePreview {
 
     /**
      * Set the invoiceUuid property: The UUID of the invoice. The canonical reference for the invoice.
-     *
+     * 
      * @param invoiceUuid the invoiceUuid value to set.
      * @return the InvoicePreview object itself.
      */
@@ -51,9 +56,9 @@ public final class InvoicePreview {
     }
 
     /**
-     * Get the amount property: Total amount of the invoice, in USD. This will reflect month-to-date usage in the
+     * Get the amount property: Total amount of the invoice, in USD.  This will reflect month-to-date usage in the
      * invoice preview.
-     *
+     * 
      * @return the amount value.
      */
     public String getAmount() {
@@ -61,9 +66,9 @@ public final class InvoicePreview {
     }
 
     /**
-     * Set the amount property: Total amount of the invoice, in USD. This will reflect month-to-date usage in the
+     * Set the amount property: Total amount of the invoice, in USD.  This will reflect month-to-date usage in the
      * invoice preview.
-     *
+     * 
      * @param amount the amount value to set.
      * @return the InvoicePreview object itself.
      */
@@ -73,8 +78,8 @@ public final class InvoicePreview {
     }
 
     /**
-     * Get the invoicePeriod property: Billing period of usage for which the invoice is issued, in `YYYY-MM` format.
-     *
+     * Get the invoicePeriod property: Billing period of usage for which the invoice is issued, in `YYYY-MM`  format.
+     * 
      * @return the invoicePeriod value.
      */
     public String getInvoicePeriod() {
@@ -82,8 +87,8 @@ public final class InvoicePreview {
     }
 
     /**
-     * Set the invoicePeriod property: Billing period of usage for which the invoice is issued, in `YYYY-MM` format.
-     *
+     * Set the invoicePeriod property: Billing period of usage for which the invoice is issued, in `YYYY-MM`  format.
+     * 
      * @param invoicePeriod the invoicePeriod value to set.
      * @return the InvoicePreview object itself.
      */
@@ -93,8 +98,8 @@ public final class InvoicePreview {
     }
 
     /**
-     * Get the updatedAt property: Time the invoice was last updated. This is only included with the invoice preview.
-     *
+     * Get the updatedAt property: Time the invoice was last updated.  This is only included with the invoice preview.
+     * 
      * @return the updatedAt value.
      */
     public String getUpdatedAt() {
@@ -102,8 +107,8 @@ public final class InvoicePreview {
     }
 
     /**
-     * Set the updatedAt property: Time the invoice was last updated. This is only included with the invoice preview.
-     *
+     * Set the updatedAt property: Time the invoice was last updated.  This is only included with the invoice preview.
+     * 
      * @param updatedAt the updatedAt value to set.
      * @return the InvoicePreview object itself.
      */

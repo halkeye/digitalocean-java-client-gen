@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** An objects containing information about a resource associated with a Droplet. */
+/**
+ * An objects containing information about a resource associated with a Droplet.
+ */
 @Fluent
 public final class AssociatedResource {
     /*
@@ -26,7 +31,7 @@ public final class AssociatedResource {
 
     /**
      * Get the id property: The unique identifier for the resource associated with the Droplet.
-     *
+     * 
      * @return the id value.
      */
     public String getId() {
@@ -35,7 +40,7 @@ public final class AssociatedResource {
 
     /**
      * Set the id property: The unique identifier for the resource associated with the Droplet.
-     *
+     * 
      * @param id the id value to set.
      * @return the AssociatedResource object itself.
      */
@@ -46,7 +51,7 @@ public final class AssociatedResource {
 
     /**
      * Get the name property: The name of the resource associated with the Droplet.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -55,7 +60,7 @@ public final class AssociatedResource {
 
     /**
      * Set the name property: The name of the resource associated with the Droplet.
-     *
+     * 
      * @param name the name value to set.
      * @return the AssociatedResource object itself.
      */
@@ -65,9 +70,9 @@ public final class AssociatedResource {
     }
 
     /**
-     * Get the cost property: The cost of the resource in USD per month if the resource is retained after the Droplet is
-     * destroyed.
-     *
+     * Get the cost property: The cost of the resource in USD per month if the resource is retained after the Droplet
+     * is destroyed.
+     * 
      * @return the cost value.
      */
     public String getCost() {
@@ -75,9 +80,9 @@ public final class AssociatedResource {
     }
 
     /**
-     * Set the cost property: The cost of the resource in USD per month if the resource is retained after the Droplet is
-     * destroyed.
-     *
+     * Set the cost property: The cost of the resource in USD per month if the resource is retained after the Droplet
+     * is destroyed.
+     * 
      * @param cost the cost value to set.
      * @return the AssociatedResource object itself.
      */

@@ -1,7 +1,11 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * An object containing a `state` attribute whose value is set to a string indicating the current status of the node.
@@ -16,7 +20,7 @@ public final class NodeStatus {
 
     /**
      * Get the state property: A string indicating the current status of the node.
-     *
+     * 
      * @return the state value.
      */
     public NodeStatusState getState() {
@@ -25,7 +29,7 @@ public final class NodeStatus {
 
     /**
      * Set the state property: A string indicating the current status of the node.
-     *
+     * 
      * @param state the state value to set.
      * @return the NodeStatus object itself.
      */

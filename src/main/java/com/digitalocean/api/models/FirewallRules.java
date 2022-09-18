@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The FirewallRules model. */
+/**
+ * The FirewallRules model.
+ */
 @Fluent
 public class FirewallRules {
     /*
@@ -21,7 +26,7 @@ public class FirewallRules {
 
     /**
      * Get the inboundRules property: The inbound_rules property.
-     *
+     * 
      * @return the inboundRules value.
      */
     public List<FirewallRulesInboundRulesItem> getInboundRules() {
@@ -30,7 +35,7 @@ public class FirewallRules {
 
     /**
      * Set the inboundRules property: The inbound_rules property.
-     *
+     * 
      * @param inboundRules the inboundRules value to set.
      * @return the FirewallRules object itself.
      */
@@ -41,7 +46,7 @@ public class FirewallRules {
 
     /**
      * Get the outboundRules property: The outbound_rules property.
-     *
+     * 
      * @return the outboundRules value.
      */
     public List<FirewallRulesOutboundRulesItem> getOutboundRules() {
@@ -50,7 +55,7 @@ public class FirewallRules {
 
     /**
      * Set the outboundRules property: The outbound_rules property.
-     *
+     * 
      * @param outboundRules the outboundRules value to set.
      * @return the FirewallRules object itself.
      */

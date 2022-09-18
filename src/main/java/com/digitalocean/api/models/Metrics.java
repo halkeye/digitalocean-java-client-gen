@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The Metrics model. */
+/**
+ * The Metrics model.
+ */
 @Fluent
 public final class Metrics {
     /*
@@ -20,7 +26,7 @@ public final class Metrics {
 
     /**
      * Get the data property: The data property.
-     *
+     * 
      * @return the data value.
      */
     public MetricsData getData() {
@@ -29,7 +35,7 @@ public final class Metrics {
 
     /**
      * Set the data property: The data property.
-     *
+     * 
      * @param data the data value to set.
      * @return the Metrics object itself.
      */
@@ -40,7 +46,7 @@ public final class Metrics {
 
     /**
      * Get the status property: The status property.
-     *
+     * 
      * @return the status value.
      */
     public MetricsStatus getStatus() {
@@ -49,7 +55,7 @@ public final class Metrics {
 
     /**
      * Set the status property: The status property.
-     *
+     * 
      * @param status the status value to set.
      * @return the Metrics object itself.
      */

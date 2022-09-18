@@ -5,19 +5,22 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import java.util.Collection;
 
 /**
- * Enables timing of database I/O calls. This parameter is off by default, because it will repeatedly query the
- * operating system for the current time, which may cause significant overhead on some platforms.
+ * Enables timing of database I/O calls. This parameter is off by default, because it will repeatedly query the operating system for the current time, which may cause significant overhead on some platforms.
  */
 public final class PostgresTrackIoTiming extends ExpandableStringEnum<PostgresTrackIoTiming> {
-    /** Static value off for PostgresTrackIoTiming. */
+    /**
+     * Static value off for PostgresTrackIoTiming.
+     */
     public static final PostgresTrackIoTiming OFF = fromString("off");
 
-    /** Static value on for PostgresTrackIoTiming. */
+    /**
+     * Static value on for PostgresTrackIoTiming.
+     */
     public static final PostgresTrackIoTiming ON = fromString("on");
 
     /**
      * Creates or finds a PostgresTrackIoTiming from its string representation.
-     *
+     * 
      * @param name a name to look for.
      * @return the corresponding PostgresTrackIoTiming.
      */
@@ -28,7 +31,7 @@ public final class PostgresTrackIoTiming extends ExpandableStringEnum<PostgresTr
 
     /**
      * Gets known PostgresTrackIoTiming values.
-     *
+     * 
      * @return known PostgresTrackIoTiming values.
      */
     public static Collection<PostgresTrackIoTiming> values() {

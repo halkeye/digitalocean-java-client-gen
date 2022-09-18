@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ComponentsUxeeyiResponsesGetFirewallResponseContentApplicationJsonSchema model. */
+/**
+ * The ComponentsUxeeyiResponsesGetFirewallResponseContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsUxeeyiResponsesGetFirewallResponseContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class ComponentsUxeeyiResponsesGetFirewallResponseContentApplicatio
 
     /**
      * Get the firewall property: The firewall property.
-     *
+     * 
      * @return the firewall value.
      */
     public Firewall getFirewall() {
@@ -23,7 +28,7 @@ public final class ComponentsUxeeyiResponsesGetFirewallResponseContentApplicatio
 
     /**
      * Set the firewall property: The firewall property.
-     *
+     * 
      * @param firewall the firewall value to set.
      * @return the ComponentsUxeeyiResponsesGetFirewallResponseContentApplicationJsonSchema object itself.
      */

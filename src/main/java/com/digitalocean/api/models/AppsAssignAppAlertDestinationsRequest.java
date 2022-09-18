@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The AppsAssignAppAlertDestinationsRequest model. */
+/**
+ * The AppsAssignAppAlertDestinationsRequest model.
+ */
 @Fluent
 public final class AppsAssignAppAlertDestinationsRequest {
     /*
@@ -21,7 +26,7 @@ public final class AppsAssignAppAlertDestinationsRequest {
 
     /**
      * Get the emails property: The emails property.
-     *
+     * 
      * @return the emails value.
      */
     public List<String> getEmails() {
@@ -30,7 +35,7 @@ public final class AppsAssignAppAlertDestinationsRequest {
 
     /**
      * Set the emails property: The emails property.
-     *
+     * 
      * @param emails the emails value to set.
      * @return the AppsAssignAppAlertDestinationsRequest object itself.
      */
@@ -41,7 +46,7 @@ public final class AppsAssignAppAlertDestinationsRequest {
 
     /**
      * Get the slackWebhooks property: The slack_webhooks property.
-     *
+     * 
      * @return the slackWebhooks value.
      */
     public List<AppAlertSlackWebhook> getSlackWebhooks() {
@@ -50,7 +55,7 @@ public final class AppsAssignAppAlertDestinationsRequest {
 
     /**
      * Set the slackWebhooks property: The slack_webhooks property.
-     *
+     * 
      * @param slackWebhooks the slackWebhooks value to set.
      * @return the AppsAssignAppAlertDestinationsRequest object itself.
      */

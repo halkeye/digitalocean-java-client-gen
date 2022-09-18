@@ -4,17 +4,23 @@ import com.azure.core.util.ExpandableStringEnum;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import java.util.Collection;
 
-/** Defines values for MetricsStatus. */
+/**
+ * Defines values for MetricsStatus.
+ */
 public final class MetricsStatus extends ExpandableStringEnum<MetricsStatus> {
-    /** Static value success for MetricsStatus. */
+    /**
+     * Static value success for MetricsStatus.
+     */
     public static final MetricsStatus SUCCESS = fromString("success");
 
-    /** Static value error for MetricsStatus. */
+    /**
+     * Static value error for MetricsStatus.
+     */
     public static final MetricsStatus ERROR = fromString("error");
 
     /**
      * Creates or finds a MetricsStatus from its string representation.
-     *
+     * 
      * @param name a name to look for.
      * @return the corresponding MetricsStatus.
      */
@@ -25,7 +31,7 @@ public final class MetricsStatus extends ExpandableStringEnum<MetricsStatus> {
 
     /**
      * Gets known MetricsStatus values.
-     *
+     * 
      * @return known MetricsStatus values.
      */
     public static Collection<MetricsStatus> values() {

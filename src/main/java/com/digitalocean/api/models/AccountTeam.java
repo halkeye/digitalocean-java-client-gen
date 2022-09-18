@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** When authorized in a team context, includes information about the current team. */
+/**
+ * When authorized in a team context, includes information about the current team.
+ */
 @Fluent
 public final class AccountTeam {
     /*
@@ -20,7 +25,7 @@ public final class AccountTeam {
 
     /**
      * Get the uuid property: The unique universal identifier for the current team.
-     *
+     * 
      * @return the uuid value.
      */
     public String getUuid() {
@@ -29,7 +34,7 @@ public final class AccountTeam {
 
     /**
      * Set the uuid property: The unique universal identifier for the current team.
-     *
+     * 
      * @param uuid the uuid value to set.
      * @return the AccountTeam object itself.
      */
@@ -40,7 +45,7 @@ public final class AccountTeam {
 
     /**
      * Get the name property: The name for the current team.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -49,7 +54,7 @@ public final class AccountTeam {
 
     /**
      * Set the name property: The name for the current team.
-     *
+     * 
      * @param name the name value to set.
      * @return the AccountTeam object itself.
      */

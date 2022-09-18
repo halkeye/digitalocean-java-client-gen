@@ -1,14 +1,19 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppPropose model. */
+/**
+ * The AppPropose model.
+ */
 @Fluent
 public final class AppPropose {
     /*
      * AppSpec
-     *
+     * 
      * The desired configuration of an application.
      */
     @JsonProperty(value = "spec", required = true)
@@ -23,9 +28,9 @@ public final class AppPropose {
 
     /**
      * Get the spec property: AppSpec
-     *
-     * <p>The desired configuration of an application.
-     *
+     * 
+     * The desired configuration of an application.
+     * 
      * @return the spec value.
      */
     public AppSpec getSpec() {
@@ -34,9 +39,9 @@ public final class AppPropose {
 
     /**
      * Set the spec property: AppSpec
-     *
-     * <p>The desired configuration of an application.
-     *
+     * 
+     * The desired configuration of an application.
+     * 
      * @param spec the spec value to set.
      * @return the AppPropose object itself.
      */
@@ -48,7 +53,7 @@ public final class AppPropose {
     /**
      * Get the appId property: An optional ID of an existing app. If set, the spec will be treated as a proposed update
      * to the specified app. The existing app is not modified using this method.
-     *
+     * 
      * @return the appId value.
      */
     public String getAppId() {
@@ -58,7 +63,7 @@ public final class AppPropose {
     /**
      * Set the appId property: An optional ID of an existing app. If set, the spec will be treated as a proposed update
      * to the specified app. The existing app is not modified using this method.
-     *
+     * 
      * @param appId the appId value to set.
      * @return the AppPropose object itself.
      */

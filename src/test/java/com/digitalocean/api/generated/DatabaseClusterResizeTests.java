@@ -1,16 +1,17 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.DatabaseClusterResize;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class DatabaseClusterResizeTests {
     @Test
     public void testDeserialize() {
-        DatabaseClusterResize model =
-                BinaryData.fromString("{\"size\":\"xbg\",\"num_nodes\":2088842603}")
-                        .toObject(DatabaseClusterResize.class);
+        DatabaseClusterResize model = BinaryData.fromString("{\"size\":\"xbg\",\"num_nodes\":2088842603}").toObject(DatabaseClusterResize.class);
         Assertions.assertEquals("xbg", model.getSize());
         Assertions.assertEquals(2088842603, model.getNumNodes());
     }

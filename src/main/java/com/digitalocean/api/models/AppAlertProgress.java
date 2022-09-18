@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The AppAlertProgress model. */
+/**
+ * The AppAlertProgress model.
+ */
 @Fluent
 public final class AppAlertProgress {
     /*
@@ -15,7 +20,7 @@ public final class AppAlertProgress {
 
     /**
      * Get the steps property: Steps of an alert's progress.
-     *
+     * 
      * @return the steps value.
      */
     public List<AppAlertProgressStep> getSteps() {
@@ -24,7 +29,7 @@ public final class AppAlertProgress {
 
     /**
      * Set the steps property: Steps of an alert's progress.
-     *
+     * 
      * @param steps the steps value to set.
      * @return the AppAlertProgress object itself.
      */

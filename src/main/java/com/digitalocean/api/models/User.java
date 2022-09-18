@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The User model. */
+/**
+ * The User model.
+ */
 @Fluent
 public final class User {
     /*
@@ -14,7 +19,7 @@ public final class User {
 
     /**
      * Get the kubernetesClusterUser property: The kubernetes_cluster_user property.
-     *
+     * 
      * @return the kubernetesClusterUser value.
      */
     public UserKubernetesClusterUser getKubernetesClusterUser() {
@@ -23,7 +28,7 @@ public final class User {
 
     /**
      * Set the kubernetesClusterUser property: The kubernetes_cluster_user property.
-     *
+     * 
      * @param kubernetesClusterUser the kubernetesClusterUser value to set.
      * @return the User object itself.
      */

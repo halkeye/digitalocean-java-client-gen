@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The NeighborIds model. */
+/**
+ * The NeighborIds model.
+ */
 @Fluent
 public final class NeighborIds {
     /*
@@ -16,7 +21,7 @@ public final class NeighborIds {
     /**
      * Get the neighborIds property: An array of arrays. Each array will contain a set of Droplet IDs for Droplets that
      * share a physical server.
-     *
+     * 
      * @return the neighborIds value.
      */
     public List<List<Integer>> getNeighborIds() {
@@ -26,7 +31,7 @@ public final class NeighborIds {
     /**
      * Set the neighborIds property: An array of arrays. Each array will contain a set of Droplet IDs for Droplets that
      * share a physical server.
-     *
+     * 
      * @param neighborIds the neighborIds value to set.
      * @return the NeighborIds object itself.
      */

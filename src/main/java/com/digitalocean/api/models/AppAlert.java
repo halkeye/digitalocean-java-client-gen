@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The AppAlert model. */
+/**
+ * The AppAlert model.
+ */
 @Fluent
 public final class AppAlert {
     /*
@@ -51,7 +57,7 @@ public final class AppAlert {
 
     /**
      * Get the id property: The ID of the alert.
-     *
+     * 
      * @return the id value.
      */
     public String getId() {
@@ -60,7 +66,7 @@ public final class AppAlert {
 
     /**
      * Get the componentName property: Name of component the alert belongs to.
-     *
+     * 
      * @return the componentName value.
      */
     public String getComponentName() {
@@ -69,7 +75,7 @@ public final class AppAlert {
 
     /**
      * Set the componentName property: Name of component the alert belongs to.
-     *
+     * 
      * @param componentName the componentName value to set.
      * @return the AppAlert object itself.
      */
@@ -80,7 +86,7 @@ public final class AppAlert {
 
     /**
      * Get the spec property: The spec property.
-     *
+     * 
      * @return the spec value.
      */
     public AppAlertSpec getSpec() {
@@ -89,7 +95,7 @@ public final class AppAlert {
 
     /**
      * Set the spec property: The spec property.
-     *
+     * 
      * @param spec the spec value to set.
      * @return the AppAlert object itself.
      */
@@ -100,7 +106,7 @@ public final class AppAlert {
 
     /**
      * Get the emails property: Emails for alerts to go to.
-     *
+     * 
      * @return the emails value.
      */
     public List<String> getEmails() {
@@ -109,7 +115,7 @@ public final class AppAlert {
 
     /**
      * Set the emails property: Emails for alerts to go to.
-     *
+     * 
      * @param emails the emails value to set.
      * @return the AppAlert object itself.
      */
@@ -120,7 +126,7 @@ public final class AppAlert {
 
     /**
      * Get the slackWebhooks property: Slack Webhooks to send alerts to.
-     *
+     * 
      * @return the slackWebhooks value.
      */
     public List<AppAlertSlackWebhook> getSlackWebhooks() {
@@ -129,7 +135,7 @@ public final class AppAlert {
 
     /**
      * Set the slackWebhooks property: Slack Webhooks to send alerts to.
-     *
+     * 
      * @param slackWebhooks the slackWebhooks value to set.
      * @return the AppAlert object itself.
      */
@@ -140,7 +146,7 @@ public final class AppAlert {
 
     /**
      * Get the phase property: The phase property.
-     *
+     * 
      * @return the phase value.
      */
     public AppAlertPhase getPhase() {
@@ -149,7 +155,7 @@ public final class AppAlert {
 
     /**
      * Set the phase property: The phase property.
-     *
+     * 
      * @param phase the phase value to set.
      * @return the AppAlert object itself.
      */
@@ -160,7 +166,7 @@ public final class AppAlert {
 
     /**
      * Get the progress property: The progress property.
-     *
+     * 
      * @return the progress value.
      */
     public AppAlertProgress getProgress() {
@@ -169,7 +175,7 @@ public final class AppAlert {
 
     /**
      * Set the progress property: The progress property.
-     *
+     * 
      * @param progress the progress value to set.
      * @return the AppAlert object itself.
      */

@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The AppServiceSpec model. */
+/**
+ * The AppServiceSpec model.
+ */
 @Fluent
 public final class AppServiceSpec extends AppComponentBase {
     /*
@@ -53,7 +59,7 @@ public final class AppServiceSpec extends AppComponentBase {
 
     /**
      * Get the cors property: The cors property.
-     *
+     * 
      * @return the cors value.
      */
     public AppsCorsPolicy getCors() {
@@ -62,7 +68,7 @@ public final class AppServiceSpec extends AppComponentBase {
 
     /**
      * Set the cors property: The cors property.
-     *
+     * 
      * @param cors the cors value to set.
      * @return the AppServiceSpec object itself.
      */
@@ -73,7 +79,7 @@ public final class AppServiceSpec extends AppComponentBase {
 
     /**
      * Get the healthCheck property: The health_check property.
-     *
+     * 
      * @return the healthCheck value.
      */
     public AppServiceSpecHealthCheck getHealthCheck() {
@@ -82,7 +88,7 @@ public final class AppServiceSpec extends AppComponentBase {
 
     /**
      * Set the healthCheck property: The health_check property.
-     *
+     * 
      * @param healthCheck the healthCheck value to set.
      * @return the AppServiceSpec object itself.
      */
@@ -92,10 +98,10 @@ public final class AppServiceSpec extends AppComponentBase {
     }
 
     /**
-     * Get the httpPort property: The internal port on which this service's run command will listen. Default: 8080 If
-     * there is not an environment variable with the name `PORT`, one will be automatically added with its value set to
-     * the value of this field.
-     *
+     * Get the httpPort property: The internal port on which this service's run command will listen. Default: 8080
+     * If there is not an environment variable with the name `PORT`, one will be automatically added with its value set
+     * to the value of this field.
+     * 
      * @return the httpPort value.
      */
     public Long getHttpPort() {
@@ -103,10 +109,10 @@ public final class AppServiceSpec extends AppComponentBase {
     }
 
     /**
-     * Set the httpPort property: The internal port on which this service's run command will listen. Default: 8080 If
-     * there is not an environment variable with the name `PORT`, one will be automatically added with its value set to
-     * the value of this field.
-     *
+     * Set the httpPort property: The internal port on which this service's run command will listen. Default: 8080
+     * If there is not an environment variable with the name `PORT`, one will be automatically added with its value set
+     * to the value of this field.
+     * 
      * @param httpPort the httpPort value to set.
      * @return the AppServiceSpec object itself.
      */
@@ -117,7 +123,7 @@ public final class AppServiceSpec extends AppComponentBase {
 
     /**
      * Get the internalPorts property: The ports on which this service will listen for internal traffic.
-     *
+     * 
      * @return the internalPorts value.
      */
     public List<Long> getInternalPorts() {
@@ -126,7 +132,7 @@ public final class AppServiceSpec extends AppComponentBase {
 
     /**
      * Set the internalPorts property: The ports on which this service will listen for internal traffic.
-     *
+     * 
      * @param internalPorts the internalPorts value to set.
      * @return the AppServiceSpec object itself.
      */
@@ -137,7 +143,7 @@ public final class AppServiceSpec extends AppComponentBase {
 
     /**
      * Get the routes property: A list of HTTP routes that should be routed to this component.
-     *
+     * 
      * @return the routes value.
      */
     public List<AppRouteSpec> getRoutes() {
@@ -146,7 +152,7 @@ public final class AppServiceSpec extends AppComponentBase {
 
     /**
      * Set the routes property: A list of HTTP routes that should be routed to this component.
-     *
+     * 
      * @param routes the routes value to set.
      * @return the AppServiceSpec object itself.
      */
@@ -157,7 +163,7 @@ public final class AppServiceSpec extends AppComponentBase {
 
     /**
      * Get the instanceCount property: The amount of instances that this component should be scaled to. Default: 1.
-     *
+     * 
      * @return the instanceCount value.
      */
     public Long getInstanceCount() {
@@ -166,7 +172,7 @@ public final class AppServiceSpec extends AppComponentBase {
 
     /**
      * Set the instanceCount property: The amount of instances that this component should be scaled to. Default: 1.
-     *
+     * 
      * @param instanceCount the instanceCount value to set.
      * @return the AppServiceSpec object itself.
      */
@@ -177,7 +183,7 @@ public final class AppServiceSpec extends AppComponentBase {
 
     /**
      * Get the instanceSizeSlug property: The instance size to use for this component. Default: `basic-xxs`.
-     *
+     * 
      * @return the instanceSizeSlug value.
      */
     public AppComponentInstanceBaseInstanceSizeSlug getInstanceSizeSlug() {
@@ -186,7 +192,7 @@ public final class AppServiceSpec extends AppComponentBase {
 
     /**
      * Set the instanceSizeSlug property: The instance size to use for this component. Default: `basic-xxs`.
-     *
+     * 
      * @param instanceSizeSlug the instanceSizeSlug value to set.
      * @return the AppServiceSpec object itself.
      */
@@ -195,84 +201,108 @@ public final class AppServiceSpec extends AppComponentBase {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppServiceSpec setName(String name) {
         super.setName(name);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppServiceSpec setGit(AppsGitSourceSpec git) {
         super.setGit(git);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppServiceSpec setGithub(AppsGithubSourceSpec github) {
         super.setGithub(github);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppServiceSpec setGitlab(AppsGitlabSourceSpec gitlab) {
         super.setGitlab(gitlab);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppServiceSpec setImage(AppsImageSourceSpec image) {
         super.setImage(image);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppServiceSpec setDockerfilePath(String dockerfilePath) {
         super.setDockerfilePath(dockerfilePath);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppServiceSpec setBuildCommand(String buildCommand) {
         super.setBuildCommand(buildCommand);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppServiceSpec setRunCommand(String runCommand) {
         super.setRunCommand(runCommand);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppServiceSpec setSourceDir(String sourceDir) {
         super.setSourceDir(sourceDir);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppServiceSpec setEnvs(List<AppVariableDefinition> envs) {
         super.setEnvs(envs);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppServiceSpec setEnvironmentSlug(String environmentSlug) {
         super.setEnvironmentSlug(environmentSlug);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppServiceSpec setLogDestinations(AppLogDestinationDefinition logDestinations) {
         super.setLogDestinations(logDestinations);

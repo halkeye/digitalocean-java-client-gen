@@ -1,12 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Pattern;
 
-/** The Cluster model. */
+/**
+ * The Cluster model.
+ */
 @Fluent
 public final class Cluster {
     /*
@@ -135,7 +140,7 @@ public final class Cluster {
 
     /**
      * Get the id property: A unique ID that can be used to identify and reference a Kubernetes cluster.
-     *
+     * 
      * @return the id value.
      */
     public UUID getId() {
@@ -144,7 +149,7 @@ public final class Cluster {
 
     /**
      * Get the name property: A human-readable name for a Kubernetes cluster.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -153,7 +158,7 @@ public final class Cluster {
 
     /**
      * Set the name property: A human-readable name for a Kubernetes cluster.
-     *
+     * 
      * @param name the name value to set.
      * @return the Cluster object itself.
      */
@@ -164,7 +169,7 @@ public final class Cluster {
 
     /**
      * Get the region property: The slug identifier for the region where the Kubernetes cluster is located.
-     *
+     * 
      * @return the region value.
      */
     public String getRegion() {
@@ -173,7 +178,7 @@ public final class Cluster {
 
     /**
      * Set the region property: The slug identifier for the region where the Kubernetes cluster is located.
-     *
+     * 
      * @param region the region value to set.
      * @return the Cluster object itself.
      */
@@ -187,7 +192,7 @@ public final class Cluster {
      * minor version (e.g. "1.14"), the latest version within it will be used (e.g. "1.14.6-do.1"); if set to "latest",
      * the latest published version will be used. See the `/v2/kubernetes/options` endpoint to find all currently
      * available versions.
-     *
+     * 
      * @return the version value.
      */
     public String getVersion() {
@@ -199,7 +204,7 @@ public final class Cluster {
      * minor version (e.g. "1.14"), the latest version within it will be used (e.g. "1.14.6-do.1"); if set to "latest",
      * the latest published version will be used. See the `/v2/kubernetes/options` endpoint to find all currently
      * available versions.
-     *
+     * 
      * @param version the version value to set.
      * @return the Cluster object itself.
      */
@@ -211,7 +216,7 @@ public final class Cluster {
     /**
      * Get the clusterSubnet property: The range of IP addresses in the overlay network of the Kubernetes cluster in
      * CIDR notation.
-     *
+     * 
      * @return the clusterSubnet value.
      */
     public String getClusterSubnet() {
@@ -221,7 +226,7 @@ public final class Cluster {
     /**
      * Get the serviceSubnet property: The range of assignable IP addresses for services running in the Kubernetes
      * cluster in CIDR notation.
-     *
+     * 
      * @return the serviceSubnet value.
      */
     public String getServiceSubnet() {
@@ -230,7 +235,7 @@ public final class Cluster {
 
     /**
      * Get the vpcUuid property: A string specifying the UUID of the VPC to which the Kubernetes cluster is assigned.
-     *
+     * 
      * @return the vpcUuid value.
      */
     public UUID getVpcUuid() {
@@ -239,7 +244,7 @@ public final class Cluster {
 
     /**
      * Set the vpcUuid property: A string specifying the UUID of the VPC to which the Kubernetes cluster is assigned.
-     *
+     * 
      * @param vpcUuid the vpcUuid value to set.
      * @return the Cluster object itself.
      */
@@ -251,7 +256,7 @@ public final class Cluster {
     /**
      * Get the ipv4 property: The public IPv4 address of the Kubernetes master node. This will not be set if high
      * availability is configured on the cluster (v1.21+).
-     *
+     * 
      * @return the ipv4 value.
      */
     public String getIpv4() {
@@ -260,7 +265,7 @@ public final class Cluster {
 
     /**
      * Get the endpoint property: The base URL of the API server on the Kubernetes master node.
-     *
+     * 
      * @return the endpoint value.
      */
     public String getEndpoint() {
@@ -270,7 +275,7 @@ public final class Cluster {
     /**
      * Get the tags property: An array of tags applied to the Kubernetes cluster. All clusters are automatically tagged
      * `k8s` and `k8s:$K8S_CLUSTER_ID`.
-     *
+     * 
      * @return the tags value.
      */
     public List<String> getTags() {
@@ -280,7 +285,7 @@ public final class Cluster {
     /**
      * Set the tags property: An array of tags applied to the Kubernetes cluster. All clusters are automatically tagged
      * `k8s` and `k8s:$K8S_CLUSTER_ID`.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the Cluster object itself.
      */
@@ -292,7 +297,7 @@ public final class Cluster {
     /**
      * Get the nodePools property: An object specifying the details of the worker nodes available to the Kubernetes
      * cluster.
-     *
+     * 
      * @return the nodePools value.
      */
     public List<KubernetesNodePool> getNodePools() {
@@ -302,7 +307,7 @@ public final class Cluster {
     /**
      * Set the nodePools property: An object specifying the details of the worker nodes available to the Kubernetes
      * cluster.
-     *
+     * 
      * @param nodePools the nodePools value to set.
      * @return the Cluster object itself.
      */
@@ -314,7 +319,7 @@ public final class Cluster {
     /**
      * Get the maintenancePolicy property: An object specifying the maintenance window policy for the Kubernetes
      * cluster.
-     *
+     * 
      * @return the maintenancePolicy value.
      */
     public MaintenancePolicy getMaintenancePolicy() {
@@ -324,7 +329,7 @@ public final class Cluster {
     /**
      * Set the maintenancePolicy property: An object specifying the maintenance window policy for the Kubernetes
      * cluster.
-     *
+     * 
      * @param maintenancePolicy the maintenancePolicy value to set.
      * @return the Cluster object itself.
      */
@@ -336,7 +341,7 @@ public final class Cluster {
     /**
      * Get the autoUpgrade property: A boolean value indicating whether the cluster will be automatically upgraded to
      * new patch releases during its maintenance window.
-     *
+     * 
      * @return the autoUpgrade value.
      */
     public Boolean isAutoUpgrade() {
@@ -346,7 +351,7 @@ public final class Cluster {
     /**
      * Set the autoUpgrade property: A boolean value indicating whether the cluster will be automatically upgraded to
      * new patch releases during its maintenance window.
-     *
+     * 
      * @param autoUpgrade the autoUpgrade value to set.
      * @return the Cluster object itself.
      */
@@ -358,7 +363,7 @@ public final class Cluster {
     /**
      * Get the status property: An object containing a `state` attribute whose value is set to a string indicating the
      * current status of the cluster.
-     *
+     * 
      * @return the status value.
      */
     public ClusterStatus getStatus() {
@@ -368,7 +373,7 @@ public final class Cluster {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * Kubernetes cluster was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -378,7 +383,7 @@ public final class Cluster {
     /**
      * Get the updatedAt property: A time value given in ISO8601 combined date and time format that represents when the
      * Kubernetes cluster was last updated.
-     *
+     * 
      * @return the updatedAt value.
      */
     public OffsetDateTime getUpdatedAt() {
@@ -389,7 +394,7 @@ public final class Cluster {
      * Get the surgeUpgrade property: A boolean value indicating whether surge upgrade is enabled/disabled for the
      * cluster. Surge upgrade makes cluster upgrades fast and reliable by bringing up new nodes before destroying the
      * outdated nodes.
-     *
+     * 
      * @return the surgeUpgrade value.
      */
     public Boolean isSurgeUpgrade() {
@@ -400,7 +405,7 @@ public final class Cluster {
      * Set the surgeUpgrade property: A boolean value indicating whether surge upgrade is enabled/disabled for the
      * cluster. Surge upgrade makes cluster upgrades fast and reliable by bringing up new nodes before destroying the
      * outdated nodes.
-     *
+     * 
      * @param surgeUpgrade the surgeUpgrade value to set.
      * @return the Cluster object itself.
      */
@@ -412,7 +417,7 @@ public final class Cluster {
     /**
      * Get the ha property: A boolean value indicating whether the control plane is run in a highly available
      * configuration in the cluster. Highly available control planes incur less downtime.
-     *
+     * 
      * @return the ha value.
      */
     public Boolean isHa() {
@@ -422,7 +427,7 @@ public final class Cluster {
     /**
      * Set the ha property: A boolean value indicating whether the control plane is run in a highly available
      * configuration in the cluster. Highly available control planes incur less downtime.
-     *
+     * 
      * @param ha the ha value to set.
      * @return the Cluster object itself.
      */
@@ -432,9 +437,9 @@ public final class Cluster {
     }
 
     /**
-     * Get the registryEnabled property: A read-only boolean value indicating if a container registry is integrated with
-     * the cluster.
-     *
+     * Get the registryEnabled property: A read-only boolean value indicating if a container registry is integrated
+     * with the cluster.
+     * 
      * @return the registryEnabled value.
      */
     public Boolean isRegistryEnabled() {

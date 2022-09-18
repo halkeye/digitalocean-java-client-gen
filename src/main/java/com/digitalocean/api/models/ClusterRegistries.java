@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ClusterRegistries model. */
+/**
+ * The ClusterRegistries model.
+ */
 @Fluent
 public final class ClusterRegistries {
     /*
@@ -15,7 +20,7 @@ public final class ClusterRegistries {
 
     /**
      * Get the clusterUuids property: An array containing the UUIDs of Kubernetes clusters.
-     *
+     * 
      * @return the clusterUuids value.
      */
     public List<String> getClusterUuids() {
@@ -24,7 +29,7 @@ public final class ClusterRegistries {
 
     /**
      * Set the clusterUuids property: An array containing the UUIDs of Kubernetes clusters.
-     *
+     * 
      * @param clusterUuids the clusterUuids value to set.
      * @return the ClusterRegistries object itself.
      */

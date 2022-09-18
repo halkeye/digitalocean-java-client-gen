@@ -1,15 +1,21 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The AppRollbackValidationCondition model. */
+/**
+ * The AppRollbackValidationCondition model.
+ */
 @Fluent
 public class AppRollbackValidationCondition {
     /*
      * A code identifier that represents the failing condition.
-     *
+     * 
      * Failing conditions:
      * - `incompatible_phase` - indicates that the deployment's phase is not suitable for rollback.
      * - `incompatible_result` - indicates that the deployment's result is not suitable for rollback.
@@ -18,13 +24,13 @@ public class AppRollbackValidationCondition {
      * - `database_config_conflict` - indicates that the deployment's database config is different than the current
      * config.
      * - `region_conflict` - indicates that the deployment's region differs from the current app region.
-     *
+     * 
      * Warning conditions:
      * - `static_site_requires_rebuild` - indicates that the deployment contains at least one static site that will
      * require a rebuild.
      * - `image_source_missing_digest` - indicates that the deployment contains at least one component with an image
      * source that is missing a digest.
-     *
+     * 
      */
     @JsonProperty(value = "code")
     private AppRollbackValidationConditionCode code;
@@ -43,18 +49,22 @@ public class AppRollbackValidationCondition {
 
     /**
      * Get the code property: A code identifier that represents the failing condition.
-     *
-     * <p>Failing conditions: - `incompatible_phase` - indicates that the deployment's phase is not suitable for
-     * rollback. - `incompatible_result` - indicates that the deployment's result is not suitable for rollback. -
-     * `exceeded_revision_limit` - indicates that the app has exceeded the rollback revision limits for its tier. -
-     * `app_pinned` - indicates that there is already a rollback in progress and the app is pinned. -
-     * `database_config_conflict` - indicates that the deployment's database config is different than the current
-     * config. - `region_conflict` - indicates that the deployment's region differs from the current app region.
-     *
-     * <p>Warning conditions: - `static_site_requires_rebuild` - indicates that the deployment contains at least one
-     * static site that will require a rebuild. - `image_source_missing_digest` - indicates that the deployment contains
-     * at least one component with an image source that is missing a digest.
-     *
+     * 
+     * Failing conditions:
+     * - `incompatible_phase` - indicates that the deployment's phase is not suitable for rollback.
+     * - `incompatible_result` - indicates that the deployment's result is not suitable for rollback.
+     * - `exceeded_revision_limit` - indicates that the app has exceeded the rollback revision limits for its tier.
+     * - `app_pinned` - indicates that there is already a rollback in progress and the app is pinned.
+     * - `database_config_conflict` - indicates that the deployment's database config is different than the current
+     * config.
+     * - `region_conflict` - indicates that the deployment's region differs from the current app region.
+     * 
+     * Warning conditions:
+     * - `static_site_requires_rebuild` - indicates that the deployment contains at least one static site that will
+     * require a rebuild.
+     * - `image_source_missing_digest` - indicates that the deployment contains at least one component with an image
+     * source that is missing a digest.
+     * 
      * @return the code value.
      */
     public AppRollbackValidationConditionCode getCode() {
@@ -63,18 +73,22 @@ public class AppRollbackValidationCondition {
 
     /**
      * Set the code property: A code identifier that represents the failing condition.
-     *
-     * <p>Failing conditions: - `incompatible_phase` - indicates that the deployment's phase is not suitable for
-     * rollback. - `incompatible_result` - indicates that the deployment's result is not suitable for rollback. -
-     * `exceeded_revision_limit` - indicates that the app has exceeded the rollback revision limits for its tier. -
-     * `app_pinned` - indicates that there is already a rollback in progress and the app is pinned. -
-     * `database_config_conflict` - indicates that the deployment's database config is different than the current
-     * config. - `region_conflict` - indicates that the deployment's region differs from the current app region.
-     *
-     * <p>Warning conditions: - `static_site_requires_rebuild` - indicates that the deployment contains at least one
-     * static site that will require a rebuild. - `image_source_missing_digest` - indicates that the deployment contains
-     * at least one component with an image source that is missing a digest.
-     *
+     * 
+     * Failing conditions:
+     * - `incompatible_phase` - indicates that the deployment's phase is not suitable for rollback.
+     * - `incompatible_result` - indicates that the deployment's result is not suitable for rollback.
+     * - `exceeded_revision_limit` - indicates that the app has exceeded the rollback revision limits for its tier.
+     * - `app_pinned` - indicates that there is already a rollback in progress and the app is pinned.
+     * - `database_config_conflict` - indicates that the deployment's database config is different than the current
+     * config.
+     * - `region_conflict` - indicates that the deployment's region differs from the current app region.
+     * 
+     * Warning conditions:
+     * - `static_site_requires_rebuild` - indicates that the deployment contains at least one static site that will
+     * require a rebuild.
+     * - `image_source_missing_digest` - indicates that the deployment contains at least one component with an image
+     * source that is missing a digest.
+     * 
      * @param code the code value to set.
      * @return the AppRollbackValidationCondition object itself.
      */
@@ -85,7 +99,7 @@ public class AppRollbackValidationCondition {
 
     /**
      * Get the message property: A human-readable message describing the failing condition.
-     *
+     * 
      * @return the message value.
      */
     public String getMessage() {
@@ -94,7 +108,7 @@ public class AppRollbackValidationCondition {
 
     /**
      * Set the message property: A human-readable message describing the failing condition.
-     *
+     * 
      * @param message the message value to set.
      * @return the AppRollbackValidationCondition object itself.
      */
@@ -105,7 +119,7 @@ public class AppRollbackValidationCondition {
 
     /**
      * Get the components property: The components property.
-     *
+     * 
      * @return the components value.
      */
     public List<String> getComponents() {
@@ -114,7 +128,7 @@ public class AppRollbackValidationCondition {
 
     /**
      * Set the components property: The components property.
-     *
+     * 
      * @param components the components value to set.
      * @return the AppRollbackValidationCondition object itself.
      */

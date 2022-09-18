@@ -1,11 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The SnapshotsBase model. */
+/**
+ * The SnapshotsBase model.
+ */
 @Fluent
 public class SnapshotsBase {
     /*
@@ -41,7 +46,7 @@ public class SnapshotsBase {
 
     /**
      * Get the name property: A human-readable name for the snapshot.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -50,7 +55,7 @@ public class SnapshotsBase {
 
     /**
      * Set the name property: A human-readable name for the snapshot.
-     *
+     * 
      * @param name the name value to set.
      * @return the SnapshotsBase object itself.
      */
@@ -62,7 +67,7 @@ public class SnapshotsBase {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * snapshot was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -72,7 +77,7 @@ public class SnapshotsBase {
     /**
      * Set the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * snapshot was created.
-     *
+     * 
      * @param createdAt the createdAt value to set.
      * @return the SnapshotsBase object itself.
      */
@@ -84,7 +89,7 @@ public class SnapshotsBase {
     /**
      * Get the regions property: An array of the regions that the snapshot is available in. The regions are represented
      * by their identifying slug values.
-     *
+     * 
      * @return the regions value.
      */
     public List<String> getRegions() {
@@ -94,7 +99,7 @@ public class SnapshotsBase {
     /**
      * Set the regions property: An array of the regions that the snapshot is available in. The regions are represented
      * by their identifying slug values.
-     *
+     * 
      * @param regions the regions value to set.
      * @return the SnapshotsBase object itself.
      */
@@ -105,7 +110,7 @@ public class SnapshotsBase {
 
     /**
      * Get the minDiskSize property: The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
+     * 
      * @return the minDiskSize value.
      */
     public int getMinDiskSize() {
@@ -114,7 +119,7 @@ public class SnapshotsBase {
 
     /**
      * Set the minDiskSize property: The minimum size in GB required for a volume or Droplet to use this snapshot.
-     *
+     * 
      * @param minDiskSize the minDiskSize value to set.
      * @return the SnapshotsBase object itself.
      */
@@ -125,7 +130,7 @@ public class SnapshotsBase {
 
     /**
      * Get the sizeGigabytes property: The billable size of the snapshot in gigabytes.
-     *
+     * 
      * @return the sizeGigabytes value.
      */
     public float getSizeGigabytes() {
@@ -134,7 +139,7 @@ public class SnapshotsBase {
 
     /**
      * Set the sizeGigabytes property: The billable size of the snapshot in gigabytes.
-     *
+     * 
      * @param sizeGigabytes the sizeGigabytes value to set.
      * @return the SnapshotsBase object itself.
      */

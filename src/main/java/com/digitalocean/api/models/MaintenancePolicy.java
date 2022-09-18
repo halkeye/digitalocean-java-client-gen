@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** An object specifying the maintenance window policy for the Kubernetes cluster. */
+/**
+ * An object specifying the maintenance window policy for the Kubernetes cluster.
+ */
 @Fluent
 public final class MaintenancePolicy {
     /*
@@ -28,7 +34,7 @@ public final class MaintenancePolicy {
     /**
      * Get the startTime property: The start time in UTC of the maintenance window policy in 24-hour clock format /
      * HH:MM notation (e.g., `15:00`).
-     *
+     * 
      * @return the startTime value.
      */
     public String getStartTime() {
@@ -38,7 +44,7 @@ public final class MaintenancePolicy {
     /**
      * Set the startTime property: The start time in UTC of the maintenance window policy in 24-hour clock format /
      * HH:MM notation (e.g., `15:00`).
-     *
+     * 
      * @param startTime the startTime value to set.
      * @return the MaintenancePolicy object itself.
      */
@@ -49,7 +55,7 @@ public final class MaintenancePolicy {
 
     /**
      * Get the duration property: The duration of the maintenance window policy in human-readable format.
-     *
+     * 
      * @return the duration value.
      */
     public String getDuration() {
@@ -57,9 +63,9 @@ public final class MaintenancePolicy {
     }
 
     /**
-     * Get the day property: The day of the maintenance window policy. May be one of `monday` through `sunday`, or `any`
-     * to indicate an arbitrary week day.
-     *
+     * Get the day property: The day of the maintenance window policy. May be one of `monday` through `sunday`, or
+     * `any` to indicate an arbitrary week day.
+     * 
      * @return the day value.
      */
     public MaintenancePolicyDay getDay() {
@@ -67,9 +73,9 @@ public final class MaintenancePolicy {
     }
 
     /**
-     * Set the day property: The day of the maintenance window policy. May be one of `monday` through `sunday`, or `any`
-     * to indicate an arbitrary week day.
-     *
+     * Set the day property: The day of the maintenance window policy. May be one of `monday` through `sunday`, or
+     * `any` to indicate an arbitrary week day.
+     * 
      * @param day the day value to set.
      * @return the MaintenancePolicy object itself.
      */

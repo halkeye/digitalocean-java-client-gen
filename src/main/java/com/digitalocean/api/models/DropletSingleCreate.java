@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** Single Droplet Request. */
+/**
+ * Single Droplet Request.
+ */
 @Fluent
 public final class DropletSingleCreate extends DropletCreate {
     /*
@@ -20,7 +25,7 @@ public final class DropletSingleCreate extends DropletCreate {
      * set to a domain name managed in the DigitalOcean DNS management system, will configure a PTR record for the
      * Droplet. The name set during creation will also determine the hostname for the Droplet in its internal
      * configuration.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -32,7 +37,7 @@ public final class DropletSingleCreate extends DropletCreate {
      * set to a domain name managed in the DigitalOcean DNS management system, will configure a PTR record for the
      * Droplet. The name set during creation will also determine the hostname for the Droplet in its internal
      * configuration.
-     *
+     * 
      * @param name the name value to set.
      * @return the DropletSingleCreate object itself.
      */
@@ -41,84 +46,108 @@ public final class DropletSingleCreate extends DropletCreate {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletSingleCreate setRegion(String region) {
         super.setRegion(region);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletSingleCreate setSize(String size) {
         super.setSize(size);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletSingleCreate setImage(Object image) {
         super.setImage(image);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletSingleCreate setSshKeys(List<Object> sshKeys) {
         super.setSshKeys(sshKeys);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletSingleCreate setBackups(Boolean backups) {
         super.setBackups(backups);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletSingleCreate setIpv6(Boolean ipv6) {
         super.setIpv6(ipv6);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletSingleCreate setMonitoring(Boolean monitoring) {
         super.setMonitoring(monitoring);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletSingleCreate setTags(List<String> tags) {
         super.setTags(tags);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletSingleCreate setUserData(String userData) {
         super.setUserData(userData);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletSingleCreate setPrivateNetworking(Boolean privateNetworking) {
         super.setPrivateNetworking(privateNetworking);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletSingleCreate setVpcUuid(String vpcUuid) {
         super.setVpcUuid(vpcUuid);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletSingleCreate setWithDropletAgent(Boolean withDropletAgent) {
         super.setWithDropletAgent(withDropletAgent);

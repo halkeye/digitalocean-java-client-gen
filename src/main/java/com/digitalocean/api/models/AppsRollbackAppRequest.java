@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsRollbackAppRequest model. */
+/**
+ * The AppsRollbackAppRequest model.
+ */
 @Fluent
 public final class AppsRollbackAppRequest {
     /*
@@ -23,7 +28,7 @@ public final class AppsRollbackAppRequest {
 
     /**
      * Get the deploymentId property: The ID of the deployment to rollback to.
-     *
+     * 
      * @return the deploymentId value.
      */
     public String getDeploymentId() {
@@ -32,7 +37,7 @@ public final class AppsRollbackAppRequest {
 
     /**
      * Set the deploymentId property: The ID of the deployment to rollback to.
-     *
+     * 
      * @param deploymentId the deploymentId value to set.
      * @return the AppsRollbackAppRequest object itself.
      */
@@ -42,11 +47,11 @@ public final class AppsRollbackAppRequest {
     }
 
     /**
-     * Get the skipPin property: Whether to skip pinning the rollback deployment. If false, the rollback deployment will
-     * be pinned and any new deployments including Auto Deploy on Push hooks will be disabled until the rollback is
-     * either manually committed or reverted via the CommitAppRollback or RevertAppRollback endpoints respectively. If
-     * true, the rollback will be immediately committed and the app will remain unpinned.
-     *
+     * Get the skipPin property: Whether to skip pinning the rollback deployment. If false, the rollback deployment
+     * will be pinned and any new deployments including Auto Deploy on Push hooks will be disabled until the rollback
+     * is either manually committed or reverted via the CommitAppRollback or RevertAppRollback endpoints respectively.
+     * If true, the rollback will be immediately committed and the app will remain unpinned.
+     * 
      * @return the skipPin value.
      */
     public Boolean isSkipPin() {
@@ -54,11 +59,11 @@ public final class AppsRollbackAppRequest {
     }
 
     /**
-     * Set the skipPin property: Whether to skip pinning the rollback deployment. If false, the rollback deployment will
-     * be pinned and any new deployments including Auto Deploy on Push hooks will be disabled until the rollback is
-     * either manually committed or reverted via the CommitAppRollback or RevertAppRollback endpoints respectively. If
-     * true, the rollback will be immediately committed and the app will remain unpinned.
-     *
+     * Set the skipPin property: Whether to skip pinning the rollback deployment. If false, the rollback deployment
+     * will be pinned and any new deployments including Auto Deploy on Push hooks will be disabled until the rollback
+     * is either manually committed or reverted via the CommitAppRollback or RevertAppRollback endpoints respectively.
+     * If true, the rollback will be immediately committed and the app will remain unpinned.
+     * 
      * @param skipPin the skipPin value to set.
      * @return the AppsRollbackAppRequest object itself.
      */

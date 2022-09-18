@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The KubernetesOptionsOptions model. */
+/**
+ * The KubernetesOptionsOptions model.
+ */
 @Fluent
 public final class KubernetesOptionsOptions {
     /*
@@ -27,7 +32,7 @@ public final class KubernetesOptionsOptions {
 
     /**
      * Get the regions property: The regions property.
-     *
+     * 
      * @return the regions value.
      */
     public List<KubernetesRegion> getRegions() {
@@ -36,7 +41,7 @@ public final class KubernetesOptionsOptions {
 
     /**
      * Set the regions property: The regions property.
-     *
+     * 
      * @param regions the regions value to set.
      * @return the KubernetesOptionsOptions object itself.
      */
@@ -47,7 +52,7 @@ public final class KubernetesOptionsOptions {
 
     /**
      * Get the versions property: The versions property.
-     *
+     * 
      * @return the versions value.
      */
     public List<KubernetesVersion> getVersions() {
@@ -56,7 +61,7 @@ public final class KubernetesOptionsOptions {
 
     /**
      * Set the versions property: The versions property.
-     *
+     * 
      * @param versions the versions value to set.
      * @return the KubernetesOptionsOptions object itself.
      */
@@ -67,7 +72,7 @@ public final class KubernetesOptionsOptions {
 
     /**
      * Get the sizes property: The sizes property.
-     *
+     * 
      * @return the sizes value.
      */
     public List<KubernetesSize> getSizes() {
@@ -76,7 +81,7 @@ public final class KubernetesOptionsOptions {
 
     /**
      * Set the sizes property: The sizes property.
-     *
+     * 
      * @param sizes the sizes value to set.
      * @return the KubernetesOptionsOptions object itself.
      */

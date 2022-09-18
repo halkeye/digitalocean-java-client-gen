@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Error model. */
+/**
+ * The Error model.
+ */
 @Fluent
 public final class Error {
     /*
@@ -27,9 +32,9 @@ public final class Error {
     private String requestId;
 
     /**
-     * Get the id property: A short identifier corresponding to the HTTP status code returned. For example, the ID for a
-     * response returning a 404 status code would be "not_found.".
-     *
+     * Get the id property: A short identifier corresponding to the HTTP status code returned. For  example, the ID for
+     * a response returning a 404 status code would be "not_found.".
+     * 
      * @return the id value.
      */
     public String getId() {
@@ -37,9 +42,9 @@ public final class Error {
     }
 
     /**
-     * Set the id property: A short identifier corresponding to the HTTP status code returned. For example, the ID for a
-     * response returning a 404 status code would be "not_found.".
-     *
+     * Set the id property: A short identifier corresponding to the HTTP status code returned. For  example, the ID for
+     * a response returning a 404 status code would be "not_found.".
+     * 
      * @param id the id value to set.
      * @return the Error object itself.
      */
@@ -49,9 +54,9 @@ public final class Error {
     }
 
     /**
-     * Get the message property: A message providing additional information about the error, including details to help
+     * Get the message property: A message providing additional information about the error, including  details to help
      * resolve it when possible.
-     *
+     * 
      * @return the message value.
      */
     public String getMessage() {
@@ -59,9 +64,9 @@ public final class Error {
     }
 
     /**
-     * Set the message property: A message providing additional information about the error, including details to help
+     * Set the message property: A message providing additional information about the error, including  details to help
      * resolve it when possible.
-     *
+     * 
      * @param message the message value to set.
      * @return the Error object itself.
      */
@@ -71,9 +76,9 @@ public final class Error {
     }
 
     /**
-     * Get the requestId property: Optionally, some endpoints may include a request ID that should be provided when
-     * reporting bugs or opening support tickets to help identify the issue.
-     *
+     * Get the requestId property: Optionally, some endpoints may include a request ID that should be  provided when
+     * reporting bugs or opening support tickets to help  identify the issue.
+     * 
      * @return the requestId value.
      */
     public String getRequestId() {
@@ -81,9 +86,9 @@ public final class Error {
     }
 
     /**
-     * Set the requestId property: Optionally, some endpoints may include a request ID that should be provided when
-     * reporting bugs or opening support tickets to help identify the issue.
-     *
+     * Set the requestId property: Optionally, some endpoints may include a request ID that should be  provided when
+     * reporting bugs or opening support tickets to help  identify the issue.
+     * 
      * @param requestId the requestId value to set.
      * @return the Error object itself.
      */

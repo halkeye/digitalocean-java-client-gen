@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The KubernetesNodePoolTaint model. */
+/**
+ * The KubernetesNodePoolTaint model.
+ */
 @Fluent
 public final class KubernetesNodePoolTaint {
     /*
@@ -33,7 +39,7 @@ public final class KubernetesNodePoolTaint {
      * Get the key property: An arbitrary string. The `key` and `value` fields of the `taint` object form a key-value
      * pair. For example, if the value of the `key` field is "special" and the value of the `value` field is "gpu", the
      * key value pair would be `special=gpu`.
-     *
+     * 
      * @return the key value.
      */
     public String getKey() {
@@ -44,7 +50,7 @@ public final class KubernetesNodePoolTaint {
      * Set the key property: An arbitrary string. The `key` and `value` fields of the `taint` object form a key-value
      * pair. For example, if the value of the `key` field is "special" and the value of the `value` field is "gpu", the
      * key value pair would be `special=gpu`.
-     *
+     * 
      * @param key the key value to set.
      * @return the KubernetesNodePoolTaint object itself.
      */
@@ -57,7 +63,7 @@ public final class KubernetesNodePoolTaint {
      * Get the value property: An arbitrary string. The `key` and `value` fields of the `taint` object form a key-value
      * pair. For example, if the value of the `key` field is "special" and the value of the `value` field is "gpu", the
      * key value pair would be `special=gpu`.
-     *
+     * 
      * @return the value value.
      */
     public String getValue() {
@@ -68,7 +74,7 @@ public final class KubernetesNodePoolTaint {
      * Set the value property: An arbitrary string. The `key` and `value` fields of the `taint` object form a key-value
      * pair. For example, if the value of the `key` field is "special" and the value of the `value` field is "gpu", the
      * key value pair would be `special=gpu`.
-     *
+     * 
      * @param value the value value to set.
      * @return the KubernetesNodePoolTaint object itself.
      */
@@ -80,7 +86,7 @@ public final class KubernetesNodePoolTaint {
     /**
      * Get the effect property: How the node reacts to pods that it won't tolerate. Available effect values are
      * `NoSchedule`, `PreferNoSchedule`, and `NoExecute`.
-     *
+     * 
      * @return the effect value.
      */
     public KubernetesNodePoolTaintEffect getEffect() {
@@ -90,7 +96,7 @@ public final class KubernetesNodePoolTaint {
     /**
      * Set the effect property: How the node reacts to pods that it won't tolerate. Available effect values are
      * `NoSchedule`, `PreferNoSchedule`, and `NoExecute`.
-     *
+     * 
      * @param effect the effect value to set.
      * @return the KubernetesNodePoolTaint object itself.
      */

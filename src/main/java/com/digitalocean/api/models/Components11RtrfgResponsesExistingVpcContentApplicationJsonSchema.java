@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components11RtrfgResponsesExistingVpcContentApplicationJsonSchema model. */
+/**
+ * The Components11RtrfgResponsesExistingVpcContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components11RtrfgResponsesExistingVpcContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components11RtrfgResponsesExistingVpcContentApplicationJsonSc
 
     /**
      * Get the vpc property: The vpc property.
-     *
+     * 
      * @return the vpc value.
      */
     public Vpc getVpc() {
@@ -23,7 +28,7 @@ public final class Components11RtrfgResponsesExistingVpcContentApplicationJsonSc
 
     /**
      * Set the vpc property: The vpc property.
-     *
+     * 
      * @param vpc the vpc value to set.
      * @return the Components11RtrfgResponsesExistingVpcContentApplicationJsonSchema object itself.
      */

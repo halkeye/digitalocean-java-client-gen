@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The AppsListTiersResponse model. */
+/**
+ * The AppsListTiersResponse model.
+ */
 @Fluent
 public final class AppsListTiersResponse {
     /*
@@ -15,7 +20,7 @@ public final class AppsListTiersResponse {
 
     /**
      * Get the tiers property: The tiers property.
-     *
+     * 
      * @return the tiers value.
      */
     public List<AppsTier> getTiers() {
@@ -24,7 +29,7 @@ public final class AppsListTiersResponse {
 
     /**
      * Set the tiers property: The tiers property.
-     *
+     * 
      * @param tiers the tiers value to set.
      * @return the AppsListTiersResponse object itself.
      */

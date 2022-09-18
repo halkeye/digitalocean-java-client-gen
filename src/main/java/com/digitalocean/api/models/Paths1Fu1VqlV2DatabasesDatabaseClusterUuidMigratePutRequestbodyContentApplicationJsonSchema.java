@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Paths1Fu1VqlV2DatabasesDatabaseClusterUuidMigratePutRequestbodyContentApplicationJsonSchema model. */
+/**
+ * The Paths1Fu1VqlV2DatabasesDatabaseClusterUuidMigratePutRequestbodyContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Paths1Fu1VqlV2DatabasesDatabaseClusterUuidMigratePutRequestbodyContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Paths1Fu1VqlV2DatabasesDatabaseClusterUuidMigratePutRequestbo
 
     /**
      * Get the region property: A slug identifier for the region to which the database cluster will be migrated.
-     *
+     * 
      * @return the region value.
      */
     public String getRegion() {
@@ -23,13 +28,12 @@ public final class Paths1Fu1VqlV2DatabasesDatabaseClusterUuidMigratePutRequestbo
 
     /**
      * Set the region property: A slug identifier for the region to which the database cluster will be migrated.
-     *
+     * 
      * @param region the region value to set.
      * @return the Paths1Fu1VqlV2DatabasesDatabaseClusterUuidMigratePutRequestbodyContentApplicationJsonSchema object
-     *     itself.
+     * itself.
      */
-    public Paths1Fu1VqlV2DatabasesDatabaseClusterUuidMigratePutRequestbodyContentApplicationJsonSchema setRegion(
-            String region) {
+    public Paths1Fu1VqlV2DatabasesDatabaseClusterUuidMigratePutRequestbodyContentApplicationJsonSchema setRegion(String region) {
         this.region = region;
         return this;
     }

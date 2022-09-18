@@ -1,18 +1,18 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.AppsGetTierResponse;
 import com.digitalocean.api.models.AppsTier;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class AppsGetTierResponseTests {
     @Test
     public void testDeserialize() {
-        AppsGetTierResponse model =
-                BinaryData.fromString(
-                                "{\"tier\":{\"build_seconds\":\"lryts\",\"egress_bandwidth_bytes\":\"pfmdgycx\",\"name\":\"skw\",\"slug\":\"jjyslurlps\",\"storage_bytes\":\"kvp\"}}")
-                        .toObject(AppsGetTierResponse.class);
+        AppsGetTierResponse model = BinaryData.fromString("{\"tier\":{\"build_seconds\":\"lryts\",\"egress_bandwidth_bytes\":\"pfmdgycx\",\"name\":\"skw\",\"slug\":\"jjyslurlps\",\"storage_bytes\":\"kvp\"}}").toObject(AppsGetTierResponse.class);
         Assertions.assertEquals("lryts", model.getTier().getBuildSeconds());
         Assertions.assertEquals("pfmdgycx", model.getTier().getEgressBandwidthBytes());
         Assertions.assertEquals("skw", model.getTier().getName());
@@ -22,15 +22,7 @@ public final class AppsGetTierResponseTests {
 
     @Test
     public void testSerialize() {
-        AppsGetTierResponse model =
-                new AppsGetTierResponse()
-                        .setTier(
-                                new AppsTier()
-                                        .setBuildSeconds("lryts")
-                                        .setEgressBandwidthBytes("pfmdgycx")
-                                        .setName("skw")
-                                        .setSlug("jjyslurlps")
-                                        .setStorageBytes("kvp"));
+        AppsGetTierResponse model = new AppsGetTierResponse().setTier(new AppsTier().setBuildSeconds("lryts").setEgressBandwidthBytes("pfmdgycx").setName("skw").setSlug("jjyslurlps").setStorageBytes("kvp"));
         model = BinaryData.fromObject(model).toObject(AppsGetTierResponse.class);
         Assertions.assertEquals("lryts", model.getTier().getBuildSeconds());
         Assertions.assertEquals("pfmdgycx", model.getTier().getEgressBandwidthBytes());

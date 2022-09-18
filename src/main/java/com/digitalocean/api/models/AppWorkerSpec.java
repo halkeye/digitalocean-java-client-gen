@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The AppWorkerSpec model. */
+/**
+ * The AppWorkerSpec model.
+ */
 @Fluent
 public final class AppWorkerSpec extends AppComponentBase {
     /*
@@ -21,7 +27,7 @@ public final class AppWorkerSpec extends AppComponentBase {
 
     /**
      * Get the instanceCount property: The amount of instances that this component should be scaled to. Default: 1.
-     *
+     * 
      * @return the instanceCount value.
      */
     public Long getInstanceCount() {
@@ -30,7 +36,7 @@ public final class AppWorkerSpec extends AppComponentBase {
 
     /**
      * Set the instanceCount property: The amount of instances that this component should be scaled to. Default: 1.
-     *
+     * 
      * @param instanceCount the instanceCount value to set.
      * @return the AppWorkerSpec object itself.
      */
@@ -41,7 +47,7 @@ public final class AppWorkerSpec extends AppComponentBase {
 
     /**
      * Get the instanceSizeSlug property: The instance size to use for this component. Default: `basic-xxs`.
-     *
+     * 
      * @return the instanceSizeSlug value.
      */
     public AppComponentInstanceBaseInstanceSizeSlug getInstanceSizeSlug() {
@@ -50,7 +56,7 @@ public final class AppWorkerSpec extends AppComponentBase {
 
     /**
      * Set the instanceSizeSlug property: The instance size to use for this component. Default: `basic-xxs`.
-     *
+     * 
      * @param instanceSizeSlug the instanceSizeSlug value to set.
      * @return the AppWorkerSpec object itself.
      */
@@ -59,84 +65,108 @@ public final class AppWorkerSpec extends AppComponentBase {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppWorkerSpec setName(String name) {
         super.setName(name);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppWorkerSpec setGit(AppsGitSourceSpec git) {
         super.setGit(git);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppWorkerSpec setGithub(AppsGithubSourceSpec github) {
         super.setGithub(github);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppWorkerSpec setGitlab(AppsGitlabSourceSpec gitlab) {
         super.setGitlab(gitlab);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppWorkerSpec setImage(AppsImageSourceSpec image) {
         super.setImage(image);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppWorkerSpec setDockerfilePath(String dockerfilePath) {
         super.setDockerfilePath(dockerfilePath);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppWorkerSpec setBuildCommand(String buildCommand) {
         super.setBuildCommand(buildCommand);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppWorkerSpec setRunCommand(String runCommand) {
         super.setRunCommand(runCommand);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppWorkerSpec setSourceDir(String sourceDir) {
         super.setSourceDir(sourceDir);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppWorkerSpec setEnvs(List<AppVariableDefinition> envs) {
         super.setEnvs(envs);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppWorkerSpec setEnvironmentSlug(String environmentSlug) {
         super.setEnvironmentSlug(environmentSlug);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppWorkerSpec setLogDestinations(AppLogDestinationDefinition logDestinations) {
         super.setLogDestinations(logDestinations);

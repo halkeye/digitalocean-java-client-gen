@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsDeploymentStaticSite model. */
+/**
+ * The AppsDeploymentStaticSite model.
+ */
 @Fluent
 public final class AppsDeploymentStaticSite {
     /*
@@ -20,7 +25,7 @@ public final class AppsDeploymentStaticSite {
 
     /**
      * Get the name property: The name of this static site.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -29,7 +34,7 @@ public final class AppsDeploymentStaticSite {
 
     /**
      * Set the name property: The name of this static site.
-     *
+     * 
      * @param name the name value to set.
      * @return the AppsDeploymentStaticSite object itself.
      */
@@ -40,7 +45,7 @@ public final class AppsDeploymentStaticSite {
 
     /**
      * Get the sourceCommitHash property: The commit hash of the repository that was used to build this static site.
-     *
+     * 
      * @return the sourceCommitHash value.
      */
     public String getSourceCommitHash() {
@@ -49,7 +54,7 @@ public final class AppsDeploymentStaticSite {
 
     /**
      * Set the sourceCommitHash property: The commit hash of the repository that was used to build this static site.
-     *
+     * 
      * @param sourceCommitHash the sourceCommitHash value to set.
      * @return the AppsDeploymentStaticSite object itself.
      */

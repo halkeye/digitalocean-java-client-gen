@@ -1,17 +1,18 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.DatabaseMaintenanceWindow;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class DatabaseMaintenanceWindowTests {
     @Test
     public void testDeserialize() {
-        DatabaseMaintenanceWindow model =
-                BinaryData.fromString(
-                                "{\"day\":\"ojhtollhs\",\"hour\":\"idmytzln\",\"pending\":false,\"description\":[\"ovyoanf\",\"cswqa\",\"ywv\"]}")
-                        .toObject(DatabaseMaintenanceWindow.class);
+        DatabaseMaintenanceWindow model = BinaryData.fromString("{\"day\":\"ojhtollhs\",\"hour\":\"idmytzln\",\"pending\":false,\"description\":[\"ovyoanf\",\"cswqa\",\"ywv\"]}").toObject(DatabaseMaintenanceWindow.class);
         Assertions.assertEquals("ojhtollhs", model.getDay());
         Assertions.assertEquals("idmytzln", model.getHour());
     }

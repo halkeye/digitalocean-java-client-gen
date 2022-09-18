@@ -1,13 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsChk4KxResponsesBillingHistoryContentApplicationJsonSchema model. */
+/**
+ * The ComponentsChk4KxResponsesBillingHistoryContentApplicationJsonSchema model.
+ */
 @Fluent
-public final class ComponentsChk4KxResponsesBillingHistoryContentApplicationJsonSchema
-        extends Components1Sa8LwhResponsesBillingHistoryContentApplicationJsonSchemaAllof0 {
+public final class ComponentsChk4KxResponsesBillingHistoryContentApplicationJsonSchema extends Components1Sa8LwhResponsesBillingHistoryContentApplicationJsonSchemaAllof0 {
     /*
      * The links property.
      */
@@ -22,7 +26,7 @@ public final class ComponentsChk4KxResponsesBillingHistoryContentApplicationJson
 
     /**
      * Get the links property: The links property.
-     *
+     * 
      * @return the links value.
      */
     public PageLinks getLinks() {
@@ -31,7 +35,7 @@ public final class ComponentsChk4KxResponsesBillingHistoryContentApplicationJson
 
     /**
      * Set the links property: The links property.
-     *
+     * 
      * @param links the links value to set.
      * @return the ComponentsChk4KxResponsesBillingHistoryContentApplicationJsonSchema object itself.
      */
@@ -42,7 +46,7 @@ public final class ComponentsChk4KxResponsesBillingHistoryContentApplicationJson
 
     /**
      * Get the meta property: Information about the response itself.
-     *
+     * 
      * @return the meta value.
      */
     public MetaProperties getMeta() {
@@ -51,7 +55,7 @@ public final class ComponentsChk4KxResponsesBillingHistoryContentApplicationJson
 
     /**
      * Set the meta property: Information about the response itself.
-     *
+     * 
      * @param meta the meta value to set.
      * @return the ComponentsChk4KxResponsesBillingHistoryContentApplicationJsonSchema object itself.
      */
@@ -60,10 +64,11 @@ public final class ComponentsChk4KxResponsesBillingHistoryContentApplicationJson
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public ComponentsChk4KxResponsesBillingHistoryContentApplicationJsonSchema setBillingHistory(
-            List<BillingHistory> billingHistory) {
+    public ComponentsChk4KxResponsesBillingHistoryContentApplicationJsonSchema setBillingHistory(List<BillingHistory> billingHistory) {
         super.setBillingHistory(billingHistory);
         return this;
     }

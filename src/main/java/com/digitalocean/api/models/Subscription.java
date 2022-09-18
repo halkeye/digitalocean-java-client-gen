@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
 
-/** The Subscription model. */
+/**
+ * The Subscription model.
+ */
 @Fluent
 public class Subscription {
     /*
@@ -27,7 +32,7 @@ public class Subscription {
 
     /**
      * Get the tier property: The tier property.
-     *
+     * 
      * @return the tier value.
      */
     public SubscriptionTierBase getTier() {
@@ -36,7 +41,7 @@ public class Subscription {
 
     /**
      * Set the tier property: The tier property.
-     *
+     * 
      * @param tier the tier value to set.
      * @return the Subscription object itself.
      */
@@ -47,7 +52,7 @@ public class Subscription {
 
     /**
      * Get the createdAt property: The time at which the subscription was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -56,7 +61,7 @@ public class Subscription {
 
     /**
      * Get the updatedAt property: The time at which the subscription was last updated.
-     *
+     * 
      * @return the updatedAt value.
      */
     public OffsetDateTime getUpdatedAt() {

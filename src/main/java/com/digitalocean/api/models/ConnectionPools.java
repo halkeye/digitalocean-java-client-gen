@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
+import com.azure.core.annotation.Fluent;
 import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ConnectionPools model. */
+/**
+ * The ConnectionPools model.
+ */
 @Immutable
 public final class ConnectionPools {
     /*
@@ -15,7 +20,7 @@ public final class ConnectionPools {
 
     /**
      * Get the pools property: An array of connection pool objects.
-     *
+     * 
      * @return the pools value.
      */
     public List<ConnectionPool> getPools() {

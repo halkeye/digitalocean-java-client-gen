@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** Metadata about the Kubernetes API object the diagnostic is reported on. */
+/**
+ * Metadata about the Kubernetes API object the diagnostic is reported on.
+ */
 @Fluent
 public final class ClusterlintResultsDiagnosticsItemObject {
     /*
@@ -26,7 +31,7 @@ public final class ClusterlintResultsDiagnosticsItemObject {
 
     /**
      * Get the name property: Name of the object.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -35,7 +40,7 @@ public final class ClusterlintResultsDiagnosticsItemObject {
 
     /**
      * Set the name property: Name of the object.
-     *
+     * 
      * @param name the name value to set.
      * @return the ClusterlintResultsDiagnosticsItemObject object itself.
      */
@@ -46,7 +51,7 @@ public final class ClusterlintResultsDiagnosticsItemObject {
 
     /**
      * Get the kind property: The kind of Kubernetes API object.
-     *
+     * 
      * @return the kind value.
      */
     public String getKind() {
@@ -55,7 +60,7 @@ public final class ClusterlintResultsDiagnosticsItemObject {
 
     /**
      * Set the kind property: The kind of Kubernetes API object.
-     *
+     * 
      * @param kind the kind value to set.
      * @return the ClusterlintResultsDiagnosticsItemObject object itself.
      */
@@ -66,7 +71,7 @@ public final class ClusterlintResultsDiagnosticsItemObject {
 
     /**
      * Get the namespace property: The namespace the object resides in the cluster.
-     *
+     * 
      * @return the namespace value.
      */
     public String getNamespace() {
@@ -75,7 +80,7 @@ public final class ClusterlintResultsDiagnosticsItemObject {
 
     /**
      * Set the namespace property: The namespace the object resides in the cluster.
-     *
+     * 
      * @param namespace the namespace value to set.
      * @return the ClusterlintResultsDiagnosticsItemObject object itself.
      */

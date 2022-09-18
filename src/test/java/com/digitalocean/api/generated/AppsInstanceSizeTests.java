@@ -1,18 +1,19 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.AppsInstanceSize;
 import com.digitalocean.api.models.InstanceSizeCpuType;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.stream.Collectors;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class AppsInstanceSizeTests {
     @Test
     public void testDeserialize() {
-        AppsInstanceSize model =
-                BinaryData.fromString(
-                                "{\"cpu_type\":\"DEDICATED\",\"cpus\":\"twvc\",\"memory_bytes\":\"swkacvej\",\"name\":\"dvlvhbwrnfxtgdd\",\"slug\":\"th\",\"tier_downgrade_to\":\"n\",\"tier_slug\":\"aoyankcoeqswa\",\"tier_upgrade_to\":\"ltytmhdr\",\"usd_per_month\":\"nnhdrl\",\"usd_per_second\":\"gjc\"}")
-                        .toObject(AppsInstanceSize.class);
+        AppsInstanceSize model = BinaryData.fromString("{\"cpu_type\":\"DEDICATED\",\"cpus\":\"twvc\",\"memory_bytes\":\"swkacvej\",\"name\":\"dvlvhbwrnfxtgdd\",\"slug\":\"th\",\"tier_downgrade_to\":\"n\",\"tier_slug\":\"aoyankcoeqswa\",\"tier_upgrade_to\":\"ltytmhdr\",\"usd_per_month\":\"nnhdrl\",\"usd_per_second\":\"gjc\"}").toObject(AppsInstanceSize.class);
         Assertions.assertEquals(InstanceSizeCpuType.DEDICATED, model.getCpuType());
         Assertions.assertEquals("twvc", model.getCpus());
         Assertions.assertEquals("swkacvej", model.getMemoryBytes());
@@ -27,18 +28,7 @@ public final class AppsInstanceSizeTests {
 
     @Test
     public void testSerialize() {
-        AppsInstanceSize model =
-                new AppsInstanceSize()
-                        .setCpuType(InstanceSizeCpuType.DEDICATED)
-                        .setCpus("twvc")
-                        .setMemoryBytes("swkacvej")
-                        .setName("dvlvhbwrnfxtgdd")
-                        .setSlug("th")
-                        .setTierDowngradeTo("n")
-                        .setTierSlug("aoyankcoeqswa")
-                        .setTierUpgradeTo("ltytmhdr")
-                        .setUsdPerMonth("nnhdrl")
-                        .setUsdPerSecond("gjc");
+        AppsInstanceSize model = new AppsInstanceSize().setCpuType(InstanceSizeCpuType.DEDICATED).setCpus("twvc").setMemoryBytes("swkacvej").setName("dvlvhbwrnfxtgdd").setSlug("th").setTierDowngradeTo("n").setTierSlug("aoyankcoeqswa").setTierUpgradeTo("ltytmhdr").setUsdPerMonth("nnhdrl").setUsdPerSecond("gjc");
         model = BinaryData.fromObject(model).toObject(AppsInstanceSize.class);
         Assertions.assertEquals(InstanceSizeCpuType.DEDICATED, model.getCpuType());
         Assertions.assertEquals("twvc", model.getCpus());

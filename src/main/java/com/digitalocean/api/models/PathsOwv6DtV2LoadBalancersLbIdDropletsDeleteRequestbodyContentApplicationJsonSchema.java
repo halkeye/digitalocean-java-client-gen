@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The PathsOwv6DtV2LoadBalancersLbIdDropletsDeleteRequestbodyContentApplicationJsonSchema model. */
+/**
+ * The PathsOwv6DtV2LoadBalancersLbIdDropletsDeleteRequestbodyContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class PathsOwv6DtV2LoadBalancersLbIdDropletsDeleteRequestbodyContentApplicationJsonSchema {
     /*
@@ -15,7 +20,7 @@ public final class PathsOwv6DtV2LoadBalancersLbIdDropletsDeleteRequestbodyConten
 
     /**
      * Get the dropletIds property: An array containing the IDs of the Droplets assigned to the load balancer.
-     *
+     * 
      * @return the dropletIds value.
      */
     public List<Integer> getDropletIds() {
@@ -24,12 +29,11 @@ public final class PathsOwv6DtV2LoadBalancersLbIdDropletsDeleteRequestbodyConten
 
     /**
      * Set the dropletIds property: An array containing the IDs of the Droplets assigned to the load balancer.
-     *
+     * 
      * @param dropletIds the dropletIds value to set.
      * @return the PathsOwv6DtV2LoadBalancersLbIdDropletsDeleteRequestbodyContentApplicationJsonSchema object itself.
      */
-    public PathsOwv6DtV2LoadBalancersLbIdDropletsDeleteRequestbodyContentApplicationJsonSchema setDropletIds(
-            List<Integer> dropletIds) {
+    public PathsOwv6DtV2LoadBalancersLbIdDropletsDeleteRequestbodyContentApplicationJsonSchema setDropletIds(List<Integer> dropletIds) {
         this.dropletIds = dropletIds;
         return this;
     }

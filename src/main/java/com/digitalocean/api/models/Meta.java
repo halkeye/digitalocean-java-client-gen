@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Meta model. */
+/**
+ * The Meta model.
+ */
 @Fluent
 public class Meta {
     /*
@@ -14,7 +19,7 @@ public class Meta {
 
     /**
      * Get the meta property: The meta property.
-     *
+     * 
      * @return the meta value.
      */
     public MetaMeta getMeta() {
@@ -23,7 +28,7 @@ public class Meta {
 
     /**
      * Set the meta property: The meta property.
-     *
+     * 
      * @param meta the meta value to set.
      * @return the Meta object itself.
      */

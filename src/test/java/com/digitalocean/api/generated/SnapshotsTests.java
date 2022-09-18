@@ -1,20 +1,23 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.Snapshots;
+import com.digitalocean.api.models.SnapshotsBase;
 import com.digitalocean.api.models.SnapshotsResourceType;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class SnapshotsTests {
     @Test
     public void testDeserialize() {
-        Snapshots model =
-                BinaryData.fromString(
-                                "{\"resource_id\":\"imxm\",\"resource_type\":\"droplet\",\"tags\":[\"jppitygv\",\"wdsoqtbfkvuozbzc\",\"nqekwankl\"],\"name\":\"urlcydjhtkjs\",\"created_at\":\"2021-08-03T22:52:53Z\",\"regions\":[\"yn\",\"urdon\",\"gobxblrdolen\",\"swknpdrgn\"],\"min_disk_size\":1350765961,\"size_gigabytes\":62.87154}")
-                        .toObject(Snapshots.class);
+        Snapshots model = BinaryData.fromString("{\"resource_id\":\"imxm\",\"resource_type\":\"droplet\",\"tags\":[\"jppitygv\",\"wdsoqtbfkvuozbzc\",\"nqekwankl\"],\"name\":\"urlcydjhtkjs\",\"created_at\":\"2021-08-03T22:52:53Z\",\"regions\":[\"yn\",\"urdon\",\"gobxblrdolen\",\"swknpdrgn\"],\"min_disk_size\":1350765961,\"size_gigabytes\":62.87154}").toObject(Snapshots.class);
         Assertions.assertEquals("urlcydjhtkjs", model.getName());
         Assertions.assertEquals(OffsetDateTime.parse("2021-08-03T22:52:53Z"), model.getCreatedAt());
         Assertions.assertEquals("yn", model.getRegions().get(0));
@@ -27,16 +30,7 @@ public final class SnapshotsTests {
 
     @Test
     public void testSerialize() {
-        Snapshots model =
-                new Snapshots()
-                        .setName("urlcydjhtkjs")
-                        .setCreatedAt(OffsetDateTime.parse("2021-08-03T22:52:53Z"))
-                        .setRegions(Arrays.asList("yn", "urdon", "gobxblrdolen", "swknpdrgn"))
-                        .setMinDiskSize(1350765961)
-                        .setSizeGigabytes(62.87154f)
-                        .setResourceId("imxm")
-                        .setResourceType(SnapshotsResourceType.DROPLET)
-                        .setTags(Arrays.asList("jppitygv", "wdsoqtbfkvuozbzc", "nqekwankl"));
+        Snapshots model = new Snapshots().setName("urlcydjhtkjs").setCreatedAt(OffsetDateTime.parse("2021-08-03T22:52:53Z")).setRegions(Arrays.asList("yn", "urdon", "gobxblrdolen", "swknpdrgn")).setMinDiskSize(1350765961).setSizeGigabytes(62.87154f).setResourceId("imxm").setResourceType(SnapshotsResourceType.DROPLET).setTags(Arrays.asList("jppitygv", "wdsoqtbfkvuozbzc", "nqekwankl"));
         model = BinaryData.fromObject(model).toObject(Snapshots.class);
         Assertions.assertEquals("urlcydjhtkjs", model.getName());
         Assertions.assertEquals(OffsetDateTime.parse("2021-08-03T22:52:53Z"), model.getCreatedAt());

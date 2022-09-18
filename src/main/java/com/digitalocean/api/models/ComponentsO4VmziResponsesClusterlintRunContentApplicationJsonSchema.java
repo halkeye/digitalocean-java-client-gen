@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ComponentsO4VmziResponsesClusterlintRunContentApplicationJsonSchema model. */
+/**
+ * The ComponentsO4VmziResponsesClusterlintRunContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsO4VmziResponsesClusterlintRunContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class ComponentsO4VmziResponsesClusterlintRunContentApplicationJson
 
     /**
      * Get the runId property: ID of the clusterlint run that can be used later to fetch the diagnostics.
-     *
+     * 
      * @return the runId value.
      */
     public String getRunId() {
@@ -23,7 +28,7 @@ public final class ComponentsO4VmziResponsesClusterlintRunContentApplicationJson
 
     /**
      * Set the runId property: ID of the clusterlint run that can be used later to fetch the diagnostics.
-     *
+     * 
      * @param runId the runId value to set.
      * @return the ComponentsO4VmziResponsesClusterlintRunContentApplicationJsonSchema object itself.
      */

@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The NetworkV4 model. */
+/**
+ * The NetworkV4 model.
+ */
 @Fluent
 public final class NetworkV4 {
     /*
@@ -20,10 +26,10 @@ public final class NetworkV4 {
 
     /*
      * The gateway of the specified IPv4 network interface.
-     *
+     * 
      * For private interfaces, a gateway is not provided. This is denoted by
      * returning `nil` as its value.
-     *
+     * 
      */
     @JsonProperty(value = "gateway")
     private String gateway;
@@ -36,7 +42,7 @@ public final class NetworkV4 {
 
     /**
      * Get the ipAddress property: The IP address of the IPv4 network interface.
-     *
+     * 
      * @return the ipAddress value.
      */
     public String getIpAddress() {
@@ -45,7 +51,7 @@ public final class NetworkV4 {
 
     /**
      * Set the ipAddress property: The IP address of the IPv4 network interface.
-     *
+     * 
      * @param ipAddress the ipAddress value to set.
      * @return the NetworkV4 object itself.
      */
@@ -56,7 +62,7 @@ public final class NetworkV4 {
 
     /**
      * Get the netmask property: The netmask of the IPv4 network interface.
-     *
+     * 
      * @return the netmask value.
      */
     public String getNetmask() {
@@ -65,7 +71,7 @@ public final class NetworkV4 {
 
     /**
      * Set the netmask property: The netmask of the IPv4 network interface.
-     *
+     * 
      * @param netmask the netmask value to set.
      * @return the NetworkV4 object itself.
      */
@@ -76,9 +82,10 @@ public final class NetworkV4 {
 
     /**
      * Get the gateway property: The gateway of the specified IPv4 network interface.
-     *
-     * <p>For private interfaces, a gateway is not provided. This is denoted by returning `nil` as its value.
-     *
+     * 
+     * For private interfaces, a gateway is not provided. This is denoted by
+     * returning `nil` as its value.
+     * 
      * @return the gateway value.
      */
     public String getGateway() {
@@ -87,9 +94,10 @@ public final class NetworkV4 {
 
     /**
      * Set the gateway property: The gateway of the specified IPv4 network interface.
-     *
-     * <p>For private interfaces, a gateway is not provided. This is denoted by returning `nil` as its value.
-     *
+     * 
+     * For private interfaces, a gateway is not provided. This is denoted by
+     * returning `nil` as its value.
+     * 
      * @param gateway the gateway value to set.
      * @return the NetworkV4 object itself.
      */
@@ -100,7 +108,7 @@ public final class NetworkV4 {
 
     /**
      * Get the type property: The type of the IPv4 network interface.
-     *
+     * 
      * @return the type value.
      */
     public NetworkV4Type getType() {
@@ -109,7 +117,7 @@ public final class NetworkV4 {
 
     /**
      * Set the type property: The type of the IPv4 network interface.
-     *
+     * 
      * @param type the type value to set.
      * @return the NetworkV4 object itself.
      */

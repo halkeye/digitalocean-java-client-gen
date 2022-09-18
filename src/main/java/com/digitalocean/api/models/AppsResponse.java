@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The AppsResponse model. */
+/**
+ * The AppsResponse model.
+ */
 @Fluent
 public final class AppsResponse extends Pagination {
     /*
@@ -21,7 +26,7 @@ public final class AppsResponse extends Pagination {
 
     /**
      * Get the apps property: A list of apps.
-     *
+     * 
      * @return the apps value.
      */
     public List<App> getApps() {
@@ -30,7 +35,7 @@ public final class AppsResponse extends Pagination {
 
     /**
      * Set the apps property: A list of apps.
-     *
+     * 
      * @param apps the apps value to set.
      * @return the AppsResponse object itself.
      */
@@ -41,7 +46,7 @@ public final class AppsResponse extends Pagination {
 
     /**
      * Get the meta property: The meta property.
-     *
+     * 
      * @return the meta value.
      */
     public MetaMeta getMeta() {
@@ -50,7 +55,7 @@ public final class AppsResponse extends Pagination {
 
     /**
      * Set the meta property: The meta property.
-     *
+     * 
      * @param meta the meta value to set.
      * @return the AppsResponse object itself.
      */
@@ -59,7 +64,9 @@ public final class AppsResponse extends Pagination {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public AppsResponse setLinks(PageLinks links) {
         super.setLinks(links);

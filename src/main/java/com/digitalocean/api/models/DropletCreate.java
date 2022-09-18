@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The DropletCreate model. */
+/**
+ * The DropletCreate model.
+ */
 @Fluent
 public class DropletCreate {
     /*
@@ -90,7 +95,7 @@ public class DropletCreate {
 
     /**
      * Get the region property: The slug identifier for the region that you wish to deploy the Droplet in.
-     *
+     * 
      * @return the region value.
      */
     public String getRegion() {
@@ -99,7 +104,7 @@ public class DropletCreate {
 
     /**
      * Set the region property: The slug identifier for the region that you wish to deploy the Droplet in.
-     *
+     * 
      * @param region the region value to set.
      * @return the DropletCreate object itself.
      */
@@ -110,7 +115,7 @@ public class DropletCreate {
 
     /**
      * Get the size property: The slug identifier for the size that you wish to select for this Droplet.
-     *
+     * 
      * @return the size value.
      */
     public String getSize() {
@@ -119,7 +124,7 @@ public class DropletCreate {
 
     /**
      * Set the size property: The slug identifier for the size that you wish to select for this Droplet.
-     *
+     * 
      * @param size the size value to set.
      * @return the DropletCreate object itself.
      */
@@ -129,9 +134,9 @@ public class DropletCreate {
     }
 
     /**
-     * Get the image property: The image ID of a public or private image or the slug identifier for a public image. This
-     * image will be the base image for your Droplet.
-     *
+     * Get the image property: The image ID of a public or private image or the slug identifier for a public image.
+     * This image will be the base image for your Droplet.
+     * 
      * @return the image value.
      */
     public Object getImage() {
@@ -139,9 +144,9 @@ public class DropletCreate {
     }
 
     /**
-     * Set the image property: The image ID of a public or private image or the slug identifier for a public image. This
-     * image will be the base image for your Droplet.
-     *
+     * Set the image property: The image ID of a public or private image or the slug identifier for a public image.
+     * This image will be the base image for your Droplet.
+     * 
      * @param image the image value to set.
      * @return the DropletCreate object itself.
      */
@@ -153,7 +158,7 @@ public class DropletCreate {
     /**
      * Get the sshKeys property: An array containing the IDs or fingerprints of the SSH keys that you wish to embed in
      * the Droplet's root account upon creation.
-     *
+     * 
      * @return the sshKeys value.
      */
     public List<Object> getSshKeys() {
@@ -163,7 +168,7 @@ public class DropletCreate {
     /**
      * Set the sshKeys property: An array containing the IDs or fingerprints of the SSH keys that you wish to embed in
      * the Droplet's root account upon creation.
-     *
+     * 
      * @param sshKeys the sshKeys value to set.
      * @return the DropletCreate object itself.
      */
@@ -174,7 +179,7 @@ public class DropletCreate {
 
     /**
      * Get the backups property: A boolean indicating whether automated backups should be enabled for the Droplet.
-     *
+     * 
      * @return the backups value.
      */
     public Boolean isBackups() {
@@ -183,7 +188,7 @@ public class DropletCreate {
 
     /**
      * Set the backups property: A boolean indicating whether automated backups should be enabled for the Droplet.
-     *
+     * 
      * @param backups the backups value to set.
      * @return the DropletCreate object itself.
      */
@@ -194,7 +199,7 @@ public class DropletCreate {
 
     /**
      * Get the ipv6 property: A boolean indicating whether to enable IPv6 on the Droplet.
-     *
+     * 
      * @return the ipv6 value.
      */
     public Boolean isIpv6() {
@@ -203,7 +208,7 @@ public class DropletCreate {
 
     /**
      * Set the ipv6 property: A boolean indicating whether to enable IPv6 on the Droplet.
-     *
+     * 
      * @param ipv6 the ipv6 value to set.
      * @return the DropletCreate object itself.
      */
@@ -214,7 +219,7 @@ public class DropletCreate {
 
     /**
      * Get the monitoring property: A boolean indicating whether to install the DigitalOcean agent for monitoring.
-     *
+     * 
      * @return the monitoring value.
      */
     public Boolean isMonitoring() {
@@ -223,7 +228,7 @@ public class DropletCreate {
 
     /**
      * Set the monitoring property: A boolean indicating whether to install the DigitalOcean agent for monitoring.
-     *
+     * 
      * @param monitoring the monitoring value to set.
      * @return the DropletCreate object itself.
      */
@@ -235,7 +240,7 @@ public class DropletCreate {
     /**
      * Get the tags property: A flat array of tag names as strings to apply to the Droplet after it is created. Tag
      * names can either be existing or new tags.
-     *
+     * 
      * @return the tags value.
      */
     public List<String> getTags() {
@@ -245,7 +250,7 @@ public class DropletCreate {
     /**
      * Set the tags property: A flat array of tag names as strings to apply to the Droplet after it is created. Tag
      * names can either be existing or new tags.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the DropletCreate object itself.
      */
@@ -257,7 +262,7 @@ public class DropletCreate {
     /**
      * Get the userData property: A string containing 'user data' which may be used to configure the Droplet on first
      * boot, often a 'cloud-config' file or Bash script. It must be plain text and may not exceed 64 KiB in size.
-     *
+     * 
      * @return the userData value.
      */
     public String getUserData() {
@@ -267,7 +272,7 @@ public class DropletCreate {
     /**
      * Set the userData property: A string containing 'user data' which may be used to configure the Droplet on first
      * boot, often a 'cloud-config' file or Bash script. It must be plain text and may not exceed 64 KiB in size.
-     *
+     * 
      * @param userData the userData value to set.
      * @return the DropletCreate object itself.
      */
@@ -280,7 +285,7 @@ public class DropletCreate {
      * Get the privateNetworking property: This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC
      * network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC
      * for the region.
-     *
+     * 
      * @return the privateNetworking value.
      */
     public Boolean isPrivateNetworking() {
@@ -291,7 +296,7 @@ public class DropletCreate {
      * Set the privateNetworking property: This parameter has been deprecated. Use `vpc_uuid` instead to specify a VPC
      * network for the Droplet. If no `vpc_uuid` is provided, the Droplet will be placed in your account's default VPC
      * for the region.
-     *
+     * 
      * @param privateNetworking the privateNetworking value to set.
      * @return the DropletCreate object itself.
      */
@@ -303,7 +308,7 @@ public class DropletCreate {
     /**
      * Get the vpcUuid property: A string specifying the UUID of the VPC to which the Droplet will be assigned. If
      * excluded, the Droplet will be assigned to your account's default VPC for the region.
-     *
+     * 
      * @return the vpcUuid value.
      */
     public String getVpcUuid() {
@@ -313,7 +318,7 @@ public class DropletCreate {
     /**
      * Set the vpcUuid property: A string specifying the UUID of the VPC to which the Droplet will be assigned. If
      * excluded, the Droplet will be assigned to your account's default VPC for the region.
-     *
+     * 
      * @param vpcUuid the vpcUuid value to set.
      * @return the DropletCreate object itself.
      */
@@ -327,7 +332,7 @@ public class DropletCreate {
      * providing access to the Droplet web console in the control panel. By default, the agent is installed on new
      * Droplets but installation errors (i.e. OS not supported) are ignored. To prevent it from being installed, set to
      * `false`. To make installation errors fatal, explicitly set it to `true`.
-     *
+     * 
      * @return the withDropletAgent value.
      */
     public Boolean isWithDropletAgent() {
@@ -339,7 +344,7 @@ public class DropletCreate {
      * providing access to the Droplet web console in the control panel. By default, the agent is installed on new
      * Droplets but installation errors (i.e. OS not supported) are ignored. To prevent it from being installed, set to
      * `false`. To make installation errors fatal, explicitly set it to `true`.
-     *
+     * 
      * @param withDropletAgent the withDropletAgent value to set.
      * @return the DropletCreate object itself.
      */

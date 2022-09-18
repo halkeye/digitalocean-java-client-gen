@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsDeploymentProgressStepReason model. */
+/**
+ * The AppsDeploymentProgressStepReason model.
+ */
 @Fluent
 public final class AppsDeploymentProgressStepReason {
     /*
@@ -20,7 +25,7 @@ public final class AppsDeploymentProgressStepReason {
 
     /**
      * Get the code property: The error code.
-     *
+     * 
      * @return the code value.
      */
     public String getCode() {
@@ -29,7 +34,7 @@ public final class AppsDeploymentProgressStepReason {
 
     /**
      * Set the code property: The error code.
-     *
+     * 
      * @param code the code value to set.
      * @return the AppsDeploymentProgressStepReason object itself.
      */
@@ -40,7 +45,7 @@ public final class AppsDeploymentProgressStepReason {
 
     /**
      * Get the message property: The error message.
-     *
+     * 
      * @return the message value.
      */
     public String getMessage() {
@@ -49,7 +54,7 @@ public final class AppsDeploymentProgressStepReason {
 
     /**
      * Set the message property: The error message.
-     *
+     * 
      * @param message the message value to set.
      * @return the AppsDeploymentProgressStepReason object itself.
      */

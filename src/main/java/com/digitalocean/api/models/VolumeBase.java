@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The VolumeBase model. */
+/**
+ * The VolumeBase model.
+ */
 @Fluent
 public class VolumeBase {
     /*
@@ -55,7 +60,7 @@ public class VolumeBase {
 
     /**
      * Get the id property: The unique identifier for the block storage volume.
-     *
+     * 
      * @return the id value.
      */
     public String getId() {
@@ -65,7 +70,7 @@ public class VolumeBase {
     /**
      * Get the dropletIds property: An array containing the IDs of the Droplets the volume is attached to. Note that at
      * this time, a volume can only be attached to a single Droplet.
-     *
+     * 
      * @return the dropletIds value.
      */
     public List<Integer> getDropletIds() {
@@ -73,9 +78,9 @@ public class VolumeBase {
     }
 
     /**
-     * Get the name property: A human-readable name for the block storage volume. Must be lowercase and be composed only
-     * of numbers, letters and "-", up to a limit of 64 characters. The name must begin with a letter.
-     *
+     * Get the name property: A human-readable name for the block storage volume. Must be lowercase and be composed
+     * only of numbers, letters and "-", up to a limit of 64 characters. The name must begin with a letter.
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -83,9 +88,9 @@ public class VolumeBase {
     }
 
     /**
-     * Set the name property: A human-readable name for the block storage volume. Must be lowercase and be composed only
-     * of numbers, letters and "-", up to a limit of 64 characters. The name must begin with a letter.
-     *
+     * Set the name property: A human-readable name for the block storage volume. Must be lowercase and be composed
+     * only of numbers, letters and "-", up to a limit of 64 characters. The name must begin with a letter.
+     * 
      * @param name the name value to set.
      * @return the VolumeBase object itself.
      */
@@ -96,7 +101,7 @@ public class VolumeBase {
 
     /**
      * Get the description property: An optional free-form text field to describe a block storage volume.
-     *
+     * 
      * @return the description value.
      */
     public String getDescription() {
@@ -105,7 +110,7 @@ public class VolumeBase {
 
     /**
      * Set the description property: An optional free-form text field to describe a block storage volume.
-     *
+     * 
      * @param description the description value to set.
      * @return the VolumeBase object itself.
      */
@@ -116,7 +121,7 @@ public class VolumeBase {
 
     /**
      * Get the sizeGigabytes property: The size of the block storage volume in GiB (1024^3).
-     *
+     * 
      * @return the sizeGigabytes value.
      */
     public Integer getSizeGigabytes() {
@@ -125,7 +130,7 @@ public class VolumeBase {
 
     /**
      * Set the sizeGigabytes property: The size of the block storage volume in GiB (1024^3).
-     *
+     * 
      * @param sizeGigabytes the sizeGigabytes value to set.
      * @return the VolumeBase object itself.
      */
@@ -137,7 +142,7 @@ public class VolumeBase {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * block storage volume was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public String getCreatedAt() {
@@ -147,7 +152,7 @@ public class VolumeBase {
     /**
      * Get the tags property: A flat array of tag names as strings to be applied to the resource. Tag names may be for
      * either existing or new tags.
-     *
+     * 
      * @return the tags value.
      */
     public List<String> getTags() {
@@ -157,7 +162,7 @@ public class VolumeBase {
     /**
      * Set the tags property: A flat array of tag names as strings to be applied to the resource. Tag names may be for
      * either existing or new tags.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the VolumeBase object itself.
      */

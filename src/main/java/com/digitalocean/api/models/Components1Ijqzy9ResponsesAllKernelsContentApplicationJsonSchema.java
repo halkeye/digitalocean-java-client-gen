@@ -1,13 +1,17 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components1Ijqzy9ResponsesAllKernelsContentApplicationJsonSchema model. */
+/**
+ * The Components1Ijqzy9ResponsesAllKernelsContentApplicationJsonSchema model.
+ */
 @Fluent
-public final class Components1Ijqzy9ResponsesAllKernelsContentApplicationJsonSchema
-        extends ComponentsL46Y0QResponsesAllKernelsContentApplicationJsonSchemaAllof0 {
+public final class Components1Ijqzy9ResponsesAllKernelsContentApplicationJsonSchema extends ComponentsL46Y0QResponsesAllKernelsContentApplicationJsonSchemaAllof0 {
     /*
      * The links property.
      */
@@ -22,7 +26,7 @@ public final class Components1Ijqzy9ResponsesAllKernelsContentApplicationJsonSch
 
     /**
      * Get the links property: The links property.
-     *
+     * 
      * @return the links value.
      */
     public PageLinks getLinks() {
@@ -31,7 +35,7 @@ public final class Components1Ijqzy9ResponsesAllKernelsContentApplicationJsonSch
 
     /**
      * Set the links property: The links property.
-     *
+     * 
      * @param links the links value to set.
      * @return the Components1Ijqzy9ResponsesAllKernelsContentApplicationJsonSchema object itself.
      */
@@ -42,7 +46,7 @@ public final class Components1Ijqzy9ResponsesAllKernelsContentApplicationJsonSch
 
     /**
      * Get the meta property: The meta property.
-     *
+     * 
      * @return the meta value.
      */
     public MetaMeta getMeta() {
@@ -51,7 +55,7 @@ public final class Components1Ijqzy9ResponsesAllKernelsContentApplicationJsonSch
 
     /**
      * Set the meta property: The meta property.
-     *
+     * 
      * @param meta the meta value to set.
      * @return the Components1Ijqzy9ResponsesAllKernelsContentApplicationJsonSchema object itself.
      */
@@ -60,7 +64,9 @@ public final class Components1Ijqzy9ResponsesAllKernelsContentApplicationJsonSch
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Components1Ijqzy9ResponsesAllKernelsContentApplicationJsonSchema setKernels(List<Kernel> kernels) {
         super.setKernels(kernels);

@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The DockerCredentials model. */
+/**
+ * The DockerCredentials model.
+ */
 @Fluent
 public final class DockerCredentials {
     /*
@@ -14,7 +19,7 @@ public final class DockerCredentials {
 
     /**
      * Get the auths property: The auths property.
-     *
+     * 
      * @return the auths value.
      */
     public DockerCredentialsAuths getAuths() {
@@ -23,7 +28,7 @@ public final class DockerCredentials {
 
     /**
      * Set the auths property: The auths property.
-     *
+     * 
      * @param auths the auths value to set.
      * @return the DockerCredentials object itself.
      */

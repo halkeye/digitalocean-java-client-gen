@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Paths1Vjb9PvV2VolumesVolumeIdSnapshotsPostRequestbodyContentApplicationJsonSchema model. */
+/**
+ * The Paths1Vjb9PvV2VolumesVolumeIdSnapshotsPostRequestbodyContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Paths1Vjb9PvV2VolumesVolumeIdSnapshotsPostRequestbodyContentApplicationJsonSchema {
     /*
@@ -22,7 +27,7 @@ public final class Paths1Vjb9PvV2VolumesVolumeIdSnapshotsPostRequestbodyContentA
 
     /**
      * Get the name property: A human-readable name for the volume snapshot.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -31,7 +36,7 @@ public final class Paths1Vjb9PvV2VolumesVolumeIdSnapshotsPostRequestbodyContentA
 
     /**
      * Set the name property: A human-readable name for the volume snapshot.
-     *
+     * 
      * @param name the name value to set.
      * @return the Paths1Vjb9PvV2VolumesVolumeIdSnapshotsPostRequestbodyContentApplicationJsonSchema object itself.
      */
@@ -43,7 +48,7 @@ public final class Paths1Vjb9PvV2VolumesVolumeIdSnapshotsPostRequestbodyContentA
     /**
      * Get the tags property: A flat array of tag names as strings to be applied to the resource. Tag names may be for
      * either existing or new tags.
-     *
+     * 
      * @return the tags value.
      */
     public List<String> getTags() {
@@ -53,12 +58,11 @@ public final class Paths1Vjb9PvV2VolumesVolumeIdSnapshotsPostRequestbodyContentA
     /**
      * Set the tags property: A flat array of tag names as strings to be applied to the resource. Tag names may be for
      * either existing or new tags.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the Paths1Vjb9PvV2VolumesVolumeIdSnapshotsPostRequestbodyContentApplicationJsonSchema object itself.
      */
-    public Paths1Vjb9PvV2VolumesVolumeIdSnapshotsPostRequestbodyContentApplicationJsonSchema setTags(
-            List<String> tags) {
+    public Paths1Vjb9PvV2VolumesVolumeIdSnapshotsPostRequestbodyContentApplicationJsonSchema setTags(List<String> tags) {
         this.tags = tags;
         return this;
     }

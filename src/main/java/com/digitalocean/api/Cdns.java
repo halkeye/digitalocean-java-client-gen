@@ -16,6 +16,7 @@ import com.azure.core.annotation.ServiceInterface;
 import com.azure.core.annotation.ServiceMethod;
 import com.azure.core.annotation.UnexpectedResponseExceptionType;
 import com.azure.core.http.rest.RestProxy;
+import com.azure.core.util.Context;
 import com.digitalocean.api.models.CdnEndpoint;
 import com.digitalocean.api.models.CdnsCreateEndpointResponse;
 import com.digitalocean.api.models.CdnsDeleteEndpointResponse;
@@ -27,23 +28,31 @@ import com.digitalocean.api.models.Error;
 import com.digitalocean.api.models.ErrorException;
 import com.digitalocean.api.models.PurgeCache;
 import com.digitalocean.api.models.UpdateEndpoint;
+import java.util.Objects;
 import java.util.UUID;
+import java.util.stream.Collectors;
 import reactor.core.publisher.Mono;
 
-/** An instance of this class provides access to all the operations defined in Cdns. */
+/**
+ * An instance of this class provides access to all the operations defined in Cdns.
+ */
 public final class Cdns {
-    /** The proxy service used to perform REST calls. */
+    /**
+     * The proxy service used to perform REST calls.
+     */
     private final CdnsService service;
 
-    /** The service client containing this operation class. */
+    /**
+     * The service client containing this operation class.
+     */
     private final GeneratedClient client;
 
     /**
      * Initializes an instance of Cdns.
-     *
+     * 
      * @param client the instance of the service client containing this operation class.
      */
-    Cdns(GeneratedClient client) {
+     Cdns(GeneratedClient client) {
         this.service = RestProxy.create(CdnsService.class, client.getHttpPipeline(), client.getSerializerAdapter());
         this.client = client;
     }
@@ -58,56 +67,39 @@ public final class Cdns {
         @Get("/v2/cdn/endpoints")
         @ExpectedResponses({200, 401, 429, 500})
         @UnexpectedResponseExceptionType(ErrorException.class)
-        Mono<CdnsListEndpointsResponse> listEndpoints(
-                @HostParam("$host") String host,
-                @QueryParam("per_page") Integer perPage,
-                @QueryParam("page") Integer page,
-                @HeaderParam("Accept") String accept);
+        Mono<CdnsListEndpointsResponse> listEndpoints(@HostParam("$host") String host, @QueryParam("per_page") Integer perPage, @QueryParam("page") Integer page, @HeaderParam("Accept") String accept);
 
         @Post("/v2/cdn/endpoints")
         @ExpectedResponses({201, 401, 429, 500})
         @UnexpectedResponseExceptionType(ErrorException.class)
-        Mono<CdnsCreateEndpointResponse> createEndpoint(
-                @HostParam("$host") String host,
-                @BodyParam("application/json") CdnEndpoint body,
-                @HeaderParam("Accept") String accept);
+        Mono<CdnsCreateEndpointResponse> createEndpoint(@HostParam("$host") String host, @BodyParam("application/json") CdnEndpoint body, @HeaderParam("Accept") String accept);
 
         @Get("/v2/cdn/endpoints/{cdn_id}")
         @ExpectedResponses({200, 401, 404, 429, 500})
         @UnexpectedResponseExceptionType(ErrorException.class)
-        Mono<CdnsGetEndpointResponse> getEndpoint(
-                @HostParam("$host") String host, @PathParam("cdn_id") UUID cdnId, @HeaderParam("Accept") String accept);
+        Mono<CdnsGetEndpointResponse> getEndpoint(@HostParam("$host") String host, @PathParam("cdn_id") UUID cdnId, @HeaderParam("Accept") String accept);
 
         @Put("/v2/cdn/endpoints/{cdn_id}")
         @ExpectedResponses({200, 401, 404, 429, 500})
         @UnexpectedResponseExceptionType(ErrorException.class)
-        Mono<CdnsUpdateEndpointsResponse> updateEndpoints(
-                @HostParam("$host") String host,
-                @PathParam("cdn_id") UUID cdnId,
-                @BodyParam("application/json") UpdateEndpoint body,
-                @HeaderParam("Accept") String accept);
+        Mono<CdnsUpdateEndpointsResponse> updateEndpoints(@HostParam("$host") String host, @PathParam("cdn_id") UUID cdnId, @BodyParam("application/json") UpdateEndpoint body, @HeaderParam("Accept") String accept);
 
         @Delete("/v2/cdn/endpoints/{cdn_id}")
         @ExpectedResponses({204, 401, 404, 429, 500})
         @UnexpectedResponseExceptionType(ErrorException.class)
-        Mono<CdnsDeleteEndpointResponse> deleteEndpoint(
-                @HostParam("$host") String host, @PathParam("cdn_id") UUID cdnId, @HeaderParam("Accept") String accept);
+        Mono<CdnsDeleteEndpointResponse> deleteEndpoint(@HostParam("$host") String host, @PathParam("cdn_id") UUID cdnId, @HeaderParam("Accept") String accept);
 
         @Delete("/v2/cdn/endpoints/{cdn_id}/cache")
         @ExpectedResponses({204, 401, 404, 429, 500})
         @UnexpectedResponseExceptionType(ErrorException.class)
-        Mono<CdnsPurgeCacheResponse> purgeCache(
-                @HostParam("$host") String host,
-                @PathParam("cdn_id") UUID cdnId,
-                @BodyParam("application/json") PurgeCache body,
-                @HeaderParam("Accept") String accept);
+        Mono<CdnsPurgeCacheResponse> purgeCache(@HostParam("$host") String host, @PathParam("cdn_id") UUID cdnId, @BodyParam("application/json") PurgeCache body, @HeaderParam("Accept") String accept);
     }
 
     /**
      * List All CDN Endpoints
-     *
-     * <p>To list all of the CDN endpoints available on your account, send a GET request to `/v2/cdn/endpoints`.
-     *
+     * 
+     * To list all of the CDN endpoints available on your account, send a GET request to `/v2/cdn/endpoints`.
+     * 
      * @param perPage Number of items returned per page.
      * @param page Which 'page' of paginated results to return.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
@@ -123,9 +115,9 @@ public final class Cdns {
 
     /**
      * List All CDN Endpoints
-     *
-     * <p>To list all of the CDN endpoints available on your account, send a GET request to `/v2/cdn/endpoints`.
-     *
+     * 
+     * To list all of the CDN endpoints available on your account, send a GET request to `/v2/cdn/endpoints`.
+     * 
      * @param perPage Number of items returned per page.
      * @param page Which 'page' of paginated results to return.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
@@ -135,18 +127,20 @@ public final class Cdns {
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Object> listEndpointsAsync(Integer perPage, Integer page) {
-        return listEndpointsWithResponseAsync(perPage, page).flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return listEndpointsWithResponseAsync(perPage, page)
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 
     /**
      * Create a New CDN Endpoint
-     *
-     * <p>To create a new CDN endpoint, send a POST request to `/v2/cdn/endpoints`. The origin attribute must be set to
-     * the fully qualified domain name (FQDN) of a DigitalOcean Space. Optionally, the TTL may be configured by setting
-     * the `ttl` attribute.
-     *
-     * <p>A custom subdomain may be configured by specifying the `custom_domain` and `certificate_id` attributes.
-     *
+     * 
+     * To create a new CDN endpoint, send a POST request to `/v2/cdn/endpoints`. The
+     * origin attribute must be set to the fully qualified domain name (FQDN) of a
+     * DigitalOcean Space. Optionally, the TTL may be configured by setting the `ttl`
+     * attribute.
+     * 
+     * A custom subdomain may be configured by specifying the `custom_domain` and
+     * `certificate_id` attributes.
+     * 
      * @param body The body parameter.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
      * @throws ErrorException thrown if the request is rejected by server.
@@ -161,13 +155,15 @@ public final class Cdns {
 
     /**
      * Create a New CDN Endpoint
-     *
-     * <p>To create a new CDN endpoint, send a POST request to `/v2/cdn/endpoints`. The origin attribute must be set to
-     * the fully qualified domain name (FQDN) of a DigitalOcean Space. Optionally, the TTL may be configured by setting
-     * the `ttl` attribute.
-     *
-     * <p>A custom subdomain may be configured by specifying the `custom_domain` and `certificate_id` attributes.
-     *
+     * 
+     * To create a new CDN endpoint, send a POST request to `/v2/cdn/endpoints`. The
+     * origin attribute must be set to the fully qualified domain name (FQDN) of a
+     * DigitalOcean Space. Optionally, the TTL may be configured by setting the `ttl`
+     * attribute.
+     * 
+     * A custom subdomain may be configured by specifying the `custom_domain` and
+     * `certificate_id` attributes.
+     * 
      * @param body The body parameter.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
      * @throws ErrorException thrown if the request is rejected by server.
@@ -176,14 +172,14 @@ public final class Cdns {
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Object> createEndpointAsync(CdnEndpoint body) {
-        return createEndpointWithResponseAsync(body).flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return createEndpointWithResponseAsync(body)
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 
     /**
      * Retrieve an Existing CDN Endpoint
-     *
-     * <p>To show information about an existing CDN endpoint, send a GET request to `/v2/cdn/endpoints/$ENDPOINT_ID`.
-     *
+     * 
+     * To show information about an existing CDN endpoint, send a GET request to `/v2/cdn/endpoints/$ENDPOINT_ID`.
+     * 
      * @param cdnId A unique identifier for a CDN endpoint.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
      * @throws ErrorException thrown if the request is rejected by server.
@@ -198,9 +194,9 @@ public final class Cdns {
 
     /**
      * Retrieve an Existing CDN Endpoint
-     *
-     * <p>To show information about an existing CDN endpoint, send a GET request to `/v2/cdn/endpoints/$ENDPOINT_ID`.
-     *
+     * 
+     * To show information about an existing CDN endpoint, send a GET request to `/v2/cdn/endpoints/$ENDPOINT_ID`.
+     * 
      * @param cdnId A unique identifier for a CDN endpoint.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
      * @throws ErrorException thrown if the request is rejected by server.
@@ -209,15 +205,16 @@ public final class Cdns {
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Object> getEndpointAsync(UUID cdnId) {
-        return getEndpointWithResponseAsync(cdnId).flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return getEndpointWithResponseAsync(cdnId)
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 
     /**
      * Update a CDN Endpoint
-     *
-     * <p>To update the TTL, certificate ID, or the FQDN of the custom subdomain for an existing CDN endpoint, send a
-     * PUT request to `/v2/cdn/endpoints/$ENDPOINT_ID`.
-     *
+     * 
+     * To update the TTL, certificate ID, or the FQDN of the custom subdomain for
+     * an existing CDN endpoint, send a PUT request to
+     * `/v2/cdn/endpoints/$ENDPOINT_ID`.
+     * 
      * @param cdnId A unique identifier for a CDN endpoint.
      * @param body The body parameter.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
@@ -233,10 +230,11 @@ public final class Cdns {
 
     /**
      * Update a CDN Endpoint
-     *
-     * <p>To update the TTL, certificate ID, or the FQDN of the custom subdomain for an existing CDN endpoint, send a
-     * PUT request to `/v2/cdn/endpoints/$ENDPOINT_ID`.
-     *
+     * 
+     * To update the TTL, certificate ID, or the FQDN of the custom subdomain for
+     * an existing CDN endpoint, send a PUT request to
+     * `/v2/cdn/endpoints/$ENDPOINT_ID`.
+     * 
      * @param cdnId A unique identifier for a CDN endpoint.
      * @param body The body parameter.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
@@ -246,17 +244,18 @@ public final class Cdns {
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Object> updateEndpointsAsync(UUID cdnId, UpdateEndpoint body) {
-        return updateEndpointsWithResponseAsync(cdnId, body).flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return updateEndpointsWithResponseAsync(cdnId, body)
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 
     /**
      * Delete a CDN Endpoint
-     *
-     * <p>To delete a specific CDN endpoint, send a DELETE request to `/v2/cdn/endpoints/$ENDPOINT_ID`.
-     *
-     * <p>A status of 204 will be given. This indicates that the request was processed successfully, but that no
-     * response body is needed.
-     *
+     * 
+     * To delete a specific CDN endpoint, send a DELETE request to
+     * `/v2/cdn/endpoints/$ENDPOINT_ID`.
+     * 
+     * A status of 204 will be given. This indicates that the request was processed
+     * successfully, but that no response body is needed.
+     * 
      * @param cdnId A unique identifier for a CDN endpoint.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
      * @throws ErrorException thrown if the request is rejected by server.
@@ -271,12 +270,13 @@ public final class Cdns {
 
     /**
      * Delete a CDN Endpoint
-     *
-     * <p>To delete a specific CDN endpoint, send a DELETE request to `/v2/cdn/endpoints/$ENDPOINT_ID`.
-     *
-     * <p>A status of 204 will be given. This indicates that the request was processed successfully, but that no
-     * response body is needed.
-     *
+     * 
+     * To delete a specific CDN endpoint, send a DELETE request to
+     * `/v2/cdn/endpoints/$ENDPOINT_ID`.
+     * 
+     * A status of 204 will be given. This indicates that the request was processed
+     * successfully, but that no response body is needed.
+     * 
      * @param cdnId A unique identifier for a CDN endpoint.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
      * @throws ErrorException thrown if the request is rejected by server.
@@ -285,17 +285,19 @@ public final class Cdns {
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Error> deleteEndpointAsync(UUID cdnId) {
-        return deleteEndpointWithResponseAsync(cdnId).flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return deleteEndpointWithResponseAsync(cdnId)
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 
     /**
      * Purge the Cache for an Existing CDN Endpoint
-     *
-     * <p>To purge cached content from a CDN endpoint, send a DELETE request to `/v2/cdn/endpoints/$ENDPOINT_ID/cache`.
-     * The body of the request should include a `files` attribute containing a list of cached file paths to be purged. A
-     * path may be for a single file or may contain a wildcard (`*`) to recursively purge all files under a directory.
-     * When only a wildcard is provided, all cached files will be purged.
-     *
+     * 
+     * To purge cached content from a CDN endpoint, send a DELETE request to
+     * `/v2/cdn/endpoints/$ENDPOINT_ID/cache`. The body of the request should include
+     * a `files` attribute containing a list of cached file paths to be purged. A
+     * path may be for a single file or may contain a wildcard (`*`) to recursively
+     * purge all files under a directory. When only a wildcard is provided, all
+     * cached files will be purged.
+     * 
      * @param cdnId A unique identifier for a CDN endpoint.
      * @param body The body parameter.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
@@ -311,12 +313,14 @@ public final class Cdns {
 
     /**
      * Purge the Cache for an Existing CDN Endpoint
-     *
-     * <p>To purge cached content from a CDN endpoint, send a DELETE request to `/v2/cdn/endpoints/$ENDPOINT_ID/cache`.
-     * The body of the request should include a `files` attribute containing a list of cached file paths to be purged. A
-     * path may be for a single file or may contain a wildcard (`*`) to recursively purge all files under a directory.
-     * When only a wildcard is provided, all cached files will be purged.
-     *
+     * 
+     * To purge cached content from a CDN endpoint, send a DELETE request to
+     * `/v2/cdn/endpoints/$ENDPOINT_ID/cache`. The body of the request should include
+     * a `files` attribute containing a list of cached file paths to be purged. A
+     * path may be for a single file or may contain a wildcard (`*`) to recursively
+     * purge all files under a directory. When only a wildcard is provided, all
+     * cached files will be purged.
+     * 
      * @param cdnId A unique identifier for a CDN endpoint.
      * @param body The body parameter.
      * @throws IllegalArgumentException thrown if parameters fail the validation.
@@ -326,6 +330,6 @@ public final class Cdns {
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Error> purgeCacheAsync(UUID cdnId, PurgeCache body) {
-        return purgeCacheWithResponseAsync(cdnId, body).flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return purgeCacheWithResponseAsync(cdnId, body)
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 }

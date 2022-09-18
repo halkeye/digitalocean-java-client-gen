@@ -10,27 +10,34 @@ import com.azure.core.annotation.ServiceInterface;
 import com.azure.core.annotation.ServiceMethod;
 import com.azure.core.annotation.UnexpectedResponseExceptionType;
 import com.azure.core.http.rest.RestProxy;
+import com.azure.core.util.Context;
 import com.digitalocean.api.models.BillingHistoriesListResponse;
 import com.digitalocean.api.models.ErrorException;
+import java.util.Objects;
+import java.util.stream.Collectors;
 import reactor.core.publisher.Mono;
 
-/** An instance of this class provides access to all the operations defined in BillingHistories. */
+/**
+ * An instance of this class provides access to all the operations defined in BillingHistories.
+ */
 public final class BillingHistories {
-    /** The proxy service used to perform REST calls. */
+    /**
+     * The proxy service used to perform REST calls.
+     */
     private final BillingHistoriesService service;
 
-    /** The service client containing this operation class. */
+    /**
+     * The service client containing this operation class.
+     */
     private final GeneratedClient client;
 
     /**
      * Initializes an instance of BillingHistories.
-     *
+     * 
      * @param client the instance of the service client containing this operation class.
      */
-    BillingHistories(GeneratedClient client) {
-        this.service =
-                RestProxy.create(
-                        BillingHistoriesService.class, client.getHttpPipeline(), client.getSerializerAdapter());
+     BillingHistories(GeneratedClient client) {
+        this.service = RestProxy.create(BillingHistoriesService.class, client.getHttpPipeline(), client.getSerializerAdapter());
         this.client = client;
     }
 
@@ -49,9 +56,9 @@ public final class BillingHistories {
 
     /**
      * List Billing History
-     *
-     * <p>To retrieve a list of all billing history entries, send a GET request to `/v2/customers/my/billing_history`.
-     *
+     * 
+     * To retrieve a list of all billing history entries, send a GET request to `/v2/customers/my/billing_history`.
+     * 
      * @throws ErrorException thrown if the request is rejected by server.
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent.
      * @return the response body on successful completion of {@link Mono}.
@@ -64,15 +71,15 @@ public final class BillingHistories {
 
     /**
      * List Billing History
-     *
-     * <p>To retrieve a list of all billing history entries, send a GET request to `/v2/customers/my/billing_history`.
-     *
+     * 
+     * To retrieve a list of all billing history entries, send a GET request to `/v2/customers/my/billing_history`.
+     * 
      * @throws ErrorException thrown if the request is rejected by server.
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent.
      * @return the response body on successful completion of {@link Mono}.
      */
     @ServiceMethod(returns = ReturnType.SINGLE)
     public Mono<Object> listAsync() {
-        return listWithResponseAsync().flatMap(res -> Mono.justOrEmpty(res.getValue()));
-    }
+        return listWithResponseAsync()
+            .flatMap(res -> Mono.justOrEmpty(res.getValue()));}
 }

@@ -1,10 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The VolumeActionPostAttach model. */
+/**
+ * The VolumeActionPostAttach model.
+ */
 @Fluent
 public final class VolumeActionPostAttach extends VolumeActionPostBase {
     /*
@@ -22,7 +28,7 @@ public final class VolumeActionPostAttach extends VolumeActionPostBase {
 
     /**
      * Get the dropletId property: The unique identifier for the Droplet the volume will be attached or detached from.
-     *
+     * 
      * @return the dropletId value.
      */
     public int getDropletId() {
@@ -31,7 +37,7 @@ public final class VolumeActionPostAttach extends VolumeActionPostBase {
 
     /**
      * Set the dropletId property: The unique identifier for the Droplet the volume will be attached or detached from.
-     *
+     * 
      * @param dropletId the dropletId value to set.
      * @return the VolumeActionPostAttach object itself.
      */
@@ -43,7 +49,7 @@ public final class VolumeActionPostAttach extends VolumeActionPostBase {
     /**
      * Get the tags property: A flat array of tag names as strings to be applied to the resource. Tag names may be for
      * either existing or new tags.
-     *
+     * 
      * @return the tags value.
      */
     public List<String> getTags() {
@@ -53,7 +59,7 @@ public final class VolumeActionPostAttach extends VolumeActionPostBase {
     /**
      * Set the tags property: A flat array of tag names as strings to be applied to the resource. Tag names may be for
      * either existing or new tags.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the VolumeActionPostAttach object itself.
      */
@@ -62,14 +68,18 @@ public final class VolumeActionPostAttach extends VolumeActionPostBase {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public VolumeActionPostAttach setType(VolumeActionPostBaseType type) {
         super.setType(type);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public VolumeActionPostAttach setRegion(RegionSlug region) {
         super.setRegion(region);

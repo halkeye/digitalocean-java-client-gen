@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ClusterlintRequest model. */
+/**
+ * The ClusterlintRequest model.
+ */
 @Fluent
 public final class ClusterlintRequest {
     /*
@@ -33,7 +38,7 @@ public final class ClusterlintRequest {
 
     /**
      * Get the includeGroups property: An array of check groups that will be run when clusterlint executes checks.
-     *
+     * 
      * @return the includeGroups value.
      */
     public List<String> getIncludeGroups() {
@@ -42,7 +47,7 @@ public final class ClusterlintRequest {
 
     /**
      * Set the includeGroups property: An array of check groups that will be run when clusterlint executes checks.
-     *
+     * 
      * @param includeGroups the includeGroups value to set.
      * @return the ClusterlintRequest object itself.
      */
@@ -53,7 +58,7 @@ public final class ClusterlintRequest {
 
     /**
      * Get the includeChecks property: An array of checks that will be run when clusterlint executes checks.
-     *
+     * 
      * @return the includeChecks value.
      */
     public List<String> getIncludeChecks() {
@@ -62,7 +67,7 @@ public final class ClusterlintRequest {
 
     /**
      * Set the includeChecks property: An array of checks that will be run when clusterlint executes checks.
-     *
+     * 
      * @param includeChecks the includeChecks value to set.
      * @return the ClusterlintRequest object itself.
      */
@@ -73,7 +78,7 @@ public final class ClusterlintRequest {
 
     /**
      * Get the excludeGroups property: An array of check groups that will be omitted when clusterlint executes checks.
-     *
+     * 
      * @return the excludeGroups value.
      */
     public List<String> getExcludeGroups() {
@@ -82,7 +87,7 @@ public final class ClusterlintRequest {
 
     /**
      * Set the excludeGroups property: An array of check groups that will be omitted when clusterlint executes checks.
-     *
+     * 
      * @param excludeGroups the excludeGroups value to set.
      * @return the ClusterlintRequest object itself.
      */
@@ -93,7 +98,7 @@ public final class ClusterlintRequest {
 
     /**
      * Get the excludeChecks property: An array of checks that will be run when clusterlint executes checks.
-     *
+     * 
      * @return the excludeChecks value.
      */
     public List<String> getExcludeChecks() {
@@ -102,7 +107,7 @@ public final class ClusterlintRequest {
 
     /**
      * Set the excludeChecks property: An array of checks that will be run when clusterlint executes checks.
-     *
+     * 
      * @param excludeChecks the excludeChecks value to set.
      * @return the ClusterlintRequest object itself.
      */

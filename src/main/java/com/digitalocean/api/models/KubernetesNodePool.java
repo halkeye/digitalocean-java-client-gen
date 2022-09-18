@@ -1,11 +1,16 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Pattern;
 
-/** The KubernetesNodePool model. */
+/**
+ * The KubernetesNodePool model.
+ */
 @Fluent
 public final class KubernetesNodePool extends KubernetesNodePoolSize {
     /*
@@ -74,7 +79,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
 
     /**
      * Get the id property: A unique ID that can be used to identify and reference a specific node pool.
-     *
+     * 
      * @return the id value.
      */
     public UUID getId() {
@@ -83,7 +88,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
 
     /**
      * Get the name property: A human-readable name for the node pool.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -92,7 +97,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
 
     /**
      * Set the name property: A human-readable name for the node pool.
-     *
+     * 
      * @param name the name value to set.
      * @return the KubernetesNodePool object itself.
      */
@@ -103,7 +108,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
 
     /**
      * Get the count property: The number of Droplet instances in the node pool.
-     *
+     * 
      * @return the count value.
      */
     public Integer getCount() {
@@ -112,7 +117,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
 
     /**
      * Set the count property: The number of Droplet instances in the node pool.
-     *
+     * 
      * @param count the count value to set.
      * @return the KubernetesNodePool object itself.
      */
@@ -124,7 +129,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
     /**
      * Get the tags property: An array containing the tags applied to the node pool. All node pools are automatically
      * tagged `k8s`, `k8s-worker`, and `k8s:$K8S_CLUSTER_ID`.
-     *
+     * 
      * @return the tags value.
      */
     public List<String> getTags() {
@@ -134,7 +139,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
     /**
      * Set the tags property: An array containing the tags applied to the node pool. All node pools are automatically
      * tagged `k8s`, `k8s-worker`, and `k8s:$K8S_CLUSTER_ID`.
-     *
+     * 
      * @param tags the tags value to set.
      * @return the KubernetesNodePool object itself.
      */
@@ -146,7 +151,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
     /**
      * Get the labels property: An object containing a set of Kubernetes labels. The keys and are values are both
      * user-defined.
-     *
+     * 
      * @return the labels value.
      */
     public Object getLabels() {
@@ -156,7 +161,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
     /**
      * Set the labels property: An object containing a set of Kubernetes labels. The keys and are values are both
      * user-defined.
-     *
+     * 
      * @param labels the labels value to set.
      * @return the KubernetesNodePool object itself.
      */
@@ -166,10 +171,10 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
     }
 
     /**
-     * Get the taints property: An array of taints to apply to all nodes in a pool. Taints will automatically be applied
-     * to all existing nodes and any subsequent nodes added to the pool. When a taint is removed, it is removed from all
-     * nodes in the pool.
-     *
+     * Get the taints property: An array of taints to apply to all nodes in a pool. Taints will automatically be
+     * applied to all existing nodes and any subsequent nodes added to the pool. When a taint is removed, it is removed
+     * from all nodes in the pool.
+     * 
      * @return the taints value.
      */
     public List<KubernetesNodePoolTaint> getTaints() {
@@ -177,10 +182,10 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
     }
 
     /**
-     * Set the taints property: An array of taints to apply to all nodes in a pool. Taints will automatically be applied
-     * to all existing nodes and any subsequent nodes added to the pool. When a taint is removed, it is removed from all
-     * nodes in the pool.
-     *
+     * Set the taints property: An array of taints to apply to all nodes in a pool. Taints will automatically be
+     * applied to all existing nodes and any subsequent nodes added to the pool. When a taint is removed, it is removed
+     * from all nodes in the pool.
+     * 
      * @param taints the taints value to set.
      * @return the KubernetesNodePool object itself.
      */
@@ -191,7 +196,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
 
     /**
      * Get the autoScale property: A boolean value indicating whether auto-scaling is enabled for this node pool.
-     *
+     * 
      * @return the autoScale value.
      */
     public Boolean isAutoScale() {
@@ -200,7 +205,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
 
     /**
      * Set the autoScale property: A boolean value indicating whether auto-scaling is enabled for this node pool.
-     *
+     * 
      * @param autoScale the autoScale value to set.
      * @return the KubernetesNodePool object itself.
      */
@@ -212,7 +217,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
     /**
      * Get the minNodes property: The minimum number of nodes that this node pool can be auto-scaled to. The value will
      * be `0` if `auto_scale` is set to `false`.
-     *
+     * 
      * @return the minNodes value.
      */
     public Integer getMinNodes() {
@@ -222,7 +227,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
     /**
      * Set the minNodes property: The minimum number of nodes that this node pool can be auto-scaled to. The value will
      * be `0` if `auto_scale` is set to `false`.
-     *
+     * 
      * @param minNodes the minNodes value to set.
      * @return the KubernetesNodePool object itself.
      */
@@ -234,7 +239,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
     /**
      * Get the maxNodes property: The maximum number of nodes that this node pool can be auto-scaled to. The value will
      * be `0` if `auto_scale` is set to `false`.
-     *
+     * 
      * @return the maxNodes value.
      */
     public Integer getMaxNodes() {
@@ -244,7 +249,7 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
     /**
      * Set the maxNodes property: The maximum number of nodes that this node pool can be auto-scaled to. The value will
      * be `0` if `auto_scale` is set to `false`.
-     *
+     * 
      * @param maxNodes the maxNodes value to set.
      * @return the KubernetesNodePool object itself.
      */
@@ -255,14 +260,16 @@ public final class KubernetesNodePool extends KubernetesNodePoolSize {
 
     /**
      * Get the nodes property: An object specifying the details of a specific worker node in a node pool.
-     *
+     * 
      * @return the nodes value.
      */
     public List<Node> getNodes() {
         return this.nodes;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public KubernetesNodePool setSize(String size) {
         super.setSize(size);

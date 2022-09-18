@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
 
-/** An object containing information about a resource scheduled for deletion. */
+/**
+ * An object containing information about a resource scheduled for deletion.
+ */
 @Fluent
 public final class DestroyedAssociatedResource {
     /*
@@ -34,7 +39,7 @@ public final class DestroyedAssociatedResource {
 
     /**
      * Get the id property: The unique identifier for the resource scheduled for deletion.
-     *
+     * 
      * @return the id value.
      */
     public String getId() {
@@ -43,7 +48,7 @@ public final class DestroyedAssociatedResource {
 
     /**
      * Set the id property: The unique identifier for the resource scheduled for deletion.
-     *
+     * 
      * @param id the id value to set.
      * @return the DestroyedAssociatedResource object itself.
      */
@@ -54,7 +59,7 @@ public final class DestroyedAssociatedResource {
 
     /**
      * Get the name property: The name of the resource scheduled for deletion.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -63,7 +68,7 @@ public final class DestroyedAssociatedResource {
 
     /**
      * Set the name property: The name of the resource scheduled for deletion.
-     *
+     * 
      * @param name the name value to set.
      * @return the DestroyedAssociatedResource object itself.
      */
@@ -75,7 +80,7 @@ public final class DestroyedAssociatedResource {
     /**
      * Get the destroyedAt property: A time value given in ISO8601 combined date and time format indicating when the
      * resource was destroyed if the request was successful.
-     *
+     * 
      * @return the destroyedAt value.
      */
     public OffsetDateTime getDestroyedAt() {
@@ -85,7 +90,7 @@ public final class DestroyedAssociatedResource {
     /**
      * Set the destroyedAt property: A time value given in ISO8601 combined date and time format indicating when the
      * resource was destroyed if the request was successful.
-     *
+     * 
      * @param destroyedAt the destroyedAt value to set.
      * @return the DestroyedAssociatedResource object itself.
      */
@@ -95,9 +100,9 @@ public final class DestroyedAssociatedResource {
     }
 
     /**
-     * Get the errorMessage property: A string indicating that the resource was not successfully destroyed and providing
-     * additional information.
-     *
+     * Get the errorMessage property: A string indicating that the resource was not successfully destroyed and
+     * providing additional information.
+     * 
      * @return the errorMessage value.
      */
     public String getErrorMessage() {
@@ -105,9 +110,9 @@ public final class DestroyedAssociatedResource {
     }
 
     /**
-     * Set the errorMessage property: A string indicating that the resource was not successfully destroyed and providing
-     * additional information.
-     *
+     * Set the errorMessage property: A string indicating that the resource was not successfully destroyed and
+     * providing additional information.
+     * 
      * @param errorMessage the errorMessage value to set.
      * @return the DestroyedAssociatedResource object itself.
      */

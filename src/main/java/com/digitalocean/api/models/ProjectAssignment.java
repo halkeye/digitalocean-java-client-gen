@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ProjectAssignment model. */
+/**
+ * The ProjectAssignment model.
+ */
 @Fluent
 public final class ProjectAssignment {
     /*
@@ -15,7 +20,7 @@ public final class ProjectAssignment {
 
     /**
      * Get the resources property: A list of uniform resource names (URNs) to be added to a project.
-     *
+     * 
      * @return the resources value.
      */
     public List<String> getResources() {
@@ -24,7 +29,7 @@ public final class ProjectAssignment {
 
     /**
      * Set the resources property: A list of uniform resource names (URNs) to be added to a project.
-     *
+     * 
      * @param resources the resources value to set.
      * @return the ProjectAssignment object itself.
      */

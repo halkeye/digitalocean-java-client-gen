@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The LinkToFirstPage model. */
+/**
+ * The LinkToFirstPage model.
+ */
 @Fluent
 public class LinkToFirstPage {
     /*
@@ -14,7 +19,7 @@ public class LinkToFirstPage {
 
     /**
      * Get the first property: URI of the first page of the results.
-     *
+     * 
      * @return the first value.
      */
     public String getFirst() {
@@ -23,7 +28,7 @@ public class LinkToFirstPage {
 
     /**
      * Set the first property: URI of the first page of the results.
-     *
+     * 
      * @param first the first value to set.
      * @return the LinkToFirstPage object itself.
      */

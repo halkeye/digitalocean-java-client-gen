@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The KubernetesOptions model. */
+/**
+ * The KubernetesOptions model.
+ */
 @Fluent
 public final class KubernetesOptions {
     /*
@@ -14,7 +19,7 @@ public final class KubernetesOptions {
 
     /**
      * Get the options property: The options property.
-     *
+     * 
      * @return the options value.
      */
     public KubernetesOptionsOptions getOptions() {
@@ -23,7 +28,7 @@ public final class KubernetesOptions {
 
     /**
      * Set the options property: The options property.
-     *
+     * 
      * @param options the options value to set.
      * @return the KubernetesOptions object itself.
      */

@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Repository model. */
+/**
+ * The Repository model.
+ */
 @Fluent
 public final class Repository {
     /*
@@ -32,7 +37,7 @@ public final class Repository {
 
     /**
      * Get the registryName property: The name of the container registry.
-     *
+     * 
      * @return the registryName value.
      */
     public String getRegistryName() {
@@ -41,7 +46,7 @@ public final class Repository {
 
     /**
      * Set the registryName property: The name of the container registry.
-     *
+     * 
      * @param registryName the registryName value to set.
      * @return the Repository object itself.
      */
@@ -52,7 +57,7 @@ public final class Repository {
 
     /**
      * Get the name property: The name of the repository.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -61,7 +66,7 @@ public final class Repository {
 
     /**
      * Set the name property: The name of the repository.
-     *
+     * 
      * @param name the name value to set.
      * @return the Repository object itself.
      */
@@ -72,7 +77,7 @@ public final class Repository {
 
     /**
      * Get the latestTag property: The latest_tag property.
-     *
+     * 
      * @return the latestTag value.
      */
     public RepositoryTag getLatestTag() {
@@ -81,7 +86,7 @@ public final class Repository {
 
     /**
      * Set the latestTag property: The latest_tag property.
-     *
+     * 
      * @param latestTag the latestTag value to set.
      * @return the Repository object itself.
      */
@@ -92,7 +97,7 @@ public final class Repository {
 
     /**
      * Get the tagCount property: The number of tags in the repository.
-     *
+     * 
      * @return the tagCount value.
      */
     public Integer getTagCount() {
@@ -101,7 +106,7 @@ public final class Repository {
 
     /**
      * Set the tagCount property: The number of tags in the repository.
-     *
+     * 
      * @param tagCount the tagCount value to set.
      * @return the Repository object itself.
      */

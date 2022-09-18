@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The DomainRecord model. */
+/**
+ * The DomainRecord model.
+ */
 @Fluent
 public class DomainRecord {
     /*
@@ -71,7 +76,7 @@ public class DomainRecord {
 
     /**
      * Get the id property: A unique identifier for each domain record.
-     *
+     * 
      * @return the id value.
      */
     public Integer getId() {
@@ -80,7 +85,7 @@ public class DomainRecord {
 
     /**
      * Get the type property: The type of the DNS record. For example: A, CNAME, TXT, ...
-     *
+     * 
      * @return the type value.
      */
     public String getType() {
@@ -89,7 +94,7 @@ public class DomainRecord {
 
     /**
      * Set the type property: The type of the DNS record. For example: A, CNAME, TXT, ...
-     *
+     * 
      * @param type the type value to set.
      * @return the DomainRecord object itself.
      */
@@ -100,7 +105,7 @@ public class DomainRecord {
 
     /**
      * Get the name property: The host name, alias, or service being defined by the record.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -109,7 +114,7 @@ public class DomainRecord {
 
     /**
      * Set the name property: The host name, alias, or service being defined by the record.
-     *
+     * 
      * @param name the name value to set.
      * @return the DomainRecord object itself.
      */
@@ -122,7 +127,7 @@ public class DomainRecord {
      * Get the data property: Variable data depending on record type. For example, the "data" value for an A record
      * would be the IPv4 address to which the domain will be mapped. For a CAA record, it would contain the domain name
      * of the CA being granted permission to issue certificates.
-     *
+     * 
      * @return the data value.
      */
     public String getData() {
@@ -133,7 +138,7 @@ public class DomainRecord {
      * Set the data property: Variable data depending on record type. For example, the "data" value for an A record
      * would be the IPv4 address to which the domain will be mapped. For a CAA record, it would contain the domain name
      * of the CA being granted permission to issue certificates.
-     *
+     * 
      * @param data the data value to set.
      * @return the DomainRecord object itself.
      */
@@ -144,7 +149,7 @@ public class DomainRecord {
 
     /**
      * Get the priority property: The priority for SRV and MX records.
-     *
+     * 
      * @return the priority value.
      */
     public Integer getPriority() {
@@ -153,7 +158,7 @@ public class DomainRecord {
 
     /**
      * Set the priority property: The priority for SRV and MX records.
-     *
+     * 
      * @param priority the priority value to set.
      * @return the DomainRecord object itself.
      */
@@ -164,7 +169,7 @@ public class DomainRecord {
 
     /**
      * Get the port property: The port for SRV records.
-     *
+     * 
      * @return the port value.
      */
     public Integer getPort() {
@@ -173,7 +178,7 @@ public class DomainRecord {
 
     /**
      * Set the port property: The port for SRV records.
-     *
+     * 
      * @param port the port value to set.
      * @return the DomainRecord object itself.
      */
@@ -183,9 +188,9 @@ public class DomainRecord {
     }
 
     /**
-     * Get the ttl property: This value is the time to live for the record, in seconds. This defines the time frame that
-     * clients can cache queried information before a refresh should be requested.
-     *
+     * Get the ttl property: This value is the time to live for the record, in seconds. This defines the time frame
+     * that clients can cache queried information before a refresh should be requested.
+     * 
      * @return the ttl value.
      */
     public Integer getTtl() {
@@ -193,9 +198,9 @@ public class DomainRecord {
     }
 
     /**
-     * Set the ttl property: This value is the time to live for the record, in seconds. This defines the time frame that
-     * clients can cache queried information before a refresh should be requested.
-     *
+     * Set the ttl property: This value is the time to live for the record, in seconds. This defines the time frame
+     * that clients can cache queried information before a refresh should be requested.
+     * 
      * @param ttl the ttl value to set.
      * @return the DomainRecord object itself.
      */
@@ -206,7 +211,7 @@ public class DomainRecord {
 
     /**
      * Get the weight property: The weight for SRV records.
-     *
+     * 
      * @return the weight value.
      */
     public Integer getWeight() {
@@ -215,7 +220,7 @@ public class DomainRecord {
 
     /**
      * Set the weight property: The weight for SRV records.
-     *
+     * 
      * @param weight the weight value to set.
      * @return the DomainRecord object itself.
      */
@@ -226,7 +231,7 @@ public class DomainRecord {
 
     /**
      * Get the flags property: An unsigned integer between 0-255 used for CAA records.
-     *
+     * 
      * @return the flags value.
      */
     public Integer getFlags() {
@@ -235,7 +240,7 @@ public class DomainRecord {
 
     /**
      * Set the flags property: An unsigned integer between 0-255 used for CAA records.
-     *
+     * 
      * @param flags the flags value to set.
      * @return the DomainRecord object itself.
      */
@@ -246,7 +251,7 @@ public class DomainRecord {
 
     /**
      * Get the tag property: The parameter tag for CAA records. Valid values are "issue", "issuewild", or "iodef".
-     *
+     * 
      * @return the tag value.
      */
     public String getTag() {
@@ -255,7 +260,7 @@ public class DomainRecord {
 
     /**
      * Set the tag property: The parameter tag for CAA records. Valid values are "issue", "issuewild", or "iodef".
-     *
+     * 
      * @param tag the tag value to set.
      * @return the DomainRecord object itself.
      */

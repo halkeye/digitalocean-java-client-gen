@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsAplp5ResponsesAllDropletsContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The ComponentsAplp5ResponsesAllDropletsContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class ComponentsAplp5ResponsesAllDropletsContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsAplp5ResponsesAllDropletsContentApplicationJsonSchemaAllo
 
     /**
      * Get the droplets property: The droplets property.
-     *
+     * 
      * @return the droplets value.
      */
     public List<Droplet> getDroplets() {
@@ -24,7 +29,7 @@ public class ComponentsAplp5ResponsesAllDropletsContentApplicationJsonSchemaAllo
 
     /**
      * Set the droplets property: The droplets property.
-     *
+     * 
      * @param droplets the droplets value to set.
      * @return the ComponentsAplp5ResponsesAllDropletsContentApplicationJsonSchemaAllof0 object itself.
      */

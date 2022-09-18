@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsMf1I3YResponsesAllDropletSnapshotsContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The ComponentsMf1I3YResponsesAllDropletSnapshotsContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class ComponentsMf1I3YResponsesAllDropletSnapshotsContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsMf1I3YResponsesAllDropletSnapshotsContentApplicationJsonS
 
     /**
      * Get the snapshots property: The snapshots property.
-     *
+     * 
      * @return the snapshots value.
      */
     public List<DropletSnapshot> getSnapshots() {
@@ -24,12 +29,11 @@ public class ComponentsMf1I3YResponsesAllDropletSnapshotsContentApplicationJsonS
 
     /**
      * Set the snapshots property: The snapshots property.
-     *
+     * 
      * @param snapshots the snapshots value to set.
      * @return the ComponentsMf1I3YResponsesAllDropletSnapshotsContentApplicationJsonSchemaAllof0 object itself.
      */
-    public ComponentsMf1I3YResponsesAllDropletSnapshotsContentApplicationJsonSchemaAllof0 setSnapshots(
-            List<DropletSnapshot> snapshots) {
+    public ComponentsMf1I3YResponsesAllDropletSnapshotsContentApplicationJsonSchemaAllof0 setSnapshots(List<DropletSnapshot> snapshots) {
         this.snapshots = snapshots;
         return this;
     }

@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ComponentsH2S4NkResponsesExistingClusterContentApplicationJsonSchema model. */
+/**
+ * The ComponentsH2S4NkResponsesExistingClusterContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsH2S4NkResponsesExistingClusterContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class ComponentsH2S4NkResponsesExistingClusterContentApplicationJso
 
     /**
      * Get the kubernetesCluster property: The kubernetes_cluster property.
-     *
+     * 
      * @return the kubernetesCluster value.
      */
     public Cluster getKubernetesCluster() {
@@ -23,12 +28,11 @@ public final class ComponentsH2S4NkResponsesExistingClusterContentApplicationJso
 
     /**
      * Set the kubernetesCluster property: The kubernetes_cluster property.
-     *
+     * 
      * @param kubernetesCluster the kubernetesCluster value to set.
      * @return the ComponentsH2S4NkResponsesExistingClusterContentApplicationJsonSchema object itself.
      */
-    public ComponentsH2S4NkResponsesExistingClusterContentApplicationJsonSchema setKubernetesCluster(
-            Cluster kubernetesCluster) {
+    public ComponentsH2S4NkResponsesExistingClusterContentApplicationJsonSchema setKubernetesCluster(Cluster kubernetesCluster) {
         this.kubernetesCluster = kubernetesCluster;
         return this;
     }

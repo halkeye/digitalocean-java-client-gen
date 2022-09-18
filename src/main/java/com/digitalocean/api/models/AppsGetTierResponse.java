@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsGetTierResponse model. */
+/**
+ * The AppsGetTierResponse model.
+ */
 @Fluent
 public final class AppsGetTierResponse {
     /*
@@ -14,7 +19,7 @@ public final class AppsGetTierResponse {
 
     /**
      * Get the tier property: The tier property.
-     *
+     * 
      * @return the tier value.
      */
     public AppsTier getTier() {
@@ -23,7 +28,7 @@ public final class AppsGetTierResponse {
 
     /**
      * Set the tier property: The tier property.
-     *
+     * 
      * @param tier the tier value to set.
      * @return the AppsGetTierResponse object itself.
      */

@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components1Nx5U76ResponsesTagsNewContentApplicationJsonSchema model. */
+/**
+ * The Components1Nx5U76ResponsesTagsNewContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components1Nx5U76ResponsesTagsNewContentApplicationJsonSchema {
     /*
@@ -17,10 +22,11 @@ public final class Components1Nx5U76ResponsesTagsNewContentApplicationJsonSchema
 
     /**
      * Get the tag property: A tag is a label that can be applied to a resource (currently Droplets, Images, Volumes,
-     * Volume Snapshots, and Database clusters) in order to better organize or facilitate the lookups and actions on it.
+     * Volume Snapshots, and Database clusters) in order to better organize or facilitate the lookups and actions on
+     * it.
      * Tags have two attributes: a user defined `name` attribute and an embedded `resources` attribute with information
      * about resources that have been tagged.
-     *
+     * 
      * @return the tag value.
      */
     public Tags getTag() {
@@ -29,10 +35,11 @@ public final class Components1Nx5U76ResponsesTagsNewContentApplicationJsonSchema
 
     /**
      * Set the tag property: A tag is a label that can be applied to a resource (currently Droplets, Images, Volumes,
-     * Volume Snapshots, and Database clusters) in order to better organize or facilitate the lookups and actions on it.
+     * Volume Snapshots, and Database clusters) in order to better organize or facilitate the lookups and actions on
+     * it.
      * Tags have two attributes: a user defined `name` attribute and an embedded `resources` attribute with information
      * about resources that have been tagged.
-     *
+     * 
      * @param tag the tag value to set.
      * @return the Components1Nx5U76ResponsesTagsNewContentApplicationJsonSchema object itself.
      */

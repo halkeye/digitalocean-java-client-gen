@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The SshKeys model. */
+/**
+ * The SshKeys model.
+ */
 @Fluent
 public final class SshKeys {
     /*
@@ -33,9 +38,9 @@ public final class SshKeys {
     private String name;
 
     /**
-     * Get the id property: A unique identification number for this key. Can be used to embed a specific SSH key into a
-     * Droplet.
-     *
+     * Get the id property: A unique identification number for this key. Can be used to embed a  specific SSH key into
+     * a Droplet.
+     * 
      * @return the id value.
      */
     public Integer getId() {
@@ -43,9 +48,9 @@ public final class SshKeys {
     }
 
     /**
-     * Get the fingerprint property: A unique identifier that differentiates this key from other keys using a format
+     * Get the fingerprint property: A unique identifier that differentiates this key from other keys using  a format
      * that SSH recognizes. The fingerprint is created when the key is added to your account.
-     *
+     * 
      * @return the fingerprint value.
      */
     public String getFingerprint() {
@@ -55,7 +60,7 @@ public final class SshKeys {
     /**
      * Get the publicKey property: The entire public key string that was uploaded. Embedded into the root user's
      * `authorized_keys` file if you include this key during Droplet creation.
-     *
+     * 
      * @return the publicKey value.
      */
     public String getPublicKey() {
@@ -65,7 +70,7 @@ public final class SshKeys {
     /**
      * Set the publicKey property: The entire public key string that was uploaded. Embedded into the root user's
      * `authorized_keys` file if you include this key during Droplet creation.
-     *
+     * 
      * @param publicKey the publicKey value to set.
      * @return the SshKeys object itself.
      */
@@ -75,9 +80,9 @@ public final class SshKeys {
     }
 
     /**
-     * Get the name property: A human-readable display name for this key, used to easily identify the SSH keys when they
-     * are displayed.
-     *
+     * Get the name property: A human-readable display name for this key, used to easily identify the SSH keys when
+     * they are displayed.
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -85,9 +90,9 @@ public final class SshKeys {
     }
 
     /**
-     * Set the name property: A human-readable display name for this key, used to easily identify the SSH keys when they
-     * are displayed.
-     *
+     * Set the name property: A human-readable display name for this key, used to easily identify the SSH keys when
+     * they are displayed.
+     * 
      * @param name the name value to set.
      * @return the SshKeys object itself.
      */

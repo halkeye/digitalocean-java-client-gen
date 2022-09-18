@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsYsdmqhResponsesReservedIpListContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The ComponentsYsdmqhResponsesReservedIpListContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class ComponentsYsdmqhResponsesReservedIpListContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class ComponentsYsdmqhResponsesReservedIpListContentApplicationJsonSchema
 
     /**
      * Get the reservedIps property: The reserved_ips property.
-     *
+     * 
      * @return the reservedIps value.
      */
     public List<ReservedIp> getReservedIps() {
@@ -24,12 +29,11 @@ public class ComponentsYsdmqhResponsesReservedIpListContentApplicationJsonSchema
 
     /**
      * Set the reservedIps property: The reserved_ips property.
-     *
+     * 
      * @param reservedIps the reservedIps value to set.
      * @return the ComponentsYsdmqhResponsesReservedIpListContentApplicationJsonSchemaAllof0 object itself.
      */
-    public ComponentsYsdmqhResponsesReservedIpListContentApplicationJsonSchemaAllof0 setReservedIps(
-            List<ReservedIp> reservedIps) {
+    public ComponentsYsdmqhResponsesReservedIpListContentApplicationJsonSchemaAllof0 setReservedIps(List<ReservedIp> reservedIps) {
         this.reservedIps = reservedIps;
         return this;
     }

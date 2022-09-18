@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The DropletActionResize model. */
+/**
+ * The DropletActionResize model.
+ */
 @Fluent
 public final class DropletActionResize extends DropletAction {
     /*
@@ -22,7 +28,7 @@ public final class DropletActionResize extends DropletAction {
     /**
      * Get the disk property: When `true`, the Droplet's disk will be resized in addition to its RAM and CPU. This is a
      * permanent change and cannot be reversed as a Droplet's disk size cannot be decreased.
-     *
+     * 
      * @return the disk value.
      */
     public Boolean isDisk() {
@@ -32,7 +38,7 @@ public final class DropletActionResize extends DropletAction {
     /**
      * Set the disk property: When `true`, the Droplet's disk will be resized in addition to its RAM and CPU. This is a
      * permanent change and cannot be reversed as a Droplet's disk size cannot be decreased.
-     *
+     * 
      * @param disk the disk value to set.
      * @return the DropletActionResize object itself.
      */
@@ -43,7 +49,7 @@ public final class DropletActionResize extends DropletAction {
 
     /**
      * Get the size property: The slug identifier for the size to which you wish to resize the Droplet.
-     *
+     * 
      * @return the size value.
      */
     public String getSize() {
@@ -52,7 +58,7 @@ public final class DropletActionResize extends DropletAction {
 
     /**
      * Set the size property: The slug identifier for the size to which you wish to resize the Droplet.
-     *
+     * 
      * @param size the size value to set.
      * @return the DropletActionResize object itself.
      */
@@ -61,7 +67,9 @@ public final class DropletActionResize extends DropletAction {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DropletActionResize setType(DropletActionType type) {
         super.setType(type);

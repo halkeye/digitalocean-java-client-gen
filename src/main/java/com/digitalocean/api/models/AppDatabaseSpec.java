@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The AppDatabaseSpec model. */
+/**
+ * The AppDatabaseSpec model.
+ */
 @Fluent
 public final class AppDatabaseSpec {
     /*
@@ -54,7 +60,7 @@ public final class AppDatabaseSpec {
     /**
      * Get the clusterName property: The name of the underlying DigitalOcean DBaaS cluster. This is required for
      * production databases. For dev databases, if cluster_name is not set, a new cluster will be provisioned.
-     *
+     * 
      * @return the clusterName value.
      */
     public String getClusterName() {
@@ -64,7 +70,7 @@ public final class AppDatabaseSpec {
     /**
      * Set the clusterName property: The name of the underlying DigitalOcean DBaaS cluster. This is required for
      * production databases. For dev databases, if cluster_name is not set, a new cluster will be provisioned.
-     *
+     * 
      * @param clusterName the clusterName value to set.
      * @return the AppDatabaseSpec object itself.
      */
@@ -75,7 +81,7 @@ public final class AppDatabaseSpec {
 
     /**
      * Get the dbName property: The name of the MySQL or PostgreSQL database to configure.
-     *
+     * 
      * @return the dbName value.
      */
     public String getDbName() {
@@ -84,7 +90,7 @@ public final class AppDatabaseSpec {
 
     /**
      * Set the dbName property: The name of the MySQL or PostgreSQL database to configure.
-     *
+     * 
      * @param dbName the dbName value to set.
      * @return the AppDatabaseSpec object itself.
      */
@@ -95,7 +101,7 @@ public final class AppDatabaseSpec {
 
     /**
      * Get the dbUser property: The name of the MySQL or PostgreSQL user to configure.
-     *
+     * 
      * @return the dbUser value.
      */
     public String getDbUser() {
@@ -104,7 +110,7 @@ public final class AppDatabaseSpec {
 
     /**
      * Set the dbUser property: The name of the MySQL or PostgreSQL user to configure.
-     *
+     * 
      * @param dbUser the dbUser value to set.
      * @return the AppDatabaseSpec object itself.
      */
@@ -114,8 +120,10 @@ public final class AppDatabaseSpec {
     }
 
     /**
-     * Get the engine property: - MYSQL: MySQL - PG: PostgreSQL - REDIS: Redis.
-     *
+     * Get the engine property: - MYSQL: MySQL
+     * - PG: PostgreSQL
+     * - REDIS: Redis.
+     * 
      * @return the engine value.
      */
     public AppDatabaseSpecEngine getEngine() {
@@ -123,8 +131,10 @@ public final class AppDatabaseSpec {
     }
 
     /**
-     * Set the engine property: - MYSQL: MySQL - PG: PostgreSQL - REDIS: Redis.
-     *
+     * Set the engine property: - MYSQL: MySQL
+     * - PG: PostgreSQL
+     * - REDIS: Redis.
+     * 
      * @param engine the engine value to set.
      * @return the AppDatabaseSpec object itself.
      */
@@ -135,7 +145,7 @@ public final class AppDatabaseSpec {
 
     /**
      * Get the name property: The name. Must be unique across all components within the same app.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -144,7 +154,7 @@ public final class AppDatabaseSpec {
 
     /**
      * Set the name property: The name. Must be unique across all components within the same app.
-     *
+     * 
      * @param name the name value to set.
      * @return the AppDatabaseSpec object itself.
      */
@@ -155,7 +165,7 @@ public final class AppDatabaseSpec {
 
     /**
      * Get the production property: Whether this is a production or dev database.
-     *
+     * 
      * @return the production value.
      */
     public Boolean isProduction() {
@@ -164,7 +174,7 @@ public final class AppDatabaseSpec {
 
     /**
      * Set the production property: Whether this is a production or dev database.
-     *
+     * 
      * @param production the production value to set.
      * @return the AppDatabaseSpec object itself.
      */
@@ -175,7 +185,7 @@ public final class AppDatabaseSpec {
 
     /**
      * Get the version property: The version of the database engine.
-     *
+     * 
      * @return the version value.
      */
     public String getVersion() {
@@ -184,7 +194,7 @@ public final class AppDatabaseSpec {
 
     /**
      * Set the version property: The version of the database engine.
-     *
+     * 
      * @param version the version value to set.
      * @return the AppDatabaseSpec object itself.
      */

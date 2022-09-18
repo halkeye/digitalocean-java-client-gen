@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppsGitlabSourceSpec model. */
+/**
+ * The AppsGitlabSourceSpec model.
+ */
 @Fluent
 public final class AppsGitlabSourceSpec {
     /*
@@ -26,7 +31,7 @@ public final class AppsGitlabSourceSpec {
 
     /**
      * Get the branch property: The name of the branch to use.
-     *
+     * 
      * @return the branch value.
      */
     public String getBranch() {
@@ -35,7 +40,7 @@ public final class AppsGitlabSourceSpec {
 
     /**
      * Set the branch property: The name of the branch to use.
-     *
+     * 
      * @param branch the branch value to set.
      * @return the AppsGitlabSourceSpec object itself.
      */
@@ -46,7 +51,7 @@ public final class AppsGitlabSourceSpec {
 
     /**
      * Get the deployOnPush property: Whether to automatically deploy new commits made to the repo.
-     *
+     * 
      * @return the deployOnPush value.
      */
     public Boolean isDeployOnPush() {
@@ -55,7 +60,7 @@ public final class AppsGitlabSourceSpec {
 
     /**
      * Set the deployOnPush property: Whether to automatically deploy new commits made to the repo.
-     *
+     * 
      * @param deployOnPush the deployOnPush value to set.
      * @return the AppsGitlabSourceSpec object itself.
      */
@@ -66,7 +71,7 @@ public final class AppsGitlabSourceSpec {
 
     /**
      * Get the repo property: The name of the repo in the format owner/repo. Example: `digitalocean/sample-golang`.
-     *
+     * 
      * @return the repo value.
      */
     public String getRepo() {
@@ -75,7 +80,7 @@ public final class AppsGitlabSourceSpec {
 
     /**
      * Set the repo property: The name of the repo in the format owner/repo. Example: `digitalocean/sample-golang`.
-     *
+     * 
      * @param repo the repo value to set.
      * @return the AppsGitlabSourceSpec object itself.
      */

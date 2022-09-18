@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The AppsListInstanceSizesResponse model. */
+/**
+ * The AppsListInstanceSizesResponse model.
+ */
 @Fluent
 public final class AppsListInstanceSizesResponse {
     /*
@@ -21,7 +26,7 @@ public final class AppsListInstanceSizesResponse {
 
     /**
      * Get the discountPercent property: The discount_percent property.
-     *
+     * 
      * @return the discountPercent value.
      */
     public Float getDiscountPercent() {
@@ -30,7 +35,7 @@ public final class AppsListInstanceSizesResponse {
 
     /**
      * Set the discountPercent property: The discount_percent property.
-     *
+     * 
      * @param discountPercent the discountPercent value to set.
      * @return the AppsListInstanceSizesResponse object itself.
      */
@@ -41,7 +46,7 @@ public final class AppsListInstanceSizesResponse {
 
     /**
      * Get the instanceSizes property: The instance_sizes property.
-     *
+     * 
      * @return the instanceSizes value.
      */
     public List<AppsInstanceSize> getInstanceSizes() {
@@ -50,7 +55,7 @@ public final class AppsListInstanceSizesResponse {
 
     /**
      * Set the instanceSizes property: The instance_sizes property.
-     *
+     * 
      * @param instanceSizes the instanceSizes value to set.
      * @return the AppsListInstanceSizesResponse object itself.
      */

@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The UpdateRegistry model. */
+/**
+ * The UpdateRegistry model.
+ */
 @Fluent
 public final class UpdateRegistry {
     /*
@@ -14,7 +19,7 @@ public final class UpdateRegistry {
 
     /**
      * Get the cancel property: A boolean value indicating that the garbage collection should be cancelled.
-     *
+     * 
      * @return the cancel value.
      */
     public Boolean isCancel() {
@@ -23,7 +28,7 @@ public final class UpdateRegistry {
 
     /**
      * Set the cancel property: A boolean value indicating that the garbage collection should be cancelled.
-     *
+     * 
      * @param cancel the cancel value to set.
      * @return the UpdateRegistry object itself.
      */

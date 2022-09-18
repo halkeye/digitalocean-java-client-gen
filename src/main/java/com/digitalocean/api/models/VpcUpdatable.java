@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The VpcUpdatable model. */
+/**
+ * The VpcUpdatable model.
+ */
 @Fluent
 public class VpcUpdatable {
     /*
@@ -21,7 +26,7 @@ public class VpcUpdatable {
     /**
      * Get the name property: The name of the VPC. Must be unique and may only contain alphanumeric characters, dashes,
      * and periods.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -31,7 +36,7 @@ public class VpcUpdatable {
     /**
      * Set the name property: The name of the VPC. Must be unique and may only contain alphanumeric characters, dashes,
      * and periods.
-     *
+     * 
      * @param name the name value to set.
      * @return the VpcUpdatable object itself.
      */
@@ -41,9 +46,9 @@ public class VpcUpdatable {
     }
 
     /**
-     * Get the description property: A free-form text field for describing the VPC's purpose. It may be a maximum of 255
-     * characters.
-     *
+     * Get the description property: A free-form text field for describing the VPC's purpose. It may be a maximum of
+     * 255 characters.
+     * 
      * @return the description value.
      */
     public String getDescription() {
@@ -51,9 +56,9 @@ public class VpcUpdatable {
     }
 
     /**
-     * Set the description property: A free-form text field for describing the VPC's purpose. It may be a maximum of 255
-     * characters.
-     *
+     * Set the description property: A free-form text field for describing the VPC's purpose. It may be a maximum of
+     * 255 characters.
+     * 
      * @param description the description value to set.
      * @return the VpcUpdatable object itself.
      */

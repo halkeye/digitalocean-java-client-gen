@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components1IxwwnaResponsesProjectsListContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The Components1IxwwnaResponsesProjectsListContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class Components1IxwwnaResponsesProjectsListContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class Components1IxwwnaResponsesProjectsListContentApplicationJsonSchemaA
 
     /**
      * Get the projects property: The projects property.
-     *
+     * 
      * @return the projects value.
      */
     public List<Project> getProjects() {
@@ -24,12 +29,11 @@ public class Components1IxwwnaResponsesProjectsListContentApplicationJsonSchemaA
 
     /**
      * Set the projects property: The projects property.
-     *
+     * 
      * @param projects the projects value to set.
      * @return the Components1IxwwnaResponsesProjectsListContentApplicationJsonSchemaAllof0 object itself.
      */
-    public Components1IxwwnaResponsesProjectsListContentApplicationJsonSchemaAllof0 setProjects(
-            List<Project> projects) {
+    public Components1IxwwnaResponsesProjectsListContentApplicationJsonSchemaAllof0 setProjects(List<Project> projects) {
         this.projects = projects;
         return this;
     }

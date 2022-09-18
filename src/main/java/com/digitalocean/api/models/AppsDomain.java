@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The AppsDomain model. */
+/**
+ * The AppsDomain model.
+ */
 @Fluent
 public final class AppsDomain {
     /*
@@ -32,7 +38,7 @@ public final class AppsDomain {
 
     /**
      * Get the id property: The ID of the domain.
-     *
+     * 
      * @return the id value.
      */
     public String getId() {
@@ -41,7 +47,7 @@ public final class AppsDomain {
 
     /**
      * Set the id property: The ID of the domain.
-     *
+     * 
      * @param id the id value to set.
      * @return the AppsDomain object itself.
      */
@@ -52,7 +58,7 @@ public final class AppsDomain {
 
     /**
      * Get the phase property: The phase property.
-     *
+     * 
      * @return the phase value.
      */
     public AppsDomainPhase getPhase() {
@@ -61,7 +67,7 @@ public final class AppsDomain {
 
     /**
      * Set the phase property: The phase property.
-     *
+     * 
      * @param phase the phase value to set.
      * @return the AppsDomain object itself.
      */
@@ -72,7 +78,7 @@ public final class AppsDomain {
 
     /**
      * Get the progress property: The progress property.
-     *
+     * 
      * @return the progress value.
      */
     public AppsDomainProgress getProgress() {
@@ -81,7 +87,7 @@ public final class AppsDomain {
 
     /**
      * Set the progress property: The progress property.
-     *
+     * 
      * @param progress the progress value to set.
      * @return the AppsDomain object itself.
      */
@@ -92,7 +98,7 @@ public final class AppsDomain {
 
     /**
      * Get the spec property: The spec property.
-     *
+     * 
      * @return the spec value.
      */
     public AppDomainSpec getSpec() {
@@ -101,7 +107,7 @@ public final class AppsDomain {
 
     /**
      * Set the spec property: The spec property.
-     *
+     * 
      * @param spec the spec value to set.
      * @return the AppsDomain object itself.
      */

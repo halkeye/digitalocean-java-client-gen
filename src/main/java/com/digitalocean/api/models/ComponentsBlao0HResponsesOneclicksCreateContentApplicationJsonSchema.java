@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ComponentsBlao0HResponsesOneclicksCreateContentApplicationJsonSchema model. */
+/**
+ * The ComponentsBlao0HResponsesOneclicksCreateContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsBlao0HResponsesOneclicksCreateContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class ComponentsBlao0HResponsesOneclicksCreateContentApplicationJso
 
     /**
      * Get the message property: A message about the result of the request.
-     *
+     * 
      * @return the message value.
      */
     public String getMessage() {
@@ -23,7 +28,7 @@ public final class ComponentsBlao0HResponsesOneclicksCreateContentApplicationJso
 
     /**
      * Set the message property: A message about the result of the request.
-     *
+     * 
      * @param message the message value to set.
      * @return the ComponentsBlao0HResponsesOneclicksCreateContentApplicationJsonSchema object itself.
      */

@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The Mysql model. */
+/**
+ * The Mysql model.
+ */
 @Fluent
 public final class Mysql {
     /*
@@ -183,7 +189,7 @@ public final class Mysql {
     /**
      * Get the backupHour property: The hour of day (in UTC) when backup for the service starts. New backup only starts
      * if previous backup has already completed.
-     *
+     * 
      * @return the backupHour value.
      */
     public Integer getBackupHour() {
@@ -193,7 +199,7 @@ public final class Mysql {
     /**
      * Set the backupHour property: The hour of day (in UTC) when backup for the service starts. New backup only starts
      * if previous backup has already completed.
-     *
+     * 
      * @param backupHour the backupHour value to set.
      * @return the Mysql object itself.
      */
@@ -203,9 +209,9 @@ public final class Mysql {
     }
 
     /**
-     * Get the backupMinute property: The minute of the backup hour when backup for the service starts. New backup only
-     * starts if previous backup has already completed.
-     *
+     * Get the backupMinute property: The minute of the backup hour when backup for the service starts. New backup 
+     * only starts if previous backup has already completed.
+     * 
      * @return the backupMinute value.
      */
     public Integer getBackupMinute() {
@@ -213,9 +219,9 @@ public final class Mysql {
     }
 
     /**
-     * Set the backupMinute property: The minute of the backup hour when backup for the service starts. New backup only
-     * starts if previous backup has already completed.
-     *
+     * Set the backupMinute property: The minute of the backup hour when backup for the service starts. New backup 
+     * only starts if previous backup has already completed.
+     * 
      * @param backupMinute the backupMinute value to set.
      * @return the Mysql object itself.
      */
@@ -227,7 +233,7 @@ public final class Mysql {
     /**
      * Get the sqlMode property: Global SQL mode. If empty, uses MySQL server defaults. Must only include uppercase
      * alphabetic characters, underscores, and commas.
-     *
+     * 
      * @return the sqlMode value.
      */
     public String getSqlMode() {
@@ -237,7 +243,7 @@ public final class Mysql {
     /**
      * Set the sqlMode property: Global SQL mode. If empty, uses MySQL server defaults. Must only include uppercase
      * alphabetic characters, underscores, and commas.
-     *
+     * 
      * @param sqlMode the sqlMode value to set.
      * @return the Mysql object itself.
      */
@@ -249,7 +255,7 @@ public final class Mysql {
     /**
      * Get the connectTimeout property: The number of seconds that the mysqld server waits for a connect packet before
      * responding with bad handshake.
-     *
+     * 
      * @return the connectTimeout value.
      */
     public Integer getConnectTimeout() {
@@ -259,7 +265,7 @@ public final class Mysql {
     /**
      * Set the connectTimeout property: The number of seconds that the mysqld server waits for a connect packet before
      * responding with bad handshake.
-     *
+     * 
      * @param connectTimeout the connectTimeout value to set.
      * @return the Mysql object itself.
      */
@@ -271,7 +277,7 @@ public final class Mysql {
     /**
      * Get the defaultTimeZone property: Default server time zone, in the form of an offset from UTC (from -12:00 to
      * +12:00), a time zone name (EST), or 'SYSTEM' to use the MySQL server default.
-     *
+     * 
      * @return the defaultTimeZone value.
      */
     public String getDefaultTimeZone() {
@@ -281,7 +287,7 @@ public final class Mysql {
     /**
      * Set the defaultTimeZone property: Default server time zone, in the form of an offset from UTC (from -12:00 to
      * +12:00), a time zone name (EST), or 'SYSTEM' to use the MySQL server default.
-     *
+     * 
      * @param defaultTimeZone the defaultTimeZone value to set.
      * @return the Mysql object itself.
      */
@@ -293,7 +299,7 @@ public final class Mysql {
     /**
      * Get the groupConcatMaxLen property: The maximum permitted result length, in bytes, for the GROUP_CONCAT()
      * function.
-     *
+     * 
      * @return the groupConcatMaxLen value.
      */
     public Integer getGroupConcatMaxLen() {
@@ -303,7 +309,7 @@ public final class Mysql {
     /**
      * Set the groupConcatMaxLen property: The maximum permitted result length, in bytes, for the GROUP_CONCAT()
      * function.
-     *
+     * 
      * @param groupConcatMaxLen the groupConcatMaxLen value to set.
      * @return the Mysql object itself.
      */
@@ -314,7 +320,7 @@ public final class Mysql {
 
     /**
      * Get the informationSchemaStatsExpiry property: The time, in seconds, before cached statistics expire.
-     *
+     * 
      * @return the informationSchemaStatsExpiry value.
      */
     public Integer getInformationSchemaStatsExpiry() {
@@ -323,7 +329,7 @@ public final class Mysql {
 
     /**
      * Set the informationSchemaStatsExpiry property: The time, in seconds, before cached statistics expire.
-     *
+     * 
      * @param informationSchemaStatsExpiry the informationSchemaStatsExpiry value to set.
      * @return the Mysql object itself.
      */
@@ -334,7 +340,7 @@ public final class Mysql {
 
     /**
      * Get the innodbFtMinTokenSize property: The minimum length of words that an InnoDB FULLTEXT index stores.
-     *
+     * 
      * @return the innodbFtMinTokenSize value.
      */
     public Integer getInnodbFtMinTokenSize() {
@@ -343,7 +349,7 @@ public final class Mysql {
 
     /**
      * Set the innodbFtMinTokenSize property: The minimum length of words that an InnoDB FULLTEXT index stores.
-     *
+     * 
      * @param innodbFtMinTokenSize the innodbFtMinTokenSize value to set.
      * @return the Mysql object itself.
      */
@@ -354,7 +360,7 @@ public final class Mysql {
 
     /**
      * Get the innodbFtServerStopwordTable property: The InnoDB FULLTEXT index stopword list for all InnoDB tables.
-     *
+     * 
      * @return the innodbFtServerStopwordTable value.
      */
     public String getInnodbFtServerStopwordTable() {
@@ -363,7 +369,7 @@ public final class Mysql {
 
     /**
      * Set the innodbFtServerStopwordTable property: The InnoDB FULLTEXT index stopword list for all InnoDB tables.
-     *
+     * 
      * @param innodbFtServerStopwordTable the innodbFtServerStopwordTable value to set.
      * @return the Mysql object itself.
      */
@@ -375,7 +381,7 @@ public final class Mysql {
     /**
      * Get the innodbLockWaitTimeout property: The time, in seconds, that an InnoDB transaction waits for a row lock.
      * before giving up.
-     *
+     * 
      * @return the innodbLockWaitTimeout value.
      */
     public Integer getInnodbLockWaitTimeout() {
@@ -385,7 +391,7 @@ public final class Mysql {
     /**
      * Set the innodbLockWaitTimeout property: The time, in seconds, that an InnoDB transaction waits for a row lock.
      * before giving up.
-     *
+     * 
      * @param innodbLockWaitTimeout the innodbLockWaitTimeout value to set.
      * @return the Mysql object itself.
      */
@@ -397,7 +403,7 @@ public final class Mysql {
     /**
      * Get the innodbLogBufferSize property: The size of the buffer, in bytes, that InnoDB uses to write to the log
      * files. on disk.
-     *
+     * 
      * @return the innodbLogBufferSize value.
      */
     public Integer getInnodbLogBufferSize() {
@@ -407,7 +413,7 @@ public final class Mysql {
     /**
      * Set the innodbLogBufferSize property: The size of the buffer, in bytes, that InnoDB uses to write to the log
      * files. on disk.
-     *
+     * 
      * @param innodbLogBufferSize the innodbLogBufferSize value to set.
      * @return the Mysql object itself.
      */
@@ -419,7 +425,7 @@ public final class Mysql {
     /**
      * Get the innodbOnlineAlterLogMaxSize property: The upper limit, in bytes, of the size of the temporary log files
      * used during online DDL operations for InnoDB tables.
-     *
+     * 
      * @return the innodbOnlineAlterLogMaxSize value.
      */
     public Integer getInnodbOnlineAlterLogMaxSize() {
@@ -429,7 +435,7 @@ public final class Mysql {
     /**
      * Set the innodbOnlineAlterLogMaxSize property: The upper limit, in bytes, of the size of the temporary log files
      * used during online DDL operations for InnoDB tables.
-     *
+     * 
      * @param innodbOnlineAlterLogMaxSize the innodbOnlineAlterLogMaxSize value to set.
      * @return the Mysql object itself.
      */
@@ -440,8 +446,8 @@ public final class Mysql {
 
     /**
      * Get the innodbPrintAllDeadlocks property: When enabled, records information about all deadlocks in InnoDB user
-     * transactions in the error log. Disabled by default.
-     *
+     * transactions  in the error log. Disabled by default.
+     * 
      * @return the innodbPrintAllDeadlocks value.
      */
     public Boolean isInnodbPrintAllDeadlocks() {
@@ -450,8 +456,8 @@ public final class Mysql {
 
     /**
      * Set the innodbPrintAllDeadlocks property: When enabled, records information about all deadlocks in InnoDB user
-     * transactions in the error log. Disabled by default.
-     *
+     * transactions  in the error log. Disabled by default.
+     * 
      * @param innodbPrintAllDeadlocks the innodbPrintAllDeadlocks value to set.
      * @return the Mysql object itself.
      */
@@ -463,7 +469,7 @@ public final class Mysql {
     /**
      * Get the innodbRollbackOnTimeout property: When enabled, transaction timeouts cause InnoDB to abort and roll back
      * the entire transaction.
-     *
+     * 
      * @return the innodbRollbackOnTimeout value.
      */
     public Boolean isInnodbRollbackOnTimeout() {
@@ -473,7 +479,7 @@ public final class Mysql {
     /**
      * Set the innodbRollbackOnTimeout property: When enabled, transaction timeouts cause InnoDB to abort and roll back
      * the entire transaction.
-     *
+     * 
      * @param innodbRollbackOnTimeout the innodbRollbackOnTimeout value to set.
      * @return the Mysql object itself.
      */
@@ -485,7 +491,7 @@ public final class Mysql {
     /**
      * Get the interactiveTimeout property: The time, in seconds, the server waits for activity on an interactive.
      * connection before closing it.
-     *
+     * 
      * @return the interactiveTimeout value.
      */
     public Integer getInteractiveTimeout() {
@@ -495,7 +501,7 @@ public final class Mysql {
     /**
      * Set the interactiveTimeout property: The time, in seconds, the server waits for activity on an interactive.
      * connection before closing it.
-     *
+     * 
      * @param interactiveTimeout the interactiveTimeout value to set.
      * @return the Mysql object itself.
      */
@@ -506,7 +512,7 @@ public final class Mysql {
 
     /**
      * Get the internalTmpMemStorageEngine property: The storage engine for in-memory internal temporary tables.
-     *
+     * 
      * @return the internalTmpMemStorageEngine value.
      */
     public MysqlInternalTmpMemStorageEngine getInternalTmpMemStorageEngine() {
@@ -515,7 +521,7 @@ public final class Mysql {
 
     /**
      * Set the internalTmpMemStorageEngine property: The storage engine for in-memory internal temporary tables.
-     *
+     * 
      * @param internalTmpMemStorageEngine the internalTmpMemStorageEngine value to set.
      * @return the Mysql object itself.
      */
@@ -527,7 +533,7 @@ public final class Mysql {
     /**
      * Get the netReadTimeout property: The time, in seconds, to wait for more data from an existing connection.
      * aborting the read.
-     *
+     * 
      * @return the netReadTimeout value.
      */
     public Integer getNetReadTimeout() {
@@ -537,7 +543,7 @@ public final class Mysql {
     /**
      * Set the netReadTimeout property: The time, in seconds, to wait for more data from an existing connection.
      * aborting the read.
-     *
+     * 
      * @param netReadTimeout the netReadTimeout value to set.
      * @return the Mysql object itself.
      */
@@ -549,7 +555,7 @@ public final class Mysql {
     /**
      * Get the netWriteTimeout property: The number of seconds to wait for a block to be written to a connection before
      * aborting the write.
-     *
+     * 
      * @return the netWriteTimeout value.
      */
     public Integer getNetWriteTimeout() {
@@ -559,7 +565,7 @@ public final class Mysql {
     /**
      * Set the netWriteTimeout property: The number of seconds to wait for a block to be written to a connection before
      * aborting the write.
-     *
+     * 
      * @param netWriteTimeout the netWriteTimeout value to set.
      * @return the Mysql object itself.
      */
@@ -570,9 +576,9 @@ public final class Mysql {
 
     /**
      * Get the sqlRequirePrimaryKey property: Require primary key to be defined for new tables or old tables modified
-     * with ALTER TABLE and fail if missing. It is recommended to always have primary keys because various functionality
-     * may break if any large table is missing them.
-     *
+     * with ALTER TABLE and fail if missing. It is recommended to always have primary keys because various
+     * functionality may break if any large table is missing them.
+     * 
      * @return the sqlRequirePrimaryKey value.
      */
     public Boolean isSqlRequirePrimaryKey() {
@@ -581,9 +587,9 @@ public final class Mysql {
 
     /**
      * Set the sqlRequirePrimaryKey property: Require primary key to be defined for new tables or old tables modified
-     * with ALTER TABLE and fail if missing. It is recommended to always have primary keys because various functionality
-     * may break if any large table is missing them.
-     *
+     * with ALTER TABLE and fail if missing. It is recommended to always have primary keys because various
+     * functionality may break if any large table is missing them.
+     * 
      * @param sqlRequirePrimaryKey the sqlRequirePrimaryKey value to set.
      * @return the Mysql object itself.
      */
@@ -595,7 +601,7 @@ public final class Mysql {
     /**
      * Get the waitTimeout property: The number of seconds the server waits for activity on a noninteractive connection
      * before closing it.
-     *
+     * 
      * @return the waitTimeout value.
      */
     public Integer getWaitTimeout() {
@@ -605,7 +611,7 @@ public final class Mysql {
     /**
      * Set the waitTimeout property: The number of seconds the server waits for activity on a noninteractive connection
      * before closing it.
-     *
+     * 
      * @param waitTimeout the waitTimeout value to set.
      * @return the Mysql object itself.
      */
@@ -615,9 +621,9 @@ public final class Mysql {
     }
 
     /**
-     * Get the maxAllowedPacket property: The size of the largest message, in bytes, that can be received by the server.
-     * Default is 67108864 (64M).
-     *
+     * Get the maxAllowedPacket property: The size of the largest message, in bytes, that can be received by the
+     * server. Default is 67108864 (64M).
+     * 
      * @return the maxAllowedPacket value.
      */
     public Integer getMaxAllowedPacket() {
@@ -625,9 +631,9 @@ public final class Mysql {
     }
 
     /**
-     * Set the maxAllowedPacket property: The size of the largest message, in bytes, that can be received by the server.
-     * Default is 67108864 (64M).
-     *
+     * Set the maxAllowedPacket property: The size of the largest message, in bytes, that can be received by the
+     * server. Default is 67108864 (64M).
+     * 
      * @param maxAllowedPacket the maxAllowedPacket value to set.
      * @return the Mysql object itself.
      */
@@ -639,7 +645,7 @@ public final class Mysql {
     /**
      * Get the maxHeapTableSize property: The maximum size, in bytes, of internal in-memory tables. Also set
      * tmp_table_size. Default is 16777216 (16M).
-     *
+     * 
      * @return the maxHeapTableSize value.
      */
     public Integer getMaxHeapTableSize() {
@@ -649,7 +655,7 @@ public final class Mysql {
     /**
      * Set the maxHeapTableSize property: The maximum size, in bytes, of internal in-memory tables. Also set
      * tmp_table_size. Default is 16777216 (16M).
-     *
+     * 
      * @param maxHeapTableSize the maxHeapTableSize value to set.
      * @return the Mysql object itself.
      */
@@ -661,7 +667,7 @@ public final class Mysql {
     /**
      * Get the sortBufferSize property: The sort buffer size, in bytes, for ORDER BY optimization. Default is 262144.
      * (256K).
-     *
+     * 
      * @return the sortBufferSize value.
      */
     public Integer getSortBufferSize() {
@@ -671,7 +677,7 @@ public final class Mysql {
     /**
      * Set the sortBufferSize property: The sort buffer size, in bytes, for ORDER BY optimization. Default is 262144.
      * (256K).
-     *
+     * 
      * @param sortBufferSize the sortBufferSize value to set.
      * @return the Mysql object itself.
      */
@@ -683,7 +689,7 @@ public final class Mysql {
     /**
      * Get the tmpTableSize property: The maximum size, in bytes, of internal in-memory tables. Also set
      * max_heap_table_size. Default is 16777216 (16M).
-     *
+     * 
      * @return the tmpTableSize value.
      */
     public Integer getTmpTableSize() {
@@ -693,7 +699,7 @@ public final class Mysql {
     /**
      * Set the tmpTableSize property: The maximum size, in bytes, of internal in-memory tables. Also set
      * max_heap_table_size. Default is 16777216 (16M).
-     *
+     * 
      * @param tmpTableSize the tmpTableSize value to set.
      * @return the Mysql object itself.
      */
@@ -705,7 +711,7 @@ public final class Mysql {
     /**
      * Get the slowQueryLog property: When enabled, captures slow queries. When disabled, also truncates the
      * mysql.slow_log table. Default is false.
-     *
+     * 
      * @return the slowQueryLog value.
      */
     public Boolean isSlowQueryLog() {
@@ -715,7 +721,7 @@ public final class Mysql {
     /**
      * Set the slowQueryLog property: When enabled, captures slow queries. When disabled, also truncates the
      * mysql.slow_log table. Default is false.
-     *
+     * 
      * @param slowQueryLog the slowQueryLog value to set.
      * @return the Mysql object itself.
      */
@@ -725,9 +731,9 @@ public final class Mysql {
     }
 
     /**
-     * Get the longQueryTime property: The time, in seconds, for a query to take to execute before being captured by
+     * Get the longQueryTime property: The time, in seconds, for a query to take to execute before  being captured by
      * slow_query_logs. Default is 10 seconds.
-     *
+     * 
      * @return the longQueryTime value.
      */
     public Float getLongQueryTime() {
@@ -735,9 +741,9 @@ public final class Mysql {
     }
 
     /**
-     * Set the longQueryTime property: The time, in seconds, for a query to take to execute before being captured by
+     * Set the longQueryTime property: The time, in seconds, for a query to take to execute before  being captured by
      * slow_query_logs. Default is 10 seconds.
-     *
+     * 
      * @param longQueryTime the longQueryTime value to set.
      * @return the Mysql object itself.
      */
@@ -748,9 +754,9 @@ public final class Mysql {
 
     /**
      * Get the binlogRetentionPeriod property: The minimum amount of time, in seconds, to keep binlog entries before
-     * deletion. This may be extended for services that require binlog entries for longer than the default, for example
-     * if using the MySQL Debezium Kafka connector.
-     *
+     * deletion.  This may be extended for services that require binlog entries for longer than the default, for
+     * example if using the MySQL Debezium Kafka connector.
+     * 
      * @return the binlogRetentionPeriod value.
      */
     public Float getBinlogRetentionPeriod() {
@@ -759,9 +765,9 @@ public final class Mysql {
 
     /**
      * Set the binlogRetentionPeriod property: The minimum amount of time, in seconds, to keep binlog entries before
-     * deletion. This may be extended for services that require binlog entries for longer than the default, for example
-     * if using the MySQL Debezium Kafka connector.
-     *
+     * deletion.  This may be extended for services that require binlog entries for longer than the default, for
+     * example if using the MySQL Debezium Kafka connector.
+     * 
      * @param binlogRetentionPeriod the binlogRetentionPeriod value to set.
      * @return the Mysql object itself.
      */

@@ -4,20 +4,28 @@ import com.azure.core.util.ExpandableStringEnum;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import java.util.Collection;
 
-/** The environment of the project's resources. */
+/**
+ * The environment of the project's resources.
+ */
 public final class ProjectBaseEnvironment extends ExpandableStringEnum<ProjectBaseEnvironment> {
-    /** Static value Development for ProjectBaseEnvironment. */
+    /**
+     * Static value Development for ProjectBaseEnvironment.
+     */
     public static final ProjectBaseEnvironment DEVELOPMENT = fromString("Development");
 
-    /** Static value Staging for ProjectBaseEnvironment. */
+    /**
+     * Static value Staging for ProjectBaseEnvironment.
+     */
     public static final ProjectBaseEnvironment STAGING = fromString("Staging");
 
-    /** Static value Production for ProjectBaseEnvironment. */
+    /**
+     * Static value Production for ProjectBaseEnvironment.
+     */
     public static final ProjectBaseEnvironment PRODUCTION = fromString("Production");
 
     /**
      * Creates or finds a ProjectBaseEnvironment from its string representation.
-     *
+     * 
      * @param name a name to look for.
      * @return the corresponding ProjectBaseEnvironment.
      */
@@ -28,7 +36,7 @@ public final class ProjectBaseEnvironment extends ExpandableStringEnum<ProjectBa
 
     /**
      * Gets known ProjectBaseEnvironment values.
-     *
+     * 
      * @return known ProjectBaseEnvironment values.
      */
     public static Collection<ProjectBaseEnvironment> values() {

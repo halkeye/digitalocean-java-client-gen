@@ -1,18 +1,19 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.Size;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class SizeTests {
     @Test
     public void testDeserialize() {
-        Size model =
-                BinaryData.fromString(
-                                "{\"slug\":\"jpewpyjlfx\",\"memory\":34873333,\"vcpus\":1857968528,\"disk\":1111869311,\"transfer\":25.711292,\"price_monthly\":80.83503,\"price_hourly\":63.810665,\"regions\":[\"euqxbpiatwfa\"],\"available\":false,\"description\":\"egqdtadrakgd\"}")
-                        .toObject(Size.class);
+        Size model = BinaryData.fromString("{\"slug\":\"jpewpyjlfx\",\"memory\":34873333,\"vcpus\":1857968528,\"disk\":1111869311,\"transfer\":25.711292,\"price_monthly\":80.83503,\"price_hourly\":63.810665,\"regions\":[\"euqxbpiatwfa\"],\"available\":false,\"description\":\"egqdtadrakgd\"}").toObject(Size.class);
         Assertions.assertEquals("jpewpyjlfx", model.getSlug());
         Assertions.assertEquals(34873333, model.getMemory());
         Assertions.assertEquals(1857968528, model.getVcpus());
@@ -27,18 +28,7 @@ public final class SizeTests {
 
     @Test
     public void testSerialize() {
-        Size model =
-                new Size()
-                        .setSlug("jpewpyjlfx")
-                        .setMemory(34873333)
-                        .setVcpus(1857968528)
-                        .setDisk(1111869311)
-                        .setTransfer(25.711292f)
-                        .setPriceMonthly(80.83503f)
-                        .setPriceHourly(63.810665f)
-                        .setRegions(Arrays.asList("euqxbpiatwfa"))
-                        .setAvailable(false)
-                        .setDescription("egqdtadrakgd");
+        Size model = new Size().setSlug("jpewpyjlfx").setMemory(34873333).setVcpus(1857968528).setDisk(1111869311).setTransfer(25.711292f).setPriceMonthly(80.83503f).setPriceHourly(63.810665f).setRegions(Arrays.asList("euqxbpiatwfa")).setAvailable(false).setDescription("egqdtadrakgd");
         model = BinaryData.fromObject(model).toObject(Size.class);
         Assertions.assertEquals("jpewpyjlfx", model.getSlug());
         Assertions.assertEquals(34873333, model.getMemory());

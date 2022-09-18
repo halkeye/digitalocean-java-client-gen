@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components10Nm5DiResponsesAppsValidateRollbackContentApplicationJsonSchema model. */
+/**
+ * The Components10Nm5DiResponsesAppsValidateRollbackContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components10Nm5DiResponsesAppsValidateRollbackContentApplicationJsonSchema {
     /*
@@ -27,7 +32,7 @@ public final class Components10Nm5DiResponsesAppsValidateRollbackContentApplicat
 
     /**
      * Get the valid property: Indicates whether the app can be rolled back to the specified deployment.
-     *
+     * 
      * @return the valid value.
      */
     public Boolean isValid() {
@@ -36,7 +41,7 @@ public final class Components10Nm5DiResponsesAppsValidateRollbackContentApplicat
 
     /**
      * Set the valid property: Indicates whether the app can be rolled back to the specified deployment.
-     *
+     * 
      * @param valid the valid value to set.
      * @return the Components10Nm5DiResponsesAppsValidateRollbackContentApplicationJsonSchema object itself.
      */
@@ -47,7 +52,7 @@ public final class Components10Nm5DiResponsesAppsValidateRollbackContentApplicat
 
     /**
      * Get the error property: The error property.
-     *
+     * 
      * @return the error value.
      */
     public AppsValidateRollbackApplicationJsonProperties getError() {
@@ -56,12 +61,11 @@ public final class Components10Nm5DiResponsesAppsValidateRollbackContentApplicat
 
     /**
      * Set the error property: The error property.
-     *
+     * 
      * @param error the error value to set.
      * @return the Components10Nm5DiResponsesAppsValidateRollbackContentApplicationJsonSchema object itself.
      */
-    public Components10Nm5DiResponsesAppsValidateRollbackContentApplicationJsonSchema setError(
-            AppsValidateRollbackApplicationJsonProperties error) {
+    public Components10Nm5DiResponsesAppsValidateRollbackContentApplicationJsonSchema setError(AppsValidateRollbackApplicationJsonProperties error) {
         this.error = error;
         return this;
     }
@@ -69,7 +73,7 @@ public final class Components10Nm5DiResponsesAppsValidateRollbackContentApplicat
     /**
      * Get the warnings property: Contains a list of warnings that may cause the rollback to run under unideal
      * circumstances.
-     *
+     * 
      * @return the warnings value.
      */
     public List<AppRollbackValidationCondition> getWarnings() {
@@ -79,12 +83,11 @@ public final class Components10Nm5DiResponsesAppsValidateRollbackContentApplicat
     /**
      * Set the warnings property: Contains a list of warnings that may cause the rollback to run under unideal
      * circumstances.
-     *
+     * 
      * @param warnings the warnings value to set.
      * @return the Components10Nm5DiResponsesAppsValidateRollbackContentApplicationJsonSchema object itself.
      */
-    public Components10Nm5DiResponsesAppsValidateRollbackContentApplicationJsonSchema setWarnings(
-            List<AppRollbackValidationCondition> warnings) {
+    public Components10Nm5DiResponsesAppsValidateRollbackContentApplicationJsonSchema setWarnings(List<AppRollbackValidationCondition> warnings) {
         this.warnings = warnings;
         return this;
     }

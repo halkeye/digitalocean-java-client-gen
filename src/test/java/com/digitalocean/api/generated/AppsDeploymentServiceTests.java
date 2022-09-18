@@ -1,16 +1,17 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.AppsDeploymentService;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class AppsDeploymentServiceTests {
     @Test
     public void testDeserialize() {
-        AppsDeploymentService model =
-                BinaryData.fromString("{\"name\":\"ss\",\"source_commit_hash\":\"u\"}")
-                        .toObject(AppsDeploymentService.class);
+        AppsDeploymentService model = BinaryData.fromString("{\"name\":\"ss\",\"source_commit_hash\":\"u\"}").toObject(AppsDeploymentService.class);
         Assertions.assertEquals("ss", model.getName());
         Assertions.assertEquals("u", model.getSourceCommitHash());
     }

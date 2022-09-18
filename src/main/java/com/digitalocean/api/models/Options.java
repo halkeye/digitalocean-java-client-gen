@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Options model. */
+/**
+ * The Options model.
+ */
 @Fluent
 public final class Options {
     /*
@@ -14,7 +19,7 @@ public final class Options {
 
     /**
      * Get the options property: The options property.
-     *
+     * 
      * @return the options value.
      */
     public OptionsOptions getOptions() {
@@ -23,7 +28,7 @@ public final class Options {
 
     /**
      * Set the options property: The options property.
-     *
+     * 
      * @param options the options value to set.
      * @return the Options object itself.
      */

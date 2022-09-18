@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The AppServiceSpecHealthCheck model. */
+/**
+ * The AppServiceSpecHealthCheck model.
+ */
 @Fluent
 public final class AppServiceSpecHealthCheck {
     /*
@@ -52,7 +57,7 @@ public final class AppServiceSpecHealthCheck {
 
     /**
      * Get the failureThreshold property: The number of failed health checks before considered unhealthy.
-     *
+     * 
      * @return the failureThreshold value.
      */
     public Integer getFailureThreshold() {
@@ -61,7 +66,7 @@ public final class AppServiceSpecHealthCheck {
 
     /**
      * Set the failureThreshold property: The number of failed health checks before considered unhealthy.
-     *
+     * 
      * @param failureThreshold the failureThreshold value to set.
      * @return the AppServiceSpecHealthCheck object itself.
      */
@@ -71,9 +76,9 @@ public final class AppServiceSpecHealthCheck {
     }
 
     /**
-     * Get the port property: The port on which the health check will be performed. If not set, the health check will be
-     * performed on the component's http_port.
-     *
+     * Get the port property: The port on which the health check will be performed. If not set, the health check will
+     * be performed on the component's http_port.
+     * 
      * @return the port value.
      */
     public Long getPort() {
@@ -81,9 +86,9 @@ public final class AppServiceSpecHealthCheck {
     }
 
     /**
-     * Set the port property: The port on which the health check will be performed. If not set, the health check will be
-     * performed on the component's http_port.
-     *
+     * Set the port property: The port on which the health check will be performed. If not set, the health check will
+     * be performed on the component's http_port.
+     * 
      * @param port the port value to set.
      * @return the AppServiceSpecHealthCheck object itself.
      */
@@ -95,7 +100,7 @@ public final class AppServiceSpecHealthCheck {
     /**
      * Get the httpPath property: The route path used for the HTTP health check ping. If not set, the HTTP health check
      * will be disabled and a TCP health check used instead.
-     *
+     * 
      * @return the httpPath value.
      */
     public String getHttpPath() {
@@ -105,7 +110,7 @@ public final class AppServiceSpecHealthCheck {
     /**
      * Set the httpPath property: The route path used for the HTTP health check ping. If not set, the HTTP health check
      * will be disabled and a TCP health check used instead.
-     *
+     * 
      * @param httpPath the httpPath value to set.
      * @return the AppServiceSpecHealthCheck object itself.
      */
@@ -116,7 +121,7 @@ public final class AppServiceSpecHealthCheck {
 
     /**
      * Get the initialDelaySeconds property: The number of seconds to wait before beginning health checks.
-     *
+     * 
      * @return the initialDelaySeconds value.
      */
     public Integer getInitialDelaySeconds() {
@@ -125,7 +130,7 @@ public final class AppServiceSpecHealthCheck {
 
     /**
      * Set the initialDelaySeconds property: The number of seconds to wait before beginning health checks.
-     *
+     * 
      * @param initialDelaySeconds the initialDelaySeconds value to set.
      * @return the AppServiceSpecHealthCheck object itself.
      */
@@ -136,7 +141,7 @@ public final class AppServiceSpecHealthCheck {
 
     /**
      * Get the periodSeconds property: The number of seconds to wait between health checks.
-     *
+     * 
      * @return the periodSeconds value.
      */
     public Integer getPeriodSeconds() {
@@ -145,7 +150,7 @@ public final class AppServiceSpecHealthCheck {
 
     /**
      * Set the periodSeconds property: The number of seconds to wait between health checks.
-     *
+     * 
      * @param periodSeconds the periodSeconds value to set.
      * @return the AppServiceSpecHealthCheck object itself.
      */
@@ -156,7 +161,7 @@ public final class AppServiceSpecHealthCheck {
 
     /**
      * Get the successThreshold property: The number of successful health checks before considered healthy.
-     *
+     * 
      * @return the successThreshold value.
      */
     public Integer getSuccessThreshold() {
@@ -165,7 +170,7 @@ public final class AppServiceSpecHealthCheck {
 
     /**
      * Set the successThreshold property: The number of successful health checks before considered healthy.
-     *
+     * 
      * @param successThreshold the successThreshold value to set.
      * @return the AppServiceSpecHealthCheck object itself.
      */
@@ -176,7 +181,7 @@ public final class AppServiceSpecHealthCheck {
 
     /**
      * Get the timeoutSeconds property: The number of seconds after which the check times out.
-     *
+     * 
      * @return the timeoutSeconds value.
      */
     public Integer getTimeoutSeconds() {
@@ -185,7 +190,7 @@ public final class AppServiceSpecHealthCheck {
 
     /**
      * Set the timeoutSeconds property: The number of seconds after which the check times out.
-     *
+     * 
      * @param timeoutSeconds the timeoutSeconds value to set.
      * @return the AppServiceSpecHealthCheck object itself.
      */

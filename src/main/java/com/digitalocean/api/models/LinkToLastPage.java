@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The LinkToLastPage model. */
+/**
+ * The LinkToLastPage model.
+ */
 @Fluent
 public class LinkToLastPage {
     /*
@@ -14,7 +19,7 @@ public class LinkToLastPage {
 
     /**
      * Get the last property: URI of the last page of the results.
-     *
+     * 
      * @return the last value.
      */
     public String getLast() {
@@ -23,7 +28,7 @@ public class LinkToLastPage {
 
     /**
      * Set the last property: URI of the last page of the results.
-     *
+     * 
      * @param last the last value to set.
      * @return the LinkToLastPage object itself.
      */

@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The Components17G8K7MResponsesSnapshotsContentApplicationJsonSchemaAllof0 model. */
+/**
+ * The Components17G8K7MResponsesSnapshotsContentApplicationJsonSchemaAllof0 model.
+ */
 @Fluent
 public class Components17G8K7MResponsesSnapshotsContentApplicationJsonSchemaAllof0 {
     /*
@@ -15,7 +20,7 @@ public class Components17G8K7MResponsesSnapshotsContentApplicationJsonSchemaAllo
 
     /**
      * Get the snapshots property: The snapshots property.
-     *
+     * 
      * @return the snapshots value.
      */
     public List<Snapshots> getSnapshots() {
@@ -24,12 +29,11 @@ public class Components17G8K7MResponsesSnapshotsContentApplicationJsonSchemaAllo
 
     /**
      * Set the snapshots property: The snapshots property.
-     *
+     * 
      * @param snapshots the snapshots value to set.
      * @return the Components17G8K7MResponsesSnapshotsContentApplicationJsonSchemaAllof0 object itself.
      */
-    public Components17G8K7MResponsesSnapshotsContentApplicationJsonSchemaAllof0 setSnapshots(
-            List<Snapshots> snapshots) {
+    public Components17G8K7MResponsesSnapshotsContentApplicationJsonSchemaAllof0 setSnapshots(List<Snapshots> snapshots) {
         this.snapshots = snapshots;
         return this;
     }

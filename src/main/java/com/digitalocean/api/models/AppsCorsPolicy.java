@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The AppsCorsPolicy model. */
+/**
+ * The AppsCorsPolicy model.
+ */
 @Fluent
 public final class AppsCorsPolicy {
     /*
@@ -48,7 +53,7 @@ public final class AppsCorsPolicy {
 
     /**
      * Get the allowOrigins property: The set of allowed CORS origins.
-     *
+     * 
      * @return the allowOrigins value.
      */
     public List<AppsStringMatch> getAllowOrigins() {
@@ -57,7 +62,7 @@ public final class AppsCorsPolicy {
 
     /**
      * Set the allowOrigins property: The set of allowed CORS origins.
-     *
+     * 
      * @param allowOrigins the allowOrigins value to set.
      * @return the AppsCorsPolicy object itself.
      */
@@ -69,7 +74,7 @@ public final class AppsCorsPolicy {
     /**
      * Get the allowMethods property: The set of allowed HTTP methods. This configures the
      * `Access-Control-Allow-Methods` header.
-     *
+     * 
      * @return the allowMethods value.
      */
     public List<String> getAllowMethods() {
@@ -79,7 +84,7 @@ public final class AppsCorsPolicy {
     /**
      * Set the allowMethods property: The set of allowed HTTP methods. This configures the
      * `Access-Control-Allow-Methods` header.
-     *
+     * 
      * @param allowMethods the allowMethods value to set.
      * @return the AppsCorsPolicy object itself.
      */
@@ -91,7 +96,7 @@ public final class AppsCorsPolicy {
     /**
      * Get the allowHeaders property: The set of allowed HTTP request headers. This configures the
      * `Access-Control-Allow-Headers` header.
-     *
+     * 
      * @return the allowHeaders value.
      */
     public List<String> getAllowHeaders() {
@@ -101,7 +106,7 @@ public final class AppsCorsPolicy {
     /**
      * Set the allowHeaders property: The set of allowed HTTP request headers. This configures the
      * `Access-Control-Allow-Headers` header.
-     *
+     * 
      * @param allowHeaders the allowHeaders value to set.
      * @return the AppsCorsPolicy object itself.
      */
@@ -113,7 +118,7 @@ public final class AppsCorsPolicy {
     /**
      * Get the exposeHeaders property: The set of HTTP response headers that browsers are allowed to access. This
      * configures the `Access-Control-Expose-Headers` header.
-     *
+     * 
      * @return the exposeHeaders value.
      */
     public List<String> getExposeHeaders() {
@@ -123,7 +128,7 @@ public final class AppsCorsPolicy {
     /**
      * Set the exposeHeaders property: The set of HTTP response headers that browsers are allowed to access. This
      * configures the `Access-Control-Expose-Headers` header.
-     *
+     * 
      * @param exposeHeaders the exposeHeaders value to set.
      * @return the AppsCorsPolicy object itself.
      */
@@ -135,7 +140,7 @@ public final class AppsCorsPolicy {
     /**
      * Get the maxAge property: An optional duration specifying how long browsers can cache the results of a preflight
      * request. This configures the `Access-Control-Max-Age` header.
-     *
+     * 
      * @return the maxAge value.
      */
     public String getMaxAge() {
@@ -145,7 +150,7 @@ public final class AppsCorsPolicy {
     /**
      * Set the maxAge property: An optional duration specifying how long browsers can cache the results of a preflight
      * request. This configures the `Access-Control-Max-Age` header.
-     *
+     * 
      * @param maxAge the maxAge value to set.
      * @return the AppsCorsPolicy object itself.
      */
@@ -155,9 +160,10 @@ public final class AppsCorsPolicy {
     }
 
     /**
-     * Get the allowCredentials property: Whether browsers should expose the response to the client-side JavaScript code
-     * when the request’s credentials mode is include. This configures the `Access-Control-Allow-Credentials` header.
-     *
+     * Get the allowCredentials property: Whether browsers should expose the response to the client-side JavaScript
+     * code when the request’s credentials mode is include. This configures the `Access-Control-Allow-Credentials`
+     * header.
+     * 
      * @return the allowCredentials value.
      */
     public Boolean isAllowCredentials() {
@@ -165,9 +171,10 @@ public final class AppsCorsPolicy {
     }
 
     /**
-     * Set the allowCredentials property: Whether browsers should expose the response to the client-side JavaScript code
-     * when the request’s credentials mode is include. This configures the `Access-Control-Allow-Credentials` header.
-     *
+     * Set the allowCredentials property: Whether browsers should expose the response to the client-side JavaScript
+     * code when the request’s credentials mode is include. This configures the `Access-Control-Allow-Credentials`
+     * header.
+     * 
      * @param allowCredentials the allowCredentials value to set.
      * @return the AppsCorsPolicy object itself.
      */

@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The links object contains the `self` object, which contains the resource relationship. */
+/**
+ * The links object contains the `self` object, which contains the resource relationship.
+ */
 @Fluent
 public final class ResourceLinks {
     /*
@@ -14,7 +19,7 @@ public final class ResourceLinks {
 
     /**
      * Get the self property: A URI that can be used to retrieve the resource.
-     *
+     * 
      * @return the self value.
      */
     public String getSelf() {
@@ -23,7 +28,7 @@ public final class ResourceLinks {
 
     /**
      * Set the self property: A URI that can be used to retrieve the resource.
-     *
+     * 
      * @param self the self value to set.
      * @return the ResourceLinks object itself.
      */

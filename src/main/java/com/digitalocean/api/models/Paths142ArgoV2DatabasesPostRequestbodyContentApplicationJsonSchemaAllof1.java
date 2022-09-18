@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Paths142ArgoV2DatabasesPostRequestbodyContentApplicationJsonSchemaAllof1 model. */
+/**
+ * The Paths142ArgoV2DatabasesPostRequestbodyContentApplicationJsonSchemaAllof1 model.
+ */
 @Fluent
 public class Paths142ArgoV2DatabasesPostRequestbodyContentApplicationJsonSchemaAllof1 {
     /*
@@ -14,7 +19,7 @@ public class Paths142ArgoV2DatabasesPostRequestbodyContentApplicationJsonSchemaA
 
     /**
      * Get the backupRestore property: The backup_restore property.
-     *
+     * 
      * @return the backupRestore value.
      */
     public DatabaseBackup getBackupRestore() {
@@ -23,12 +28,11 @@ public class Paths142ArgoV2DatabasesPostRequestbodyContentApplicationJsonSchemaA
 
     /**
      * Set the backupRestore property: The backup_restore property.
-     *
+     * 
      * @param backupRestore the backupRestore value to set.
      * @return the Paths142ArgoV2DatabasesPostRequestbodyContentApplicationJsonSchemaAllof1 object itself.
      */
-    public Paths142ArgoV2DatabasesPostRequestbodyContentApplicationJsonSchemaAllof1 setBackupRestore(
-            DatabaseBackup backupRestore) {
+    public Paths142ArgoV2DatabasesPostRequestbodyContentApplicationJsonSchemaAllof1 setBackupRestore(DatabaseBackup backupRestore) {
         this.backupRestore = backupRestore;
         return this;
     }

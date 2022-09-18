@@ -1,8 +1,12 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * The
@@ -10,9 +14,7 @@ import java.util.List;
  * model.
  */
 @Fluent
-public final
-class Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-        extends SubscriptionTierBase {
+public final class Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems extends SubscriptionTierBase {
     /*
      * A boolean indicating whether your account it eligible to use a certain subscription tier.
      */
@@ -29,7 +31,7 @@ class Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSch
     /**
      * Get the eligible property: A boolean indicating whether your account it eligible to use a certain subscription
      * tier.
-     *
+     * 
      * @return the eligible value.
      */
     public Boolean isEligible() {
@@ -39,15 +41,13 @@ class Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSch
     /**
      * Set the eligible property: A boolean indicating whether your account it eligible to use a certain subscription
      * tier.
-     *
+     * 
      * @param eligible the eligible value to set.
      * @return the
-     *     Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-     *     object itself.
+     * Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
+     * object itself.
      */
-    public
-    Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-            setEligible(Boolean eligible) {
+    public Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems setEligible(Boolean eligible) {
         this.eligible = eligible;
         return this;
     }
@@ -55,7 +55,7 @@ class Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSch
     /**
      * Get the eligibilityReasons property: If your account is not eligible to use a certain subscription tier, this
      * will include a list of reasons that prevent you from using the tier.
-     *
+     * 
      * @return the eligibilityReasons value.
      */
     public List<SubscriptionTierExtendedEligibilityReasonsItem> getEligibilityReasons() {
@@ -65,87 +65,85 @@ class Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSch
     /**
      * Set the eligibilityReasons property: If your account is not eligible to use a certain subscription tier, this
      * will include a list of reasons that prevent you from using the tier.
-     *
+     * 
      * @param eligibilityReasons the eligibilityReasons value to set.
      * @return the
-     *     Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-     *     object itself.
+     * Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
+     * object itself.
      */
-    public
-    Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-            setEligibilityReasons(List<SubscriptionTierExtendedEligibilityReasonsItem> eligibilityReasons) {
+    public Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems setEligibilityReasons(List<SubscriptionTierExtendedEligibilityReasonsItem> eligibilityReasons) {
         this.eligibilityReasons = eligibilityReasons;
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public
-    Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-            setName(String name) {
+    public Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems setName(String name) {
         super.setName(name);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public
-    Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-            setSlug(String slug) {
+    public Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems setSlug(String slug) {
         super.setSlug(slug);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public
-    Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-            setIncludedRepositories(Integer includedRepositories) {
+    public Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems setIncludedRepositories(Integer includedRepositories) {
         super.setIncludedRepositories(includedRepositories);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public
-    Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-            setIncludedStorageBytes(Integer includedStorageBytes) {
+    public Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems setIncludedStorageBytes(Integer includedStorageBytes) {
         super.setIncludedStorageBytes(includedStorageBytes);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public
-    Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-            setAllowStorageOverage(Boolean allowStorageOverage) {
+    public Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems setAllowStorageOverage(Boolean allowStorageOverage) {
         super.setAllowStorageOverage(allowStorageOverage);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public
-    Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-            setIncludedBandwidthBytes(Integer includedBandwidthBytes) {
+    public Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems setIncludedBandwidthBytes(Integer includedBandwidthBytes) {
         super.setIncludedBandwidthBytes(includedBandwidthBytes);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public
-    Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-            setMonthlyPriceInCents(Integer monthlyPriceInCents) {
+    public Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems setMonthlyPriceInCents(Integer monthlyPriceInCents) {
         super.setMonthlyPriceInCents(monthlyPriceInCents);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public
-    Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems
-            setStorageOveragePriceInCents(Integer storageOveragePriceInCents) {
+    public Components1Vh7GehResponsesRegistryOptionsResponseContentApplicationJsonSchemaPropertiesOptionsPropertiesSubscriptionTiersItems setStorageOveragePriceInCents(Integer storageOveragePriceInCents) {
         super.setStorageOveragePriceInCents(storageOveragePriceInCents);
         return this;
     }

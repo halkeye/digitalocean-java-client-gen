@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The DatabaseLayoutOption model. */
+/**
+ * The DatabaseLayoutOption model.
+ */
 @Fluent
 public final class DatabaseLayoutOption {
     /*
@@ -21,7 +26,7 @@ public final class DatabaseLayoutOption {
 
     /**
      * Get the numNodes property: The num_nodes property.
-     *
+     * 
      * @return the numNodes value.
      */
     public Integer getNumNodes() {
@@ -30,7 +35,7 @@ public final class DatabaseLayoutOption {
 
     /**
      * Set the numNodes property: The num_nodes property.
-     *
+     * 
      * @param numNodes the numNodes value to set.
      * @return the DatabaseLayoutOption object itself.
      */
@@ -41,7 +46,7 @@ public final class DatabaseLayoutOption {
 
     /**
      * Get the sizes property: An array of objects containing the slugs available with various node counts.
-     *
+     * 
      * @return the sizes value.
      */
     public List<String> getSizes() {

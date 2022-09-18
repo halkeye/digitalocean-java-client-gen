@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import java.util.regex.Pattern;
 
-/** The Backup model. */
+/**
+ * The Backup model.
+ */
 @Fluent
 public final class Backup {
     /*
@@ -22,7 +27,7 @@ public final class Backup {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format at which the backup was
      * created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -32,7 +37,7 @@ public final class Backup {
     /**
      * Set the createdAt property: A time value given in ISO8601 combined date and time format at which the backup was
      * created.
-     *
+     * 
      * @param createdAt the createdAt value to set.
      * @return the Backup object itself.
      */
@@ -43,7 +48,7 @@ public final class Backup {
 
     /**
      * Get the sizeGigabytes property: The size of the database backup in GBs.
-     *
+     * 
      * @return the sizeGigabytes value.
      */
     public float getSizeGigabytes() {
@@ -52,7 +57,7 @@ public final class Backup {
 
     /**
      * Set the sizeGigabytes property: The size of the database backup in GBs.
-     *
+     * 
      * @param sizeGigabytes the sizeGigabytes value to set.
      * @return the Backup object itself.
      */

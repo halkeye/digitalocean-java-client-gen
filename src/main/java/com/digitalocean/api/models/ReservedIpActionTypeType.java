@@ -4,17 +4,23 @@ import com.azure.core.util.ExpandableStringEnum;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import java.util.Collection;
 
-/** The type of action to initiate for the reserved IP. */
+/**
+ * The type of action to initiate for the reserved IP.
+ */
 public final class ReservedIpActionTypeType extends ExpandableStringEnum<ReservedIpActionTypeType> {
-    /** Static value assign for ReservedIpActionTypeType. */
+    /**
+     * Static value assign for ReservedIpActionTypeType.
+     */
     public static final ReservedIpActionTypeType ASSIGN = fromString("assign");
 
-    /** Static value unassign for ReservedIpActionTypeType. */
+    /**
+     * Static value unassign for ReservedIpActionTypeType.
+     */
     public static final ReservedIpActionTypeType UNASSIGN = fromString("unassign");
 
     /**
      * Creates or finds a ReservedIpActionTypeType from its string representation.
-     *
+     * 
      * @param name a name to look for.
      * @return the corresponding ReservedIpActionTypeType.
      */
@@ -25,7 +31,7 @@ public final class ReservedIpActionTypeType extends ExpandableStringEnum<Reserve
 
     /**
      * Gets known ReservedIpActionTypeType values.
-     *
+     * 
      * @return known ReservedIpActionTypeType values.
      */
     public static Collection<ReservedIpActionTypeType> values() {

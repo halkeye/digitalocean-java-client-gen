@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The FloatingIpCreatedApplicationJsonProperties model. */
+/**
+ * The FloatingIpCreatedApplicationJsonProperties model.
+ */
 @Fluent
 public final class FloatingIpCreatedApplicationJsonProperties {
     /*
@@ -21,7 +26,7 @@ public final class FloatingIpCreatedApplicationJsonProperties {
 
     /**
      * Get the droplets property: The droplets property.
-     *
+     * 
      * @return the droplets value.
      */
     public List<ActionLink> getDroplets() {
@@ -30,7 +35,7 @@ public final class FloatingIpCreatedApplicationJsonProperties {
 
     /**
      * Set the droplets property: The droplets property.
-     *
+     * 
      * @param droplets the droplets value to set.
      * @return the FloatingIpCreatedApplicationJsonProperties object itself.
      */
@@ -41,7 +46,7 @@ public final class FloatingIpCreatedApplicationJsonProperties {
 
     /**
      * Get the actions property: The actions property.
-     *
+     * 
      * @return the actions value.
      */
     public List<ActionLink> getActions() {
@@ -50,7 +55,7 @@ public final class FloatingIpCreatedApplicationJsonProperties {
 
     /**
      * Set the actions property: The actions property.
-     *
+     * 
      * @param actions the actions value to set.
      * @return the FloatingIpCreatedApplicationJsonProperties object itself.
      */

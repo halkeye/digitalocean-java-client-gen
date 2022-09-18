@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The FirewallPendingChangesItem model. */
+/**
+ * The FirewallPendingChangesItem model.
+ */
 @Fluent
 public final class FirewallPendingChangesItem {
     /*
@@ -26,7 +31,7 @@ public final class FirewallPendingChangesItem {
 
     /**
      * Get the dropletId property: The droplet_id property.
-     *
+     * 
      * @return the dropletId value.
      */
     public Integer getDropletId() {
@@ -35,7 +40,7 @@ public final class FirewallPendingChangesItem {
 
     /**
      * Set the dropletId property: The droplet_id property.
-     *
+     * 
      * @param dropletId the dropletId value to set.
      * @return the FirewallPendingChangesItem object itself.
      */
@@ -46,7 +51,7 @@ public final class FirewallPendingChangesItem {
 
     /**
      * Get the removing property: The removing property.
-     *
+     * 
      * @return the removing value.
      */
     public Boolean isRemoving() {
@@ -55,7 +60,7 @@ public final class FirewallPendingChangesItem {
 
     /**
      * Set the removing property: The removing property.
-     *
+     * 
      * @param removing the removing value to set.
      * @return the FirewallPendingChangesItem object itself.
      */
@@ -66,7 +71,7 @@ public final class FirewallPendingChangesItem {
 
     /**
      * Get the status property: The status property.
-     *
+     * 
      * @return the status value.
      */
     public String getStatus() {
@@ -75,7 +80,7 @@ public final class FirewallPendingChangesItem {
 
     /**
      * Set the status property: The status property.
-     *
+     * 
      * @param status the status value to set.
      * @return the FirewallPendingChangesItem object itself.
      */

@@ -1,12 +1,18 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The LoadBalancerBase model. */
+/**
+ * The LoadBalancerBase model.
+ */
 @Fluent
 public class LoadBalancerBase {
     /*
@@ -42,7 +48,7 @@ public class LoadBalancerBase {
      * * `lb-small` = 1 node
      * * `lb-medium` = 3 nodes
      * * `lb-large` = 6 nodes
-     *
+     * 
      * You can resize load balancers after creation up to once per hour. You cannot resize a load balancer within the
      * first hour of its creation.
      */
@@ -119,7 +125,7 @@ public class LoadBalancerBase {
 
     /**
      * Get the id property: A unique ID that can be used to identify and reference a load balancer.
-     *
+     * 
      * @return the id value.
      */
     public UUID getId() {
@@ -128,7 +134,7 @@ public class LoadBalancerBase {
 
     /**
      * Get the name property: A human-readable name for a load balancer instance.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -137,7 +143,7 @@ public class LoadBalancerBase {
 
     /**
      * Set the name property: A human-readable name for a load balancer instance.
-     *
+     * 
      * @param name the name value to set.
      * @return the LoadBalancerBase object itself.
      */
@@ -148,7 +154,7 @@ public class LoadBalancerBase {
 
     /**
      * Get the ip property: An attribute containing the public-facing IP address of the load balancer.
-     *
+     * 
      * @return the ip value.
      */
     public String getIp() {
@@ -160,7 +166,7 @@ public class LoadBalancerBase {
      * balancer's ability to manage more connections. Load balancers can be scaled up or down, and you can change the
      * number of nodes after creation up to once per hour. This field is currently not available in the AMS2, NYC2, or
      * SFO1 regions. Use the `size` field to scale load balancers that reside in these regions.
-     *
+     * 
      * @return the sizeUnit value.
      */
     public Integer getSizeUnit() {
@@ -172,7 +178,7 @@ public class LoadBalancerBase {
      * balancer's ability to manage more connections. Load balancers can be scaled up or down, and you can change the
      * number of nodes after creation up to once per hour. This field is currently not available in the AMS2, NYC2, or
      * SFO1 regions. Use the `size` field to scale load balancers that reside in these regions.
-     *
+     * 
      * @param sizeUnit the sizeUnit value to set.
      * @return the LoadBalancerBase object itself.
      */
@@ -184,11 +190,13 @@ public class LoadBalancerBase {
     /**
      * Get the size property: This field has been replaced by the `size_unit` field for all regions except in AMS2,
      * NYC2, and SFO1. Each available load balancer size now equates to the load balancer having a set number of nodes.
-     * * `lb-small` = 1 node * `lb-medium` = 3 nodes * `lb-large` = 6 nodes
-     *
-     * <p>You can resize load balancers after creation up to once per hour. You cannot resize a load balancer within the
+     * * `lb-small` = 1 node
+     * * `lb-medium` = 3 nodes
+     * * `lb-large` = 6 nodes
+     * 
+     * You can resize load balancers after creation up to once per hour. You cannot resize a load balancer within the
      * first hour of its creation.
-     *
+     * 
      * @return the size value.
      */
     public LoadBalancerBaseSize getSize() {
@@ -198,11 +206,13 @@ public class LoadBalancerBase {
     /**
      * Set the size property: This field has been replaced by the `size_unit` field for all regions except in AMS2,
      * NYC2, and SFO1. Each available load balancer size now equates to the load balancer having a set number of nodes.
-     * * `lb-small` = 1 node * `lb-medium` = 3 nodes * `lb-large` = 6 nodes
-     *
-     * <p>You can resize load balancers after creation up to once per hour. You cannot resize a load balancer within the
+     * * `lb-small` = 1 node
+     * * `lb-medium` = 3 nodes
+     * * `lb-large` = 6 nodes
+     * 
+     * You can resize load balancers after creation up to once per hour. You cannot resize a load balancer within the
      * first hour of its creation.
-     *
+     * 
      * @param size the size value to set.
      * @return the LoadBalancerBase object itself.
      */
@@ -214,7 +224,7 @@ public class LoadBalancerBase {
     /**
      * Get the algorithm property: This field has been deprecated. You can no longer specify an algorithm for load
      * balancers.
-     *
+     * 
      * @return the algorithm value.
      */
     public LoadBalancerBaseAlgorithm getAlgorithm() {
@@ -224,7 +234,7 @@ public class LoadBalancerBase {
     /**
      * Set the algorithm property: This field has been deprecated. You can no longer specify an algorithm for load
      * balancers.
-     *
+     * 
      * @param algorithm the algorithm value to set.
      * @return the LoadBalancerBase object itself.
      */
@@ -236,7 +246,7 @@ public class LoadBalancerBase {
     /**
      * Get the status property: A status string indicating the current state of the load balancer. This can be `new`,
      * `active`, or `errored`.
-     *
+     * 
      * @return the status value.
      */
     public LoadBalancerBaseStatus getStatus() {
@@ -246,7 +256,7 @@ public class LoadBalancerBase {
     /**
      * Get the createdAt property: A time value given in ISO8601 combined date and time format that represents when the
      * load balancer was created.
-     *
+     * 
      * @return the createdAt value.
      */
     public OffsetDateTime getCreatedAt() {
@@ -255,7 +265,7 @@ public class LoadBalancerBase {
 
     /**
      * Get the forwardingRules property: An array of objects specifying the forwarding rules for a load balancer.
-     *
+     * 
      * @return the forwardingRules value.
      */
     public List<ForwardingRule> getForwardingRules() {
@@ -264,7 +274,7 @@ public class LoadBalancerBase {
 
     /**
      * Set the forwardingRules property: An array of objects specifying the forwarding rules for a load balancer.
-     *
+     * 
      * @param forwardingRules the forwardingRules value to set.
      * @return the LoadBalancerBase object itself.
      */
@@ -275,7 +285,7 @@ public class LoadBalancerBase {
 
     /**
      * Get the healthCheck property: An object specifying health check settings for the load balancer.
-     *
+     * 
      * @return the healthCheck value.
      */
     public HealthCheck getHealthCheck() {
@@ -284,7 +294,7 @@ public class LoadBalancerBase {
 
     /**
      * Set the healthCheck property: An object specifying health check settings for the load balancer.
-     *
+     * 
      * @param healthCheck the healthCheck value to set.
      * @return the LoadBalancerBase object itself.
      */
@@ -295,7 +305,7 @@ public class LoadBalancerBase {
 
     /**
      * Get the stickySessions property: An object specifying sticky sessions settings for the load balancer.
-     *
+     * 
      * @return the stickySessions value.
      */
     public StickySessions getStickySessions() {
@@ -304,7 +314,7 @@ public class LoadBalancerBase {
 
     /**
      * Set the stickySessions property: An object specifying sticky sessions settings for the load balancer.
-     *
+     * 
      * @param stickySessions the stickySessions value to set.
      * @return the LoadBalancerBase object itself.
      */
@@ -316,7 +326,7 @@ public class LoadBalancerBase {
     /**
      * Get the redirectHttpToHttps property: A boolean value indicating whether HTTP requests to the load balancer on
      * port 80 will be redirected to HTTPS on port 443.
-     *
+     * 
      * @return the redirectHttpToHttps value.
      */
     public Boolean isRedirectHttpToHttps() {
@@ -326,7 +336,7 @@ public class LoadBalancerBase {
     /**
      * Set the redirectHttpToHttps property: A boolean value indicating whether HTTP requests to the load balancer on
      * port 80 will be redirected to HTTPS on port 443.
-     *
+     * 
      * @param redirectHttpToHttps the redirectHttpToHttps value to set.
      * @return the LoadBalancerBase object itself.
      */
@@ -337,7 +347,7 @@ public class LoadBalancerBase {
 
     /**
      * Get the enableProxyProtocol property: A boolean value indicating whether PROXY Protocol is in use.
-     *
+     * 
      * @return the enableProxyProtocol value.
      */
     public Boolean isEnableProxyProtocol() {
@@ -346,7 +356,7 @@ public class LoadBalancerBase {
 
     /**
      * Set the enableProxyProtocol property: A boolean value indicating whether PROXY Protocol is in use.
-     *
+     * 
      * @param enableProxyProtocol the enableProxyProtocol value to set.
      * @return the LoadBalancerBase object itself.
      */
@@ -358,7 +368,7 @@ public class LoadBalancerBase {
     /**
      * Get the enableBackendKeepalive property: A boolean value indicating whether HTTP keepalive connections are
      * maintained to target Droplets.
-     *
+     * 
      * @return the enableBackendKeepalive value.
      */
     public Boolean isEnableBackendKeepalive() {
@@ -368,7 +378,7 @@ public class LoadBalancerBase {
     /**
      * Set the enableBackendKeepalive property: A boolean value indicating whether HTTP keepalive connections are
      * maintained to target Droplets.
-     *
+     * 
      * @param enableBackendKeepalive the enableBackendKeepalive value to set.
      * @return the LoadBalancerBase object itself.
      */
@@ -379,7 +389,7 @@ public class LoadBalancerBase {
 
     /**
      * Get the vpcUuid property: A string specifying the UUID of the VPC to which the load balancer is assigned.
-     *
+     * 
      * @return the vpcUuid value.
      */
     public UUID getVpcUuid() {
@@ -388,7 +398,7 @@ public class LoadBalancerBase {
 
     /**
      * Set the vpcUuid property: A string specifying the UUID of the VPC to which the load balancer is assigned.
-     *
+     * 
      * @param vpcUuid the vpcUuid value to set.
      * @return the LoadBalancerBase object itself.
      */
@@ -398,9 +408,9 @@ public class LoadBalancerBase {
     }
 
     /**
-     * Get the disableLetsEncryptDnsRecords property: A boolean value indicating whether to disable automatic DNS record
-     * creation for Let's Encrypt certificates that are added to the load balancer.
-     *
+     * Get the disableLetsEncryptDnsRecords property: A boolean value indicating whether to disable automatic DNS
+     * record creation for Let's Encrypt certificates that are added to the load balancer.
+     * 
      * @return the disableLetsEncryptDnsRecords value.
      */
     public Boolean isDisableLetsEncryptDnsRecords() {
@@ -408,9 +418,9 @@ public class LoadBalancerBase {
     }
 
     /**
-     * Set the disableLetsEncryptDnsRecords property: A boolean value indicating whether to disable automatic DNS record
-     * creation for Let's Encrypt certificates that are added to the load balancer.
-     *
+     * Set the disableLetsEncryptDnsRecords property: A boolean value indicating whether to disable automatic DNS
+     * record creation for Let's Encrypt certificates that are added to the load balancer.
+     * 
      * @param disableLetsEncryptDnsRecords the disableLetsEncryptDnsRecords value to set.
      * @return the LoadBalancerBase object itself.
      */

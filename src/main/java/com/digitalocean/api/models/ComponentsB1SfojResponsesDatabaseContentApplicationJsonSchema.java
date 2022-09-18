@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The ComponentsB1SfojResponsesDatabaseContentApplicationJsonSchema model. */
+/**
+ * The ComponentsB1SfojResponsesDatabaseContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsB1SfojResponsesDatabaseContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class ComponentsB1SfojResponsesDatabaseContentApplicationJsonSchema
 
     /**
      * Get the db property: The db property.
-     *
+     * 
      * @return the db value.
      */
     public Database getDb() {
@@ -23,7 +28,7 @@ public final class ComponentsB1SfojResponsesDatabaseContentApplicationJsonSchema
 
     /**
      * Set the db property: The db property.
-     *
+     * 
      * @param db the db value to set.
      * @return the ComponentsB1SfojResponsesDatabaseContentApplicationJsonSchema object itself.
      */

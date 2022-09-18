@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The NetworkV6 model. */
+/**
+ * The NetworkV6 model.
+ */
 @Fluent
 public final class NetworkV6 {
     /*
@@ -26,16 +31,16 @@ public final class NetworkV6 {
 
     /*
      * The type of the IPv6 network interface.
-     *
+     * 
      * **Note**: IPv6 private  networking is not currently supported.
-     *
+     * 
      */
     @JsonProperty(value = "type")
     private String type = "public";
 
     /**
      * Get the ipAddress property: The IP address of the IPv6 network interface.
-     *
+     * 
      * @return the ipAddress value.
      */
     public String getIpAddress() {
@@ -44,7 +49,7 @@ public final class NetworkV6 {
 
     /**
      * Set the ipAddress property: The IP address of the IPv6 network interface.
-     *
+     * 
      * @param ipAddress the ipAddress value to set.
      * @return the NetworkV6 object itself.
      */
@@ -55,7 +60,7 @@ public final class NetworkV6 {
 
     /**
      * Get the netmask property: The netmask of the IPv6 network interface.
-     *
+     * 
      * @return the netmask value.
      */
     public Integer getNetmask() {
@@ -64,7 +69,7 @@ public final class NetworkV6 {
 
     /**
      * Set the netmask property: The netmask of the IPv6 network interface.
-     *
+     * 
      * @param netmask the netmask value to set.
      * @return the NetworkV6 object itself.
      */
@@ -75,7 +80,7 @@ public final class NetworkV6 {
 
     /**
      * Get the gateway property: The gateway of the specified IPv6 network interface.
-     *
+     * 
      * @return the gateway value.
      */
     public String getGateway() {
@@ -84,7 +89,7 @@ public final class NetworkV6 {
 
     /**
      * Set the gateway property: The gateway of the specified IPv6 network interface.
-     *
+     * 
      * @param gateway the gateway value to set.
      * @return the NetworkV6 object itself.
      */
@@ -95,9 +100,9 @@ public final class NetworkV6 {
 
     /**
      * Get the type property: The type of the IPv6 network interface.
-     *
-     * <p>**Note**: IPv6 private networking is not currently supported.
-     *
+     * 
+     * **Note**: IPv6 private  networking is not currently supported.
+     * 
      * @return the type value.
      */
     public String getType() {
@@ -106,9 +111,9 @@ public final class NetworkV6 {
 
     /**
      * Set the type property: The type of the IPv6 network interface.
-     *
-     * <p>**Note**: IPv6 private networking is not currently supported.
-     *
+     * 
+     * **Note**: IPv6 private  networking is not currently supported.
+     * 
      * @param type the type value to set.
      * @return the NetworkV6 object itself.
      */

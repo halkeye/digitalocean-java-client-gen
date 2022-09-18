@@ -1,15 +1,20 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The OneClicksCreate model. */
+/**
+ * The OneClicksCreate model.
+ */
 @Fluent
 public final class OneClicksCreate {
     /*
      * addon_slugs
-     *
+     * 
      * An array of 1-Click Application slugs to be installed to the Kubernetes cluster.
      */
     @JsonProperty(value = "addon_slugs", required = true)
@@ -17,7 +22,7 @@ public final class OneClicksCreate {
 
     /*
      * cluster_uuid
-     *
+     * 
      * A unique ID for the Kubernetes cluster to which the 1-Click Applications will be installed.
      */
     @JsonProperty(value = "cluster_uuid", required = true)
@@ -25,9 +30,9 @@ public final class OneClicksCreate {
 
     /**
      * Get the addonSlugs property: addon_slugs
-     *
-     * <p>An array of 1-Click Application slugs to be installed to the Kubernetes cluster.
-     *
+     * 
+     * An array of 1-Click Application slugs to be installed to the Kubernetes cluster.
+     * 
      * @return the addonSlugs value.
      */
     public List<String> getAddonSlugs() {
@@ -36,9 +41,9 @@ public final class OneClicksCreate {
 
     /**
      * Set the addonSlugs property: addon_slugs
-     *
-     * <p>An array of 1-Click Application slugs to be installed to the Kubernetes cluster.
-     *
+     * 
+     * An array of 1-Click Application slugs to be installed to the Kubernetes cluster.
+     * 
      * @param addonSlugs the addonSlugs value to set.
      * @return the OneClicksCreate object itself.
      */
@@ -49,9 +54,9 @@ public final class OneClicksCreate {
 
     /**
      * Get the clusterUuid property: cluster_uuid
-     *
-     * <p>A unique ID for the Kubernetes cluster to which the 1-Click Applications will be installed.
-     *
+     * 
+     * A unique ID for the Kubernetes cluster to which the 1-Click Applications will be installed.
+     * 
      * @return the clusterUuid value.
      */
     public String getClusterUuid() {
@@ -60,9 +65,9 @@ public final class OneClicksCreate {
 
     /**
      * Set the clusterUuid property: cluster_uuid
-     *
-     * <p>A unique ID for the Kubernetes cluster to which the 1-Click Applications will be installed.
-     *
+     * 
+     * A unique ID for the Kubernetes cluster to which the 1-Click Applications will be installed.
+     * 
      * @param clusterUuid the clusterUuid value to set.
      * @return the OneClicksCreate object itself.
      */

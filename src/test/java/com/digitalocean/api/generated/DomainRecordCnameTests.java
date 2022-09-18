@@ -1,6 +1,9 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
+import com.digitalocean.api.models.DomainRecord;
 import com.digitalocean.api.models.DomainRecordCname;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -8,10 +11,7 @@ import org.junit.jupiter.api.Test;
 public final class DomainRecordCnameTests {
     @Test
     public void testDeserialize() {
-        DomainRecordCname model =
-                BinaryData.fromString(
-                                "{\"id\":585851582,\"type\":\"qnacyheq\",\"name\":\"pqqncju\",\"data\":\"hjozf\",\"priority\":1317599816,\"port\":169938072,\"ttl\":375285538,\"weight\":905389946,\"flags\":1902620686,\"tag\":\"vliqiips\"}")
-                        .toObject(DomainRecordCname.class);
+        DomainRecordCname model = BinaryData.fromString("{\"id\":585851582,\"type\":\"qnacyheq\",\"name\":\"pqqncju\",\"data\":\"hjozf\",\"priority\":1317599816,\"port\":169938072,\"ttl\":375285538,\"weight\":905389946,\"flags\":1902620686,\"tag\":\"vliqiips\"}").toObject(DomainRecordCname.class);
         Assertions.assertEquals("qnacyheq", model.getType());
         Assertions.assertEquals("pqqncju", model.getName());
         Assertions.assertEquals("hjozf", model.getData());
@@ -25,17 +25,7 @@ public final class DomainRecordCnameTests {
 
     @Test
     public void testSerialize() {
-        DomainRecordCname model =
-                new DomainRecordCname()
-                        .setType("qnacyheq")
-                        .setName("pqqncju")
-                        .setData("hjozf")
-                        .setPriority(1317599816)
-                        .setPort(169938072)
-                        .setTtl(375285538)
-                        .setWeight(905389946)
-                        .setFlags(1902620686)
-                        .setTag("vliqiips");
+        DomainRecordCname model = new DomainRecordCname().setType("qnacyheq").setName("pqqncju").setData("hjozf").setPriority(1317599816).setPort(169938072).setTtl(375285538).setWeight(905389946).setFlags(1902620686).setTag("vliqiips");
         model = BinaryData.fromObject(model).toObject(DomainRecordCname.class);
         Assertions.assertEquals("qnacyheq", model.getType());
         Assertions.assertEquals("pqqncju", model.getName());

@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Paths1Cfx96QV2KubernetesClustersClusterIdUpgradePostRequestbodyContentApplicationJsonSchema model. */
+/**
+ * The Paths1Cfx96QV2KubernetesClustersClusterIdUpgradePostRequestbodyContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Paths1Cfx96QV2KubernetesClustersClusterIdUpgradePostRequestbodyContentApplicationJsonSchema {
     /*
@@ -13,8 +18,9 @@ public final class Paths1Cfx96QV2KubernetesClustersClusterIdUpgradePostRequestbo
     private String version;
 
     /**
-     * Get the version property: The slug identifier for the version of Kubernetes that the cluster will be upgraded to.
-     *
+     * Get the version property: The slug identifier for the version of Kubernetes that the cluster will be upgraded
+     * to.
+     * 
      * @return the version value.
      */
     public String getVersion() {
@@ -22,14 +28,14 @@ public final class Paths1Cfx96QV2KubernetesClustersClusterIdUpgradePostRequestbo
     }
 
     /**
-     * Set the version property: The slug identifier for the version of Kubernetes that the cluster will be upgraded to.
-     *
+     * Set the version property: The slug identifier for the version of Kubernetes that the cluster will be upgraded
+     * to.
+     * 
      * @param version the version value to set.
      * @return the Paths1Cfx96QV2KubernetesClustersClusterIdUpgradePostRequestbodyContentApplicationJsonSchema object
-     *     itself.
+     * itself.
      */
-    public Paths1Cfx96QV2KubernetesClustersClusterIdUpgradePostRequestbodyContentApplicationJsonSchema setVersion(
-            String version) {
+    public Paths1Cfx96QV2KubernetesClustersClusterIdUpgradePostRequestbodyContentApplicationJsonSchema setVersion(String version) {
         this.version = version;
         return this;
     }

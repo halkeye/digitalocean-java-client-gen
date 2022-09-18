@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The DropletCreateApplicationJsonOneOfProperties model. */
+/**
+ * The DropletCreateApplicationJsonOneOfProperties model.
+ */
 @Fluent
 public final class DropletCreateApplicationJsonOneOfProperties {
     /*
@@ -15,7 +20,7 @@ public final class DropletCreateApplicationJsonOneOfProperties {
 
     /**
      * Get the actions property: The actions property.
-     *
+     * 
      * @return the actions value.
      */
     public List<ActionLink> getActions() {
@@ -24,7 +29,7 @@ public final class DropletCreateApplicationJsonOneOfProperties {
 
     /**
      * Set the actions property: The actions property.
-     *
+     * 
      * @param actions the actions value to set.
      * @return the DropletCreateApplicationJsonOneOfProperties object itself.
      */

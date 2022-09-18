@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ComponentsDo2Y41ResponsesOneclicksAllContentApplicationJsonSchema model. */
+/**
+ * The ComponentsDo2Y41ResponsesOneclicksAllContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class ComponentsDo2Y41ResponsesOneclicksAllContentApplicationJsonSchema {
     /*
@@ -15,7 +20,7 @@ public final class ComponentsDo2Y41ResponsesOneclicksAllContentApplicationJsonSc
 
     /**
      * Get the oneClicks property: The 1_clicks property.
-     *
+     * 
      * @return the oneClicks value.
      */
     public List<OneClicks> getOneClicks() {
@@ -24,7 +29,7 @@ public final class ComponentsDo2Y41ResponsesOneclicksAllContentApplicationJsonSc
 
     /**
      * Set the oneClicks property: The 1_clicks property.
-     *
+     * 
      * @param oneClicks the oneClicks value to set.
      * @return the ComponentsDo2Y41ResponsesOneclicksAllContentApplicationJsonSchema object itself.
      */

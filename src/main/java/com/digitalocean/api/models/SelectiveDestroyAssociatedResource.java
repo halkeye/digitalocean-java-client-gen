@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** An object containing information about a resource to be scheduled for deletion. */
+/**
+ * An object containing information about a resource to be scheduled for deletion.
+ */
 @Fluent
 public final class SelectiveDestroyAssociatedResource {
     /*
@@ -39,7 +44,7 @@ public final class SelectiveDestroyAssociatedResource {
 
     /**
      * Get the floatingIps property: An array of unique identifiers for the floating IPs to be scheduled for deletion.
-     *
+     * 
      * @return the floatingIps value.
      */
     public List<String> getFloatingIps() {
@@ -48,7 +53,7 @@ public final class SelectiveDestroyAssociatedResource {
 
     /**
      * Set the floatingIps property: An array of unique identifiers for the floating IPs to be scheduled for deletion.
-     *
+     * 
      * @param floatingIps the floatingIps value to set.
      * @return the SelectiveDestroyAssociatedResource object itself.
      */
@@ -59,7 +64,7 @@ public final class SelectiveDestroyAssociatedResource {
 
     /**
      * Get the reservedIps property: An array of unique identifiers for the reserved IPs to be scheduled for deletion.
-     *
+     * 
      * @return the reservedIps value.
      */
     public List<String> getReservedIps() {
@@ -68,7 +73,7 @@ public final class SelectiveDestroyAssociatedResource {
 
     /**
      * Set the reservedIps property: An array of unique identifiers for the reserved IPs to be scheduled for deletion.
-     *
+     * 
      * @param reservedIps the reservedIps value to set.
      * @return the SelectiveDestroyAssociatedResource object itself.
      */
@@ -79,7 +84,7 @@ public final class SelectiveDestroyAssociatedResource {
 
     /**
      * Get the snapshots property: An array of unique identifiers for the snapshots to be scheduled for deletion.
-     *
+     * 
      * @return the snapshots value.
      */
     public List<String> getSnapshots() {
@@ -88,7 +93,7 @@ public final class SelectiveDestroyAssociatedResource {
 
     /**
      * Set the snapshots property: An array of unique identifiers for the snapshots to be scheduled for deletion.
-     *
+     * 
      * @param snapshots the snapshots value to set.
      * @return the SelectiveDestroyAssociatedResource object itself.
      */
@@ -99,7 +104,7 @@ public final class SelectiveDestroyAssociatedResource {
 
     /**
      * Get the volumes property: An array of unique identifiers for the volumes to be scheduled for deletion.
-     *
+     * 
      * @return the volumes value.
      */
     public List<String> getVolumes() {
@@ -108,7 +113,7 @@ public final class SelectiveDestroyAssociatedResource {
 
     /**
      * Set the volumes property: An array of unique identifiers for the volumes to be scheduled for deletion.
-     *
+     * 
      * @param volumes the volumes value to set.
      * @return the SelectiveDestroyAssociatedResource object itself.
      */
@@ -120,7 +125,7 @@ public final class SelectiveDestroyAssociatedResource {
     /**
      * Get the volumeSnapshots property: An array of unique identifiers for the volume snapshots to be scheduled for
      * deletion.
-     *
+     * 
      * @return the volumeSnapshots value.
      */
     public List<String> getVolumeSnapshots() {
@@ -130,7 +135,7 @@ public final class SelectiveDestroyAssociatedResource {
     /**
      * Set the volumeSnapshots property: An array of unique identifiers for the volume snapshots to be scheduled for
      * deletion.
-     *
+     * 
      * @param volumeSnapshots the volumeSnapshots value to set.
      * @return the SelectiveDestroyAssociatedResource object itself.
      */

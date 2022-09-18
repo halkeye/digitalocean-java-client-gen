@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The AppComponentBase model. */
+/**
+ * The AppComponentBase model.
+ */
 @Fluent
 public class AppComponentBase {
     /*
@@ -84,7 +89,7 @@ public class AppComponentBase {
 
     /**
      * Get the name property: The name. Must be unique across all components within the same app.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -93,7 +98,7 @@ public class AppComponentBase {
 
     /**
      * Set the name property: The name. Must be unique across all components within the same app.
-     *
+     * 
      * @param name the name value to set.
      * @return the AppComponentBase object itself.
      */
@@ -104,7 +109,7 @@ public class AppComponentBase {
 
     /**
      * Get the git property: The git property.
-     *
+     * 
      * @return the git value.
      */
     public AppsGitSourceSpec getGit() {
@@ -113,7 +118,7 @@ public class AppComponentBase {
 
     /**
      * Set the git property: The git property.
-     *
+     * 
      * @param git the git value to set.
      * @return the AppComponentBase object itself.
      */
@@ -124,7 +129,7 @@ public class AppComponentBase {
 
     /**
      * Get the github property: The github property.
-     *
+     * 
      * @return the github value.
      */
     public AppsGithubSourceSpec getGithub() {
@@ -133,7 +138,7 @@ public class AppComponentBase {
 
     /**
      * Set the github property: The github property.
-     *
+     * 
      * @param github the github value to set.
      * @return the AppComponentBase object itself.
      */
@@ -144,7 +149,7 @@ public class AppComponentBase {
 
     /**
      * Get the gitlab property: The gitlab property.
-     *
+     * 
      * @return the gitlab value.
      */
     public AppsGitlabSourceSpec getGitlab() {
@@ -153,7 +158,7 @@ public class AppComponentBase {
 
     /**
      * Set the gitlab property: The gitlab property.
-     *
+     * 
      * @param gitlab the gitlab value to set.
      * @return the AppComponentBase object itself.
      */
@@ -164,7 +169,7 @@ public class AppComponentBase {
 
     /**
      * Get the image property: The image property.
-     *
+     * 
      * @return the image value.
      */
     public AppsImageSourceSpec getImage() {
@@ -173,7 +178,7 @@ public class AppComponentBase {
 
     /**
      * Set the image property: The image property.
-     *
+     * 
      * @param image the image value to set.
      * @return the AppComponentBase object itself.
      */
@@ -185,7 +190,7 @@ public class AppComponentBase {
     /**
      * Get the dockerfilePath property: The path to the Dockerfile relative to the root of the repo. If set, it will be
      * used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
+     * 
      * @return the dockerfilePath value.
      */
     public String getDockerfilePath() {
@@ -195,7 +200,7 @@ public class AppComponentBase {
     /**
      * Set the dockerfilePath property: The path to the Dockerfile relative to the root of the repo. If set, it will be
      * used to build this component. Otherwise, App Platform will attempt to build it using buildpacks.
-     *
+     * 
      * @param dockerfilePath the dockerfilePath value to set.
      * @return the AppComponentBase object itself.
      */
@@ -206,7 +211,7 @@ public class AppComponentBase {
 
     /**
      * Get the buildCommand property: An optional build command to run while building this component from source.
-     *
+     * 
      * @return the buildCommand value.
      */
     public String getBuildCommand() {
@@ -215,7 +220,7 @@ public class AppComponentBase {
 
     /**
      * Set the buildCommand property: An optional build command to run while building this component from source.
-     *
+     * 
      * @param buildCommand the buildCommand value to set.
      * @return the AppComponentBase object itself.
      */
@@ -226,7 +231,7 @@ public class AppComponentBase {
 
     /**
      * Get the runCommand property: An optional run command to override the component's default.
-     *
+     * 
      * @return the runCommand value.
      */
     public String getRunCommand() {
@@ -235,7 +240,7 @@ public class AppComponentBase {
 
     /**
      * Set the runCommand property: An optional run command to override the component's default.
-     *
+     * 
      * @param runCommand the runCommand value to set.
      * @return the AppComponentBase object itself.
      */
@@ -247,7 +252,7 @@ public class AppComponentBase {
     /**
      * Get the sourceDir property: An optional path to the working directory to use for the build. For Dockerfile
      * builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
+     * 
      * @return the sourceDir value.
      */
     public String getSourceDir() {
@@ -257,7 +262,7 @@ public class AppComponentBase {
     /**
      * Set the sourceDir property: An optional path to the working directory to use for the build. For Dockerfile
      * builds, this will be used as the build context. Must be relative to the root of the repo.
-     *
+     * 
      * @param sourceDir the sourceDir value to set.
      * @return the AppComponentBase object itself.
      */
@@ -268,7 +273,7 @@ public class AppComponentBase {
 
     /**
      * Get the envs property: A list of environment variables made available to the component.
-     *
+     * 
      * @return the envs value.
      */
     public List<AppVariableDefinition> getEnvs() {
@@ -277,7 +282,7 @@ public class AppComponentBase {
 
     /**
      * Set the envs property: A list of environment variables made available to the component.
-     *
+     * 
      * @param envs the envs value to set.
      * @return the AppComponentBase object itself.
      */
@@ -289,7 +294,7 @@ public class AppComponentBase {
     /**
      * Get the environmentSlug property: An environment slug describing the type of this app. For a full list, please
      * refer to [the product documentation](https://www.digitalocean.com/docs/app-platform/).
-     *
+     * 
      * @return the environmentSlug value.
      */
     public String getEnvironmentSlug() {
@@ -299,7 +304,7 @@ public class AppComponentBase {
     /**
      * Set the environmentSlug property: An environment slug describing the type of this app. For a full list, please
      * refer to [the product documentation](https://www.digitalocean.com/docs/app-platform/).
-     *
+     * 
      * @param environmentSlug the environmentSlug value to set.
      * @return the AppComponentBase object itself.
      */
@@ -310,7 +315,7 @@ public class AppComponentBase {
 
     /**
      * Get the logDestinations property: Configurations for external logging.
-     *
+     * 
      * @return the logDestinations value.
      */
     public AppLogDestinationDefinition getLogDestinations() {
@@ -319,7 +324,7 @@ public class AppComponentBase {
 
     /**
      * Set the logDestinations property: Configurations for external logging.
-     *
+     * 
      * @param logDestinations the logDestinations value to set.
      * @return the AppComponentBase object itself.
      */

@@ -1,7 +1,10 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
 /**
  * An embedded object containing key value pairs of resource type and resource statistics. It also includes a count of
@@ -43,7 +46,7 @@ public final class TagsResources extends TagsMetadata {
     /**
      * Get the droplets property: Tagged Resource Statistics include metadata regarding the resource type that has been
      * tagged.
-     *
+     * 
      * @return the droplets value.
      */
     public TagsMetadata getDroplets() {
@@ -53,7 +56,7 @@ public final class TagsResources extends TagsMetadata {
     /**
      * Set the droplets property: Tagged Resource Statistics include metadata regarding the resource type that has been
      * tagged.
-     *
+     * 
      * @param droplets the droplets value to set.
      * @return the TagsResources object itself.
      */
@@ -65,7 +68,7 @@ public final class TagsResources extends TagsMetadata {
     /**
      * Get the imgages property: Tagged Resource Statistics include metadata regarding the resource type that has been
      * tagged.
-     *
+     * 
      * @return the imgages value.
      */
     public TagsMetadata getImgages() {
@@ -75,7 +78,7 @@ public final class TagsResources extends TagsMetadata {
     /**
      * Set the imgages property: Tagged Resource Statistics include metadata regarding the resource type that has been
      * tagged.
-     *
+     * 
      * @param imgages the imgages value to set.
      * @return the TagsResources object itself.
      */
@@ -87,7 +90,7 @@ public final class TagsResources extends TagsMetadata {
     /**
      * Get the volumes property: Tagged Resource Statistics include metadata regarding the resource type that has been
      * tagged.
-     *
+     * 
      * @return the volumes value.
      */
     public TagsMetadata getVolumes() {
@@ -97,7 +100,7 @@ public final class TagsResources extends TagsMetadata {
     /**
      * Set the volumes property: Tagged Resource Statistics include metadata regarding the resource type that has been
      * tagged.
-     *
+     * 
      * @param volumes the volumes value to set.
      * @return the TagsResources object itself.
      */
@@ -109,7 +112,7 @@ public final class TagsResources extends TagsMetadata {
     /**
      * Get the volumeSnapshots property: Tagged Resource Statistics include metadata regarding the resource type that
      * has been tagged.
-     *
+     * 
      * @return the volumeSnapshots value.
      */
     public TagsMetadata getVolumeSnapshots() {
@@ -119,7 +122,7 @@ public final class TagsResources extends TagsMetadata {
     /**
      * Set the volumeSnapshots property: Tagged Resource Statistics include metadata regarding the resource type that
      * has been tagged.
-     *
+     * 
      * @param volumeSnapshots the volumeSnapshots value to set.
      * @return the TagsResources object itself.
      */
@@ -129,9 +132,9 @@ public final class TagsResources extends TagsMetadata {
     }
 
     /**
-     * Get the databases property: Tagged Resource Statistics include metadata regarding the resource type that has been
-     * tagged.
-     *
+     * Get the databases property: Tagged Resource Statistics include metadata regarding the resource type that has
+     * been tagged.
+     * 
      * @return the databases value.
      */
     public TagsMetadata getDatabases() {
@@ -139,9 +142,9 @@ public final class TagsResources extends TagsMetadata {
     }
 
     /**
-     * Set the databases property: Tagged Resource Statistics include metadata regarding the resource type that has been
-     * tagged.
-     *
+     * Set the databases property: Tagged Resource Statistics include metadata regarding the resource type that has
+     * been tagged.
+     * 
      * @param databases the databases value to set.
      * @return the TagsResources object itself.
      */
@@ -150,14 +153,18 @@ public final class TagsResources extends TagsMetadata {
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public TagsResources setCount(Integer count) {
         super.setCount(count);
         return this;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public TagsResources setLastTaggedUri(String lastTaggedUri) {
         super.setLastTaggedUri(lastTaggedUri);

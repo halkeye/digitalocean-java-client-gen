@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** The ProductUsageCharges model. */
+/**
+ * The ProductUsageCharges model.
+ */
 @Fluent
 public class ProductUsageCharges {
     /*
@@ -27,7 +32,7 @@ public class ProductUsageCharges {
 
     /**
      * Get the name property: Description of usage charges.
-     *
+     * 
      * @return the name value.
      */
     public String getName() {
@@ -36,7 +41,7 @@ public class ProductUsageCharges {
 
     /**
      * Set the name property: Description of usage charges.
-     *
+     * 
      * @param name the name value to set.
      * @return the ProductUsageCharges object itself.
      */
@@ -47,7 +52,7 @@ public class ProductUsageCharges {
 
     /**
      * Get the amount property: Total amount charged.
-     *
+     * 
      * @return the amount value.
      */
     public String getAmount() {
@@ -56,7 +61,7 @@ public class ProductUsageCharges {
 
     /**
      * Set the amount property: Total amount charged.
-     *
+     * 
      * @param amount the amount value to set.
      * @return the ProductUsageCharges object itself.
      */
@@ -67,7 +72,7 @@ public class ProductUsageCharges {
 
     /**
      * Get the items property: List of amount, and grouped aggregates by resource type.
-     *
+     * 
      * @return the items value.
      */
     public List<ProductChargeItem> getItems() {
@@ -76,7 +81,7 @@ public class ProductUsageCharges {
 
     /**
      * Set the items property: List of amount, and grouped aggregates by resource type.
-     *
+     * 
      * @param items the items value to set.
      * @return the ProductUsageCharges object itself.
      */

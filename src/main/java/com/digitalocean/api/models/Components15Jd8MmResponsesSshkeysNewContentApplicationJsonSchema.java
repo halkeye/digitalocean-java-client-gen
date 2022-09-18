@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The Components15Jd8MmResponsesSshkeysNewContentApplicationJsonSchema model. */
+/**
+ * The Components15Jd8MmResponsesSshkeysNewContentApplicationJsonSchema model.
+ */
 @Fluent
 public final class Components15Jd8MmResponsesSshkeysNewContentApplicationJsonSchema {
     /*
@@ -14,7 +19,7 @@ public final class Components15Jd8MmResponsesSshkeysNewContentApplicationJsonSch
 
     /**
      * Get the sshKey property: The ssh_key property.
-     *
+     * 
      * @return the sshKey value.
      */
     public SshKeys getSshKey() {
@@ -23,7 +28,7 @@ public final class Components15Jd8MmResponsesSshkeysNewContentApplicationJsonSch
 
     /**
      * Set the sshKey property: The ssh_key property.
-     *
+     * 
      * @param sshKey the sshKey value to set.
      * @return the Components15Jd8MmResponsesSshkeysNewContentApplicationJsonSchema object itself.
      */

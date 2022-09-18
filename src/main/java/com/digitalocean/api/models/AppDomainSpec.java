@@ -1,9 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-/** The AppDomainSpec model. */
+/**
+ * The AppDomainSpec model.
+ */
 @Fluent
 public final class AppDomainSpec {
     /*
@@ -32,7 +38,7 @@ public final class AppDomainSpec {
      * Optional. If the domain uses DigitalOcean DNS and you would like App
      * Platform to automatically manage it for you, set this to the name of the
      * domain on your account.
-     *
+     * 
      * For example, If the domain you are adding is `app.domain.com`, the zone
      * could be `domain.com`.
      */
@@ -48,7 +54,7 @@ public final class AppDomainSpec {
 
     /**
      * Get the domain property: The hostname for the domain.
-     *
+     * 
      * @return the domain value.
      */
     public String getDomain() {
@@ -57,7 +63,7 @@ public final class AppDomainSpec {
 
     /**
      * Set the domain property: The hostname for the domain.
-     *
+     * 
      * @param domain the domain value to set.
      * @return the AppDomainSpec object itself.
      */
@@ -67,11 +73,12 @@ public final class AppDomainSpec {
     }
 
     /**
-     * Get the type property: - DEFAULT: The default `.ondigitalocean.app` domain assigned to this app - PRIMARY: The
-     * primary domain for this app that is displayed as the default in the control panel, used in bindable environment
-     * variables, and any other places that reference an app's live URL. Only one domain may be set as primary. - ALIAS:
-     * A non-primary domain.
-     *
+     * Get the type property: - DEFAULT: The default `.ondigitalocean.app` domain assigned to this app
+     * - PRIMARY: The primary domain for this app that is displayed as the default in the control panel, used in
+     * bindable environment variables, and any other places that reference an app's live URL. Only one domain may be
+     * set as primary.
+     * - ALIAS: A non-primary domain.
+     * 
      * @return the type value.
      */
     public AppDomainSpecType getType() {
@@ -79,11 +86,12 @@ public final class AppDomainSpec {
     }
 
     /**
-     * Set the type property: - DEFAULT: The default `.ondigitalocean.app` domain assigned to this app - PRIMARY: The
-     * primary domain for this app that is displayed as the default in the control panel, used in bindable environment
-     * variables, and any other places that reference an app's live URL. Only one domain may be set as primary. - ALIAS:
-     * A non-primary domain.
-     *
+     * Set the type property: - DEFAULT: The default `.ondigitalocean.app` domain assigned to this app
+     * - PRIMARY: The primary domain for this app that is displayed as the default in the control panel, used in
+     * bindable environment variables, and any other places that reference an app's live URL. Only one domain may be
+     * set as primary.
+     * - ALIAS: A non-primary domain.
+     * 
      * @param type the type value to set.
      * @return the AppDomainSpec object itself.
      */
@@ -95,7 +103,7 @@ public final class AppDomainSpec {
     /**
      * Get the wildcard property: Indicates whether the domain includes all sub-domains, in addition to the given
      * domain.
-     *
+     * 
      * @return the wildcard value.
      */
     public Boolean isWildcard() {
@@ -105,7 +113,7 @@ public final class AppDomainSpec {
     /**
      * Set the wildcard property: Indicates whether the domain includes all sub-domains, in addition to the given
      * domain.
-     *
+     * 
      * @param wildcard the wildcard value to set.
      * @return the AppDomainSpec object itself.
      */
@@ -115,11 +123,13 @@ public final class AppDomainSpec {
     }
 
     /**
-     * Get the zone property: Optional. If the domain uses DigitalOcean DNS and you would like App Platform to
-     * automatically manage it for you, set this to the name of the domain on your account.
-     *
-     * <p>For example, If the domain you are adding is `app.domain.com`, the zone could be `domain.com`.
-     *
+     * Get the zone property: Optional. If the domain uses DigitalOcean DNS and you would like App
+     * Platform to automatically manage it for you, set this to the name of the
+     * domain on your account.
+     * 
+     * For example, If the domain you are adding is `app.domain.com`, the zone
+     * could be `domain.com`.
+     * 
      * @return the zone value.
      */
     public String getZone() {
@@ -127,11 +137,13 @@ public final class AppDomainSpec {
     }
 
     /**
-     * Set the zone property: Optional. If the domain uses DigitalOcean DNS and you would like App Platform to
-     * automatically manage it for you, set this to the name of the domain on your account.
-     *
-     * <p>For example, If the domain you are adding is `app.domain.com`, the zone could be `domain.com`.
-     *
+     * Set the zone property: Optional. If the domain uses DigitalOcean DNS and you would like App
+     * Platform to automatically manage it for you, set this to the name of the
+     * domain on your account.
+     * 
+     * For example, If the domain you are adding is `app.domain.com`, the zone
+     * could be `domain.com`.
+     * 
      * @param zone the zone value to set.
      * @return the AppDomainSpec object itself.
      */
@@ -142,8 +154,8 @@ public final class AppDomainSpec {
 
     /**
      * Get the minimumTlsVersion property: The minimum version of TLS a client application can use to access resources
-     * for the domain. Must be one of the following values wrapped within quotations: `"1.2"` or `"1.3"`.
-     *
+     * for the domain.  Must be one of the following values wrapped within quotations: `"1.2"` or `"1.3"`.
+     * 
      * @return the minimumTlsVersion value.
      */
     public AppDomainSpecMinimumTlsVersion getMinimumTlsVersion() {
@@ -152,8 +164,8 @@ public final class AppDomainSpec {
 
     /**
      * Set the minimumTlsVersion property: The minimum version of TLS a client application can use to access resources
-     * for the domain. Must be one of the following values wrapped within quotations: `"1.2"` or `"1.3"`.
-     *
+     * for the domain.  Must be one of the following values wrapped within quotations: `"1.2"` or `"1.3"`.
+     * 
      * @param minimumTlsVersion the minimumTlsVersion value to set.
      * @return the AppDomainSpec object itself.
      */

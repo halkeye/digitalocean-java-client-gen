@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** DataDog configuration. */
+/**
+ * DataDog configuration.
+ */
 @Fluent
 public final class AppLogDestinationDatadogSpec {
     /*
@@ -20,7 +25,7 @@ public final class AppLogDestinationDatadogSpec {
 
     /**
      * Get the endpoint property: Datadog HTTP log intake endpoint.
-     *
+     * 
      * @return the endpoint value.
      */
     public String getEndpoint() {
@@ -29,7 +34,7 @@ public final class AppLogDestinationDatadogSpec {
 
     /**
      * Set the endpoint property: Datadog HTTP log intake endpoint.
-     *
+     * 
      * @param endpoint the endpoint value to set.
      * @return the AppLogDestinationDatadogSpec object itself.
      */
@@ -40,7 +45,7 @@ public final class AppLogDestinationDatadogSpec {
 
     /**
      * Get the apiKey property: Datadog API key.
-     *
+     * 
      * @return the apiKey value.
      */
     public String getApiKey() {
@@ -49,7 +54,7 @@ public final class AppLogDestinationDatadogSpec {
 
     /**
      * Set the apiKey property: Datadog API key.
-     *
+     * 
      * @param apiKey the apiKey value to set.
      * @return the AppLogDestinationDatadogSpec object itself.
      */

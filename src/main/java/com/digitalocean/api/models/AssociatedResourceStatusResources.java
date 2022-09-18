@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** An object containing additional information about resource related to a Droplet requested to be destroyed. */
+/**
+ * An object containing additional information about resource related to a Droplet requested to be destroyed.
+ */
 @Fluent
 public final class AssociatedResourceStatusResources {
     /*
@@ -39,7 +44,7 @@ public final class AssociatedResourceStatusResources {
 
     /**
      * Get the reservedIps property: The reserved_ips property.
-     *
+     * 
      * @return the reservedIps value.
      */
     public List<DestroyedAssociatedResource> getReservedIps() {
@@ -48,7 +53,7 @@ public final class AssociatedResourceStatusResources {
 
     /**
      * Set the reservedIps property: The reserved_ips property.
-     *
+     * 
      * @param reservedIps the reservedIps value to set.
      * @return the AssociatedResourceStatusResources object itself.
      */
@@ -59,7 +64,7 @@ public final class AssociatedResourceStatusResources {
 
     /**
      * Get the floatingIps property: The floating_ips property.
-     *
+     * 
      * @return the floatingIps value.
      */
     public List<DestroyedAssociatedResource> getFloatingIps() {
@@ -68,7 +73,7 @@ public final class AssociatedResourceStatusResources {
 
     /**
      * Set the floatingIps property: The floating_ips property.
-     *
+     * 
      * @param floatingIps the floatingIps value to set.
      * @return the AssociatedResourceStatusResources object itself.
      */
@@ -79,7 +84,7 @@ public final class AssociatedResourceStatusResources {
 
     /**
      * Get the snapshots property: The snapshots property.
-     *
+     * 
      * @return the snapshots value.
      */
     public List<DestroyedAssociatedResource> getSnapshots() {
@@ -88,7 +93,7 @@ public final class AssociatedResourceStatusResources {
 
     /**
      * Set the snapshots property: The snapshots property.
-     *
+     * 
      * @param snapshots the snapshots value to set.
      * @return the AssociatedResourceStatusResources object itself.
      */
@@ -99,7 +104,7 @@ public final class AssociatedResourceStatusResources {
 
     /**
      * Get the volumes property: The volumes property.
-     *
+     * 
      * @return the volumes value.
      */
     public List<DestroyedAssociatedResource> getVolumes() {
@@ -108,7 +113,7 @@ public final class AssociatedResourceStatusResources {
 
     /**
      * Set the volumes property: The volumes property.
-     *
+     * 
      * @param volumes the volumes value to set.
      * @return the AssociatedResourceStatusResources object itself.
      */
@@ -119,7 +124,7 @@ public final class AssociatedResourceStatusResources {
 
     /**
      * Get the volumeSnapshots property: The volume_snapshots property.
-     *
+     * 
      * @return the volumeSnapshots value.
      */
     public List<DestroyedAssociatedResource> getVolumeSnapshots() {
@@ -128,7 +133,7 @@ public final class AssociatedResourceStatusResources {
 
     /**
      * Set the volumeSnapshots property: The volume_snapshots property.
-     *
+     * 
      * @param volumeSnapshots the volumeSnapshots value to set.
      * @return the AssociatedResourceStatusResources object itself.
      */

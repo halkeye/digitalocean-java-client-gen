@@ -4,17 +4,23 @@ import com.azure.core.util.ExpandableStringEnum;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import java.util.Collection;
 
-/** The type of resource that the snapshot originated from. */
+/**
+ * The type of resource that the snapshot originated from.
+ */
 public final class SnapshotsResourceType extends ExpandableStringEnum<SnapshotsResourceType> {
-    /** Static value droplet for SnapshotsResourceType. */
+    /**
+     * Static value droplet for SnapshotsResourceType.
+     */
     public static final SnapshotsResourceType DROPLET = fromString("droplet");
 
-    /** Static value volume for SnapshotsResourceType. */
+    /**
+     * Static value volume for SnapshotsResourceType.
+     */
     public static final SnapshotsResourceType VOLUME = fromString("volume");
 
     /**
      * Creates or finds a SnapshotsResourceType from its string representation.
-     *
+     * 
      * @param name a name to look for.
      * @return the corresponding SnapshotsResourceType.
      */
@@ -25,7 +31,7 @@ public final class SnapshotsResourceType extends ExpandableStringEnum<SnapshotsR
 
     /**
      * Gets known SnapshotsResourceType values.
-     *
+     * 
      * @return known SnapshotsResourceType values.
      */
     public static Collection<SnapshotsResourceType> values() {

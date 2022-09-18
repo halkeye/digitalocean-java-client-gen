@@ -1,9 +1,14 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.regex.Pattern;
 
-/** The InvoiceSummary model. */
+/**
+ * The InvoiceSummary model.
+ */
 @Fluent
 public final class InvoiceSummary {
     /*
@@ -74,7 +79,7 @@ public final class InvoiceSummary {
 
     /**
      * Get the invoiceUuid property: UUID of the invoice.
-     *
+     * 
      * @return the invoiceUuid value.
      */
     public String getInvoiceUuid() {
@@ -83,7 +88,7 @@ public final class InvoiceSummary {
 
     /**
      * Set the invoiceUuid property: UUID of the invoice.
-     *
+     * 
      * @param invoiceUuid the invoiceUuid value to set.
      * @return the InvoiceSummary object itself.
      */
@@ -93,8 +98,8 @@ public final class InvoiceSummary {
     }
 
     /**
-     * Get the billingPeriod property: Billing period of usage for which the invoice is issued, in `YYYY-MM` format.
-     *
+     * Get the billingPeriod property: Billing period of usage for which the invoice is issued, in `YYYY-MM`  format.
+     * 
      * @return the billingPeriod value.
      */
     public String getBillingPeriod() {
@@ -102,8 +107,8 @@ public final class InvoiceSummary {
     }
 
     /**
-     * Set the billingPeriod property: Billing period of usage for which the invoice is issued, in `YYYY-MM` format.
-     *
+     * Set the billingPeriod property: Billing period of usage for which the invoice is issued, in `YYYY-MM`  format.
+     * 
      * @param billingPeriod the billingPeriod value to set.
      * @return the InvoiceSummary object itself.
      */
@@ -113,9 +118,9 @@ public final class InvoiceSummary {
     }
 
     /**
-     * Get the amount property: Total amount of the invoice, in USD. This will reflect month-to-date usage in the
+     * Get the amount property: Total amount of the invoice, in USD.  This will reflect month-to-date usage in the
      * invoice preview.
-     *
+     * 
      * @return the amount value.
      */
     public String getAmount() {
@@ -123,9 +128,9 @@ public final class InvoiceSummary {
     }
 
     /**
-     * Set the amount property: Total amount of the invoice, in USD. This will reflect month-to-date usage in the
+     * Set the amount property: Total amount of the invoice, in USD.  This will reflect month-to-date usage in the
      * invoice preview.
-     *
+     * 
      * @param amount the amount value to set.
      * @return the InvoiceSummary object itself.
      */
@@ -136,7 +141,7 @@ public final class InvoiceSummary {
 
     /**
      * Get the userName property: Name of the DigitalOcean customer being invoiced.
-     *
+     * 
      * @return the userName value.
      */
     public String getUserName() {
@@ -145,7 +150,7 @@ public final class InvoiceSummary {
 
     /**
      * Set the userName property: Name of the DigitalOcean customer being invoiced.
-     *
+     * 
      * @param userName the userName value to set.
      * @return the InvoiceSummary object itself.
      */
@@ -156,7 +161,7 @@ public final class InvoiceSummary {
 
     /**
      * Get the userBillingAddress property: The user_billing_address property.
-     *
+     * 
      * @return the userBillingAddress value.
      */
     public InvoiceSummaryUserBillingAddress getUserBillingAddress() {
@@ -165,7 +170,7 @@ public final class InvoiceSummary {
 
     /**
      * Set the userBillingAddress property: The user_billing_address property.
-     *
+     * 
      * @param userBillingAddress the userBillingAddress value to set.
      * @return the InvoiceSummary object itself.
      */
@@ -176,7 +181,7 @@ public final class InvoiceSummary {
 
     /**
      * Get the userCompany property: Company of the DigitalOcean customer being invoiced, if set.
-     *
+     * 
      * @return the userCompany value.
      */
     public String getUserCompany() {
@@ -185,7 +190,7 @@ public final class InvoiceSummary {
 
     /**
      * Set the userCompany property: Company of the DigitalOcean customer being invoiced, if set.
-     *
+     * 
      * @param userCompany the userCompany value to set.
      * @return the InvoiceSummary object itself.
      */
@@ -196,7 +201,7 @@ public final class InvoiceSummary {
 
     /**
      * Get the userEmail property: Email of the DigitalOcean customer being invoiced.
-     *
+     * 
      * @return the userEmail value.
      */
     public String getUserEmail() {
@@ -205,7 +210,7 @@ public final class InvoiceSummary {
 
     /**
      * Set the userEmail property: Email of the DigitalOcean customer being invoiced.
-     *
+     * 
      * @param userEmail the userEmail value to set.
      * @return the InvoiceSummary object itself.
      */
@@ -216,7 +221,7 @@ public final class InvoiceSummary {
 
     /**
      * Get the productCharges property: The product_charges property.
-     *
+     * 
      * @return the productCharges value.
      */
     public InvoiceSummaryProductCharges getProductCharges() {
@@ -225,7 +230,7 @@ public final class InvoiceSummary {
 
     /**
      * Set the productCharges property: The product_charges property.
-     *
+     * 
      * @param productCharges the productCharges value to set.
      * @return the InvoiceSummary object itself.
      */
@@ -236,7 +241,7 @@ public final class InvoiceSummary {
 
     /**
      * Get the overages property: The overages property.
-     *
+     * 
      * @return the overages value.
      */
     public InvoiceSummaryOverages getOverages() {
@@ -245,7 +250,7 @@ public final class InvoiceSummary {
 
     /**
      * Set the overages property: The overages property.
-     *
+     * 
      * @param overages the overages value to set.
      * @return the InvoiceSummary object itself.
      */
@@ -256,7 +261,7 @@ public final class InvoiceSummary {
 
     /**
      * Get the taxes property: The taxes property.
-     *
+     * 
      * @return the taxes value.
      */
     public InvoiceSummaryTaxes getTaxes() {
@@ -265,7 +270,7 @@ public final class InvoiceSummary {
 
     /**
      * Set the taxes property: The taxes property.
-     *
+     * 
      * @param taxes the taxes value to set.
      * @return the InvoiceSummary object itself.
      */
@@ -276,7 +281,7 @@ public final class InvoiceSummary {
 
     /**
      * Get the creditsAndAdjustments property: The credits_and_adjustments property.
-     *
+     * 
      * @return the creditsAndAdjustments value.
      */
     public InvoiceSummaryCreditsAndAdjustments getCreditsAndAdjustments() {
@@ -285,7 +290,7 @@ public final class InvoiceSummary {
 
     /**
      * Set the creditsAndAdjustments property: The credits_and_adjustments property.
-     *
+     * 
      * @param creditsAndAdjustments the creditsAndAdjustments value to set.
      * @return the InvoiceSummary object itself.
      */

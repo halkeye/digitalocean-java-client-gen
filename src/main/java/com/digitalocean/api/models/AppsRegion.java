@@ -1,10 +1,15 @@
 package com.digitalocean.api.models;
 
+import com.azure.core.annotation.Fluent;
 import com.azure.core.annotation.Immutable;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
+import java.util.regex.Pattern;
 
-/** Geographical information about an app origin. */
+/**
+ * Geographical information about an app origin.
+ */
 @Immutable
 public final class AppsRegion {
     /*
@@ -57,7 +62,7 @@ public final class AppsRegion {
 
     /**
      * Get the continent property: The continent that this region is in.
-     *
+     * 
      * @return the continent value.
      */
     public String getContinent() {
@@ -66,7 +71,7 @@ public final class AppsRegion {
 
     /**
      * Get the dataCenters property: Data centers that are in this region.
-     *
+     * 
      * @return the dataCenters value.
      */
     public List<String> getDataCenters() {
@@ -75,7 +80,7 @@ public final class AppsRegion {
 
     /**
      * Get the defaultProperty property: Whether or not the region is presented as the default.
-     *
+     * 
      * @return the defaultProperty value.
      */
     public Boolean isDefaultProperty() {
@@ -84,7 +89,7 @@ public final class AppsRegion {
 
     /**
      * Get the disabled property: Whether or not the region is open for new apps.
-     *
+     * 
      * @return the disabled value.
      */
     public Boolean isDisabled() {
@@ -93,7 +98,7 @@ public final class AppsRegion {
 
     /**
      * Get the flag property: The flag of this region.
-     *
+     * 
      * @return the flag value.
      */
     public String getFlag() {
@@ -102,7 +107,7 @@ public final class AppsRegion {
 
     /**
      * Get the label property: A human-readable name of the region.
-     *
+     * 
      * @return the label value.
      */
     public String getLabel() {
@@ -111,7 +116,7 @@ public final class AppsRegion {
 
     /**
      * Get the reason property: Reason that this region is not available.
-     *
+     * 
      * @return the reason value.
      */
     public String getReason() {
@@ -120,7 +125,7 @@ public final class AppsRegion {
 
     /**
      * Get the slug property: The slug form of the region name.
-     *
+     * 
      * @return the slug value.
      */
     public String getSlug() {

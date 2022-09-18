@@ -1,16 +1,17 @@
 package com.digitalocean.api.generated;
 
+import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
 import com.azure.core.util.BinaryData;
 import com.digitalocean.api.models.RepositoryBlob;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public final class RepositoryBlobTests {
     @Test
     public void testDeserialize() {
-        RepositoryBlob model =
-                BinaryData.fromString("{\"digest\":\"hfmdoiiyobq\",\"compressed_size_bytes\":374086744}")
-                        .toObject(RepositoryBlob.class);
+        RepositoryBlob model = BinaryData.fromString("{\"digest\":\"hfmdoiiyobq\",\"compressed_size_bytes\":374086744}").toObject(RepositoryBlob.class);
         Assertions.assertEquals("hfmdoiiyobq", model.getDigest());
         Assertions.assertEquals(374086744, model.getCompressedSizeBytes());
     }

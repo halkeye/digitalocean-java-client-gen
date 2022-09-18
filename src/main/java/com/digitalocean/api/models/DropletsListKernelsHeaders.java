@@ -1,10 +1,24 @@
 package com.digitalocean.api.models;
 
 import com.azure.core.annotation.Fluent;
+import com.azure.core.annotation.Immutable;
+import com.azure.core.http.HttpHeader;
 import com.azure.core.http.HttpHeaders;
+import com.azure.core.util.logging.ClientLogger;
+import com.azure.core.util.serializer.JacksonAdapter;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.net.URL;
+import java.util.Base64;
+import java.util.HashMap;
+import java.util.UUID;
+import java.util.regex.Pattern;
 
-/** The DropletsListKernelsHeaders model. */
+/**
+ * The DropletsListKernelsHeaders model.
+ */
 @Fluent
 public final class DropletsListKernelsHeaders {
     /*
@@ -28,7 +42,7 @@ public final class DropletsListKernelsHeaders {
     // HttpHeaders containing the raw property values.
     /**
      * Creates an instance of DropletsListKernelsHeaders class.
-     *
+     * 
      * @param rawHeaders The raw HttpHeaders that will be used to create the property values.
      */
     public DropletsListKernelsHeaders(HttpHeaders rawHeaders) {
@@ -39,7 +53,7 @@ public final class DropletsListKernelsHeaders {
 
     /**
      * Get the ratelimitLimit property: The ratelimit-limit property.
-     *
+     * 
      * @return the ratelimitLimit value.
      */
     public Integer getRatelimitLimit() {
@@ -48,7 +62,7 @@ public final class DropletsListKernelsHeaders {
 
     /**
      * Set the ratelimitLimit property: The ratelimit-limit property.
-     *
+     * 
      * @param ratelimitLimit the ratelimitLimit value to set.
      * @return the DropletsListKernelsHeaders object itself.
      */
@@ -59,7 +73,7 @@ public final class DropletsListKernelsHeaders {
 
     /**
      * Get the ratelimitRemaining property: The ratelimit-remaining property.
-     *
+     * 
      * @return the ratelimitRemaining value.
      */
     public Integer getRatelimitRemaining() {
@@ -68,7 +82,7 @@ public final class DropletsListKernelsHeaders {
 
     /**
      * Set the ratelimitRemaining property: The ratelimit-remaining property.
-     *
+     * 
      * @param ratelimitRemaining the ratelimitRemaining value to set.
      * @return the DropletsListKernelsHeaders object itself.
      */
@@ -79,7 +93,7 @@ public final class DropletsListKernelsHeaders {
 
     /**
      * Get the ratelimitReset property: The ratelimit-reset property.
-     *
+     * 
      * @return the ratelimitReset value.
      */
     public Integer getRatelimitReset() {
@@ -88,7 +102,7 @@ public final class DropletsListKernelsHeaders {
 
     /**
      * Set the ratelimitReset property: The ratelimit-reset property.
-     *
+     * 
      * @param ratelimitReset the ratelimitReset value to set.
      * @return the DropletsListKernelsHeaders object itself.
      */

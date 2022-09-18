@@ -4,30 +4,26 @@ import com.azure.core.http.HttpHeaders;
 import com.azure.core.http.HttpRequest;
 import com.azure.core.http.rest.ResponseBase;
 
-/** Contains all response data for the destroyWithAssociatedResourcesDangerous operation. */
-public final class DropletsDestroyWithAssociatedResourcesDangerousResponse
-        extends ResponseBase<DropletsDestroyWithAssociatedResourcesDangerousHeaders, Error> {
+/**
+ * Contains all response data for the destroyWithAssociatedResourcesDangerous operation.
+ */
+public final class DropletsDestroyWithAssociatedResourcesDangerousResponse extends ResponseBase<DropletsDestroyWithAssociatedResourcesDangerousHeaders, Error> {
     /**
      * Creates an instance of DropletsDestroyWithAssociatedResourcesDangerousResponse.
-     *
+     * 
      * @param request the request which resulted in this DropletsDestroyWithAssociatedResourcesDangerousResponse.
      * @param statusCode the status code of the HTTP response.
      * @param rawHeaders the raw headers of the HTTP response.
      * @param value the deserialized value of the HTTP response.
      * @param headers the deserialized headers of the HTTP response.
      */
-    public DropletsDestroyWithAssociatedResourcesDangerousResponse(
-            HttpRequest request,
-            int statusCode,
-            HttpHeaders rawHeaders,
-            Error value,
-            DropletsDestroyWithAssociatedResourcesDangerousHeaders headers) {
+    public DropletsDestroyWithAssociatedResourcesDangerousResponse(HttpRequest request, int statusCode, HttpHeaders rawHeaders, Error value, DropletsDestroyWithAssociatedResourcesDangerousHeaders headers) {
         super(request, statusCode, rawHeaders, value, headers);
     }
 
     /**
      * Gets the deserialized response body.
-     *
+     * 
      * @return the deserialized response body.
      */
     @Override

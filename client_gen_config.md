@@ -12,6 +12,7 @@ override-client-name: GeneratedClient
 regenerate-pom: true
 
 add-credential: true
+credential-types=tokencredential
 credential-default-policy-type: BearerTokenCredentialPolicy
 credential-scopes: https://api.digitalocean.com
 
